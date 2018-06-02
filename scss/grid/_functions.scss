@@ -1,18 +1,18 @@
-/* --------------------------------------*/
-/* Get a breakpoint from the settings	*/
-/* --------------------------------------*/
+//
+// Get a breakpoint from the settings	*/
+//
 
 @function bp($bp) {
 	$breakpoint: map-get($grid-breakpoints, $bp);
 	@return $breakpoint;
 }
 
-/* ---------------------------------------------------- */
-/* Create a viewport width size based on columns       */
-/*                                                    */
-/* When using multiple values, all values will be    */
-/* calculated										*/
-/* ------------------------------------------------*/
+//
+// Create a viewport width size based on columns
+//
+// When using multiple values, all values will be
+// calculated
+//
 
 @function grid($value) {
 	$values: null;
@@ -27,12 +27,12 @@
 	@return $values;
 }
 
-/* ---------------------------------------------------- */
-/* Create a viewport width size based on columns       */
-/*                                                    */
-/* Same as the function above, only will return a    */
-/* negative value.                                  */
-/* ------------------------------------------------*/
+//
+// Create a viewport width size based on columns
+//
+// Same as the function above, only will return a
+// negative value.
+//
 
 @function -grid($value) {
 	$values: null;
@@ -47,9 +47,9 @@
 	@return $values;
 }
 
-/* ------------------------------------------------- */
-/* Calculate the viewport width based on columns    */
-/* ------------------------------------------------*/
+// -
+// Calculate the viewport width based on columns
+//
 
 @function calc-grid($v) {
 	$value: (100 / $grid-columns) * $v;
@@ -65,9 +65,9 @@
 	@return unquote("#{$value}vw");
 }
 
-/* ------------------------------------------------ */
-/* Return a media query with min and max values    */
-/* -----------------------------------------------*/
+//
+// Return a media query with min and max values
+// -*/
 
 @function mq($min: 0, $max: 0) {
 	@if $max > 0 {
@@ -80,10 +80,10 @@
 	}
 }
 
-/* ----------------------------------------------------- */
-/* Calculate the minimum breakpoint for a value to be   */
-/* at a specified amount of pixels.                    */
-/* ---------------------------------------------------*/
+//
+// Calculate the minimum breakpoint for a value to be
+// at a specified amount of pixels.
+//
 
 @function grid-mq-min($columns, $width) {
 	@if unit($columns) == "rem" {
@@ -97,10 +97,10 @@
 	@return $result;
 }
 
-/* ----------------------------------------------------- */
-/* Calculate the maximum breakpoint for a value to be   */
-/* at a specified amount of pixels.                    */
-/* ---------------------------------------------------*/
+//
+// Calculate the maximum breakpoint for a value to be
+// at a specified amount of pixels.
+//
 
 @function grid-mq-max($columns, $width) {
 	@if unit($columns) == "rem" {

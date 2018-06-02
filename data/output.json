@@ -2,6 +2,7 @@
 	"output": [
 		{
 			"css": true,
+			"full": false,
 			"reset": true,
 			"background-colors": true,
 			"text-colors": true,
@@ -22,11 +23,15 @@
 			"grid-helpers": false,
 			"grid-hide-show-classes": false,
 			"grid-only-classes": true,
-			"grid-create-offset": false,
-			"grid-create-push": false,
-			"grid-create-pull": false,
-			"grid-create-column": true,
-			"grid-cssgrid": false
+			"grid-counted-columns": true,
+			"grid-parts": true,
+			"grid-offset": false,
+			"grid-push": false,
+			"grid-pull": false,
+			"grid-non-breaking-column": false,
+			"grid-columns": true,
+			"grid-cssgrid": false,
+			"grid-row-breakpoints": true
 		}
 	]
 }

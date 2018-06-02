@@ -1,4 +1,5 @@
 $output-css: true !default; //
+$output-full: false !default; //
 $output-reset: true !default; //
 $output-background-colors: true !default; //
 $output-text-colors: true !default; //
@@ -19,13 +20,18 @@ $output-grid: true !default; //
 $output-grid-helpers: false !default; //
 $output-grid-hide-show-classes: false !default; //
 $output-grid-only-classes: true !default; //
-$output-grid-create-offset: false !default; //
-$output-grid-create-push: false !default; //
-$output-grid-create-pull: false !default; //
-$output-grid-create-column: true !default; //
+$output-grid-counted-columns: true !default; //
+$output-grid-parts: true !default; //
+$output-grid-offset: false !default; //
+$output-grid-push: false !default; //
+$output-grid-pull: false !default; //
+$output-grid-non-breaking-column: false !default; //
+$output-grid-columns: true !default; //
 $output-grid-cssgrid: false !default; //
+$output-grid-row-breakpoints: true !default; //
 $output: (
 	"css": true, 
+	"full": false, 
 	"reset": true, 
 	"background-colors": true, 
 	"text-colors": true, 
@@ -46,9 +52,13 @@ $output: (
 	"grid-helpers": false, 
 	"grid-hide-show-classes": false, 
 	"grid-only-classes": true, 
-	"grid-create-offset": false, 
-	"grid-create-push": false, 
-	"grid-create-pull": false, 
-	"grid-create-column": true, 
-	"grid-cssgrid": false
+	"grid-counted-columns": true, 
+	"grid-parts": true, 
+	"grid-offset": false, 
+	"grid-push": false, 
+	"grid-pull": false, 
+	"grid-non-breaking-column": false, 
+	"grid-columns": true, 
+	"grid-cssgrid": false, 
+	"grid-row-breakpoints": true
 ) !default; //

@@ -1,9 +1,10 @@
+//
 // Default use:
 //  @include min-(width,4,240);
-
+//
 //  use width calculation
 //  @include min-(width,4,240,'calc(100% - 240px)');
-
+//
 @mixin min-($what: false, $columns: 1, $min-width: 100, $alt: false) {
 	$mq: grid-mq-min($columns, $min-width);
 	@media #{$mq} {
@@ -18,12 +19,13 @@
 	}
 }
 
-/* Default use:
-  @include min-(width,4,240);
-
-  use width calculation
-  @include min-(width,4,240,'calc(100% - 240px)');
-*/
+//
+// Default use:
+// `@include min-(width,4,240);`
+//
+// use width calculation
+// `@include min-(width,4,240,'calc(100% - 240px)');`
+//
 
 @mixin max-($what: null, $columns: 1, $max-width: 200, $alt: false) {
 	$mq: grid-mq-max($columns, $max-width);
@@ -39,17 +41,31 @@
 	}
 }
 
-/* Generate the classes */
-
+//
+// A mixin to create all the classes for columns
+//
 @mixin createGridClasses($child: false) {
+	//
+	// The childclasses make it possible to create classes for
+	// the row which the columns will respond to. Default the
+	// mixins doesnt create child classes. But when true, the columns will
+	// be made in the classes.
+	//
+
 	$childClass: "";
-	@if $child == true {
-		$childClass: "> .#{$base-prefix}column";
+	@if output("grid-row-breakpoints") {
+		@if $child == true {
+			$childClass: "> .#{$base-prefix}column";
+		}
 	}
+	//
+	// Create the default classes for widths without any media query
+	//
 	@for $a from 0 through $grid-columns {
 		$percentage: percentage($a/$grid-columns); //
 		$column: #{$a}#{$childClass};
-		@if output("grid-create-column") {
+
+		@if output("grid-non-breaking-column") {
 			&.#{$base-prefix}column-#{$column} {
 				width: #{$percentage};
 				@if output("grid-cssgrid") {
@@ -58,91 +74,46 @@
 					}
 				}
 			}
-		}
 
-		@if output("grid-create-offset") {
-			&.#{$base-prefix}offset-#{$column} {
-				margin-left: #{$percentage};
+			@if output("grid-offset") {
+				&.#{$base-prefix}offset-#{$column} {
+					margin-left: #{$percentage};
+				}
 			}
-		}
-		@if output("grid-create-push") {
-			&.#{$base-prefix}push-#{$column} {
-				margin-right: #{$percentage};
+			@if output("grid-push") {
+				&.#{$base-prefix}push-#{$column} {
+					margin-right: #{$percentage};
+				}
 			}
-		}
-		@if output("grid-create-pull") {
-			&.#{$base-prefix}pull-#{$column} {
-				margin-left: -#{$percentage};
+			@if output("grid-pull") {
+				&.#{$base-prefix}pull-#{$column} {
+					margin-left: -#{$percentage};
+				}
 			}
 		}
 	}
+
+	//
+	// Create the list with
+	//
 
 	$min-width: 0;
 	@each $bp-name, $bp-value in $grid-breakpoints {
 		$mq-only: "#{$grid-screen} and (min-width: #{$min-width}px) and (max-width: #{$bp-value}px)";
 		$mq: "#{$grid-screen} and (min-width: #{$min-width}px)";
 		$min-width: $bp-value + 1;
-		@each $part, $percentage in $grid-parts {
-			&%#{$part}#{$childClass},
-			&.#{$base-prefix}#{$part}#{$childClass} {
-				width: percentage($percentage);
-				@if output("grid-cssgrid") {
-					@supports (display: grid) {
-						$parts: $percentage * $grid-columns;
-						width: #{$parts}fr;
-					}
-				}
-			}
-		}
-		@if output("grid-only-classes") {
-			@media #{$mq-only} {
-				&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
-					width: 0;
-					display: none;
-				}
-				@each $part, $percentage in $grid-parts {
-					// @debug '.#{$bp-name}-only-#{$part}#{$childClass}';
-					// @debug '.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass}';
-					.#{$bp-name}-only-#{$part}#{$childClass},
-					&.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass} {
-						width: percentage($percentage);
-					}
-				}
-				@for $a from 1 through $grid-columns {
-					$percentage: percentage($a/$grid-columns);
-					&.#{$base-prefix}#{$bp-name}-only-#{$a}#{$childClass} {
-						width: $percentage;
-					}
 
-					@if output("grid-create-offset") {
-						&.#{$base-prefix}offset-#{$bp-name}-only-#{$a}#{$childClass} {
-							margin-left: $percentage;
-						}
-					}
-					@if output("grid-create-push") {
-						&.#{$base-prefix}push-#{$bp-name}-only-#{$a}#{$childClass} {
-							margin-right: $percentage;
-						}
-					}
-					@if output("grid-create-pull") {
-						&.#{$base-prefix}pull-#{$bp-name}-only-#{$a}#{$childClass} {
-							margin-left: -#{$percentage};
-						}
-					}
-				}
-			}
-		}
-		@media #{$mq} {
-			.#{$bp-name}-0#{$childClass}
-				&.#{$base-prefix}#{$bp-name}-0#{$childClass} {
-				width: 0;
-				display: none;
-			}
+		//
+		// The partials make it easier to use in the system. Create a
+		// class small-half and always create a column which is half the
+		// size of its parent. Also when you alter the amount of columns
+		//
+
+		@if output("grid-parts") {
 			@each $part, $percentage in $grid-parts {
-				%#{$bp-name}-#{$part}#{$childClass},
-				&.#{$base-prefix}#{$bp-name}-#{$part}#{$childClass} {
+				&%#{$part}#{$childClass},
+				&.#{$base-prefix}#{$part}#{$childClass} {
 					width: percentage($percentage);
-
 					@if output("grid-cssgrid") {
 						@supports (display: grid) {
 							$parts: $percentage * $grid-columns;
@@ -151,32 +122,115 @@
 					}
 				}
 			}
-			@for $a from 1 through $grid-columns {
-				$percentage: percentage($a/$grid-columns);
-
-				&.#{$base-prefix}#{$bp-name}-#{$a}#{$childClass} {
-					width: $percentage;
-					@if output("grid-cssgrid") {
-						@supports (display: grid) {
-							$parts: ($a/$grid-columns) * $grid-columns; //
-							width: auto;
-							grid-column: #{$parts} span;
+		}
+		//
+		// Grid only classes make it possible to create a specific size
+		// for a specific breakpoint.
+		//
+		@if output("grid-only-classes") {
+			@media #{$mq-only} {
+				&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
+					width: 0;
+					display: none;
+				}
+				//
+				// Grid only for the parts
+				//
+				@if output("grid-parts") {
+					@each $part, $percentage in $grid-parts {
+						.#{$bp-name}-only-#{$part}#{$childClass},
+						&.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass} {
+							width: percentage($percentage);
 						}
 					}
 				}
-				@if output("grid-create-offset") {
-					&.#{$base-prefix}offset-#{$bp-name}-#{$a}#{$childClass} {
-						margin-left: $percentage;
+				//
+				// Grid only for columns
+				//
+				@if output(("grid-columns", "grid-counted-columns")) {
+					@for $a from 1 through $grid-columns {
+						$percentage: percentage($a/$grid-columns);
+						&.#{$base-prefix}#{$bp-name}-only-#{$a}#{$childClass} {
+							width: $percentage;
+						}
+
+						@if output("grid-offset") {
+							&.#{$base-prefix}offset-#{$bp-name}-only-#{$a}#{$childClass} {
+								margin-left: $percentage;
+							}
+						}
+						@if output("grid-push") {
+							&.#{$base-prefix}push-#{$bp-name}-only-#{$a}#{$childClass} {
+								margin-right: $percentage;
+							}
+						}
+						@if output("grid-pull") {
+							&.#{$base-prefix}pull-#{$bp-name}-only-#{$a}#{$childClass} {
+								margin-left: -#{$percentage};
+							}
+						}
 					}
 				}
-				@if output("grid-create-push") {
-					&.#{$base-prefix}push-#{$bp-name}-#{$a}#{$childClass} {
-						margin-right: $percentage;
+			}
+		}
+		@media #{$mq} {
+			//
+			// Sometimes you need a zero, which does the same as a hide for a breakpoint.
+			//
+			.#{$bp-name}-0#{$childClass}
+				&.#{$base-prefix}#{$bp-name}-0#{$childClass} {
+				width: 0;
+				display: none;
+			}
+			//
+			// Create columns with parts with breakpoints
+			//
+			@if output("grid-parts") {
+				@each $part, $percentage in $grid-parts {
+					%#{$bp-name}-#{$part}#{$childClass},
+					&.#{$base-prefix}#{$bp-name}-#{$part}#{$childClass} {
+						width: percentage($percentage);
+
+						@if output("grid-cssgrid") {
+							@supports (display: grid) {
+								$parts: $percentage * $grid-columns;
+								width: #{$parts}fr;
+							}
+						}
 					}
 				}
-				@if output("grid-create-pull") {
-					&.#{$base-prefix}pull-#{$bp-name}-#{$a}#{$childClass} {
-						margin-left: -#{$percentage};
+			}
+			//
+			// Create columns with amount of columns with breakpoints
+			//
+			@if output(("grid-columns", "grid-counted-columns")) {
+				@for $a from 1 through $grid-columns {
+					$percentage: percentage($a/$grid-columns);
+
+					&.#{$base-prefix}#{$bp-name}-#{$a}#{$childClass} {
+						width: $percentage;
+						@if output("grid-cssgrid") {
+							@supports (display: grid) {
+								$parts: ($a/$grid-columns) * $grid-columns; //
+								width: auto;
+								grid-column: #{$parts} span;
+							}
+						}
+					}
+					@if output("grid-offset") {
+						&.#{$base-prefix}offset-#{$bp-name}-#{$a}#{$childClass} {
+							margin-left: $percentage;
+						}
+					}
+					@if output("grid-push") {
+						&.#{$base-prefix}push-#{$bp-name}-#{$a}#{$childClass} {
+							margin-right: $percentage;
+						}
+					}
+					@if output("grid-pull") {
+						&.#{$base-prefix}pull-#{$bp-name}-#{$a}#{$childClass} {
+							margin-left: -#{$percentage};
+						}
 					}
 				}
 			}
