@@ -1,0 +1,33 @@
+{
+	"grid": {
+		"row-width": 4096,
+		"design-width": 1920,
+		"columns": 24,
+		"screen": "only screen",
+		"breakpoints": [
+			{
+				"small": 750,
+				"medium": 960,
+				"large": 1280,
+				"xlarge": 1920,
+				"xxlarge": 9999
+			}
+		],
+		"parts": [
+			{
+				"full": "1/1",
+				"half": "1/2",
+				"third": "1/3",
+				"two-third": "2/3",
+				"quarter": "1/4",
+				"three-quarter": "3/4",
+				"fifth": "1/5",
+				"two-fifth": "2/5",
+				"three-fifth": "3/5",
+				"four-fifth": "4/5",
+				"sixth": "1/6",
+				"five-sixth": "5/6"
+			}
+		]
+	}
+}

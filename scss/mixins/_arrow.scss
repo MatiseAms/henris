@@ -1,0 +1,158 @@
+@mixin arrow($direction, $size: 1.5rem, $thickness: 2px, $bg: black) {
+	@if $direction == null {
+		@warn 'please gimme direction!';
+	}
+	// The Close button
+	& {
+		width: $size;
+		height: $size;
+		display: block;
+		text-indent: -999em;
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			width: 75%;
+			height: $thickness;
+			background-color: $bg;
+			position: absolute;
+		}
+	}
+	@if $direction == 'close' {
+		@include arrow-close();
+	}
+	@if $direction == 'right' {
+		@include arrow-right();
+	}
+	@if $direction == 'left' {
+		@include arrow-left();
+	}
+	@if $direction == 'down' {
+		@include arrow-down();
+	}
+	@if $direction == 'up' {
+		@include arrow-up();
+	}
+	@if $direction == 'plus' {
+		@include arrow-plus();
+	}
+	@if $direction == 'min' {
+		@include arrow-min();
+	}
+}
+@mixin arrow-min() {
+	& {
+		&:before,
+		&:after {
+			left: 25%;
+			top: 25%;
+			transform-origin: 50% 50%;
+			width: 100%;
+		}
+		&:before {
+			transform: rotate(0deg);
+		}
+		&:after {
+			transform: rotate(90deg);
+			width: 0;
+		}
+	}
+}
+@mixin arrow-plus() {
+	& {
+		&:before,
+		&:after {
+			left: 0%;
+			top: 50%;
+			transform-origin: 50% 50%;
+			width: 100%;
+		}
+		&:before {
+			transform: rotate(0deg);
+		}
+		&:after {
+			transform: rotate(90deg);
+		}
+	}
+}
+@mixin arrow-close() {
+	& {
+		&:before,
+		&:after {
+			left: 50%;
+			top: 50%;
+			transform-origin: 50% 50%;
+			width: 100%;
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(135deg);
+		}
+	}
+}
+@mixin arrow-left() {
+	& {
+		&:before,
+		&:after {
+			left: 25%;
+			top: 50%;
+			transform-origin: 0% 50%;
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+}
+@mixin arrow-right() {
+	& {
+		&:before,
+		&:after {
+			left: 75%;
+			top: 50%;
+			transform-origin: 0% 50%;
+		}
+		&:before {
+			transform: rotate(135deg);
+		}
+		&:after {
+			transform: rotate(-135deg);
+		}
+	}
+}
+@mixin arrow-down() {
+	& {
+		&:before,
+		&:after {
+			left: 50%;
+			top: 75%;
+			transform-origin: 0% 50%;
+		}
+		&:before {
+			transform: rotate(-135deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+@mixin arrow-up() {
+	& {
+		&:before,
+		&:after {
+			left: 50%;
+			top: 25%;
+			transform-origin: 0% 50%;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-225deg);
+		}
+	}
+}

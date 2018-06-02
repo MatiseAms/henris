@@ -1,0 +1,22 @@
+// Icon Function
+
+@function icons() {
+	@return $icons-merged;
+}
+
+@function icon($value, $return: 'value') {
+	@each $iconFamily-name, $iconFamily-value in $icons {
+		@each $icon-name, $icon-value in $iconFamily-value {
+			@if $value == $icon-name {
+				@if $return == 'name' {
+					@return $icon-name;
+				}
+				@elseif $return == "font" {
+					@return '#{$iconFamily-name}-font-family';
+				} @else {
+					@return $icon-value;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+@function letter-spacing(
+	$font-size: rem($base-font-size),
+	$space: $base-letter-spacing
+) {
+	@if $font-size > 10 {
+		@debug 'Give size in Rem';
+	}
+	$size: (($font-size * $base-font-size) * $space)/1000;
+	@return rem($size);
+}
+@function ls($font-size: rem($base-font-size), $space: $base-letter-spacing) {
+	@return letter-spacing($font-size, $space);
+}

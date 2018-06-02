@@ -1,0 +1,56 @@
+@function elementCount($end) {
+	$elements: ();
+	@for $i from 1 through $end {
+		$element: '&:nth-child(#{$i}):nth-last-child(#{(($end + 1) - $i)}),';
+		$elements: prepend($element, $elements);
+	}
+	@return $elements;
+}
+
+@mixin createElements($amount, $type: false) {
+	@for $i from 1 through $amount {
+		@if $type == false {
+			#{elementCount($i)} {
+				@content;
+			}
+		} @else if $type == 'width' {
+			#{elementCount($i)} {
+				width: percentage(1 / $i);
+			}
+		} @else if $type == 'width-left' {
+			#{elementCount($i)} {
+				width: percentage(1 / $i);
+				@for $e from 0 through $amount {
+					$percentage: $e/$i;
+					&:nth-child(#{$e + 1}) {
+						left: percentage($percentage);
+					}
+				}
+			}
+		} @else if $type == 'width-left+1' {
+			#{elementCount($i)} {
+				width: percentage(1/ ($i + 1));
+				@for $e from 0 through ($amount + 1) {
+					$percentage: $e/($i + 1);
+					&:nth-child(#{$e + 1}) {
+						left: percentage($percentage);
+					}
+				}
+			}
+		}
+	}
+}
+
+/// &AND Multi
+@mixin and($elements...) {
+	$selectors: null;
+	@for $i from 1 through length($elements) {
+		$selectors: "#{$selectors '& +' nth($elements,$i)}";
+		@if $i < length($elements) {
+			$selectors: $selectors + ',';
+		}
+	}
+	#{$selectors} {
+		@content;
+	}
+}

@@ -1,0 +1,154 @@
+{
+	"typography": {
+		"fonts": {
+			"system":
+				"[[-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol]]",
+			"mono":
+				"[[SFMono-Regular, Ubuntu Mono, Consolas, DejaVu Sans Mono, Menlo, monospace]]"
+		},
+		"font-weight": [
+			{
+				"light": "300",
+				"regular": "400",
+				"medium": "500",
+				"bold": "600"
+			}
+		],
+		"headers": [
+			{
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1",
+				"letter-spacing": "0"
+			}
+		],
+		"h1": [
+			{
+				"design-size": "96px",
+				"font-size-value": "1.2",
+				"font-size": "{{grid(1.2)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1",
+				"font-size-min": "48px",
+				"font-size-max": "144px",
+				"letter-spacing": "0"
+			}
+		],
+		"h2": [
+			{
+				"design-size": "60px",
+				"font-size-value": "0.75",
+				"font-size": "{{grid(0.75)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1",
+				"font-size-min": "30px",
+				"font-size-max": "60px",
+				"letter-spacing": "0"
+			}
+		],
+		"h3": [
+			{
+				"design-size": "40px",
+				"font-size-value": "0.5",
+				"font-size": "{{grid(0.5)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1.15",
+				"font-size-min": "25px",
+				"font-size-max": "60px",
+				"letter-spacing": "0"
+			}
+		],
+		"h4": [
+			{
+				"design-size": "32px",
+				"font-size-value": "0.4",
+				"font-size": "{{grid(0.4)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1.25",
+				"font-size-min": "20px",
+				"font-size-max": "48px",
+				"letter-spacing": "0"
+			}
+		],
+		"h5": [
+			{
+				"design-size": "24px",
+				"font-size-value": "0.3",
+				"font-size": "{{grid(0.3)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1.5",
+				"font-size-min": "18px",
+				"font-size-max": "32px",
+				"letter-spacing": "0"
+			}
+		],
+		"h6": [
+			{
+				"design-size": "20px",
+				"font-size-value": "0.25",
+				"font-size": "{{grid(0.3)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.bold)}}",
+				"text-transform": "none",
+				"line-height": "1.5",
+				"font-size-min": "16px",
+				"font-size-max": "28px",
+				"letter-spacing": "-0"
+			}
+		],
+		"menu": [
+			{
+				"design-size": "16px",
+				"font-size-value": "0.2",
+				"font-size": "16px",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.medium)}}",
+				"text-transform": "none",
+				"line-height": "{{grid(1)}}",
+				"font-size-min": "16px",
+				"font-size-max": "16px",
+				"letter-spacing": "0.5px"
+			}
+		],
+		"menu-small": [
+			{
+				"design-size": "12px",
+				"font-size-value": "0.2",
+				"font-size": "12px",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.regular)}}",
+				"text-transform": "none",
+				"line-height": "1",
+				"font-size-min": "12px",
+				"font-size-max": "12px",
+				"letter-spacing": "0.5px"
+			}
+		],
+		"p": [
+			{
+				"design-size": "16px",
+				"font-size-value": "0.2",
+				"font-size": "{{grid(0.2)}}",
+				"font-family": "{{assets(typography.fonts.system)}}",
+				"font-weight": "{{assets(typography.font-weight.regular)}}",
+				"text-transform": "none",
+				"line-height": "1.75",
+				"font-size-min": "16px",
+				"font-size-max": "16px",
+				"letter-spacing": "0",
+				"max-width": "75ch"
+			}
+		]
+	}
+}

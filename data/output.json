@@ -1,0 +1,32 @@
+{
+	"output": [
+		{
+			"css": true,
+			"reset": true,
+			"background-colors": true,
+			"text-colors": true,
+			"custom-properties": true,
+			"ease-classes": false,
+			"button-default": true,
+			"button-colors": true,
+			"button-sizes": true,
+			"button-rounded": true,
+			"button-round": true,
+			"button-icons": true,
+			"button-text-transform": true,
+			"button-rotated": true,
+			"button-border": true,
+			"custom-properties-media-queries": false,
+			"custom-properties-colors": false,
+			"grid": true,
+			"grid-helpers": false,
+			"grid-hide-show-classes": false,
+			"grid-only-classes": true,
+			"grid-create-offset": false,
+			"grid-create-push": false,
+			"grid-create-pull": false,
+			"grid-create-column": true,
+			"grid-cssgrid": false
+		}
+	]
+}

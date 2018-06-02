@@ -1,0 +1,21 @@
+@mixin parent {
+	@each $selector in & {
+		@if length($selector) == 1 {
+			$selector: nth($selector, 1);
+		}
+		$l: length($selector);
+
+		@if ($l == 1) {
+			@error 'Used parent mixin on a top-level selector';
+		} @else {
+			$parent: nth($selector, 1);
+			@for $i from 2 to $l {
+				$parent: append($parent, nth($selector, $i));
+			}
+
+			@at-root #{$parent} {
+				@content;
+			}
+		}
+	}
+}

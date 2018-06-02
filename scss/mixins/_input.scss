@@ -1,0 +1,310 @@
+@mixin input-radio(
+	$width: 1rem,
+	$height: 1rem,
+	$margin: 0,
+	$spacing: 0.2rem,
+	$bg-body: color(White),
+	$bg-check: color(Black),
+	$round: 100%
+) {
+	& {
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	@include parent {
+		input[type='radio'] + label {
+			padding-left: $width + $margin;
+			position: relative;
+			cursor: pointer;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: $width;
+				height: $height;
+				background: $bg-body;
+				@if $round != 0 {
+					border-radius: $round;
+				}
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: $spacing;
+				top: $spacing;
+				width: ($width - ($spacing * 2));
+				height: ($width - ($spacing * 2));
+				background: $bg-check;
+				border-radius: $round;
+				opacity: 0;
+				transition: $base-transition;
+			}
+		}
+		input[type='radio']:checked {
+			& + label:after {
+				opacity: 1;
+				transition: $base-transition;
+			}
+		}
+	}
+}
+@mixin input-checkbox(
+	$width: 1rem,
+	$height: 1rem,
+	$margin: 0,
+	$spacing: 0.2rem,
+	$bg-body: color(White),
+	$bg-check: color(Black),
+	$round: 50%
+) {
+	& {
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	@include parent {
+		input[type='checkbox'] + label {
+			padding-left: $width + $margin;
+			position: relative;
+			cursor: pointer;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: $width;
+				height: $height;
+				background: $bg-body;
+				@if $round != 0 {
+					border-radius: $round;
+				}
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: $spacing;
+				top: $spacing;
+				width: ($width - ($spacing * 2));
+				height: ($width - ($spacing * 2));
+				background: $bg-check;
+				border-radius: $round;
+				opacity: 0;
+				transition: $base-transition;
+			}
+		}
+		input[type='checkbox']:checked {
+			& + label:after {
+				opacity: 1;
+				transition: $base-transition;
+			}
+		}
+	}
+}
+@mixin input-element($el, $inputtype: null) {
+	$type: '';
+	@if $inputtype == null {
+		$type: '';
+	} @else {
+		$type: '[type=#{$inputtype}]';
+	}
+	@if $el == 'body' {
+		@include parent {
+			input#{$type} + label {
+				&:before {
+					@content;
+				}
+			}
+		}
+	}
+	@elseif $el == 'label' {
+		@include parent {
+			input#{$type} + label {
+				@content;
+			}
+		}
+	}
+	@elseif $el == 'focus' {
+		input#{$type}:focus + label {
+			@content;
+		}
+	}
+	@elseif $el == 'check' {
+		@include parent {
+			input#{$type} + label:after {
+				@content;
+			}
+		}
+	}
+	@elseif $el == 'check-checked' {
+		@include parent {
+			input#{$type}:checked + label:after {
+				@content;
+			}
+		}
+	}
+	@elseif $el == 'body-checked' {
+		input#{$type}:checked + label {
+			&:before {
+				@content;
+			}
+		}
+	}
+	@elseif $el == 'label-checked' {
+		@include parent {
+			input#{$type}:checked + label {
+				@content;
+			}
+		}
+	}
+}
+@mixin input-body {
+	@include input-element('body') {
+		@content;
+	}
+}
+@mixin input-checkbox-body {
+	@include input-element('body', 'checkbox') {
+		@content;
+	}
+}
+@mixin input-radio-body {
+	@include input-element('body', 'radio') {
+		@content;
+	}
+}
+
+@mixin input-label {
+	@include input-element('label') {
+		@content;
+	}
+}
+@mixin input-radio-label {
+	@include input-element('label', 'radio') {
+		@content;
+	}
+}
+@mixin input-checkbox-label {
+	@include input-element('label', 'checkbox') {
+		@content;
+	}
+}
+@mixin input-focus {
+	@include input-element('focus') {
+		@content;
+	}
+}
+@mixin input-radio-focus {
+	@include input-element('focus', 'radio') {
+		@content;
+	}
+}
+@mixin input-checkbox-focus {
+	@include input-element('focus', 'checkbox') {
+		@content;
+	}
+}
+
+@mixin input-check {
+	@include input-element('check') {
+		@content;
+	}
+}
+@mixin input-radio-check {
+	@include input-element('check', 'radio') {
+		@content;
+	}
+}
+@mixin input-checkbox-check {
+	@include input-element('check', 'checkbox') {
+		@content;
+	}
+}
+@mixin input-checkbox-check-checked {
+	@include input-element('check-checked', 'checkbox') {
+		@content;
+	}
+}
+@mixin input-body-checked {
+	@include input-element('body-checked') {
+		@content;
+	}
+}
+@mixin input-radio-body-checked {
+	@include input-element('body-checked', 'radio') {
+		@content;
+	}
+}
+@mixin input-checkbox-body-checked {
+	@include input-element('body-checked', 'checkbox') {
+		@content;
+	}
+}
+@mixin input-label-checked {
+	@include input-element('label-checked') {
+		@content;
+	}
+}
+@mixin input-radio-label-checked {
+	@include input-element('label-checked', 'radio') {
+		@content;
+	}
+}
+@mixin input-checkbox-label-checked {
+	@include input-element('label-checked', 'checkbox') {
+		@content;
+	}
+}
+$input-types: (
+	 (button, button),
+	 (checkbox, check),
+	 (color, button),
+	 (date, button),
+	 (datetime, text),
+	 (datetime-local, text),
+	 (email, text),
+	 (file, text),
+	 (hidden, hidden),
+	 (image, text),
+	 (month, text),
+	 (number, text),
+	 (password, text),
+	 (radio, radio),
+	 (range, slider),
+	 (reset, button),
+	 (search, text),
+	 (submit, button),
+	 (tel, text),
+	 (text, text),
+	 (time, text),
+	 (url, text),
+	 (week, text)
+);
+
+@mixin input-type($type) {
+	input {
+		#{input-list($type)} {
+			@content;
+		}
+	}
+}
+
+@function input-list($type) {
+	$i: 0;
+	$list: '';
+	@each $input in $input-types {
+		@if nth($input, 2) == $type {
+			$i: $i + 1;
+			@if $i>1 {
+				$list: $list + ',';
+			}
+			$list: $list + '&[type="#{nth($input,1)}"]';
+		}
+	}
+	@return $list;
+}

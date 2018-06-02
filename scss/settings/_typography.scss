@@ -1,0 +1,224 @@
+$typography-fonts-system: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-fonts-mono: 'SFMono-Regular, Ubuntu Mono, Consolas, DejaVu Sans Mono, Menlo, monospace' !default; //
+$typography-font-weight-light: 300 !default; //
+$typography-font-weight-regular: 400 !default; //
+$typography-font-weight-medium: 500 !default; //
+$typography-font-weight-bold: 600 !default; //
+$typography-headers-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-headers-font-weight: 600 !default; //
+$typography-headers-text-transform: none !default; //
+$typography-headers-line-height: 1 !default; //
+$typography-headers-letter-spacing: 0 !default; //
+$typography-h1-design-size: 96px !default; //
+$typography-h1-font-size-value: 1.2 !default; //
+$typography-h1-font-size: 5vw !default; //
+$typography-h1-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-h1-font-weight: 600 !default; //
+$typography-h1-text-transform: none !default; //
+$typography-h1-line-height: 1 !default; //
+$typography-h1-font-size-min: 48px !default; //
+$typography-h1-font-size-max: 144px !default; //
+$typography-h1-letter-spacing: 0 !default; //
+$typography-h2-design-size: 60px !default; //
+$typography-h2-font-size-value: 0.75 !default; //
+$typography-h2-font-size: 3.125vw !default; //
+$typography-h2-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-h2-font-weight: 600 !default; //
+$typography-h2-text-transform: none !default; //
+$typography-h2-line-height: 1 !default; //
+$typography-h2-font-size-min: 30px !default; //
+$typography-h2-font-size-max: 60px !default; //
+$typography-h2-letter-spacing: 0 !default; //
+$typography-h3-design-size: 40px !default; //
+$typography-h3-font-size-value: 0.5 !default; //
+$typography-h3-font-size: 2.0833333333333335vw !default; //
+$typography-h3-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-h3-font-weight: 600 !default; //
+$typography-h3-text-transform: none !default; //
+$typography-h3-line-height: 1.15 !default; //
+$typography-h3-font-size-min: 25px !default; //
+$typography-h3-font-size-max: 60px !default; //
+$typography-h3-letter-spacing: 0 !default; //
+$typography-h4-design-size: 32px !default; //
+$typography-h4-font-size-value: 0.4 !default; //
+$typography-h4-font-size: 1.666666666666667vw !default; //
+$typography-h4-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-h4-font-weight: 600 !default; //
+$typography-h4-text-transform: none !default; //
+$typography-h4-line-height: 1.25 !default; //
+$typography-h4-font-size-min: 20px !default; //
+$typography-h4-font-size-max: 48px !default; //
+$typography-h4-letter-spacing: 0 !default; //
+$typography-h5-design-size: 24px !default; //
+$typography-h5-font-size-value: 0.3 !default; //
+$typography-h5-font-size: 1.25vw !default; //
+$typography-h5-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-h5-font-weight: 600 !default; //
+$typography-h5-text-transform: none !default; //
+$typography-h5-line-height: 1.5 !default; //
+$typography-h5-font-size-min: 18px !default; //
+$typography-h5-font-size-max: 32px !default; //
+$typography-h5-letter-spacing: 0 !default; //
+$typography-h6-design-size: 20px !default; //
+$typography-h6-font-size-value: 0.25 !default; //
+$typography-h6-font-size: 1.25vw !default; //
+$typography-h6-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-h6-font-weight: 600 !default; //
+$typography-h6-text-transform: none !default; //
+$typography-h6-line-height: 1.5 !default; //
+$typography-h6-font-size-min: 16px !default; //
+$typography-h6-font-size-max: 28px !default; //
+$typography-h6-letter-spacing: '-0' !default; //
+$typography-menu-design-size: 16px !default; //
+$typography-menu-font-size-value: 0.2 !default; //
+$typography-menu-font-size: 16px !default; //
+$typography-menu-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-menu-font-weight: 500 !default; //
+$typography-menu-text-transform: none !default; //
+$typography-menu-line-height: 4.166666666666667vw !default; //
+$typography-menu-font-size-min: 16px !default; //
+$typography-menu-font-size-max: 16px !default; //
+$typography-menu-letter-spacing: 0.5px !default; //
+$typography-menu-small-design-size: 12px !default; //
+$typography-menu-small-font-size-value: 0.2 !default; //
+$typography-menu-small-font-size: 12px !default; //
+$typography-menu-small-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-menu-small-font-weight: 400 !default; //
+$typography-menu-small-text-transform: none !default; //
+$typography-menu-small-line-height: 1 !default; //
+$typography-menu-small-font-size-min: 12px !default; //
+$typography-menu-small-font-size-max: 12px !default; //
+$typography-menu-small-letter-spacing: 0.5px !default; //
+$typography-p-design-size: 16px !default; //
+$typography-p-font-size-value: 0.2 !default; //
+$typography-p-font-size: 0.8333333333333335vw !default; //
+$typography-p-font-family: '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol' !default; //
+$typography-p-font-weight: 400 !default; //
+$typography-p-text-transform: none !default; //
+$typography-p-line-height: 1.75 !default; //
+$typography-p-font-size-min: 16px !default; //
+$typography-p-font-size-max: 16px !default; //
+$typography-p-letter-spacing: 0 !default; //
+$typography-p-max-width: 75ch !default; //
+$typography-font-weight: (
+	"light": 300, 
+	"regular": 400, 
+	"medium": 500, 
+	"bold": 600
+) !default; //, 
+$typography-headers: (
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1, 
+	"letter-spacing": 0
+) !default; //, 
+$typography-h1: (
+	"design-size": 96px, 
+	"font-size-value": 1.2, 
+	"font-size": 5vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1, 
+	"font-size-min": 48px, 
+	"font-size-max": 144px, 
+	"letter-spacing": 0
+) !default; //, 
+$typography-h2: (
+	"design-size": 60px, 
+	"font-size-value": 0.75, 
+	"font-size": 3.125vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1, 
+	"font-size-min": 30px, 
+	"font-size-max": 60px, 
+	"letter-spacing": 0
+) !default; //, 
+$typography-h3: (
+	"design-size": 40px, 
+	"font-size-value": 0.5, 
+	"font-size": 2.0833333333333335vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1.15, 
+	"font-size-min": 25px, 
+	"font-size-max": 60px, 
+	"letter-spacing": 0
+) !default; //, 
+$typography-h4: (
+	"design-size": 32px, 
+	"font-size-value": 0.4, 
+	"font-size": 1.666666666666667vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1.25, 
+	"font-size-min": 20px, 
+	"font-size-max": 48px, 
+	"letter-spacing": 0
+) !default; //, 
+$typography-h5: (
+	"design-size": 24px, 
+	"font-size-value": 0.3, 
+	"font-size": 1.25vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1.5, 
+	"font-size-min": 18px, 
+	"font-size-max": 32px, 
+	"letter-spacing": 0
+) !default; //, 
+$typography-h6: (
+	"design-size": 20px, 
+	"font-size-value": 0.25, 
+	"font-size": 1.25vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 600, 
+	"text-transform": none, 
+	"line-height": 1.5, 
+	"font-size-min": 16px, 
+	"font-size-max": 28px, 
+	"letter-spacing": '-0'
+) !default; //, 
+$typography-menu: (
+	"design-size": 16px, 
+	"font-size-value": 0.2, 
+	"font-size": 16px, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 500, 
+	"text-transform": none, 
+	"line-height": 4.166666666666667vw, 
+	"font-size-min": 16px, 
+	"font-size-max": 16px, 
+	"letter-spacing": 0.5px
+) !default; //, 
+$typography-menu-small: (
+	"design-size": 12px, 
+	"font-size-value": 0.2, 
+	"font-size": 12px, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 400, 
+	"text-transform": none, 
+	"line-height": 1, 
+	"font-size-min": 12px, 
+	"font-size-max": 12px, 
+	"letter-spacing": 0.5px
+) !default; //, 
+$typography-p: (
+	"design-size": 16px, 
+	"font-size-value": 0.2, 
+	"font-size": 0.8333333333333335vw, 
+	"font-family": '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol', 
+	"font-weight": 400, 
+	"text-transform": none, 
+	"line-height": 1.75, 
+	"font-size-min": 16px, 
+	"font-size-max": 16px, 
+	"letter-spacing": 0, 
+	"max-width": 75ch
+) !default; //

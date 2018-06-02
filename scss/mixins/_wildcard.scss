@@ -1,0 +1,6 @@
+@mixin wildcard($value, $type: 'class') {
+	&[#{$type}^='#{$value}'],
+	&[#{$type}*=' #{$value}'] {
+		@content;
+	}
+}

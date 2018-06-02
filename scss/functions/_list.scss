@@ -1,0 +1,57 @@
+@function map-collect($maps...) {
+	$collection: ();
+
+	@each $map in $maps {
+		$collection: map-merge($collection, $map);
+	}
+	@return $collection;
+}
+
+@function str-to-list($string, $separator: '.', $startAt: 1) {
+	$string: str-replace($string, '__', '.'); //
+	$string: str-replace($string, '--', '.'); //
+	$string: str-replace($string, '_', '.'); //
+
+	$workStr: str-slice($string, $startAt);
+	$list: ();
+	$indexOfFirstSpace: str-index($workStr, $separator);
+	@if $indexOfFirstSpace == null {
+		$list: ($workStr);
+	} @else {
+		$list: (str-slice($workStr, 1, $indexOfFirstSpace - 1)); //
+		$list: join(
+			$list,
+			str-to-list($workStr, $separator, $startAt: $indexOfFirstSpace + 1)
+		);
+	}
+	@return $list;
+}
+
+// List Functions
+
+@function prepend($list, $value) {
+	@return join($value, $list);
+}
+
+@function to-string($list, $glue: '', $is-nested: false) {
+	$result: null;
+
+	@for $i from 1 through length($list) {
+		$e: nth($list, $i);
+
+		@if type-of($e) == list {
+			$result: $result#{to-string($e, $glue, true)};
+		} @else {
+			$result: if(
+				$i != length($list) or $is-nested,
+				$result#{$e}#{$glue},
+				$result#{$e}
+			);
+		}
+	}
+
+	@return $result;
+}
+@function to-list($value) {
+	@return if(type-of($value) != list, ($value), $value);
+}

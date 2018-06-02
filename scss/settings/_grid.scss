@@ -1,0 +1,42 @@
+$grid-row-width: 4096 !default; //
+$grid-design-width: 1920 !default; //
+$grid-columns: 24 !default; //
+$grid-screen: 'only screen' !default; //
+$grid-breakpoints-small: 750 !default; //
+$grid-breakpoints-medium: 960 !default; //
+$grid-breakpoints-large: 1280 !default; //
+$grid-breakpoints-xlarge: 1920 !default; //
+$grid-breakpoints-xxlarge: 9999 !default; //
+$grid-parts-full: 1/1 !default; //
+$grid-parts-half: 1/2 !default; //
+$grid-parts-third: 1/3 !default; //
+$grid-parts-two-third: 2/3 !default; //
+$grid-parts-quarter: 1/4 !default; //
+$grid-parts-three-quarter: 3/4 !default; //
+$grid-parts-fifth: 1/5 !default; //
+$grid-parts-two-fifth: 2/5 !default; //
+$grid-parts-three-fifth: 3/5 !default; //
+$grid-parts-four-fifth: 4/5 !default; //
+$grid-parts-sixth: 1/6 !default; //
+$grid-parts-five-sixth: 5/6 !default; //
+$grid-breakpoints: (
+	"small": 750, 
+	"medium": 960, 
+	"large": 1280, 
+	"xlarge": 1920, 
+	"xxlarge": 9999
+) !default; //, 
+$grid-parts: (
+	"full": 1/1, 
+	"half": 1/2, 
+	"third": 1/3, 
+	"two-third": 2/3, 
+	"quarter": 1/4, 
+	"three-quarter": 3/4, 
+	"fifth": 1/5, 
+	"two-fifth": 2/5, 
+	"three-fifth": 3/5, 
+	"four-fifth": 4/5, 
+	"sixth": 1/6, 
+	"five-sixth": 5/6
+) !default; //

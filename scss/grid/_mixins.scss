@@ -1,0 +1,185 @@
+// Default use:
+//  @include min-(width,4,240);
+
+//  use width calculation
+//  @include min-(width,4,240,'calc(100% - 240px)');
+
+@mixin min-($what: false, $columns: 1, $min-width: 100, $alt: false) {
+	$mq: grid-mq-min($columns, $min-width);
+	@media #{$mq} {
+		@if $what != null {
+			@if $alt != false {
+				#{$what}: $alt;
+			} @else {
+				#{$what}: #{strip-unit($min-width)}px;
+			}
+		}
+		@content;
+	}
+}
+
+/* Default use:
+  @include min-(width,4,240);
+
+  use width calculation
+  @include min-(width,4,240,'calc(100% - 240px)');
+*/
+
+@mixin max-($what: null, $columns: 1, $max-width: 200, $alt: false) {
+	$mq: grid-mq-max($columns, $max-width);
+	@media #{$mq} {
+		@if $what != null {
+			@if $alt != false {
+				#{$what}: $alt;
+			} @else {
+				#{$what}: #{strip-unit($max-width)}px;
+			}
+		}
+		@content;
+	}
+}
+
+/* Generate the classes */
+
+@mixin createGridClasses($child: false) {
+	$childClass: "";
+	@if $child == true {
+		$childClass: "> .#{$base-prefix}column";
+	}
+	@for $a from 0 through $grid-columns {
+		$percentage: percentage($a/$grid-columns); //
+		$column: #{$a}#{$childClass};
+		@if output("grid-create-column") {
+			&.#{$base-prefix}column-#{$column} {
+				width: #{$percentage};
+				@if output("grid-cssgrid") {
+					@supports (display: grid) {
+						width: #{$a}fr;
+					}
+				}
+			}
+		}
+
+		@if output("grid-create-offset") {
+			&.#{$base-prefix}offset-#{$column} {
+				margin-left: #{$percentage};
+			}
+		}
+		@if output("grid-create-push") {
+			&.#{$base-prefix}push-#{$column} {
+				margin-right: #{$percentage};
+			}
+		}
+		@if output("grid-create-pull") {
+			&.#{$base-prefix}pull-#{$column} {
+				margin-left: -#{$percentage};
+			}
+		}
+	}
+
+	$min-width: 0;
+	@each $bp-name, $bp-value in $grid-breakpoints {
+		$mq-only: "#{$grid-screen} and (min-width: #{$min-width}px) and (max-width: #{$bp-value}px)";
+		$mq: "#{$grid-screen} and (min-width: #{$min-width}px)";
+		$min-width: $bp-value + 1;
+		@each $part, $percentage in $grid-parts {
+			&%#{$part}#{$childClass},
+			&.#{$base-prefix}#{$part}#{$childClass} {
+				width: percentage($percentage);
+				@if output("grid-cssgrid") {
+					@supports (display: grid) {
+						$parts: $percentage * $grid-columns;
+						width: #{$parts}fr;
+					}
+				}
+			}
+		}
+		@if output("grid-only-classes") {
+			@media #{$mq-only} {
+				&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
+					width: 0;
+					display: none;
+				}
+				@each $part, $percentage in $grid-parts {
+					// @debug '.#{$bp-name}-only-#{$part}#{$childClass}';
+					// @debug '.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass}';
+					.#{$bp-name}-only-#{$part}#{$childClass},
+					&.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass} {
+						width: percentage($percentage);
+					}
+				}
+				@for $a from 1 through $grid-columns {
+					$percentage: percentage($a/$grid-columns);
+					&.#{$base-prefix}#{$bp-name}-only-#{$a}#{$childClass} {
+						width: $percentage;
+					}
+
+					@if output("grid-create-offset") {
+						&.#{$base-prefix}offset-#{$bp-name}-only-#{$a}#{$childClass} {
+							margin-left: $percentage;
+						}
+					}
+					@if output("grid-create-push") {
+						&.#{$base-prefix}push-#{$bp-name}-only-#{$a}#{$childClass} {
+							margin-right: $percentage;
+						}
+					}
+					@if output("grid-create-pull") {
+						&.#{$base-prefix}pull-#{$bp-name}-only-#{$a}#{$childClass} {
+							margin-left: -#{$percentage};
+						}
+					}
+				}
+			}
+		}
+		@media #{$mq} {
+			.#{$bp-name}-0#{$childClass}
+				&.#{$base-prefix}#{$bp-name}-0#{$childClass} {
+				width: 0;
+				display: none;
+			}
+			@each $part, $percentage in $grid-parts {
+				%#{$bp-name}-#{$part}#{$childClass},
+				&.#{$base-prefix}#{$bp-name}-#{$part}#{$childClass} {
+					width: percentage($percentage);
+
+					@if output("grid-cssgrid") {
+						@supports (display: grid) {
+							$parts: $percentage * $grid-columns;
+							width: #{$parts}fr;
+						}
+					}
+				}
+			}
+			@for $a from 1 through $grid-columns {
+				$percentage: percentage($a/$grid-columns);
+
+				&.#{$base-prefix}#{$bp-name}-#{$a}#{$childClass} {
+					width: $percentage;
+					@if output("grid-cssgrid") {
+						@supports (display: grid) {
+							$parts: ($a/$grid-columns) * $grid-columns; //
+							width: auto;
+							grid-column: #{$parts} span;
+						}
+					}
+				}
+				@if output("grid-create-offset") {
+					&.#{$base-prefix}offset-#{$bp-name}-#{$a}#{$childClass} {
+						margin-left: $percentage;
+					}
+				}
+				@if output("grid-create-push") {
+					&.#{$base-prefix}push-#{$bp-name}-#{$a}#{$childClass} {
+						margin-right: $percentage;
+					}
+				}
+				@if output("grid-create-pull") {
+					&.#{$base-prefix}pull-#{$bp-name}-#{$a}#{$childClass} {
+						margin-left: -#{$percentage};
+					}
+				}
+			}
+		}
+	}
+}

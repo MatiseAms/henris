@@ -1,0 +1,196 @@
+/*
+	Header Default
+	*/
+@mixin assets-header-default {
+	font-family: unquote($typography-headers-font-family);
+	font-weight: $typography-headers-font-weight;
+	line-height: $typography-headers-line-height;
+	margin: 0;
+	letter-spacing: $typography-headers-letter-spacing;
+	padding: 0;
+	text-transform: $typography-headers-text-transform;
+	&.sub {
+		font-weight: $font-regular;
+	}
+}
+%#{$base-prefix}header-default {
+	@include assets-header-default;
+}
+
+/*
+	H1
+	*/
+@mixin assets-h1 {
+	font-family: unquote($typography-h1-font-family);
+	font-size: grid($typography-h1-font-size-value);
+	font-weight: $typography-h1-font-weight;
+	line-height: $typography-h1-line-height;
+	letter-spacing: $typography-h1-letter-spacing;
+	text-transform: $typography-h1-text-transform;
+	@include min-fontsize($typography-h1-font-size-value,$typography-h1-font-size-min);
+	@include max-fontsize($typography-h1-font-size-value,$typography-h1-font-size-max);
+}
+%#{$base-prefix}h1 {
+	@include assets-header-default;
+	@include assets-h1;
+}
+
+/*
+	H2
+	*/
+@mixin assets-h2 {
+	font-family: unquote($typography-h2-font-family);
+	font-size: grid($typography-h2-font-size-value);
+	font-weight: $typography-h2-font-weight;
+	line-height: $typography-h2-line-height;
+	letter-spacing: $typography-h2-letter-spacing;
+	text-transform: $typography-h2-text-transform;
+	@include min-fontsize($typography-h2-font-size-value,$typography-h2-font-size-min);
+	@include max-fontsize($typography-h2-font-size-value,$typography-h2-font-size-max);
+}
+%#{$base-prefix}h2 {
+	@include assets-header-default;
+	@include assets-h2;
+}
+
+/*
+	H3
+	*/
+@mixin assets-h3 {
+	font-family: unquote($typography-h3-font-family);
+	font-size: grid($typography-h3-font-size-value);
+	font-weight: $typography-h3-font-weight;
+	line-height: $typography-h3-line-height;
+	letter-spacing: $typography-h3-letter-spacing;
+	text-transform: $typography-h3-text-transform;
+	@include min-fontsize($typography-h3-font-size-value,$typography-h3-font-size-min);
+	@include max-fontsize($typography-h3-font-size-value,$typography-h3-font-size-max);
+}
+
+%#{$base-prefix}h3 {
+	@include assets-header-default;
+	@include assets-h3;
+}
+
+@mixin assets-h4 {
+	font-family: unquote($typography-h4-font-family);
+	font-size: grid($typography-h4-font-size-value);
+	font-weight: $typography-h4-font-weight;
+	line-height: $typography-h4-line-height;
+	letter-spacing: $typography-h4-letter-spacing;
+	text-transform: $typography-h4-text-transform;
+	@include min-fontsize($typography-h4-font-size-value,$typography-h4-font-size-min);
+	@include max-fontsize($typography-h4-font-size-value,$typography-h4-font-size-max);
+}
+
+%#{$base-prefix}h4 {
+	@include assets-header-default;
+	@include assets-h4;
+}
+@mixin assets-h5 {
+	font-family: unquote($typography-h5-font-family);
+	font-size: grid($typography-h5-font-size-value);
+	font-weight: $typography-h5-font-weight;
+	line-height: $typography-h5-line-height;
+	letter-spacing: $typography-h5-letter-spacing;
+	text-transform: $typography-h5-text-transform;
+	@include min-fontsize($typography-h5-font-size-value,$typography-h5-font-size-min);
+	@include max-fontsize($typography-h5-font-size-value,$typography-h5-font-size-max);
+}
+
+%#{$base-prefix}h5 {
+	@include assets-header-default;
+	@include assets-h5;
+}
+@mixin assets-h6 {
+	font-family: unquote($typography-h6-font-family);
+	font-size: grid($typography-h6-font-size-value);
+	font-weight: $typography-h6-font-weight;
+	line-height: $typography-h6-line-height;
+	letter-spacing: $typography-h6-letter-spacing;
+	text-transform: $typography-h6-text-transform;
+	@include min-fontsize($typography-h6-font-size-value,$typography-h6-font-size-min);
+	@include max-fontsize($typography-h6-font-size-value,$typography-h6-font-size-max);
+}
+%#{$base-prefix}h6 {
+	@include assets-header-default;
+	@include assets-h6;
+}
+
+// make font styles
+%#{$base-prefix}font-regular {
+	font-weight: $font-regular;
+}
+%#{$base-prefix}font-bold {
+	font-weight: $font-bold;
+}
+%#{$base-prefix}small {
+	font-size: smaller;
+}
+%#{$base-prefix}del {
+	text-decoration: line-through;
+}
+%#{$base-prefix}ins {
+	text-decoration: underline;
+}
+%#{$base-prefix}sub {
+	font-size: smaller;
+	vertical-align: sub;
+}
+%#{$base-prefix}sup {
+	font-size: smaller;
+	vertical-align: sup;
+}
+
+@mixin assets-p {
+	font-size: $typography-p-font-size;
+	font-weight: $typography-p-font-weight;
+	line-height: $typography-p-line-height;
+	font-family: unquote($typography-p-font-family);
+	max-width: $typography-p-max-width;
+	@include min-fontsize($typography-p-font-size-value,$typography-p-font-size-min);
+	@include max-fontsize($typography-p-font-size-value,$typography-p-font-size-max);
+}
+%#{$base-prefix}p {
+	@include assets-p;
+}
+
+%#{$base-prefix}blockquote {
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+
+@mixin assets-button-text {
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	line-height: $button-line-height;
+	font-family: unquote($button-font-family);
+	text-transform: $button-text-transform;
+}
+%#{$base-prefix}button-text {
+	@include assets-button-text;
+}
+
+@mixin assets-menu {
+	font-size: $typography-menu-font-size;
+	font-weight: $typography-menu-font-weight;
+	line-height: $typography-menu-line-height;
+	font-family: unquote($typography-menu-font-family);
+	@include min-fontsize($typography-menu-font-size-value,$typography-menu-font-size-min);
+	@include max-fontsize($typography-menu-font-size-value,$typography-menu-font-size-max);
+}
+%#{$base-prefix}menu {
+	@include assets-menu;
+}
+
+@mixin assets-menu-small {
+	font-size: $typography-menu-small-font-size;
+	font-weight: $typography-menu-small-font-weight;
+	line-height: $typography-menu-small-line-height;
+	font-family: unquote($typography-menu-small-font-family);
+	@include min-fontsize($typography-menu-small-font-size-value,$typography-menu-small-font-size-min);
+	@include max-fontsize($typography-menu-small-font-size-value,$typography-menu-small-font-size-max);
+}
+%#{$base-prefix}menu-small {
+	@include assets-menu;
+}
