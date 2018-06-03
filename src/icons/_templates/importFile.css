@@ -1,0 +1,18 @@
+// Import glyphs
+<% if(fonts.length > 0){ %>@import<% } %>
+<% for (var i = 0; i < fonts.length; i++) { %><% if(i == (fonts.length - 1)){ %>  "<%= fonts[i] %>/_icons";<% } else { %>  "<%= fonts[i] %>/_icons", <% } %>
+<% } %>//
+// Include fonts
+<% for (var i = 0; i < fonts.length; i++) { %>
+$<%= fonts[i] %>-font: "<%= fonts[i] %>"; //
+$<%= fonts[i] %>-font-name: "<%= fonts[i] %>"; //
+$<%= fonts[i] %>-font-family: #{$<%= fonts[i] %>-font},sans-serif; //
+// include <%= fonts[i] %> font
+@include font-include($<%= fonts[i] %>-font,$<%= fonts[i] %>-font-name,normal,normal);
+%<%= fonts[i] %>-font-family{ font-family: $<%= fonts[i] %>-font-family; }
+<% } %>//
+// Collect all fonts
+<% if(fonts.length > 0){ %>$icons-merged: map-collect(<% for (var i = 0; i < fonts.length; i++) { %><% if(i == (fonts.length - 1)){ %>$<%= fonts[i] %>-iconset<% } else { %>$<%= fonts[i] %>-iconset,<% } %><% } %>);<% } %>
+$icons: (
+  <% for (var i = 0; i < fonts.length; i++) { %><% if(i == (fonts.length - 1)){ %><%= fonts[i] %>: $<%= fonts[i] %>-iconset<% } else { %><%= fonts[i] %>: $<%= fonts[i] %>-iconset,<% } %><% } %>
+);

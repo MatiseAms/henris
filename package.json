@@ -7,18 +7,24 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "jest",
-		"sass-dist":
-			"node-sass scss/style.scss dist/style.min.css --output-style compressed",
-		"sass": "node-sass scss/style.scss dist/style.css",
-		"sass-watch": "node-sass scss/style.scss dist/style.css --watch",
+		"test": "node-sass test/index.scss test/output.css",
+		"sass": "node-sass src/scss/style.scss dist/style.css",
+		"sass-dist": "node-sass style.scss dist/style.min.css --output-style compressed",
+		"sass-watch": "node-sass style.scss dist/style.css --watch",
+		"sass-test": "node-sass ext.scss dist/ext.css",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings && npm run sass-watch",
 		"dist": "npm run settings && npm run sass && npm run sass-dist",
 		"build": "npm run settings && npm run sass",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run test && npm run build",
+		"icons": "icon-font-generator src/icons/_brands/*.svg -o dist"
 	},
-	"keywords": ["scss", "framework", "sass", "grid"],
+	"keywords": [
+		"scss",
+		"framework",
+		"sass",
+		"grid"
+	],
 	"author": "Sil van Diepen",
 	"license": "MIT",
 	"devDependencies": {
@@ -26,5 +32,8 @@
 		"flat": "^4.0.0",
 		"node-sass": "^4.9.0",
 		"postcss": "^6.0.22"
+	},
+	"dependencies": {
+		"sass-true": "^4.0.0"
 	}
 }

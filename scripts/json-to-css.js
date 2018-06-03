@@ -5,7 +5,7 @@ let fs = require("fs"),
 
 let delimiter = "-",
 	sourceFolder = "data",
-	distFolder = "scss/";
+	distFolder = "src/scss/";
 
 let fileTypes = [
 	{
