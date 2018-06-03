@@ -2060,10 +2060,6 @@
 /*   ✔ [assert-equal] Color should respond with the right color */
 /*  */
 /* Test: Color should respond with the right opacity */
-/*   ✖ FAILED: [assert-equal] Color should respond with the right opacity */
-/*     - Output: [color] rgba(16, 16, 16, 0.5) */
-/*     - Expected: [color] rgba(16, 16, 16, 0.55) */
-/*     - Module: Color [function] */
-/*     - Test: Color should respond with the right opacity */
+/*   ✔ [assert-equal] Color should respond with the right opacity */
 /*  */
 /*  */
