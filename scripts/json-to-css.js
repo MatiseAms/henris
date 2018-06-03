@@ -221,7 +221,7 @@ function createImport(files) {
 	files.forEach(function(file) {
 		code = code + '@import "' + file + '";\n';
 	});
-	console.log(code);
+	// console.log(code);
 
 	fileTypes.forEach(type => {
 		fs.writeFileSync(type.dest + "/_index." + type.type, code, function(err) {

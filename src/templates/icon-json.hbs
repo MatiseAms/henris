@@ -1,10 +1,15 @@
 {
 	"iconset": {
-		"name: "{{fontName}}",
-		"icons": [
-			{{#each codepoints}}
-			{	'{{@key}}': '{{this}}' },
-			{{/each}}
-		]
+		"title": "{{fontName}}",
+		"icons":  [{
+		{{#each codepoints}}
+			{{#if @last}}
+				"{{@key}}": "{{this}}"
+			{{else}}
+				"{{@key}}": "{{this}}",
+			{{/if}}
+		{{/each}}
+		}]
 	}
 }
+	
