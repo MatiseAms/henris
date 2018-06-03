@@ -4,9 +4,9 @@
 		"icons":  [{
 		{{#each codepoints}}
 			{{#if @last}}
-				"{{@key}}": "{{this}}"
+				"{{@key}}": "\\\{{this}}"
 			{{else}}
-				"{{@key}}": "{{this}}",
+				"{{@key}}": "\\\{{this}}",
 			{{/if}}
 		{{/each}}
 		}]
