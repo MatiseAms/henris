@@ -92,7 +92,7 @@ const writeFontfiles = function(font, settings) {
 	console.log(path.join(settings.dest, settings.fontName));
 	let dirExist = mkDirByPathSync(path.join(settings.dest, settings.fontName));
 	settings.types.forEach(function(type) {
-		fs.writeFile(
+		fs.writeFileSync(
 			path.join(settings.dest, settings.fontName, settings.fontName + "." + type),
 			font[type],
 			function(err, result) {
@@ -121,7 +121,7 @@ const createJsonData = function(options) {
 		},
 		options.templateOptions
 	);
-	fs.writeFile(options.jsonDest, template(ctx));
+	fs.writeFileSync(options.jsonDest, template(ctx));
 };
 const logFiles = function(font, updated) {
 	//
