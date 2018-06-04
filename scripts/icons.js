@@ -71,6 +71,11 @@ const writeFontfiles = function(font, settings) {
 	// console.log(settings);
 	// console.log(settings.dest);
 	let dirExist = true;
+	let dirDir = path.join(__dirname, "../dist");
+	if (!fs.existsSync(dirDir)) {
+		fs.mkdirSync(dirDir);
+	}
+	//
 	let fontsDir = path.join(__dirname, "../" + settings.dest);
 	if (!fs.existsSync(fontsDir)) {
 		fs.mkdirSync(fontsDir);
