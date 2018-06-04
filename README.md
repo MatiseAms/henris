@@ -48,6 +48,17 @@ All code is beautyfied using [Prettier](https://www.prettier.io)
 
 Add additional notes about how to deploy this on a live system
 
+## Browser Support
+
+Henri's lma uses autoprefixer to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Henri's is compatible with recent versions of:
+
+* Safari
+* Chrome
+* Firefox
+* Opera
+* Edge
+* Internet Explorer (10+) is only partially supported.
+
 ## Built With
 
 * [Node-sass](https://sass-lang.com/) - Sass language compiler
