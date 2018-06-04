@@ -6,9 +6,15 @@ const fs = require("fs");
 const path = require("path");
 const webfontsGenerator = require("webfonts-generator");
 const handlebars = require("handlebars");
-
 const _ = require("underscore");
 
+//
+// Arguments
+//
+let customArgs = {
+	src: process.argv[2] || "icons",
+	dist: process.argv[3] || "fonts"
+};
 ///
 // Find folders
 ///
@@ -177,7 +183,7 @@ const makeCodenames = function(index, files) {
 	}
 	return names;
 };
-const generateFonts = function(dir, index) {
+const generateFonts = function(dir, customArgs, index) {
 	let files = getFiles(dir);
 	///
 	// Create settings
@@ -187,7 +193,7 @@ const generateFonts = function(dir, index) {
 			startCodePoint: parseInt("0x" + String.fromCharCode(97 + index) + "001"),
 			types: ["svg", "ttf", "woff", "woff2", "eot"],
 			files: files,
-			dest: "dist/fonts/",
+			dest: customArgs.dist,
 			fontName: dirName(dir),
 			writeFiles: false,
 			codepoints: makeCodepoints(index, files),
@@ -199,6 +205,7 @@ const generateFonts = function(dir, index) {
 				"../data/iconset-" + dirName(dir) + ".json"
 			)
 		};
+		// console.log(font);
 		///
 		// generate fonts and data
 		///
@@ -252,8 +259,8 @@ const generateFonts = function(dir, index) {
 // Generate settings
 console.log("\x1b[32m" + "Generating fonts from svg files");
 
-getDirectories("src/icons").forEach(function(dir, index) {
-	generateFonts(dir, index);
+getDirectories(customArgs.src).forEach(function(dir, index) {
+	generateFonts(dir, customArgs, index);
 });
 
 // console.log("\x1b[32m" + "0" + "\x1b[m" + " icon fonts created");
