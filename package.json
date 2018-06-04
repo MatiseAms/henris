@@ -1,7 +1,7 @@
 {
 	"name": "henris",
 	"version": "0.0.1",
-	"description": "SCSS framework",
+	"description": "SCSS framework - by Matise",
 	"main": "index.scss",
 	"directories": {
 		"test": "test"
