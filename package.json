@@ -9,8 +9,7 @@
 	"scripts": {
 		"test": "node-sass test/index.scss test/output.css",
 		"sass": "node-sass index.scss dist/style.css",
-		"sass-dist":
-			"node-sass index.scss dist/style.min.css --output-style compressed",
+		"sass-dist": "node-sass index.scss dist/style.min.css --output-style compressed",
 		"sass-watch": "node-sass index.scss dist/style.css --watch",
 		"sass-test": "node-sass ext.scss dist/ext.css",
 		"settings": "node scripts/json-to-css.js",
@@ -23,7 +22,12 @@
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs"
 	},
-	"keywords": ["scss", "framework", "sass", "grid"],
+	"keywords": [
+		"scss",
+		"framework",
+		"sass",
+		"grid"
+	],
 	"author": "Sil van Diepen",
 	"license": "MIT",
 	"devDependencies": {

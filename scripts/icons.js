@@ -67,35 +67,38 @@ const setTabs = function(value) {
 	}
 };
 
+const mkDirByPathSync = function(targetDir, {isRelativeToScript = false} = {}) {
+	const sep = path.sep;
+	const initDir = path.isAbsolute(targetDir) ? sep : '';
+	const baseDir = isRelativeToScript ? __dirname : '.';
+	targetDir.split(sep).reduce((parentDir, childDir) => { 
+		const curDir = path.resolve(baseDir, parentDir, childDir);
+		try {
+			fs.mkdirSync(curDir);
+			console.log(`Directory ${curDir} created!`);
+			// newDir = false;
+		} catch (err) {
+			if (err.code !== 'EEXIST') {
+				throw err;
+			}
+			console.log(`Directory ${curDir} already exists!`);
+	 	}	 
+		return curDir;
+	}, initDir);
+}
+
+
 const writeFontfiles = function(font, settings) {
-	// console.log(settings);
-	// console.log(settings.dest);
-	let dirExist = true;
-	let dirDir = path.join(__dirname, "../dist");
-	if (!fs.existsSync(dirDir)) {
-		fs.mkdirSync(dirDir);
-	}
-	//
-	let fontsDir = path.join(__dirname, "../" + settings.dest);
-	if (!fs.existsSync(fontsDir)) {
-		fs.mkdirSync(fontsDir);
-	}
-	//
-	let newDir = path.join(__dirname, "../" + settings.dest, settings.fontName);
-	if (!fs.existsSync(newDir)) {
-		fs.mkdirSync(newDir);
-		dirExist = false;
-	}
+	console.log(path.join(settings.dest, settings.fontName));
+	let dirExist = mkDirByPathSync(path.join(settings.dest, settings.fontName));
 	settings.types.forEach(function(type) {
 		fs.writeFile(
-			path.join(newDir, settings.fontName + "." + type),
+			path.join(settings.dest, settings.fontName, settings.fontName + "." + type),
 			font[type],
 			function(err, result) {
 				if (err) {
 					console.log(err);
-					// throw err;
-				} else {
-					// console.log(join(newDir, settings.fontName + "." + type));
+					throw err;
 				}
 			}
 		);
