@@ -1,7 +1,6 @@
 ///
 // imports
 ///
-const columnify = require("columnify");
 const fs = require("fs");
 const path = require("path");
 const webfontsGenerator = require("webfonts-generator");
