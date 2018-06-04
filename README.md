@@ -1,3 +1,17 @@
+---
+home: true
+actionText: Get Started →
+actionLink: /guide/
+features:
+- title: Simplicity First
+  details: Easy setup with a full styleable SCSS framework
+- title: Scss powered
+  details: Include it in your package and it just works. Power up your project development
+- title: Small or big
+  details: Fast and small, can be even smaller or bigger. It's up to you. 
+footer: MIT Licensed | Copyright © 2018-present Matise B.V.
+---
+
 # Henri's
 
 Another SCSS framework to make css development a lot faster and easier.
