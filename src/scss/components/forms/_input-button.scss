@@ -1,0 +1,13 @@
+input[type="button"],
+input[type="submit"] {
+	margin-top: 1rem;
+	&:not(.button) {
+		@extend .button;
+	}
+}
+label {
+	& + input[type="button"],
+	& + input[type="submit"] {
+		margin-top: 1rem;
+	}
+}

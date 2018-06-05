@@ -1,0 +1,43 @@
+<h1>
+	<%= fontFamilyName %>
+		<% if (version) { %><small>version <%= version %></small>
+			<% } %>
+</h1>
+
+<div class="icons" id="icons">
+	<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+		<div class="icons__item" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i>
+			<%= classPrefix %>
+				<%= glyph %>
+		</div>
+		<% } %>
+</div>
+
+<% if (addLigatures) { %>
+	<div class="ligature-icons" style="display:none">
+		<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx]; %>
+			<%= glyph %>
+				<% } %>
+	</div>
+	<% } %>
+
+		<h1>Usage</h1>
+		<pre><code>&lt;i class=&quot;<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><span id="name">name</span>&quot;&gt;&lt;/i&gt;</code></pre>
+		<% if (addLigatures) { %>
+			<pre><code>&lt;i class=&quot;ligature-icons&quot;&gt;<span id="name2">name</span>&lt;/i&gt;</code></pre>
+			<% } %>
+
+
+				<script>
+					(function() {
+						document.getElementById('icons').onclick = function(e) {
+							e = e || window.event;
+							var name = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
+							document.getElementById('name').innerHTML = name;
+							<% if (addLigatures) { %>
+							document.getElementById('name2').innerHTML = name;
+							<% } %>
+						}
+					})();
+
+				</script>

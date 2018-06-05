@@ -1,0 +1,23 @@
+dl {
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	dt,
+	dd {
+		display: inline-block;
+		min-width: 200px;
+		flex-grow: 1;
+		padding: 1rem 0;
+	}
+	dt {
+		width: 40%;
+	}
+	dd {
+		width: 60%;
+	}
+	dt + dd {
+		//	padding-top: 0;
+	}
+}

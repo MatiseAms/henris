@@ -1,0 +1,126 @@
+fieldset {
+	margin: 0;
+	padding: 0;
+	// display: flex;
+	// flex-flow: row;
+	// flex-wrap: wrap;
+	border: none;
+	& + fieldset {
+		margin-top: grid(0.5);
+		border-top: 1px solid color(Black, 0.1);
+		@include min-("margin-top", 0.5, 16);
+	}
+	label {
+		display: inline-block;
+		margin-top: 1rem;
+		padding-top: 0.75rem;
+		width: 33%;
+		flex-shrink: 0;
+		@media #{$small-only} {
+			width: 100%;
+		}
+		&:nth-child(1) {
+			&,
+			& + input,
+			& + select & + textarea {
+				margin-top: 0;
+			}
+		}
+	}
+	.input-group,
+	input,
+	textarea,
+	select {
+		display: inline-block;
+		width: 50%;
+		@media #{$small-only} {
+			width: 100%;
+		}
+	}
+	label + .input-group,
+	label + input,
+	label + textarea,
+	label + select {
+		margin-top: 1rem;
+
+		// margin-left: 1rem;
+	}
+	// textarea + label,
+	// select + label,
+	// input + label {
+	// 	&:before {
+	// 		//content: '';
+	// 		margin-top: 1rem;
+	// 		display: block;
+	// 		clear: both;
+	// 	}
+	// }
+}
+form {
+	fieldset {
+		div:not([class]) {
+			& + div:not([class]) {
+				margin-top: 1rem;
+			}
+		}
+		& + fieldset {
+			padding-top: 1rem;
+		}
+		.extra {
+			background-color: color(Offwhite);
+			padding: 1rem;
+		}
+	}
+}
+
+details {
+	summary {
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+		outline: none;
+		&:focus {
+			outline: none;
+		}
+		& + fieldset {
+			margin-top: 1rem;
+		}
+	}
+	transition: max-height 0.3s;
+	max-height: 50vh;
+	&:not([open]) {
+		max-height: 1rem;
+	}
+	&[open] {
+	}
+	& + details {
+		margin-top: 1rem;
+	}
+	summary::-webkit-details-marker {
+		display: none;
+	}
+	summary:after {
+		display: block;
+		content: "\276E";
+		width: 14px;
+		height: 14px;
+		line-height: 14px;
+		text-align: center;
+		float: left;
+		transition: transform 0.2s;
+		margin-right: 4px;
+		transform: scale(1, 1) rotate(90deg);
+	}
+	&[open] summary:after {
+		transform: scale(1, -1) rotate(90deg);
+	}
+}
+fieldset {
+	legend {
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+	}
+}

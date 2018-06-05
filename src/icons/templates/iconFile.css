@@ -1,0 +1,5 @@
+/* <%= baseClass %> Iconset */<% if (iconsStyles) { %>
+$<%= baseClass %>-iconset: (
+<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>    "<%= glyphs[glyphIdx] %>":"<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>"<% if((glyphIdx + 1) < glyphs.length) { %>,<% } %>
+<% } %>);
+<% } %>

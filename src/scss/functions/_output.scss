@@ -1,0 +1,40 @@
+//
+// To make it easier what and what not to create in the system
+// we made the output function. The output function will check
+// the value from the given output if true or false in the settings.
+//
+
+@function output($args: ()) {
+	$doOutput: true;
+	/*
+        Check the overall setting. If false, do not output any css
+    */
+	@if $output-css == false {
+		$doOutput: false;
+	}
+
+	/*
+        Go through all $arguments
+    */
+	@each $arg in $args {
+		@if variable-exists(output-#{$arg}) {
+			@if map-get($output, $arg) == false {
+				$doOutput: false;
+			}
+		} @else {
+			@warn "#{$arg} does not exist in the settings.";
+		}
+	}
+
+	/*
+		The overruler to create all the css
+	*/
+	@if $output-full == true {
+		$doOutput: true;
+	}
+
+	/*
+        In the end, determine if this prop should return anything.
+    */
+	@return $doOutput;
+}

@@ -1,0 +1,23 @@
+@if output("ease-classes") {
+	$temp: ();
+	@each $ease-name, $ease-value in $ease {
+		.ease-#{$ease-name} {
+			&,
+			&:before,
+			&:after {
+				animation-timing-function: cubic-bezier(#{unquote($ease-value)});
+				transition-timing-function: cubic-bezier(#{unquote($ease-value)});
+			}
+			$temp: join($temp, $ease-name);
+		}
+	}
+}
+
+@mixin ease($ease-name, $property: null) {
+	@if length(map-get($ease, $ease-name) > 0) {
+		animation-timing-function: cubic-bezier(#{unquote($ease-value)});
+		transition-timing-function: cubic-bezier(#{unquote($ease-value)});
+	} @else {
+		@warn "#{$ease-name} doesn't exist";
+	}
+}

@@ -1,0 +1,45 @@
+%default-input {
+	background: color(White);
+	border: 1px solid color(Black, 0.1);
+	font-size: 1rem;
+	line-height: 1rem;
+	border-radius: $base-border-radius;
+	padding: 0.75rem 0.75rem;
+	min-width: 10rem;
+	max-width: 100%;
+	-webkit-appearance: none;
+	&::placeholder {
+		color: color(Black, 0.1);
+		opacity: 1;
+		transition: filter 0.3s;
+	}
+	&:focus {
+		outline: 2px solid color(Blue, 0.25);
+	}
+	&:focus,
+	&:focus:hover {
+		&::placeholder {
+			filter: blur(5px);
+		}
+	}
+	&:hover {
+		border: 1px solid color(Black, 0.2);
+		&::placeholder {
+			color: color(Black, 0.2);
+			filter: blur(0px);
+		}
+	}
+
+	&--ghost {
+		background-color: transparent;
+		color: currentColor;
+		border: 1px solid red;
+		@each $color-name, $color-value in $colors {
+			.bg-#{to-lower-case($color-name)} &,
+			.bg-#{$color-name} & {
+				color: contra($color-name);
+				border-color: contra($color-name);
+			}
+		}
+	}
+}

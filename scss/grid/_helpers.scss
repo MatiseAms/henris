@@ -1,9 +1,0 @@
-@if output("grid-helpers") {
-	.align-center {
-		display: flex;
-		align-items: center;
-	}
-	.column-reverse {
-		flex-direction: row-reverse;
-	}
-}

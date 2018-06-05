@@ -1,0 +1,4 @@
+img:not([alt]),
+img[alt=''] {
+	outline: 5px solid red;
+}

@@ -1,30 +1,43 @@
 {
-	"name": "henri",
-	"version": "0.0.1",
-	"description": "SCSS framework",
+	"name": "henris",
+	"version": "0.1.0",
+	"description": "SCSS framework - by Matise",
 	"main": "index.scss",
 	"directories": {
 		"test": "test"
 	},
 	"scripts": {
-		"test": "jest",
-		"sass-dist":
-			"node-sass scss/style.scss dist/style.min.css --output-style compressed",
-		"sass": "node-sass scss/style.scss dist/style.css",
-		"sass-watch": "node-sass scss/style.scss dist/style.css --watch",
+		"test": "node-sass test/index.scss test/output.css",
+		"sass": "node-sass index.scss dist/style.css",
+		"sass-dist": "node-sass index.scss dist/style.min.css --output-style compressed",
+		"sass-watch": "node-sass index.scss dist/style.css --watch",
+		"sass-test": "node-sass ext.scss dist/ext.css",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings && npm run sass-watch",
 		"dist": "npm run settings && npm run sass && npm run sass-dist",
-		"build": "npm run settings && npm run sass",
-		"prepublishOnly": "npm run build"
+		"build": "npm run icons && npm run settings && npm run sass",
+		"prepublishOnly": "npm run test && npm run build",
+		"icons": "node scripts/icons.js src/icons dist/fonts",
+		"icons-generator": "icon-font-generator src/icons/_brands/*.svg -o dist",
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs"
 	},
-	"keywords": ["scss", "framework", "sass", "grid"],
+	"keywords": [
+		"scss",
+		"framework",
+		"sass",
+		"grid"
+	],
 	"author": "Sil van Diepen",
 	"license": "MIT",
 	"devDependencies": {
 		"autoprefixer": "^8.5.2",
 		"flat": "^4.0.0",
 		"node-sass": "^4.9.0",
-		"postcss": "^6.0.22"
+		"postcss": "^6.0.22",
+		"webfonts-generator": "^0.4.0"
+	},
+	"dependencies": {
+		"sass-true": "^4.0.0"
 	}
 }

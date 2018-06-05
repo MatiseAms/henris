@@ -1,0 +1,23 @@
+.button-group {
+
+	width: calc(100% + #{$base-space});
+	position: relative; left: -#{$base-space / 2};
+	[class^='button'],
+	[class*=' button']{
+
+		margin: $base-space / 2;
+
+		& + [class^='button'],
+		& + [class*=' button']{
+			margin: $base-space / 2;
+		}
+		// @media #{$small-only} {
+		// 	display: block;
+		// 	& + [class^='button'],
+		// 	& + [class*=' button']{
+		// 		margin-left: 0;
+		// 		margin-top: $base-space;
+		// 	}
+		// }
+	}
+}
