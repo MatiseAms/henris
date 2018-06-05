@@ -1,0 +1,13 @@
+
+input.hidden {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		& + label {
+			&:before,
+			&:after {
+				content: none;
+			}
+		}
+	}
