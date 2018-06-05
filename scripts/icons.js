@@ -17,22 +17,26 @@ let customArgs = {
 ///
 // Find folders
 ///
-
+//
 // Filters
+//
 const isDirectory = source => fs.lstatSync(source).isDirectory();
 const isFile = source => fs.lstatSync(source).isFile();
 const isSvg = name => name.split(".")[name.split(".").length - 1] === "svg";
 const isEnabled = name =>
 	name.split("/")[name.split("/").length - 1].charAt(0) !== "_";
-
+//
 // Get FS functions
+//
 const getDirectories = source =>
 	fs
 		.readdirSync(source)
 		.map(name => path.join(source, name))
 		.filter(isDirectory)
 		.filter(isEnabled);
-
+//
+// Get FS files
+//
 const getFiles = source =>
 	fs
 		.readdirSync(source)
@@ -40,57 +44,67 @@ const getFiles = source =>
 		.filter(isFile)
 		.filter(isSvg)
 		.filter(isEnabled);
-
+//
+// Get the nice directory name
+//
 const dirName = function(dir) {
 	return dir.split("/")[dir.split("/").length - 1];
 };
+//
+// Get the nice file name
+//
 const fileName = function(dir) {
 	return dir.split("/")[dir.split("/").length - 1].replace(".svg", "");
 };
-
+//
+// Create tabs for the list of files
+//
 const setTabs = function(value) {
 	let chars = fileName(value).length;
-	// if (chars < 3) {
-	// 	return "\t\t\t\t";
-	// }
 	if (chars < 8) {
 		return "\t\t\t";
 	}
 	if (chars < 16) {
 		return "\t\t";
 	}
-	if (chars < 20) {
-		return "\t";
-	}
-	if (chars >= 20) {
+	else {
 		return "\t";
 	}
 };
-
+//
+// Create folders
+//
 const mkDirByPathSync = function(targetDir, {isRelativeToScript = false} = {}) {
 	const sep = path.sep;
 	const initDir = path.isAbsolute(targetDir) ? sep : '';
 	const baseDir = isRelativeToScript ? __dirname : '.';
+	const createdFolders = [];
 	targetDir.split(sep).reduce((parentDir, childDir) => { 
 		const curDir = path.resolve(baseDir, parentDir, childDir);
 		try {
 			fs.mkdirSync(curDir);
-			console.log(`Directory ${curDir} created!`);
+			createdFolders.add[childDir];
+			console.log(`Directory ${childDir} created!`);
 			// newDir = false;
 		} catch (err) {
 			if (err.code !== 'EEXIST') {
 				throw err;
 			}
-			console.log(`Directory ${curDir} already exists!`);
+		//	console.log(`Directory ${curDir} already exists!`);
 	 	}	 
 		return curDir;
 	}, initDir);
+
 }
 
-
 const writeFontfiles = function(font, settings) {
-	console.log(path.join(settings.dest, settings.fontName));
+	// 
+	// Create folders if they dont exist
+	//
 	let dirExist = mkDirByPathSync(path.join(settings.dest, settings.fontName));
+	// 
+	// Create files for each type
+	//
 	settings.types.forEach(function(type) {
 		fs.writeFileSync(
 			path.join(settings.dest, settings.fontName, settings.fontName + "." + type),
@@ -105,6 +119,7 @@ const writeFontfiles = function(font, settings) {
 	});
 	console.log("\n");
 };
+
 const createJsonData = function(options) {
 	let source = fs.readFileSync(options.jsonTemplate, "utf8");
 	let template = handlebars.compile(source);
@@ -123,6 +138,7 @@ const createJsonData = function(options) {
 	);
 	fs.writeFileSync(options.jsonDest, template(ctx));
 };
+
 const logFiles = function(font, updated) {
 	//
 	// The file name and how many files
