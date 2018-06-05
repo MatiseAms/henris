@@ -27,6 +27,10 @@ Install the package using npm
 ```
 npm install henris
 ```
+or
+```
+yarn add henris
+```
 
 **Import in project**
 
