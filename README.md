@@ -6,6 +6,11 @@
 
 Another SCSS framework to make css development a lot faster and easier.
 
+[![Node version](https://img.shields.io/github/issues-raw/matiseAms/henris.svg?style=flat)](https://github.com/matiseAms/henris/issues)
+[![Node version](https://img.shields.io/npm/l/henris.svg?style=flat)](https://github.com/MatiseAms/henris/blob/master/LICENSE.MD)
+[![Node version](https://img.shields.io/david/matiseAms/henris.svg?style=flat)](https://github.com/matiseAms/henris/)
+[![Node version](https://img.shields.io/npm/v/henris.svg?style=flat)](https://www.npmjs.com/package/henris)
+
 
 ## Getting Started
 
