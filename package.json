@@ -7,7 +7,7 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "sass test/index.scss test/output.css",
+		"test": "node-sass test/index.scss test/output.css",
 		"sass": "sass index.scss dist/style.css",
 		"node-sass": "node-sass index.scss dist/style.node.css",
 		"node-sass-watch": "node-sass index.scss dist/style.node.css --watch",
@@ -17,7 +17,7 @@
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings && npm run sass-watch",
 		"dist": "npm run settings && npm run sass && npm run sass-dist",
-		"build": "npm run icons && npm run settings && npm run sass && npm run node-sass",
+		"build": "npm run icons && npm run settings && npm run sass",
 		"prepublishOnly": "npm run test && npm run build",
 		"icons": "node scripts/icons.js src/icons dist/fonts",
 		"icons-generator": "icon-font-generator src/icons/_brands/*.svg -o dist",
