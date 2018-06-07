@@ -31,7 +31,31 @@
 			"grid-non-breaking-column": false,
 			"grid-columns": true,
 			"grid-cssgrid": false,
-			"grid-row-breakpoints": true
+			"grid-row-breakpoints": true,
+			"component-blockquote": true,
+			"component-button": true,
+			"component-code": true,
+			"component-color": true,
+			"component-content": true,
+			"component-content-link-filetypes": false,
+			"component-content-p-notices": false,
+			"component-content-list": true,
+			"component-content-line-height": true,
+			"component-content-hr": true,
+			"Component-content-default-link": true,
+			"component-detail-list": true,
+			"component-ease": true,
+			"component-forms": true,
+			"component-helpers": true,
+			"component-reset": true,
+			"component-reset-meyerweb": true,
+			"component-reset-extra": true,
+			"component-horizontal-rule": true,
+			"component-icon": true,
+			"component-print": true,
+			"component-reminder": true,
+			"component-section": true,
+			"component-table": true
 		}
 	]
 }
