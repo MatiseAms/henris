@@ -1,13 +1,12 @@
 @mixin browser($browser, $version: null) {
-	@if $browser == 'safari' {
+	@if $browser == "safari" {
 		@if $version {
 			@if $version == 9 {
 				@supports (overflow: -webkit-marquee) and (justify-content: inherit) {
 					@content;
 				}
 			}
-		}
-		@elseif $version == '6>7' {
+		} @else if $version == "6>7" {
 			@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-color-index: 0) {
 				@content;
 			}
@@ -18,22 +17,20 @@
 				}
 			}
 		}
-	}
-	@elseif $browser == 'firefox' {
+	} @else if $browser == "firefox" {
 		@-moz-document url-prefix() {
 			@content;
 		}
-	}
-	@elseif $browser == 'chrome' {
+	} @else if $browser == "chrome" {
 		/* Chrome 22-28+ */
-		@if $version == '22-28' {
+		@if $version == "22-28" {
 			@media screen and(-webkit-min-device-pixel-ratio:0) {
 				@content;
 			}
 		}
 
 		/* Chrome 29+ */
-		@elseif $version == '29+' {
+		@else if $version == "29+" {
 			@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
 				@content;
 			}

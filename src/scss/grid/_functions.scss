@@ -73,8 +73,7 @@
 	@if $max > 0 {
 		$mq: "only screen and (min-width: #{strip-unit($min)}px) and (max-width: #{strip-unit($max)}px)";
 		@return $mq;
-	}
-	@elseif $min > 0 {
+	} @else if $min > 0 {
 		$mq: "only screen and (min-width: #{strip-unit($min)}px)";
 		@return $mq;
 	}
