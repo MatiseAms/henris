@@ -1,17 +1,17 @@
 $heading-font-weights: (
-	'Light': $typography-font-weight-light,
-	'Regular': $typography-font-weight-regular,
-	'Bold': $typography-font-weight-bold
+	"Light": $typography-font-weight-light,
+	"Regular": $typography-font-weight-regular,
+	"Bold": $typography-font-weight-bold
 ); //
 $body-font-weights: (
-	'Light': $typography-font-weight-light,
-	'Regular': $typography-font-weight-regular,
-	'Medium': $typography-font-weight-medium,
-	'Bold': $typography-font-weight-bold
+	"Light": $typography-font-weight-light,
+	"Regular": $typography-font-weight-regular,
+	"Medium": $typography-font-weight-medium,
+	"Bold": $typography-font-weight-bold
 ); //
 $code-font-weights: (
-	'Regular': $typography-font-weight-regular,
-	'Bold': $typography-font-weight-bold
+	"Regular": $typography-font-weight-regular,
+	"Bold": $typography-font-weight-bold
 ); //
 //
 $font-light: map-get($heading-font-weights, Light); //
@@ -24,8 +24,8 @@ $font-bold: map-get($heading-font-weights, Bold); //
 	Use font-include for single fonts
 	and font-list for a list using the $*-font-weights list
 */
-$heading-font: 'RobotoCondensed'; //
-$heading-font-name: 'RobotoCondensed-'; //
+$heading-font: "RobotoCondensed"; //
+$heading-font-name: "RobotoCondensed-"; //
 $heading-font-family: #{$heading-font}, serif; //
 //
 /* embed sing font weight */
@@ -39,8 +39,8 @@ $heading-font-family: #{$heading-font}, serif; //
 	text-transform: uppercase;
 }
 //
-$body-font: 'Roboto'; //
-$body-font-name: 'Roboto-'; //
+$body-font: "Roboto"; //
+$body-font-name: "Roboto-"; //
 $body-font-family: #{$body-font}, sans-serif; //
 /* embed sing font weight */
 //@include font-include($body-font,$body-font-name,normal,normal);
@@ -53,8 +53,8 @@ $body-font-family: #{$body-font}, sans-serif; //
 	font-weight: normal;
 }
 //
-$code-font: 'RobotoMono'; //
-$code-font-name: 'RobotoMono-'; //
+$code-font: "RobotoMono"; //
+$code-font-name: "RobotoMono-"; //
 $code-font-family: #{$code-font}, Monaco, courier, monospace, sans-serif; //
 /* embed sing font weight */
 //@include font-include($body-font,$body-font-name,normal,normal);

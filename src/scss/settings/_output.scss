@@ -29,6 +29,30 @@ $output-grid-non-breaking-column: false !default; //
 $output-grid-columns: true !default; //
 $output-grid-cssgrid: false !default; //
 $output-grid-row-breakpoints: true !default; //
+$output-component-blockquote: true !default; //
+$output-component-button: true !default; //
+$output-component-code: true !default; //
+$output-component-color: true !default; //
+$output-component-content: true !default; //
+$output-component-content-link-filetypes: false !default; //
+$output-component-content-p-notices: false !default; //
+$output-component-content-list: true !default; //
+$output-component-content-line-height: true !default; //
+$output-component-content-hr: true !default; //
+$output-component-content-default-link: true !default; //
+$output-component-detail-list: true !default; //
+$output-component-ease: true !default; //
+$output-component-forms: true !default; //
+$output-component-helpers: true !default; //
+$output-component-reset: true !default; //
+$output-component-reset-meyerweb: true !default; //
+$output-component-reset-extra: true !default; //
+$output-component-horizontal-rule: true !default; //
+$output-component-icon: true !default; //
+$output-component-print: true !default; //
+$output-component-reminder: true !default; //
+$output-component-section: true !default; //
+$output-component-table: true !default; //
 $output: (
 	"css": true, 
 	"full": false, 
@@ -60,5 +84,29 @@ $output: (
 	"grid-non-breaking-column": false, 
 	"grid-columns": true, 
 	"grid-cssgrid": false, 
-	"grid-row-breakpoints": true
+	"grid-row-breakpoints": true, 
+	"component-blockquote": true, 
+	"component-button": true, 
+	"component-code": true, 
+	"component-color": true, 
+	"component-content": true, 
+	"component-content-link-filetypes": false, 
+	"component-content-p-notices": false, 
+	"component-content-list": true, 
+	"component-content-line-height": true, 
+	"component-content-hr": true, 
+	"Component-content-default-link": true, 
+	"component-detail-list": true, 
+	"component-ease": true, 
+	"component-forms": true, 
+	"component-helpers": true, 
+	"component-reset": true, 
+	"component-reset-meyerweb": true, 
+	"component-reset-extra": true, 
+	"component-horizontal-rule": true, 
+	"component-icon": true, 
+	"component-print": true, 
+	"component-reminder": true, 
+	"component-section": true, 
+	"component-table": true
 ) !default; //
