@@ -1,4 +1,6 @@
-img:not([alt]),
-img[alt=''] {
-	outline: 5px solid red;
+@include output("components-reminder") {
+	img:not([alt]),
+	img[alt=""] {
+		outline: 5px solid red;
+	}
 }

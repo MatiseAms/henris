@@ -1,4 +1,5 @@
-
-.padding-square{
-	padding-bottom: 100%;
+@include output("components-helpers") {
+	.padding-square {
+		padding-bottom: 100%;
+	}
 }

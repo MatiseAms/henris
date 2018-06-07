@@ -31,6 +31,7 @@
 @if output(button-default) {
 	button {
 		-webkit-appearance: none;
+		appearance: none;
 	}
 
 	.button,
