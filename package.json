@@ -35,9 +35,8 @@
 		"flat": "^4.0.0",
 		"node-sass": "^4.9.0",
 		"postcss": "^6.0.22",
-		"webfonts-generator": "^0.4.0"
-	},
-	"dependencies": {
+		"vuepress": "^0.10.1",
+		"webfonts-generator": "^0.4.0",
 		"sass-true": "^4.0.0"
 	}
 }
