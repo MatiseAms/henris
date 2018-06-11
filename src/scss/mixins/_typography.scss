@@ -1,106 +1,72 @@
-@mixin font-face(
+@mixin font-include(
 	$name,
-	$font-files,
-	$eot: false,
+	$file,
 	$weight: normal,
-	$style: normal
+	$type: normal,
+	$files: ("eot", "woff", "svg", "ttf"),
+	$path: $base-font-path
 ) {
-	$iefont: unquote("#{$eot}?#iefix");
-	@font-face {
-		font-family: quote($name);
-		@if $eot {
-			src: font-url($eot);
-			$font-files: font-url($iefont) unquote("format('eot')"), $font-files;
-		}
-		src: $font-files;
-		@if $weight {
-			font-weight: $weight;
-		}
-		@if $style {
-			font-style: $style;
-		}
-	}
-}
+	$src: ();
 
-@mixin font-include($name, $file, $weight: normal, $type: normal) {
-	//	@include font-face("#{$name}", font-files("#{$file}.woff", "#{$file}.ttf", "#{$file}.svg", "#{$file}.otf"), "#{$file}.eot", $weight, $type);
+	@if contains($files, "eot") {
+		$value: "url('#{$path}/#{$file}.eot?#iefix') format('embedded-opentype')";
+		$src: append($src, $value);
+	} @else {
+		@debug "doesnt contain eot";
+	}
+	@if contains($files, "woff") {
+		$value: "url('#{$path}/#{$file}.woff') format('woff')";
+		$src: append($src, $value);
+	}
+	@if contains($files, "woff2") {
+		$value: "url('#{$path}/#{$file}.woff2') format('woff2')";
+		$src: append($src, $value);
+	}
+	@if contains($files, "ttf") {
+		$value: "url('#{$path}/#{$file}.ttf') format('truetype')";
+		$src: append($src, $value);
+	}
+	@if contains($files, "otf") {
+		$value: "url('#{$path}/#{$file}.otf') format('otf')";
+		$src: append($src, $value);
+	}
+	@if contains($files, "svg") {
+		$value: "url('#{$path}/#{$file}.svg##{$name}') format('svg')";
+		$src: append($src, $value);
+	}
+
 	@font-face {
 		font-family: $name;
-		src: url("#{$base-font-path}/#{$file}.eot?#iefix")
-				format("embedded-opentype"),
-			/* IE6-IE8 */ url("#{$base-font-path}/#{$file}.woff") format("woff"),
-			/* Pretty Modern Browsers */ url("#{$base-font-path}/#{$file}.ttf")
-				format("truetype"),
-			/* Safari, Android, iOS */ url("#{$base-font-path}/#{$file}.svg##{$name}")
-				format("svg"); /* Legacy iOS */
+		src: to-string($src, ",");
 		font-weight: $weight;
-		font-style: $type;
+		font-style: unquote($type);
 	}
 }
 
-@mixin font-list($title, $name, $weights, $type: normal) {
-	$italic: "";
-	@if $type == "italic" {
-		$italic: "Italic";
-	}
-	@for $i from 1 through length($weights) {
-		//		$weight: unquote("#{nth($weights,$i)}");
-		$weight: nth($weights, $i);
-		@include font-include(
-			$title,
-			#{$name}#{nth($weight, 1)}#{$italic},
-			nth($weight, 2),
-			$type
-		);
-	}
-}
-
-@mixin font-size($size) {
-	font-size: $size;
-	font-size: calculateRem($size);
-}
-
-@mixin font(
-	$font-size,
-	$line-height: $font-size,
-	$color: inherit,
-	$font-family: inherit
+@mixin font-list(
+	$title,
+	$name,
+	$weights,
+	$types: ("normal"),
+	$files: ("eot", "woff", "svg", "ttf"),
+	$path: $base-font-path
 ) {
-	font-size: rem-calc($font-size);
-	line-height: rem-calc($line-height);
-	color: $color;
-	font-family: $font-family;
-}
-
-@mixin baseline($font-size, $scale: 2) {
-	// rhythm unit
-	$rhythm: $base-line-height * $font-size / $scale;
-
-	// number of rhythm units that can fit the font-size
-	$lines: ceil(($font-size + 0.001px) / $rhythm);
-
-	// calculate the new line-height
-	$line-height: $rhythm * $lines / $font-size;
-
-	// use the results
-	font-size: $font-size;
-	line-height: $line-height;
-	$baseline-distance: ($line-height - $cap-height) / 2;
-
-	// METHOD 1
-	/////////////////
-
-	// this method can relatively move down elements you may not want to
-	// position: relative;
-	// top: $baseline-distance + em;
-
-	// METHOD 2
-	/////////////////
-
-	// if you use this mixin only on elements that have one direction margins
-	// http://csswizardry.com/2012/06/single-direction-margin-declarations/
-	// you can use this method with no worries.
-	// this method assumes the direction is down and the margin is $base-line-height
-	padding-top: $baseline-distance + em;
-	margin-bottom: $base-line-height - $baseline-distance + em;
+	@each $type in $types {
+		$italic: "";
+		@if $type == "italic" {
+			$italic: "Italic";
+		}
+		@for $i from 1 through length($weights) {
+			//		$weight: unquote("#{nth($weights,$i)}");
+			$weight: nth($weights, $i);
+			@include font-include(
+				$title,
+				unquote("#{$name}-#{nth($weight, 1)}#{$italic}"),
+				nth($weight, 2),
+				$type,
+				$files,
+				$path
+			);
+		}
+	}
 }
