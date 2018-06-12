@@ -1,11 +1,26 @@
+let getMenu = function() {
+	// let menu = ["/", "/scss"];
+	let menu = ["scss/typography", "scss/color"];
+	return menu;
+};
+
 module.exports = {
 	title: "Henri's",
 	description: "Just playing around",
 	themeConfig: {
-		repo: 'matiseams/henris',
-		editLinks: true,
-		docsDir: 'docs',
-		lastUpdated: 'Last Updated',
-		editLinkText: 'Edit this page on GitHub'
+		nav: [
+			{ text: "Home", link: "/" },
+			{ text: "Matise", link: "https://matise.nl" }
+		],
+		sidebar: {
+			title: "SCSS",
+			collapsable: false,
+			children: [
+				"/",
+				["/scss/typography", "Typography"],
+				["/scss/color", "Color"],
+				["/scss/grid", "Grid"]
+			]
+		}
 	}
-}
+};
