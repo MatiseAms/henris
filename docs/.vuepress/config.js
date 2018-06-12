@@ -14,7 +14,7 @@ module.exports = {
 		],
 		sidebar: {
 			title: "SCSS",
-			collapsable: false,
+			collapsable: true,
 			children: [
 				"/",
 				["/scss/typography", "Typography"],

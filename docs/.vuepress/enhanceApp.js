@@ -5,7 +5,7 @@ export default ({
 	siteData // site metadata
 }) => {
 	// ...apply enhancements to the app
-	console.log(router);
+	// console.log(router);
 	let newRoute = {};
 	let routes = router.options.routes;
 	function setName(value) {
@@ -25,9 +25,9 @@ export default ({
 			// console.log("kudt");
 			// console.log(path[a]);
 			if (index == 1) {
-				console.log(path[1]);
+				// console.log(path[1]);
 				if (path[1].indexOf(".html") > 0) {
-					console.log("this is the last");
+					// console.log("this is the last");
 				}
 				if (!newRoute[setName(path[1])]) {
 					newRoute[setName(path[1])] = {
@@ -43,6 +43,6 @@ export default ({
 		// //
 	}
 	setTimeout(function() {
-		console.log(newRoute);
+		// console.log(newRoute);
 	}, 1000);
 };
