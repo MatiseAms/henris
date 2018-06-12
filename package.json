@@ -16,7 +16,7 @@
 		"sass-test": "sass ext.scss dist/ext.css",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings && npm run sass-watch",
-		"dist": "npm run settings && npm run sass && npm run sass-dist",
+		"dist": "npm run build",
 		"build": "npm run icons && npm run settings && npm run sass",
 		"prepublishOnly": "npm run test && npm run build",
 		"icons": "node scripts/icons.js src/icons dist/fonts",
@@ -36,6 +36,7 @@
 		"autoprefixer": "^8.5.2",
 		"flat": "^4.0.0",
 		"postcss": "^6.0.22",
+		"vuepress": "^0.10.1",
 		"webfonts-generator": "^0.4.0"
 	},
 	"dependencies": {

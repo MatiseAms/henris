@@ -6,10 +6,8 @@ export default ({
 }) => {
 	// ...apply enhancements to the app
 	console.log(router);
-
 	let newRoute = {};
 	let routes = router.options.routes;
-
 	function setName(value) {
 		let newValue;
 		if (value === "") {
@@ -19,14 +17,10 @@ export default ({
 		}
 		return newValue;
 	}
-
 	for (let i = 0; i < routes.length; i++) {
 		// console.log(routes[i].path);
-
 		let path = routes[i].path.split("/");
-
 		// console.log(path.length);
-
 		for (let index = 0; index < path.length; index++) {
 			// console.log("kudt");
 			// console.log(path[a]);
@@ -35,7 +29,6 @@ export default ({
 				if (path[1].indexOf(".html") > 0) {
 					console.log("this is the last");
 				}
-
 				if (!newRoute[setName(path[1])]) {
 					newRoute[setName(path[1])] = {
 						title: `${path[1]}`,
