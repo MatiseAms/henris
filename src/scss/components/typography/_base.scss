@@ -1,18 +1,21 @@
-//@import "embed";
-/* -------------------------------------------------- */
-/*				@extend default typographic elements
-/* -------------------------------------------------- */
+// -------------------------------------------------- */
+//				@extend default typographic elements
+// -------------------------------------------------- */
 body,
 html {
 	font-size: 16px;
 }
 
-//a, a:visited, a:link, a.link:visited, .alink:visited{
-//	color: inherit;
-//}
-/* -------------------------------------------------- */
-/*				@extend default typographic elements
-/* -------------------------------------------------- */
+a,
+a:visited,
+a:link,
+a.link:visited,
+.alink:visited {
+	color: inherit;
+}
+// -------------------------------------------------- */
+//				@extend default typographic elements
+// -------------------------------------------------- */
 
 h1 {
 	@extend %#{$base-prefix}h1 !optional;

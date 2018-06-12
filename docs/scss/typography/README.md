@@ -27,38 +27,38 @@ _\* is required_
 
 ### example
 
-```
+```scss
 $font-primary: (
-  font-family: (
-    Graphik,
-    sans-serif
-  ),
-  load: true,
-  weights: (
-    "Light": 100,
-    "Regular": 400,
-    "Medium": 500,
-    "Bold": 600,
-    "Black": 800
-  ),
-  path: "/fonts",
-  files: (
-    "woff2",
-    "woff",
-    "ttf",
-    "eot"
-  ),
-  use: (
-    "h1",
-    "h3",
-    "h4",
-    "span.text",
-    "#section"
-  ),
-  types: (
-      'normal',
-      'italic'
-  )
+	font-family: (
+		Graphik,
+		sans-serif
+	),
+	load: true,
+	weights: (
+		"Light": 100,
+		"Regular": 400,
+		"Medium": 500,
+		"Bold": 600,
+		"Black": 800
+	),
+	path: "/fonts",
+	files: (
+		"woff2",
+		"woff",
+		"ttf",
+		"eot"
+	),
+	use: (
+		"h1",
+		"h3",
+		"h4",
+		"span.text",
+		"#section"
+	),
+	types: (
+		"normal",
+		"italic"
+	)
 );
 ```
 
