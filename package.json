@@ -36,6 +36,7 @@
 		"autoprefixer": "^8.5.2",
 		"flat": "^4.0.0",
 		"postcss": "^6.0.22",
+		"vuepress": "^0.10.1",
 		"webfonts-generator": "^0.4.0"
 	},
 	"dependencies": {
