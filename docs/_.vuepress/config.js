@@ -1,5 +1,5 @@
 let getMenu = function() {
-	let menu = ["/", "/scss", ["/page-b", "Explicit link text"]];
+	let menu = ["/", "/scss"];
 	// let menu = ['scss/typography','scss/color'];
 	return menu;
 };
