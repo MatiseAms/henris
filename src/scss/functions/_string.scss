@@ -2,13 +2,14 @@
 // String Replace
 // =============================================================================
 
-@function str-replace($haystack, $needle, $replace: '') {
+@function str-replace($haystack, $needle, $replace: "") {
 	// First make sure needle nor haystack are empty values;
 	@if type-of($haystack) == null OR type-of($needle) == null {
+		@warn "You havent give a string to replace";
 		@return $haystack;
 	} @else {
 		// And check if the needle and haystack are actually strings, otherwise warn.
-		@if type-of($haystack) == 'string' AND type-of($needle) == 'string' {
+		@if type-of($haystack) == "string" AND type-of($needle) == "string" {
 			$index: str-index($haystack, $needle);
 			@if $index {
 				@return str-slice($haystack, 1, $index - 1) + $replace +
@@ -19,12 +20,41 @@
 					);
 			}
 		}
-		@if type-of($haystack) != 'string' {
+		@if type-of($haystack) != "string" {
 			@warn '#{$haystack}(#{type-of($haystack)}) is not a string.';
 		}
-		@if type-of($needle) != 'string' {
+		@if type-of($needle) != "string" {
 			@warn '#{$needle}(#{type-of($needle)}) is not a string.';
 		}
 	}
 	@return $haystack;
+}
+
+@function to-string($string) {
+	@if type-of($string) == "string" {
+		@return $string;
+	} @else if type-of("#{$string}") == "string" {
+		@return "#{$string}";
+	}
+}
+@function str-split($string, $separator) {
+	// empty array/list
+	$split-arr: ();
+	// first index of separator in string
+	$index: str-index($string, $separator);
+	// loop through string
+	@while $index != null {
+		// get the substring from the first character to the separator
+		$item: str-slice($string, 1, $index - 1);
+		// push item to array
+		$split-arr: append($split-arr, $item);
+		// remove item and separator from string
+		$string: str-slice($string, $index + 1);
+		// find new index of separator
+		$index: str-index($string, $separator);
+	}
+	// add the remaining string to list (the last item)
+	$split-arr: append($split-arr, $string);
+
+	@return $split-arr;
 }

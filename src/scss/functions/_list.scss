@@ -6,11 +6,14 @@
 	}
 	@return $collection;
 }
+@function contains($list, $item) {
+	@return index($list, $item) != null;
+}
 
-@function str-to-list($string, $separator: '.', $startAt: 1) {
-	$string: str-replace($string, '__', '.'); //
-	$string: str-replace($string, '--', '.'); //
-	$string: str-replace($string, '_', '.'); //
+@function str-to-list($string, $separator: ".", $startAt: 1) {
+	$string: str-replace($string, "__", "."); //
+	$string: str-replace($string, "--", "."); //
+	$string: str-replace($string, "_", "."); //
 
 	$workStr: str-slice($string, $startAt);
 	$list: ();
@@ -33,7 +36,7 @@
 	@return join($value, $list);
 }
 
-@function to-string($list, $glue: '', $is-nested: false) {
+@function to-string($list, $glue: "", $is-nested: false) {
 	$result: null;
 
 	@for $i from 1 through length($list) {

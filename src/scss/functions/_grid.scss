@@ -1,4 +1,0 @@
-@function grid-size($value) {
-	$size: map-get($grid-size, $value);
-	@return $size;
-}

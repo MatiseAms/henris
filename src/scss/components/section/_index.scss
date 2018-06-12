@@ -1,8 +1,10 @@
-section {
-	&.basic {
-		padding: grid(2) 0;
-		@media #{$small-only} {
-			padding: 2rem;
+@include output("components-section") {
+	section {
+		&.basic {
+			padding: grid(2) 0;
+			@media #{$small-only} {
+				padding: 2rem;
+			}
 		}
 	}
 }

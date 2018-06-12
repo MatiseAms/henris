@@ -1,5 +1,7 @@
-@media print {
-	[href]:not([href^='#']):after {
-		content: ' ('attr(href)') ';
+@include output("components-print") {
+	@media print {
+		[href]:not([href^="#"]):after {
+			content: " (" attr(href) ") ";
+		}
 	}
 }

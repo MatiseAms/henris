@@ -1,35 +1,37 @@
-blockquote {
-	position: relative;
-	display: inline-block;
-	border: 1px solid color(Black, 0.2);
-	padding: 1rem 2rem;
-	@extend %p;
-	&:before,
-	&:after {
-		font-size: 2rem;
-		font-family: serif;
-		display: block;
-		position: absolute;
-		height: 2rem;
-		width: 2rem;
-		color: color(Black, 0.2);
-		text-align: center;
-		line-height: 3rem;
-	}
-	&:before {
-		top: 0;
-		left: 0;
-		content: "\201c";
-	}
-	&:after {
-		bottom: 0;
-		right: 0;
-		content: "\201d";
-	}
-	cite {
-		color: currentColor;
-		a {
+@include output(("components", "component-blockquote")) {
+	blockquote {
+		position: relative;
+		display: inline-block;
+		border: 1px solid color(Black, 0.2);
+		padding: 1rem 2rem;
+		@extend %p;
+		&:before,
+		&:after {
+			font-size: 2rem;
+			font-family: serif;
+			display: block;
+			position: absolute;
+			height: 2rem;
+			width: 2rem;
+			color: color(Black, 0.2);
+			text-align: center;
+			line-height: 3rem;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+			content: "\201c";
+		}
+		&:after {
+			bottom: 0;
+			right: 0;
+			content: "\201d";
+		}
+		cite {
 			color: currentColor;
+			a {
+				color: currentColor;
+			}
 		}
 	}
 }

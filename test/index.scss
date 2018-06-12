@@ -1,5 +1,5 @@
 @import "../node_modules/sass-true/sass/true";
-@import "src/scss/style.scss";
+@import "../index.scss";
 
 // Check if the grid function works properly
 @include test-module("Grid [function]") {

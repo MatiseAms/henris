@@ -1,3 +1,5 @@
-.anim-transform {
-	will-change: transform;
+@include output("components-helpers") {
+	.anim-transform {
+		will-change: transform;
+	}
 }

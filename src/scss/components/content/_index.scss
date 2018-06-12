@@ -1,127 +1,137 @@
-/* --------------------------------------------- */
-/*	Styled links when not used for other use	*/
-/* ------------------------------------------- */
+@include output(("components", "component-content")) {
+	/* --------------------------------------------- */
+	/*	Styled links when not used for other use	*/
+	/* ------------------------------------------- */
 
-a:not([class])[href] {
-	color: currentColor;
-	text-decoration: none;
-	display: inline-block;
-	border-bottom: 2px solid currentColor;
-	&:hover {
-		animation: linkHover 0.2s;
-	}
-}
-@keyframes linkHover {
-	0% {
-		transform: scale(1);
-	}
-	75% {
-		transform: scale(1.05);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-
-/* ------------------------- */
-/*	The horizontal rule   	*/
-/* ----------------------- */
-
-hr {
-	height: 1px;
-	background-color: currentColor;
-	color: currentColor;
-	border: none;
-	margin: 1rem 0;
-	padding: 0;
-}
-
-/* --------------------------------- */
-/*	Sytling specific for content	*/
-/* ------------------------------- */
-
-.content {
-	line-height: 1.5;
-}
-
-/* ----------------------------- */
-/*	Ordered & Unordered lists	*/
-/* --------------------------- */
-
-ul,
-ol {
-	&:not([class]) {
-		li {
-			position: relative;
-			line-height: 2;
-			&:before {
-				position: absolute;
-				right: 100%;
-				transform: translateX(100%);
+	@include output("component-content-default-link") {
+		a:not([class])[href] {
+			color: currentColor;
+			text-decoration: none;
+			display: inline-block;
+			border-bottom: 2px solid currentColor;
+			&:hover {
+				animation: linkHover 0.2s;
+			}
+		}
+		@keyframes linkHover {
+			0% {
+				transform: scale(1);
+			}
+			75% {
+				transform: scale(1.05);
+			}
+			100% {
+				transform: scale(1);
 			}
 		}
 	}
-}
-ul:not([class]) {
-	li {
-		padding-left: 1.5rem;
-		&:before {
-			content: "\2014 ";
+
+	/* ------------------------- */
+	/*	The horizontal rule   	*/
+	/* ----------------------- */
+
+	@include output("component-content-hr") {
+		hr {
+			height: 1px;
+			background-color: currentColor;
+			color: currentColor;
+			border: none;
+			margin: 1rem 0;
+			padding: 0;
 		}
 	}
-}
-ol:not([class]) {
-	> li {
-		padding-left: 1.5rem;
-		&:before {
-			font-size: rem(12);
-			font-weight: bold;
-			text-align: left;
-			line-height: 2rem;
-			display: block;
+
+	/* --------------------------------- */
+	/*	Sytling specific for content	*/
+	/* ------------------------------- */
+
+	@include output("component-content-line-height") {
+		.content {
+			line-height: 1.5;
 		}
 	}
-}
-ol:not([class]) {
-	counter-reset: level1;
-	> li {
-		counter-increment: level1;
-		&:before {
-			content: counter(level1) ".";
-		}
+
+	@include output("component-content-list") {
+		/* ----------------------------- */
+		/*	Ordered & Unordered lists	*/
+		/* --------------------------- */
+
+		ul,
 		ol {
-			counter-reset: level2;
-			> li {
-				counter-increment: level2;
-				padding-left: 2rem;
+			&:not([class]) {
+				li {
+					position: relative;
+					line-height: 2;
+					&:before {
+						position: absolute;
+						right: 100%;
+						transform: translateX(100%);
+					}
+				}
+			}
+		}
+		ul:not([class]) {
+			li {
+				padding-left: 1.5rem;
 				&:before {
-					content: counter(level1) "." counter(level2) ".";
+					content: "\2014 ";
+				}
+			}
+		}
+		ol:not([class]) {
+			> li {
+				padding-left: 1.5rem;
+				&:before {
+					font-size: rem(12);
+					font-weight: bold;
+					text-align: left;
+					line-height: 2rem;
+					display: block;
+				}
+			}
+		}
+		ol:not([class]) {
+			counter-reset: level1;
+			> li {
+				counter-increment: level1;
+				&:before {
+					content: counter(level1) ".";
 				}
 				ol {
-					counter-reset: level3;
+					counter-reset: level2;
 					> li {
-						counter-increment: level3;
+						counter-increment: level2;
+						padding-left: 2rem;
 						&:before {
-							content: counter(level1) "." counter(level2) "." counter(level3)
-								". ";
+							content: counter(level1) "." counter(level2) ".";
 						}
 						ol {
-							counter-reset: level4;
+							counter-reset: level3;
 							> li {
-								padding-left: 3rem;
-								counter-increment: level4;
+								counter-increment: level3;
 								&:before {
 									content: counter(level1) "." counter(level2) "."
-										counter(level3) "." counter(level4) ". ";
+										counter(level3) ". ";
 								}
 								ol {
-									counter-reset: level5;
+									counter-reset: level4;
 									> li {
-										counter-increment: level5;
+										padding-left: 3rem;
+										counter-increment: level4;
 										&:before {
 											content: counter(level1) "." counter(level2) "."
-												counter(level3) "." counter(level4) "." counter(level5)
-												". ";
+												counter(level3) "." counter(level4) ". ";
+										}
+										ol {
+											counter-reset: level5;
+											> li {
+												counter-increment: level5;
+												&:before {
+													content: counter(level1) "." counter(level2) "."
+														counter(level3) "." counter(level4) "."
+														counter(level5) ". ";
+												}
+											}
 										}
 									}
 								}
@@ -132,125 +142,134 @@ ol:not([class]) {
 			}
 		}
 	}
-}
 
-/* --------------------- */
-/*  Special notices 	*/
-/* ------------------- */
+	/* --------------------- */
+	/*  Special notices 	*/
+	/* ------------------- */
 
-p {
-	&.error,
-	&.success,
-	&.notice {
-		&:before {
-			margin-right: 10px;
-			content: "";
-			width: 1rem;
-			height: 1rem;
-			display: inline-block;
-			text-align: center;
-			line-height: 1rem;
-			color: color(White);
-			border-radius: 3px;
+	@include output("component-content-p-notices") {
+		p {
+			&.error,
+			&.success,
+			&.notice {
+				&:before {
+					margin-right: 10px;
+					content: "";
+					width: 1rem;
+					height: 1rem;
+					display: inline-block;
+					text-align: center;
+					line-height: 1rem;
+					color: color(White);
+					border-radius: 3px;
+				}
+			}
+			&.error:before {
+				content: "\2717";
+				background-color: color(Red, 0.75);
+				border-bottom: 1px solid darken(Red, 10);
+			}
+			&.notice:before {
+				content: "\2071";
+				background-color: color(Blue, 0.75);
+				border-bottom: 1px solid darken(Blue, 10);
+			}
+			&.success:before {
+				content: "\2713";
+				background-color: color(Green, 0.75);
+				border-bottom: 1px solid darken(Green, 10);
+			}
 		}
 	}
-	&.error:before {
-		content: "\2717";
-		background-color: color(Red, 0.75);
-		border-bottom: 1px solid darken(Red, 10);
-	}
-	&.notice:before {
-		content: "\2071";
-		background-color: color(Blue, 0.75);
-		border-bottom: 1px solid darken(Blue, 10);
-	}
-	&.success:before {
-		content: "\2713";
-		background-color: color(Green, 0.75);
-		border-bottom: 1px solid darken(Green, 10);
-	}
-}
+	@include output("component-content-link-filetypes") {
+		/* --------------------- */
+		/*  Link to filetypes 	*/
+		/* ------------------- */
 
-/* --------------------- */
-/*  Link to filetypes 	*/
-/* ------------------- */
+		a {
+			&[href^=".doc"],
+			&[href*=".doc"],
+			&[href^=".pdf"],
+			&[href*=".pdf"],
+			&[href^=".xls"],
+			&[href*=".xls"] {
+				margin-left: 1.5rem;
+				position: relative;
+				&:before {
+					position: absolute;
+					left: -1.25rem;
+					top: 50%;
+					transform: translateY(-50%);
+					content: "";
+					font-weight: bold;
+					display: inline-block;
+					width: 12px;
+					height: 1rem;
+					line-height: 1rem;
+					border: 2px solid currentColor;
+					opacity: 0.5;
+					background-image: linear-gradient(currentColor, currentColor);
+					background-size: 5px 5px;
+					background-position: top right;
+					background-repeat: no-repeat;
+					clip-path: polygon(
+						0 0,
+						calc(100% - 6px) 0,
+						100% 6px,
+						100% 100%,
+						0 100%
+					);
+				}
+			}
 
-a {
-	&[href^=".doc"],
-	&[href*=".doc"],
-	&[href^=".pdf"],
-	&[href*=".pdf"],
-	&[href^=".xls"],
-	&[href*=".xls"] {
-		margin-left: 1.5rem;
-		position: relative;
-		&:before {
-			position: absolute;
-			left: -1.25rem;
-			top: 50%;
-			transform: translateY(-50%);
-			content: "";
-			font-weight: bold;
-			display: inline-block;
-			width: 12px;
-			height: 1rem;
-			line-height: 1rem;
-			border: 2px solid currentColor;
-			opacity: 0.5;
-			background-image: linear-gradient(currentColor, currentColor);
-			background-size: 5px 5px;
-			background-position: top right;
-			background-repeat: no-repeat;
-			clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
-		}
-	}
-
-	&[href^=".rss"],
-	&[href*=".rss"] {
-		margin-left: 1.5rem;
-		position: relative;
-		&:before {
-			content: "";
-			display: inline-block;
-			position: absolute;
-			left: -1.25rem;
-			top: 50%;
-			width: 1rem;
-			height: 1rem;
-			transform: translateY(-50%);
-			background-image: radial-gradient(
-					transparent 20%,
-					red 20%,
-					red 50%,
-					transparent 50%
-				),
-				radial-gradient(transparent 20%, red 20, red 50%, transparent 50%);
-			background-size: 12px 12px, 12px 12px;
-			background-position: left center, right center;
-			background-repeat: no-repeat;
-		}
-	}
-	&[href^="mailto:"],
-	&[href*="mailto:"] {
-		margin-left: 1.75rem;
-		position: relative;
-		&:before {
-			position: absolute;
-			left: -1.5rem;
-			top: 50%;
-			transform: translateY(-50%);
-			content: "";
-			font-weight: bold;
-			display: inline-block;
-			width: 1rem;
-			height: 12px;
-			line-height: 1rem;
-			border: 2px solid currentColor;
-			opacity: 0.5;
-			background-image: linear-gradient(currentColor, currentColor);
-			background-size: 5px 5px;
-			background-position: top right;
-			background-repeat: no-repeat;
+			&[href^=".rss"],
+			&[href*=".rss"] {
+				margin-left: 1.5rem;
+				position: relative;
+				&:before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					left: -1.25rem;
+					top: 50%;
+					width: 1rem;
+					height: 1rem;
+					transform: translateY(-50%);
+					background-image: radial-gradient(
+							transparent 20%,
+							red 20%,
+							red 50%,
+							transparent 50%
+						),
+						radial-gradient(transparent 20%, red 20, red 50%, transparent 50%);
+					background-size: 12px 12px, 12px 12px;
+					background-position: left center, right center;
+					background-repeat: no-repeat;
+				}
+			}
+			&[href^="mailto:"],
+			&[href*="mailto:"] {
+				margin-left: 1.75rem;
+				position: relative;
+				&:before {
+					position: absolute;
+					left: -1.5rem;
+					top: 50%;
+					transform: translateY(-50%);
+					content: "";
+					font-weight: bold;
+					display: inline-block;
+					width: 1rem;
+					height: 12px;
+					line-height: 1rem;
+					border: 2px solid currentColor;
+					opacity: 0.5;
+					background-image: linear-gradient(currentColor, currentColor);
+					background-size: 5px 5px;
+					background-position: top right;
+					background-repeat: no-repeat;
+				}
+			}
 		}
 	}
 }

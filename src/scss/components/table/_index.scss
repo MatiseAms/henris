@@ -1,73 +1,75 @@
-table {
-	//	background-color: color(Offwhite, 0.5);
-	border-radius: $base-border-radius;
-	border-collapse: collapse;
-	& + table {
-		margin-top: grid(1);
-		@include min-("margin-top", 1, 30);
-	}
-	&.full-width {
-		width: 100%;
-	}
-	caption {
-		border: 1px solid currentColor;
-		padding: 1rem;
-		font-weight: bold;
-	}
-	td,
-	th {
-		padding: 1rem;
-		border-bottom: 1px solid currentColor;
-		font-size: rem(14);
-	}
-	th {
-		text-align: left;
-		// background-color: color(Blue);
-		font-weight: bold;
-	}
-	tr {
-		// &:last-child {
-		// 	> td,
-		// 	> th {
-		// 		border-bottom: none;
-		// 	}
-		// }
-		&:hover {
-			td {
-				//			background-color: color(White);
-			}
+@include output("components-table") {
+	table {
+		//	background-color: color(Offwhite, 0.5);
+		border-radius: $base-border-radius;
+		border-collapse: collapse;
+		& + table {
+			margin-top: grid(1);
+			@include min-("margin-top", 1, 30);
 		}
-	}
-	thead,
-	tbody,
-	tfoot {
-		&:last-child {
-			th:last-child {
-				td,
-				th {
-					border-bottom: none;
-				}
-			}
-		}
-	}
-	&.responsive {
-		@media #{$small-only} {
-			display: block;
+		&.full-width {
 			width: 100%;
+		}
+		caption {
+			border: 1px solid currentColor;
+			padding: 1rem;
+			font-weight: bold;
 		}
 		td,
 		th {
-			@media #{$small-only} {
-				display: block;
-				border: none;
-				&:last-child {
-					border-bottom: 1px solid currentColor;
+			padding: 1rem;
+			border-bottom: 1px solid currentColor;
+			font-size: rem(14);
+		}
+		th {
+			text-align: left;
+			// background-color: color(Blue);
+			font-weight: bold;
+		}
+		tr {
+			// &:last-child {
+			// 	> td,
+			// 	> th {
+			// 		border-bottom: none;
+			// 	}
+			// }
+			&:hover {
+				td {
+					//			background-color: color(White);
 				}
 			}
 		}
-		tr {
+		thead,
+		tbody,
+		tfoot {
+			&:last-child {
+				th:last-child {
+					td,
+					th {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		&.responsive {
 			@media #{$small-only} {
 				display: block;
+				width: 100%;
+			}
+			td,
+			th {
+				@media #{$small-only} {
+					display: block;
+					border: none;
+					&:last-child {
+						border-bottom: 1px solid currentColor;
+					}
+				}
+			}
+			tr {
+				@media #{$small-only} {
+					display: block;
+				}
 			}
 		}
 	}

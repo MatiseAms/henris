@@ -16,7 +16,7 @@
 	border-bottom: var(--button-depth,2px) solid darken(color(Blue), 10%);
 	text-decoration: none;
 	&:hover {
-		background-color: darken(color(Blue), 10%);
+		background-color: darken(Blue, 10%);
 		border-bottom: var(--button-depth,2px) solid darken(color(Blue), 20%);
 	}
 	&:focus {
@@ -31,6 +31,7 @@
 @if output(button-default) {
 	button {
 		-webkit-appearance: none;
+		appearance: none;
 	}
 
 	.button,
@@ -207,13 +208,13 @@
 				}
 			}
 		}
-		&__border-style--solid {
+		&__border-style--solid { 
 			border-style: solid; 
 		}
 		&__border-style--dotted {
 			border-style: dotted; 
 		}
-		&__border-style--dashed{
+		&__border-style--dashed {
 			border-style: dashed; 
 		}
 	}

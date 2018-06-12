@@ -1,6 +1,6 @@
 {
 	"name": "henris",
-	"version": "0.1.1",
+	"version": "0.2.3",
 	"description": "SCSS framework - by Matise",
 	"main": "index.scss",
 	"directories": {
@@ -8,10 +8,12 @@
 	},
 	"scripts": {
 		"test": "node-sass test/index.scss test/output.css",
-		"sass": "node-sass index.scss dist/style.css",
-		"sass-dist": "node-sass index.scss dist/style.min.css --output-style compressed",
-		"sass-watch": "node-sass index.scss dist/style.css --watch",
-		"sass-test": "node-sass ext.scss dist/ext.css",
+		"sass": "sass index.scss dist/style.css",
+		"node-sass": "node-sass index.scss dist/style.node.css",
+		"node-sass-watch": "node-sass index.scss dist/style.node.css --watch",
+		"sass-dist": "sass index.scss dist/style.min.css --output-style compressed",
+		"sass-watch": "sass index.scss dist/style.css --watch",
+		"sass-test": "sass ext.scss dist/ext.css",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings && npm run sass-watch",
 		"dist": "npm run settings && npm run sass && npm run sass-dist",
@@ -33,11 +35,12 @@
 	"devDependencies": {
 		"autoprefixer": "^8.5.2",
 		"flat": "^4.0.0",
-		"node-sass": "^4.9.0",
 		"postcss": "^6.0.22",
 		"webfonts-generator": "^0.4.0"
 	},
 	"dependencies": {
+		"node-sass": "^4.9.0",
+		"sass": "^1.5.1",
 		"sass-true": "^4.0.0"
 	}
 }

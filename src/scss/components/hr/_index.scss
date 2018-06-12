@@ -1,4 +1,6 @@
-hr {
-	color: color(Black, 0.25);
-	margin: grid(1);
+@include output("components-horizontal-rule") {
+	hr {
+		color: color(Black, 0.25);
+		margin: grid(1);
+	}
 }
