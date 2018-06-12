@@ -66,20 +66,22 @@ const setTabs = function(value) {
 	}
 	if (chars < 16) {
 		return "\t\t";
-	}
-	else {
+	} else {
 		return "\t";
 	}
 };
 //
 // Create folders
 //
-const mkDirByPathSync = function(targetDir, {isRelativeToScript = false} = {}) {
+const mkDirByPathSync = function(
+	targetDir,
+	{ isRelativeToScript = false } = {}
+) {
 	const sep = path.sep;
-	const initDir = path.isAbsolute(targetDir) ? sep : '';
-	const baseDir = isRelativeToScript ? __dirname : '.';
+	const initDir = path.isAbsolute(targetDir) ? sep : "";
+	const baseDir = isRelativeToScript ? __dirname : ".";
 	const createdFolders = [];
-	targetDir.split(sep).reduce((parentDir, childDir) => { 
+	targetDir.split(sep).reduce((parentDir, childDir) => {
 		const curDir = path.resolve(baseDir, parentDir, childDir);
 		try {
 			fs.mkdirSync(curDir);
@@ -87,27 +89,31 @@ const mkDirByPathSync = function(targetDir, {isRelativeToScript = false} = {}) {
 			console.log(`Directory ${childDir} created!`);
 			// newDir = false;
 		} catch (err) {
-			if (err.code !== 'EEXIST') {
-				throw err;
-			}
-		//	console.log(`Directory ${curDir} already exists!`);
-	 	}	 
+			// mkDirByPathSync(targetDir);
+			// if (err.code !== "EEXIST") {
+			// 	throw err;
+			// }
+			//	console.log(`Directory ${curDir} already exists!`);
+		}
 		return curDir;
 	}, initDir);
-
-}
+};
 
 const writeFontfiles = function(font, settings) {
-	// 
+	//
 	// Create folders if they dont exist
 	//
 	let dirExist = mkDirByPathSync(path.join(settings.dest, settings.fontName));
-	// 
+	//
 	// Create files for each type
 	//
 	settings.types.forEach(function(type) {
 		fs.writeFileSync(
-			path.join(settings.dest, settings.fontName, settings.fontName + "." + type),
+			path.join(
+				settings.dest,
+				settings.fontName,
+				settings.fontName + "." + type
+			),
 			font[type],
 			function(err, result) {
 				if (err) {
