@@ -23,13 +23,13 @@ Installation is simple, just npm install the package and go!
 
 Install the package using npm
 
-```
+```bash
 npm install henris
 ```
 
 or
 
-```
+```bash
 yarn add henris
 ```
 
@@ -51,7 +51,7 @@ Or in another file where you don't want the full output, just the functions.
 
 Tests will check the main functionalities of the package. Install the package locally and run
 
-```
+```bash
 npm run test
 ```
 
