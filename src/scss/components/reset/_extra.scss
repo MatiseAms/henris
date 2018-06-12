@@ -1,4 +1,4 @@
-@include output("compent-reset-extra") {
+@if output("components-reset-extra") {
 	ul,
 	li {
 		display: inline-block;

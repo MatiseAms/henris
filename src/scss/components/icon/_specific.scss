@@ -1,7 +1,8 @@
-@include output("components-icons-specific") {
-	@mixin icon-specific-style($icon-name) {
-		@if $icon-name == "glasses" {
-			letter-spacing: -1.5px;
-		}
+@mixin icon-specific-style($icon-name) {
+	@if $icon-name == "glasses" {
+		letter-spacing: -1.5px;
 	}
+}
+@if output("components-icons-specific") {
+	// yet to be filled
 }

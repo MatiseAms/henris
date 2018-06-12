@@ -1,6 +1,4 @@
-@include output(
-	("components", "component-blockquote", "component-button-group")
-) {
+@if output(("components", "components-blockquote", "components-button-group")) {
 	.button-group {
 		width: calc(100% + #{$base-space});
 		position: relative;

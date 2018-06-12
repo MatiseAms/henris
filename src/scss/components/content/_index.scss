@@ -1,28 +1,14 @@
-@include output(("components", "component-content")) {
+@if output(("components", "components-content")) {
 	/* --------------------------------------------- */
 	/*	Styled links when not used for other use	*/
 	/* ------------------------------------------- */
 
-	@include output("component-content-default-link") {
+	@if output("components-content-default-link") {
 		a:not([class])[href] {
 			color: currentColor;
 			text-decoration: none;
 			display: inline-block;
-			border-bottom: 2px solid currentColor;
-			&:hover {
-				animation: linkHover 0.2s;
-			}
-		}
-		@keyframes linkHover {
-			0% {
-				transform: scale(1);
-			}
-			75% {
-				transform: scale(1.05);
-			}
-			100% {
-				transform: scale(1);
-			}
+			font-style: italic;
 		}
 	}
 
@@ -30,7 +16,7 @@
 	/*	The horizontal rule   	*/
 	/* ----------------------- */
 
-	@include output("component-content-hr") {
+	@if output("components-content-hr") {
 		hr {
 			height: 1px;
 			background-color: currentColor;
@@ -45,13 +31,13 @@
 	/*	Sytling specific for content	*/
 	/* ------------------------------- */
 
-	@include output("component-content-line-height") {
+	@if output("components-content-line-height") {
 		.content {
 			line-height: 1.5;
 		}
 	}
 
-	@include output("component-content-list") {
+	@if output("components-content-list") {
 		/* ----------------------------- */
 		/*	Ordered & Unordered lists	*/
 		/* --------------------------- */
@@ -72,6 +58,7 @@
 		}
 		ul:not([class]) {
 			li {
+				display: block;
 				padding-left: 1.5rem;
 				&:before {
 					content: "\2014 ";
@@ -80,6 +67,7 @@
 		}
 		ol:not([class]) {
 			> li {
+				display: block;
 				padding-left: 1.5rem;
 				&:before {
 					font-size: rem(12);
@@ -110,8 +98,12 @@
 							> li {
 								counter-increment: level3;
 								&:before {
-									content: counter(level1) "." counter(level2) "."
-										counter(level3) ". ";
+									content: counter(level1)
+										"."
+										counter(level2)
+										"."
+										counter(level3)
+										". ";
 								}
 								ol {
 									counter-reset: level4;
@@ -119,17 +111,30 @@
 										padding-left: 3rem;
 										counter-increment: level4;
 										&:before {
-											content: counter(level1) "." counter(level2) "."
-												counter(level3) "." counter(level4) ". ";
+											content: counter(level1)
+												"."
+												counter(level2)
+												"."
+												counter(level3)
+												"."
+												counter(level4)
+												". ";
 										}
 										ol {
 											counter-reset: level5;
 											> li {
 												counter-increment: level5;
 												&:before {
-													content: counter(level1) "." counter(level2) "."
-														counter(level3) "." counter(level4) "."
-														counter(level5) ". ";
+													content: counter(level1)
+														"."
+														counter(level2)
+														"."
+														counter(level3)
+														"."
+														counter(level4)
+														"."
+														counter(level5)
+														". ";
 												}
 											}
 										}
@@ -147,7 +152,7 @@
 	/*  Special notices 	*/
 	/* ------------------- */
 
-	@include output("component-content-p-notices") {
+	@if output("components-content-p-notices") {
 		p {
 			&.error,
 			&.success,
@@ -181,7 +186,7 @@
 			}
 		}
 	}
-	@include output("component-content-link-filetypes") {
+	@if output("components-content-link-filetypes") {
 		/* --------------------- */
 		/*  Link to filetypes 	*/
 		/* ------------------- */

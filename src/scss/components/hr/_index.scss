@@ -1,4 +1,4 @@
-@include output("components-horizontal-rule") {
+@if output("components-horizontal-rule") {
 	hr {
 		color: color(Black, 0.25);
 		margin: grid(1);

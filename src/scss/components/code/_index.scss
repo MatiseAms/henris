@@ -1,10 +1,10 @@
-@include output(("components", "component-code")) {
+@if output(("components", "components-code")) {
 	code {
 		border: 1px solid color(Black, 0.1);
 		background-color: color(White, 0.1);
 		padding: 0.25rem 0.5rem;
-		font-size: rem(14);
-		line-height: 1rem;
+		font-size: rem(12);
+		line-height: 1.5;
 		font-family: unquote($typography-fonts-mono);
 		display: inline-block;
 	}

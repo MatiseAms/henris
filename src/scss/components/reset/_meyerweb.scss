@@ -1,7 +1,7 @@
 /*
   Inspired by meyerweb.com
 */
-@include output("component-reset-meyerweb") {
+@if output("components-reset-meyerweb") {
 	* {
 		box-sizing: border-box;
 	}
@@ -89,8 +89,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
-		font: inherit;
+		font-family: inherit;
 		vertical-align: baseline;
 	}
 	/* HTML5 display-role reset for older browsers */

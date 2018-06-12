@@ -1,4 +1,4 @@
-@include output("components-helpers") {
+@if output("components-helpers") {
 	.truncate {
 		display: block;
 		white-space: nowrap;

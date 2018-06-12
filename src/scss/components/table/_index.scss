@@ -1,4 +1,4 @@
-@include output("components-table") {
+@if output("components-table") {
 	table {
 		//	background-color: color(Offwhite, 0.5);
 		border-radius: $base-border-radius;
@@ -20,6 +20,7 @@
 			padding: 1rem;
 			border-bottom: 1px solid currentColor;
 			font-size: rem(14);
+			vertical-align: top;
 		}
 		th {
 			text-align: left;

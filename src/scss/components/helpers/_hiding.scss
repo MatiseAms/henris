@@ -1,4 +1,4 @@
-@include output("components-helpers") {
+@if output("components-helpers") {
 	.hidden {
 		clip: rect(0px, 0px, 0px, 0px);
 		height: 0px;

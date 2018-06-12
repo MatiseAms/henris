@@ -2,7 +2,7 @@ module.exports = {
 	title: "Henri's",
 	description: "Just playing around",
 	themeConfig: {
-		repo: 'matiseams/henris',
+		repo: "matiseams/henris",
 		editLinks: true,
 		docsDir: "docs",
 		lastUpdated: "Last Updated",
@@ -12,10 +12,18 @@ module.exports = {
 			{ text: "Matise", link: "https://www.matise.nl" }
 		],
 		sidebar: [
-			["/","Home"],
+			["/", "Home"],
 			["/scss/typography/", "Typography"],
 			["/scss/color/", "Color"],
 			["/scss/grid/", "Grid"]
 		]
+	},
+	chainWebpack: config => {
+		config.module
+			.rule("pug")
+			.test(/\.pug$/)
+			.use("pug-plain-loader")
+			.loader("pug-plain-loader")
+			.end();
 	}
 };

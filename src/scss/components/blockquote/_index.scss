@@ -1,10 +1,10 @@
-@include output(("components", "component-blockquote")) {
+@if output(("components", "components-blockquote")) {
 	blockquote {
 		position: relative;
 		display: inline-block;
 		border: 1px solid color(Black, 0.2);
 		padding: 1rem 2rem;
-		@extend %p;
+		// @extend %p;
 		&:before,
 		&:after {
 			font-size: 2rem;

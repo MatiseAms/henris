@@ -17,7 +17,7 @@
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings && npm run sass-watch",
 		"dist": "npm run build",
-		"build": "npm run icons && npm run settings && npm run sass",
+		"build": "npm run icons && npm run settings && npm run node-sass",
 		"prepublishOnly": "npm run test && npm run build",
 		"icons": "node scripts/icons.js src/icons dist/fonts",
 		"icons-generator": "icon-font-generator src/icons/_brands/*.svg -o dist",

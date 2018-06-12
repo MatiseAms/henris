@@ -74,7 +74,7 @@
 }
 @each $iconName, $iconValue in $iconset-basic {
 	.input-check-icon--#{$iconName} {
-		@debug $iconValue;
+		// @debug $iconValue;
 		label:before {
 			content: "#{$iconValue}";
 			@include icon-specific-style($iconName);

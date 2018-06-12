@@ -1,4 +1,4 @@
-@include output(("components", "component-color")) {
+@if output(("components", "components-color")) {
 	/* ------------------------------------------------------------ */
 	/*	Create all custom-properties for all the colors in the	   */
 	/*	current colorset. 										  */
@@ -18,11 +18,11 @@
 					blue($color-value);
 			}
 			// Social Colors in variables
-			@each $color-name, $color-value in $color-social {
-				$variable: "--color-#{to-lower-case($color-name)}";
-				//hex
-				#{$variable}: $color-value;
-			}
+			// @each $color-name, $color-value in $color-social {
+			// 	$variable: "--color-#{to-lower-case($color-name)}";
+			// 	//hex
+			// 	#{$variable}: $color-value;
+			// }
 		}
 	}
 

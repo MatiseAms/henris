@@ -1,4 +1,4 @@
-@include output("components-section") {
+@if output("components-section") {
 	section {
 		&.basic {
 			padding: grid(2) 0;
