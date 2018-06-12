@@ -1,9 +1,3 @@
-let getMenu = function() {
-	let menu = ["/", "/scss/"];
-	// let menu = ['scss/typography','scss/color'];
-	return menu;
-};
-
 module.exports = {
 	title: "Henri's",
 	description: "Just playing around",
@@ -14,8 +8,14 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 		editLinkText: 'Edit this page on GitHub',
 		nav: [
-			{ text: 'Matise.nl', link: 'https://www.matise.nl' },
+			{ text: "Home", link: "/" },
+			{ text: "Matise", link: "https://www.matise.nl" }
 		],
-		sidebar: getMenu()
+		sidebar: [
+			["/","Home"],
+			["/scss/typography/", "Typography"],
+			["/scss/color/", "Color"],
+			["/scss/grid/", "Grid"]
+		]
 	}
-}
+};
