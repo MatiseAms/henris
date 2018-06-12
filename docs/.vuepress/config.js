@@ -4,9 +4,9 @@ module.exports = {
 	themeConfig: {
 		repo: 'matiseams/henris',
 		editLinks: true,
-		docsDir: 'docs',
-		lastUpdated: 'Last Updated',
-		editLinkText: 'Edit this page on GitHub',
+		docsDir: "docs",
+		lastUpdated: "Last Updated",
+		editLinkText: "Edit this page on GitHub",
 		nav: [
 			{ text: "Home", link: "/" },
 			{ text: "Matise", link: "https://www.matise.nl" }
