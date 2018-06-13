@@ -37,6 +37,7 @@
 			"components-button": true,
 			"components-button-group": true,
 			"components-code": true,
+			"components-code-prism": false,
 			"components-color": true,
 			"components-content": true,
 			"components-content-link-filetypes": false,

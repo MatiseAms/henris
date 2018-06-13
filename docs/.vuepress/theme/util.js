@@ -23,6 +23,9 @@ export function isExternal(path) {
 export function isMailto(path) {
 	return /^mailto:/.test(path);
 }
+export function isTel(path) {
+	return /^tel:/.test(path);
+}
 
 export function ensureExt(path) {
 	if (isExternal(path)) {

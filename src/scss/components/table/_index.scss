@@ -1,8 +1,10 @@
 @if output("components-table") {
 	table {
-		//	background-color: color(Offwhite, 0.5);
+		background-color: color(White);
+		border: 1px solid color(Black, 0.1);
 		border-radius: $base-border-radius;
 		border-collapse: collapse;
+
 		& + table {
 			margin-top: grid(1);
 			@include min-("margin-top", 1, 30);
@@ -18,7 +20,7 @@
 		td,
 		th {
 			padding: 1rem;
-			border-bottom: 1px solid currentColor;
+			border-bottom: 1px solid color(Black, 0.1);
 			font-size: rem(14);
 			vertical-align: top;
 		}
@@ -37,6 +39,12 @@
 			&:hover {
 				td {
 					//			background-color: color(White);
+				}
+			}
+			&:nth-child(even) {
+				background-color: color(Blue, 0.05);
+				code {
+					background-color: color(Blue, 0.1);
 				}
 			}
 		}

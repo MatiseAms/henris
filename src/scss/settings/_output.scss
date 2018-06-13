@@ -34,6 +34,7 @@ $output-components-blockquote: true !default; //
 $output-components-button: true !default; //
 $output-components-button-group: true !default; //
 $output-components-code: true !default; //
+$output-components-code-prism: false !default; //
 $output-components-color: true !default; //
 $output-components-content: true !default; //
 $output-components-content-link-filetypes: false !default; //
@@ -93,6 +94,7 @@ $output: (
 	"components-button": true, 
 	"components-button-group": true, 
 	"components-code": true, 
+	"components-code-prism": false, 
 	"components-color": true, 
 	"components-content": true, 
 	"components-content-link-filetypes": false, 

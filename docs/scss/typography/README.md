@@ -11,7 +11,7 @@ Font includes made easy..
 | 3<sup>rd</sup> | `$font-tertiary`   |
 | 4<sup>th</sup> | `$font-quaternary` |
 
-### options
+## options
 
 | Property       | Default value                   | Example                           | Type    |
 | -------------- | ------------------------------- | --------------------------------- | ------- |
@@ -25,7 +25,7 @@ Font includes made easy..
 
 _\* is required_
 
-### example
+## example
 
 ```scss
 $font-primary: (
@@ -62,7 +62,7 @@ $font-primary: (
 );
 ```
 
-### notes
+## notes
 
 - Font weights need to be set in order to load fonts.
 - Font weight names must be identical to actual file names.

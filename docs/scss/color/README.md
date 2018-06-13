@@ -1,17 +1,17 @@
 # Color
 
-### the function `color(Red)`
+## function `color(Red)`
 
 The basic function has more than meets the eye. Essentially it outputs the color you want, taken from the current colorset.
 
-#### arguments
+## arguments
 
 | value    | the name of the color                                                |
 | -------- | -------------------------------------------------------------------- |
 | opacity  | the amount of opacity from 0 to 1. Default: 1                        |
 | colorset | Search for the color in another defined colorset. Default: 'default' |
 
-Simple
+#### Simple
 
 ```scss
 /* input: */
@@ -20,7 +20,7 @@ background-color: color(Red);
 background-color: #eb0f33;
 ```
 
-opacity
+#### opacity
 
 ```scss
 /* input: */
@@ -29,7 +29,7 @@ background-color: color(Red, 0.5);
 background-color: rgba(235, 15, 51, 0.5);
 ```
 
-colorset
+#### colorset
 
 ```scss
 /* input: */
@@ -38,7 +38,9 @@ background-color: color(Red, 1, "vibrant");
 background-color: #fe5165;
 ```
 
-### define another colorset
+## Define colorset
+
+##### define another colorset
 
 he basic function comes with a default colorset. This colorset can ben changed, extended or overwritten by another colorset. This example shows how to define another colorset.
 
@@ -47,7 +49,9 @@ he basic function comes with a default colorset. This colorset can ben changed, 
 $default-color-set: "vibrant";
 ```
 
-### Set a new custom colorset
+## New colorset
+
+#### Set a new custom colorset
 
 A fully new colorset can be set also using the same way, instead of a string (name) for the $default-colorset, you pass a map. Make sure this map has atleast 'Black' and 'White' defined, otherwise the colorset will fall back to the default colorset defined in svd-style
 
@@ -72,7 +76,9 @@ debug: (
 );
 ```
 
-### Add custom colors to the default colorset.
+## Custom colors
+
+#### Add custom colors to the default colorset.
 
 Defining a full new colorset is not always the best options, sometimes you just want to add some colors or overwrite existing colors.
 

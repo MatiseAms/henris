@@ -277,4 +277,11 @@
 			}
 		}
 	}
+	// @if output("components-content-row-example") {
+
+	.content .row.example {
+		border: 1px solid color(Black, 0.1);
+		border-radius: $base-border-radius;
+	}
+	// }
 }
