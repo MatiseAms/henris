@@ -109,3 +109,19 @@ debug: (
 	"fireRed": #ed1f35
 );
 ```
+
+### default set colors
+
+| Color     | Variable     | Value                         |
+| --------- | ------------ | ----------------------------- |
+| White     | `$white`     | <Color color="White"></Color> |
+| Black     | `$black`     | <Color color="White"></Color> |
+| Light     | `$light`     | <Color color="White"></Color> |
+| Dark      | `$dark`      | <Color color="White"></Color> |
+| Primary   | `$primary`   | <Color color="White"></Color> |
+| Secondary | `$secondary` | <Color color="White"></Color> |
+| Link      | `$link`      | <Color color="White"></Color> |
+| Info      | `$info`      | <Color color="White"></Color> |
+| Success   | `$success`   | <Color color="White"></Color> |
+| Warning   | `$warning`   | <Color color="White"></Color> |
+| Danger    | `$danger`    | <Color color="White"></Color> |

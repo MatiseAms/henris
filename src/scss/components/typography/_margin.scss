@@ -53,6 +53,5 @@ pre {
 	& + img,
 	& + pre {
 		margin-top: 1em;
-		@include min-("top", 0.5, 20);
 	}
 }

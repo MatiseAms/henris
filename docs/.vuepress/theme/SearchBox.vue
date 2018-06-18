@@ -188,6 +188,12 @@ li {
 		&:empty {
 			opacity: 0;
 		}
+		@media #{$small-only} {
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: none;
+		}
 	}
 	&__suggestion {
 		display: block;
