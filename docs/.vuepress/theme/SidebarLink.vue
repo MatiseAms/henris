@@ -63,10 +63,19 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 		{ class: "nav__list" },
 		children.map(c => {
 			const active = isActive(route, path + "#" + c.slug);
-			return h("li", { class: "nav__item" }, [
-				renderLink(h, "#" + c.slug, c.title, active),
-				renderChildren(h, c.children, path, route, maxDepth, depth + 1)
-			]);
+			return h(
+				"li",
+				{
+					class: {
+						nav__item: true,
+						"is-current": active
+					}
+				},
+				[
+					renderLink(h, "#" + c.slug, c.title, active),
+					renderChildren(h, c.children, path, route, maxDepth, depth + 1)
+				]
+			);
 		})
 	);
 }

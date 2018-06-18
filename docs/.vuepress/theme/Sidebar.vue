@@ -1,9 +1,10 @@
 <template>
   <component :is="element" class="sidebar">
+    <slot></slot>
     <slot name="top"/>
     <nav class="nav">
       <ul class="nav__list" v-if="items.length">
-        <li class="nav__item" v-for="(item, i) in items" :key="i">
+        <li v-for="(item, i) in items" :key="i" :class="{'nav__item' : true, 'is-current': isActive(item)}">
           <SidebarGroup class="nav__link" v-if="item.type === 'group'"
             :item="item"
             :first="i === 0"
@@ -16,17 +17,19 @@
     </nav>
     <NavLinks/>
     <slot name="bottom"/>
+    <SearchBox></SearchBox>
   </component>
 </template>
 
 <script>
+import SearchBox from "./SearchBox";
 import SidebarGroup from "./SidebarGroup.vue";
 import SidebarLink from "./SidebarLink.vue";
 import NavLinks from "./NavLinks.vue";
 import { isActive } from "./util";
 
 export default {
-	components: { SidebarGroup, SidebarLink, NavLinks },
+	components: { SidebarGroup, SidebarLink, NavLinks, SearchBox },
 	props: ["items", "element"],
 	data() {
 		return {
@@ -75,33 +78,62 @@ function resolveOpenGroupIndex(route, items) {
 <style lang="scss">
 @import "../../../ext.scss";
 
-// .sidebar
-//   ul
-//     padding 0
-//     margin 0
-//     list-style-type none
-//   a
-//     display inline-block
-//   .nav-links
-//     display none
-//     border-bottom 1px solid $borderColor
-//     padding 0.5rem 0 0.75rem 0
-//     a
-//       font-weight 600
-//     .nav-item, .repo-link
-//       display block
-//       line-height 1.25rem
-//       font-size 1.1em
-//       padding 0.5rem 0 0.5rem 1.5rem
-//   .sidebar-links
-//     padding 1.5rem 0
+// nav
+.nav {
+	padding: grid(1 0);
+	width: 100%;
+	color: color(Purple);
+	&__list {
+		width: 100%;
+	}
+	&__item {
+		display: block;
+		width: 100%;
+		transition: 0.3s;
+		&.is-current {
+			// background-color: rgba($primary, 0.05);
+			box-shadow: -2px 0 0 0 rgba($primary, 0.25) inset;
+			max-height: 900px;
+			.nav__list {
+				max-height: 900px;
+				.nav__item {
+					color: color(Black);
+					&.is-current {
+						box-shadow: -2px 0 0 0 rgba($primary, 1) inset;
 
-// @media (max-width: $MQMobile)
-//   .sidebar
-//     .nav-links
-//       display block
-//       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
-//         top calc(1rem - 2px)
-//     .sidebar-links
-//       padding 1rem 0
+						.nav__link {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+		.nav__list {
+			transform-origin: 0 0;
+			transform: scale(1, 0);
+			animation: openList 1s forwards;
+			.nav__item {
+				padding-left: 0.8em;
+				font-size: 0.8em;
+				.nav__link {
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		padding: 0.75rem 2rem;
+		font-weight: 600;
+		&:hover {
+			.nav__text {
+				color: color($primary, 0.75);
+			}
+		}
+	}
+	&__text {
+		color: color(Black, 0.75);
+	}
+}
 </style>

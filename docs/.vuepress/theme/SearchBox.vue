@@ -147,6 +147,9 @@ export default {
 <style lang="scss">
 @import "../../../ext.scss";
 
+.search {
+	padding: 2rem;
+}
 ul,
 li {
 	margin: 0;
@@ -155,31 +158,48 @@ li {
 }
 .search {
 	position: relative;
+	border-top: 1px solid color(Black, 0.05);
 	&__input {
 		line-height: 1em;
 		padding: 0.5em 1em;
-		border-radius: 2em;
+		border-radius: 2em !important;
 		font-size: 1rem;
-		border: 1px solid color(Black, 0.2);
+		border: 1px solid color(Black, 0.2) !important;
 		border-bottom-width: 2px;
 
 		&:focus {
-			border-color: color(Blue);
-			outline: none;
+			border-color: color(Blue) !important;
+			outline: none !important;
 		}
 	}
 	&__suggestions {
 		position: absolute;
-		right: 0;
-		top: 100%;
+		left: 100%;
+		top: 50%;
+		transform: translateY(-50%);
 		background-color: color(White);
-		border: 1px solid color(Black, 0.2);
+		z-index: 20;
 		border-top: 0;
 		width: 100%;
+		// box-shadow: 0px -10px 40px 0 color(Black, 0.25);
+		border: 1px solid color(Black, 0.05);
+		border-left: 0;
+		z-index: 10;
+		&:empty {
+			opacity: 0;
+		}
 	}
 	&__suggestion {
 		display: block;
 		border-bottom: 1px solid color(Black, 0.05);
+		animation: comeIn 0.3s forwards;
+		opacity: 0;
+		transform: translateY(-100%);
+		@for $i from 1 through 20 {
+			&:nth-child(#{$i}) {
+				animation: comeIn 0.3s #{$i/20}s forwards;
+			}
+		}
 		&:last-child {
 			border-bottom: 0;
 		}
@@ -203,6 +223,16 @@ li {
 		font-weight: bold;
 		color: color(Black, 0.5);
 		margin-right: 0.5rem;
+	}
+}
+@keyframes comeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
 	}
 }
 </style>

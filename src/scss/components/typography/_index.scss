@@ -3,6 +3,7 @@
 @import "mixins";
 @import "default";
 @import "margin";
+@import "sizing";
 
 // Load all fonts
 @include font-load($font-primary);

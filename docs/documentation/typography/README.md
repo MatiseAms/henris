@@ -2,7 +2,7 @@
 
 Font includes made easy..
 
-### Include or define up to 4 fonts.
+#### Include or define up to 4 fonts.
 
 | Font           | Variable           |
 | -------------- | ------------------ |
@@ -11,7 +11,7 @@ Font includes made easy..
 | 3<sup>rd</sup> | `$font-tertiary`   |
 | 4<sup>th</sup> | `$font-quaternary` |
 
-## options
+#### options
 
 | Property       | Default value                   | Example                           | Type    |
 | -------------- | ------------------------------- | --------------------------------- | ------- |
@@ -25,7 +25,7 @@ Font includes made easy..
 
 _\* is required_
 
-## example
+#### example
 
 ```scss
 $font-primary: (
@@ -62,7 +62,7 @@ $font-primary: (
 );
 ```
 
-## notes
+#### notes
 
 - Font weights need to be set in order to load fonts.
 - Font weight names must be identical to actual file names.
@@ -70,3 +70,14 @@ $font-primary: (
 - The space in a font-family name will be removed for the file name. `Helvetica Neue` will be `HelveticaNeue`
 - Font includes uses the following syntax: _`fontFamily-fontWeightName.ttf`_
 - When font-type 'italic' is added. Font includes will be as _`fontFamily-fontWeightNameItalic.ttf`_
+
+## examples
+
+### headings
+
+<h1>The quick brown fox jumps over the lazy dog</h1>
+<h2>The quick brown fox jumps over the lazy dog</h2>
+<h3>The quick brown fox jumps over the lazy dog</h3>
+<h4>The quick brown fox jumps over the lazy dog</h4>
+<h5>The quick brown fox jumps over the lazy dog</h5>
+<h6>The quick brown fox jumps over the lazy dog</h6>

@@ -54,6 +54,10 @@
 						transform: translateX(100%);
 					}
 				}
+				ul,
+				ol {
+					display: block;
+				}
 			}
 		}
 		ul:not([class]) {
@@ -279,9 +283,28 @@
 	}
 	// @if output("components-content-row-example") {
 
-	.content .row.example {
-		border: 1px solid color(Black, 0.1);
-		border-radius: $base-border-radius;
+	.content .example {
+		.row {
+			border: 1px solid color(Black, 0.1);
+			border-bottom: 0;
+			&:first-child {
+				border-radius: $base-border-radius $base-border-radius 0 0;
+			}
+			&:last-child {
+				border-radius: 0 0 $base-border-radius $base-border-radius;
+
+				border-bottom: 1px solid color(Black, 0.1);
+			}
+			&:nth-child(odd) {
+				background-color: color(Blue, 0.05);
+			}
+
+			.column {
+				padding: 0.5rem 1rem;
+				& + .column {
+					border-left: 1px solid color(Black, 0.1);
+				}
+			}
+		}
 	}
-	// }
 }

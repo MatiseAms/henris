@@ -7,16 +7,27 @@ module.exports = {
 		docsDir: "docs",
 		lastUpdated: "Last Updated",
 		editLinkText: "Edit this page on GitHub",
-		nav: [
-			{ text: "Home", link: "/" },
-			{ text: "Matise", link: "https://www.matise.nl" }
-		],
+		nav: [{ text: "Matise", link: "https://www.matise.nl" }],
 		sidebar: [
-			["/", "Home"],
-			["/scss/typography/", "Typography"],
-			["/scss/color/", "Color"],
-			["/scss/grid/", "Grid"]
+			["/documentation/typography/", "Typography"],
+			["/documentation/color/", "Color"],
+			["/documentation/grid/", "Grid"],
+			["/kitchensink/", "Kitchensink"]
 		]
+		// sidebar: [
+		// 	{
+		// 		title: "Main",
+		// 		collapsable: false,
+		// 		children: ["/", ["settings", "Configuration"]]
+		// 	}
+		// ]
+	},
+	configureWebpack: {
+		resolve: {
+			alias: {
+				"@media-img": "media/img/"
+			}
+		}
 	},
 	chainWebpack: config => {
 		config.module

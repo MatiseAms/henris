@@ -22,15 +22,14 @@ ol {
 	& + img,
 	& + ul,
 	& + ol {
-		margin-top: 1rem;
+		margin-top: 1em;
 	}
 }
 
 h1 {
 	& + h2,
 	& + h3 {
-		margin-top: grid(0.5);
-		@include min-("top", 0.5, 20);
+		margin-top: 1em;
 	}
 }
 
@@ -39,7 +38,9 @@ ul,
 ol,
 img,
 table,
-div {
+div,
+blockquote,
+pre {
 	& + h1,
 	& + h2,
 	& + h3,
@@ -49,8 +50,9 @@ div {
 	& + p,
 	& + blockquote,
 	& + table,
-	& + img {
-		margin-top: grid(0.5);
+	& + img,
+	& + pre {
+		margin-top: 1em;
 		@include min-("top", 0.5, 20);
 	}
 }

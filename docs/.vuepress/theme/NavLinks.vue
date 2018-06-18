@@ -92,33 +92,23 @@ export default {
 <style lang="scss">
 @import "../../../ext.scss";
 
-// .nav-links
-//   display inline-block
-//   a
-//     line-height 1.4rem
-//     color inherit
-//     &:hover, &.router-link-active
-//       color $accentColor
-//   .nav-item
-//     cursor pointer
-//     position relative
-//     display inline-block
-//     margin-left 1.5rem
-//     line-height 2rem
-//   .repo-link
-//     margin-left 1.5rem
-
-// @media (max-width: $MQMobile)
-//   .nav-links
-//     .nav-item, .repo-link
-//       margin-left 0
-
-// @media (min-width: $MQMobile)
-//   .nav-links a
-//     &:hover, &.router-link-active
-//       color $textColor
-//   .nav-item > a:not(.external)
-//     &:hover, &.router-link-active
-//       margin-bottom -2px
-//       border-bottom 2px solid lighten($accentColor, 8%)
+//
+// The normal navigation
+.nav-links {
+	border-top: 1px solid color(Black, 0.05);
+	padding: 2rem 0;
+	&__item {
+		display: block;
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		padding: 0.5rem 2rem;
+		&:hover {
+			.nav__text {
+				color: color($primary, 0.75);
+			}
+		}
+	}
+}
 </style>
