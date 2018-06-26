@@ -21,7 +21,7 @@
 			"custom-properties-colors": false,
 			"grid": true,
 			"grid-helpers": false,
-			"grid-hide-show-classes": false,
+			"grid-hide-show-classes": true,
 			"grid-only-classes": true,
 			"grid-counted-columns": true,
 			"grid-parts": true,

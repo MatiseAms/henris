@@ -18,7 +18,7 @@ $output-custom-properties-media-queries: false !default; //
 $output-custom-properties-colors: false !default; //
 $output-grid: true !default; //
 $output-grid-helpers: false !default; //
-$output-grid-hide-show-classes: false !default; //
+$output-grid-hide-show-classes: true !default; //
 $output-grid-only-classes: true !default; //
 $output-grid-counted-columns: true !default; //
 $output-grid-parts: true !default; //
@@ -78,7 +78,7 @@ $output: (
 	"custom-properties-colors": false, 
 	"grid": true, 
 	"grid-helpers": false, 
-	"grid-hide-show-classes": false, 
+	"grid-hide-show-classes": true, 
 	"grid-only-classes": true, 
 	"grid-counted-columns": true, 
 	"grid-parts": true, 
