@@ -1,50 +1,55 @@
 @if output("grid-hide-show-classes") {
 	// Hide classes
-	.hide-for-large-up {
-		@media #{$large-up} {
+	@media #{$large-up} {
+		.hide-for-large-up {
 			display: none;
 		}
 	}
-	.hide-for-large-only {
-		@media #{$large-only} {
+	@media #{$large-only} {
+		.hide-for-large-only {
 			display: none;
 		}
 	}
-	.hide-for-medium-up {
-		@media #{$medium-up} {
+	@media #{$medium-up} {
+		.hide-for-medium-up {
 			display: none;
 		}
 	}
-	.hide-for-medium-only {
-		@media #{$medium-only} {
+	@media #{$medium-only} {
+		.hide-for-medium-only {
 			display: none;
 		}
 	}
-	.hide-for-small {
-		@media #{$small-only} {
+	@media #{$small-only} {
+		.hide-for-small {
 			display: none;
 		}
 	}
 
 	// Show classes
-	.show-for-small-only {
-		@media #{$medium-up} {
+	@media #{$medium-up} {
+		.show-for-small-only {
 			display: none;
 		}
 	}
-	.show-for-medium-only {
-		@media #{$small-only} {
-			display: none;
-		}
-		@media #{$large-up} {
+	@media #{$small-only} {
+		.show-for-medium-only {
 			display: none;
 		}
 	}
-	.show-for-large-only {
-		@media #{$medium-down} {
+	@media #{$large-up} {
+		.show-for-medium-only {
 			display: none;
 		}
-		@media #{$xlarge-up} {
+	}
+
+	@media #{$medium-down} {
+		.show-for-large-only {
+			display: none;
+		}
+	}
+	@media #{$xlarge-up} {
+		.show-for-large-only {
 			display: none;
 		}
 	}
