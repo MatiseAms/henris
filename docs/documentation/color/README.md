@@ -112,16 +112,16 @@ debug: (
 
 ### default set colors
 
-| Color     | Variable     | Value                         |
-| --------- | ------------ | ----------------------------- |
-| White     | `$white`     | <Color color="White"></Color> |
-| Black     | `$black`     | <Color color="White"></Color> |
-| Light     | `$light`     | <Color color="White"></Color> |
-| Dark      | `$dark`      | <Color color="White"></Color> |
-| Primary   | `$primary`   | <Color color="White"></Color> |
-| Secondary | `$secondary` | <Color color="White"></Color> |
-| Link      | `$link`      | <Color color="White"></Color> |
-| Info      | `$info`      | <Color color="White"></Color> |
-| Success   | `$success`   | <Color color="White"></Color> |
-| Warning   | `$warning`   | <Color color="White"></Color> |
-| Danger    | `$danger`    | <Color color="White"></Color> |
+| Color     | Variable     | Value                                         |
+| --------- | ------------ | --------------------------------------------- |
+| White     | `$white`     | <convert-color color="White"></convert-color> |
+| Black     | `$black`     | <convert-color color="White"></convert-color> |
+| Light     | `$light`     | <convert-color color="White"></convert-color> |
+| Dark      | `$dark`      | <convert-color color="White"></convert-color> |
+| Primary   | `$primary`   | <convert-color color="White"></convert-color> |
+| Secondary | `$secondary` | <convert-color color="White"></convert-color> |
+| Link      | `$link`      | <convert-color color="White"></convert-color> |
+| Info      | `$info`      | <convert-color color="White"></convert-color> |
+| Success   | `$success`   | <convert-color color="White"></convert-color> |
+| Warning   | `$warning`   | <convert-color color="White"></convert-color> |
+| Danger    | `$danger`    | <convert-color color="White"></convert-color> |

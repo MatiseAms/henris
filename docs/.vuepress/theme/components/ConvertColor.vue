@@ -4,6 +4,7 @@
 
 <script>
 export default {
+	name: "convert-color",
 	data() {
 		return {
 			color: "#testcolor"
