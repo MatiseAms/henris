@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss">
-$output-components-code-prism: true;
+$output-code-prism: true;
 @import "../../../index.scss";
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono");
 

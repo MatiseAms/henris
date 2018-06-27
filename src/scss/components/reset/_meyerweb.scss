@@ -1,7 +1,7 @@
 /*
   Inspired by meyerweb.com
 */
-@if output("components-reset-meyerweb") {
+@if output("reset-meyerweb") {
 	* {
 		box-sizing: border-box;
 	}

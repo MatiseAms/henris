@@ -1,8 +1,10 @@
 input[type="button"],
 input[type="submit"] {
 	margin-top: 1rem;
-	&:not(.button) {
-		@extend .button;
+	@if output("button") {
+		&:not(.button) {
+			@extend .button;
+		}
 	}
 }
 label {

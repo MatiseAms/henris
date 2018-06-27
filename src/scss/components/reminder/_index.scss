@@ -1,4 +1,4 @@
-@if output("components-reminder") {
+@if output("reminder") {
 	img:not([alt]),
 	img[alt=""] {
 		outline: 5px solid red;
