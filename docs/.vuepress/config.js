@@ -12,7 +12,8 @@ module.exports = {
 			["/documentation/typography/", "Typography"],
 			["/documentation/color/", "Color"],
 			["/documentation/grid/", "Grid"],
-			["/kitchensink/", "Kitchensink"]
+			["/kitchensink/", "Kitchensink"],
+			["/documentation/output/", "Output"]
 		]
 		// sidebar: [
 		// 	{

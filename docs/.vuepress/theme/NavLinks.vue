@@ -1,15 +1,17 @@
-<template lang="pug">
-  nav.nav-links(v-if="userLinks.length || repoLink")
-    <!-- user links -->
-    ul.nav-links__list
-      li.nav-links__item(v-for="item in userLinks",  :key="item.link")
-        DropdownLink(v-if="item.type === 'links'", :item="item")
-        NavLink(v-else :item="item")
- 
-      li.nav-links__item.repo-link
-        a.nav-links__link(v-if="repoLink", :href="repoLink", target="_blank", rel="noopener noreferrer") {{ repoLabel }}
-    OutboundLink
-    
+<template>
+<nav class="nav-links" v-if="userLinks.length || repoLink">
+	<!-- user links -->
+	<ul class="nav-links__list"></ul>
+		<li class="nav-links__item" v-for="item in userLinks" :key="item.link">
+			<DropdownLink v-if="item.type === 'links'" :item="item"></DropdownLink>
+			<NavLink v-else :item="item"></NavLink>
+		</li>
+		<li class="nav-links__item repo-link">
+			<a class="nav-links__link" v-if="repoLink" :href="repoLink" target="_blank" rel="noopener noreferrer">{{ repoLabel }}</a>
+		</li>
+	</ul>
+	<OutboundLink></OutboundLink>
+</nav>
 </template>
 
 <script>

@@ -3,7 +3,6 @@
 		{
 			"css": true,
 			"full": false,
-			"reset": true,
 			"background-colors": true,
 			"text-colors": true,
 			"custom-properties": true,
@@ -19,7 +18,6 @@
 			"button-border": true,
 			"custom-properties-media-queries": false,
 			"custom-properties-colors": false,
-			"code-prism": false,
 			"grid": true,
 			"grid-helpers": false,
 			"grid-hide-show-classes": true,
