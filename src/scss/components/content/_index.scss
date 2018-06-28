@@ -1,9 +1,9 @@
-@if output(("components", "components-content")) {
+@if output(("components", "content")) {
 	/* --------------------------------------------- */
 	/*	Styled links when not used for other use	*/
 	/* ------------------------------------------- */
 
-	@if output("components-content-default-link") {
+	@if output("content-default-link") {
 		a:not([class])[href] {
 			color: currentColor;
 			text-decoration: none;
@@ -16,7 +16,7 @@
 	/*	The horizontal rule   	*/
 	/* ----------------------- */
 
-	@if output("components-content-hr") {
+	@if output("content-hr") {
 		hr {
 			height: 1px;
 			background-color: currentColor;
@@ -31,13 +31,13 @@
 	/*	Sytling specific for content	*/
 	/* ------------------------------- */
 
-	@if output("components-content-line-height") {
+	@if output("content-line-height") {
 		.content {
 			line-height: 1.5;
 		}
 	}
 
-	@if output("components-content-list") {
+	@if output("content-list") {
 		/* ----------------------------- */
 		/*	Ordered & Unordered lists	*/
 		/* --------------------------- */
@@ -156,7 +156,7 @@
 	/*  Special notices 	*/
 	/* ------------------- */
 
-	@if output("components-content-p-notices") {
+	@if output("content-p-notices") {
 		p {
 			&.error,
 			&.success,
@@ -190,7 +190,7 @@
 			}
 		}
 	}
-	@if output("components-content-link-filetypes") {
+	@if output("content-link-filetypes") {
 		/* --------------------- */
 		/*  Link to filetypes 	*/
 		/* ------------------- */
@@ -281,7 +281,7 @@
 			}
 		}
 	}
-	// @if output("components-content-row-example") {
+	// @if output("content-row-example") {
 
 	.content .example {
 		.row {

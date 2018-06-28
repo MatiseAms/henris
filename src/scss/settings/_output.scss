@@ -1,6 +1,5 @@
 $output-css: true !default; //
 $output-full: false !default; //
-$output-reset: true !default; //
 $output-background-colors: true !default; //
 $output-text-colors: true !default; //
 $output-custom-properties: true !default; //
@@ -30,37 +29,36 @@ $output-grid-columns: true !default; //
 $output-grid-cssgrid: false !default; //
 $output-grid-row-breakpoints: true !default; //
 $output-components: true !default; //
-$output-components-blockquote: true !default; //
-$output-components-button: true !default; //
-$output-components-button-group: true !default; //
-$output-components-code: true !default; //
-$output-components-code-prism: false !default; //
-$output-components-color: true !default; //
-$output-components-content: true !default; //
-$output-components-content-link-filetypes: false !default; //
-$output-components-content-p-notices: false !default; //
-$output-components-content-list: true !default; //
-$output-components-content-line-height: true !default; //
-$output-components-content-hr: true !default; //
-$output-components-content-default-link: true !default; //
-$output-components-detail-list: true !default; //
-$output-components-ease: true !default; //
-$output-components-forms: true !default; //
-$output-components-helpers: true !default; //
-$output-components-reset: true !default; //
-$output-components-reset-meyerweb: true !default; //
-$output-components-reset-extra: true !default; //
-$output-components-horizontal-rule: true !default; //
-$output-components-icon: true !default; //
-$output-components-icons-specific: false !default; //
-$output-components-print: true !default; //
-$output-components-reminder: true !default; //
-$output-components-section: true !default; //
-$output-components-table: true !default; //
+$output-blockquote: true !default; //
+$output-button: false !default; //
+$output-button-group: false !default; //
+$output-code: true !default; //
+$output-code-prism: false !default; //
+$output-color: true !default; //
+$output-content: true !default; //
+$output-content-link-filetypes: false !default; //
+$output-content-p-notices: false !default; //
+$output-content-list: true !default; //
+$output-content-line-height: true !default; //
+$output-content-hr: true !default; //
+$output-content-default-link: true !default; //
+$output-detail-list: true !default; //
+$output-ease: true !default; //
+$output-forms: true !default; //
+$output-helpers: true !default; //
+$output-reset: true !default; //
+$output-reset-meyerweb: true !default; //
+$output-reset-extra: true !default; //
+$output-horizontal-rule: true !default; //
+$output-icon: true !default; //
+$output-icons-specific: false !default; //
+$output-print: true !default; //
+$output-reminder: true !default; //
+$output-section: true !default; //
+$output-table: true !default; //
 $output: (
 	"css": true, 
 	"full": false, 
-	"reset": true, 
 	"background-colors": true, 
 	"text-colors": true, 
 	"custom-properties": true, 
@@ -90,31 +88,31 @@ $output: (
 	"grid-cssgrid": false, 
 	"grid-row-breakpoints": true, 
 	"components": true, 
-	"components-blockquote": true, 
-	"components-button": true, 
-	"components-button-group": true, 
-	"components-code": true, 
-	"components-code-prism": false, 
-	"components-color": true, 
-	"components-content": true, 
-	"components-content-link-filetypes": false, 
-	"components-content-p-notices": false, 
-	"components-content-list": true, 
-	"components-content-line-height": true, 
-	"components-content-hr": true, 
-	"components-content-default-link": true, 
-	"components-detail-list": true, 
-	"components-ease": true, 
-	"components-forms": true, 
-	"components-helpers": true, 
-	"components-reset": true, 
-	"components-reset-meyerweb": true, 
-	"components-reset-extra": true, 
-	"components-horizontal-rule": true, 
-	"components-icon": true, 
-	"components-icons-specific": false, 
-	"components-print": true, 
-	"components-reminder": true, 
-	"components-section": true, 
-	"components-table": true
+	"blockquote": true, 
+	"button": false, 
+	"button-group": false, 
+	"code": true, 
+	"code-prism": false, 
+	"color": true, 
+	"content": true, 
+	"content-link-filetypes": false, 
+	"content-p-notices": false, 
+	"content-list": true, 
+	"content-line-height": true, 
+	"content-hr": true, 
+	"content-default-link": true, 
+	"detail-list": true, 
+	"ease": true, 
+	"forms": true, 
+	"helpers": true, 
+	"reset": true, 
+	"reset-meyerweb": true, 
+	"reset-extra": true, 
+	"horizontal-rule": true, 
+	"icon": true, 
+	"icons-specific": false, 
+	"print": true, 
+	"reminder": true, 
+	"section": true, 
+	"table": true
 ) !default; //

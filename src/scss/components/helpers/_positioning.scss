@@ -1,4 +1,4 @@
-@if output("components-helpers") {
+@if output("helpers") {
 	.flex-center {
 		display: flex;
 		flex-direction: column;
