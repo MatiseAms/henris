@@ -38,11 +38,11 @@
 		"postcss": "^6.0.22",
 		"sass-loader": "^7.0.3",
 		"vuepress": "^0.10.1",
-		"webfonts-generator": "^0.4.0"
+		"webfonts-generator": "^0.4.0",
+		"sass-true": "^4.0.0",
+		"sass": "^1.5.1"
 	},
 	"dependencies": {
-		"node-sass": "^4.9.0",
-		"sass": "^1.5.1",
-		"sass-true": "^4.0.0"
+		"node-sass": "^4.9.0"
 	}
 }
