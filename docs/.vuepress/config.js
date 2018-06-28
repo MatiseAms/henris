@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Henri's",
-	description: "Just playing around",
+	description: "Matise Style Basis",
 	themeConfig: {
 		repo: "matiseams/henris",
 		editLinks: true,
@@ -29,13 +29,5 @@ module.exports = {
 				"@media-img": "media/img/"
 			}
 		}
-	},
-	chainWebpack: config => {
-		config.module
-			.rule("pug")
-			.test(/\.pug$/)
-			.use("pug-plain-loader")
-			.loader("pug-plain-loader")
-			.end();
 	}
 };
