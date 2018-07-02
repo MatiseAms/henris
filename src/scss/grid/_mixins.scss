@@ -237,3 +237,30 @@
 		}
 	}
 }
+
+//
+// A mixin to create all the rows classes for css grid
+// For the moment createCssGridClasses supports only basic layout classes like .half, .full
+//
+@mixin createCssGridClasses($child: true){
+  $childClass: "";
+  @if output("grid-row-breakpoints") {
+    @if $child == true {
+      $childClass: "> .#{$base-prefix}row";
+    }
+  }
+
+  @each $part, $percentage in $grid-parts {
+    &%#{$part}#{$childClass},
+    &.#{$base-prefix}#{$part}#{$childClass} {
+      @supports (display: grid) {
+        $parts: $percentage * $grid-columns;
+        $parts: $grid-columns / $parts;
+        grid-template-columns: repeat($parts, 1fr);
+        &>.column{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

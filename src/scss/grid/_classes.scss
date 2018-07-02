@@ -11,12 +11,13 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-flow: row wrap;
-
 		@if output("grid-cssgrid") {
+      @include createCssGridClasses(false);
 			@supports (display: grid) {
 				display: grid;
 				grid-template-columns: repeat($grid-columns, 1fr);
 				grid-gap: 0rem;
+        // @include createGridCssClasses();
 			}
 		}
 		//

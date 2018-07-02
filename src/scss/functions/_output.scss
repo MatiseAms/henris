@@ -17,7 +17,7 @@
         Go through all $arguments
     */
 	@each $arg in $args {
-		@if variable-exists(output-#{$arg}) {
+		@if map-has-key($output, $arg) {
 			@if map-get($output, $arg) == false {
 				$doOutput: false;
 			}
@@ -29,12 +29,20 @@
 	/*
 		The overruler to create all the css
 	*/
-	@if $output-full == true {
+	@if map-get($output, 'full') == true {
 		$doOutput: true;
 	}
 
 	/*
-        In the end, determine if this prop should return anything.
-    */
+      In the end, determine if this prop should return anything.
+  */
 	@return $doOutput;
+}
+
+/*
+  Allow to create custom configuration with $henris
+  Check if the henris is defined to override $ouput
+ */
+@if(variable_exists(henris)){
+  $output: map-merge($output, $henris);
 }
