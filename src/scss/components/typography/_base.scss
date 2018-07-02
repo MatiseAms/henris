@@ -1,7 +1,7 @@
 // -------------------------------------------------- */
 //				@extend default typographic elements
 // -------------------------------------------------- */
-@if output("typography","typography-margins") {
+@if output(("typography","typography-margins")) {
 	body,
 	html {
 		font-size: 16px;
