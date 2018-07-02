@@ -59,7 +59,10 @@
 			"print": true,
 			"reminder": true,
 			"section": true,
-			"table": true
+			"table": true,
+			"typography": true,
+			"typography-headings": true,
+			"typography-margins": true
 		}
 	]
 }
