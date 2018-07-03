@@ -56,6 +56,9 @@ $output-print: true !default; //
 $output-reminder: true !default; //
 $output-section: true !default; //
 $output-table: true !default; //
+$output-typography: true !default; //
+$output-typography-headings: true !default; //
+$output-typography-margins: true !default; //
 $output: (
 	"css": true,
 	"full": false,
