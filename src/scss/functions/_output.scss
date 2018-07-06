@@ -4,37 +4,65 @@
 // the value from the given output if true or false in the settings.
 //
 
-@function output($args: ()) {
+@function output($args...) {
+	// Set a default of output true
 	$doOutput: true;
-	/*
-        Check the overall setting. If false, do not output any css
-    */
-	@if $output-css == false {
-		$doOutput: false;
-	}
-
-	/*
-        Go through all $arguments
-    */
+	//
+  //	Go through all $arguments
+  //
 	@each $arg in $args {
-		@if variable-exists(output-#{$arg}) {
-			@if map-get($output, $arg) == false {
-				$doOutput: false;
+		@if type-of($arg) == 'string'{
+			$doOutput: check-output($arg,true,$doOutput);
+		}
+		@else {
+			// @debug type-of($arg);
+			@each $listArg in $arg {
+				$doOutput: check-output($listArg,true,$doOutput);
 			}
-		} @else {
-			@warn "#{$arg} does not exist in the settings.";
 		}
 	}
-
-	/*
-		The overruler to create all the css
-	*/
+	//
+	//	The overruler to create all the css
+	//
 	@if $output-full == true {
 		$doOutput: true;
 	}
-
-	/*
-        In the end, determine if this prop should return anything.
-    */
+	//
+	//  Check the overall setting. If false, do not output any css
+	//
+	@if $output-css == false {
+		$doOutput: false;
+	}
+	//
+  //      In the end, determine if this prop should return anything.
+  //
 	@return $doOutput;
+}
+
+
+@function check-output($arg,$warn: false, $doOutput: true){
+	$Return:$doOutput;
+	@if map-has-key($output, $arg) {
+		@if map-get($output, $arg) == false {
+			$Return: false;
+		}
+		//
+		// Check if the argument has a parent argument to overrule.
+		// Get the first item from the list and check this value. If this value is false, all
+		// children won't be outputted.
+		// 
+		$newList: str-split($arg,'-');
+		@if length($newList) > 1{
+			$Return: check-output(nth($newList,1));
+		}
+
+	} @else {
+		//
+		// Only warn when checking the children. Don't check on the parents, this is not relevant.
+		//
+		@if $warn{
+			@warn "#{$arg} does not exist in the settings.";
+		}
+	}
+	@return $Return;
 }
