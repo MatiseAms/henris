@@ -24,7 +24,7 @@
 		box-shadow: 0 0 0.5rem 0 color(Black, 0.25);
 	}
 }
-@if output(('components','button')){
+@if output(components,button){
 	// ------------------------------------------------------------------------ */
 	//	Styling set on standard buttons and elements with a button class	   */
 	// ---------------------------------------------------------------------- */

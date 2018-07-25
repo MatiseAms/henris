@@ -1,4 +1,4 @@
-@if output(("components", "button", "button-group")) {
+@if output("components", "button-group") {
 	.button-group {
 		width: calc(100% + #{$base-space});
 		position: relative;

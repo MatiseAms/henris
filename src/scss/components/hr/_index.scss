@@ -1,4 +1,4 @@
-@if output("horizontal-rule") {
+@if output(horizontal-rule) {
 	hr {
 		color: color(Black, 0.25);
 		margin: grid(1);
