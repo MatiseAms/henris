@@ -1,8 +1,10 @@
-textarea {
-	@extend %default-input;
-	resize: none;
-	min-height: 5rem;
-	&:not(:empty) {
-		border: 1px solid color(Black, 0.25);
+@if output(form-textarea) {
+	textarea {
+		@extend %default-input;
+		resize: none;
+		min-height: 5rem;
+		&:not(:empty) {
+			border: 1px solid color(Black, 0.25);
+		}
 	}
 }

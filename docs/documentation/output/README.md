@@ -22,6 +22,82 @@ or
 @import "~henris/ext";
 ```
 
+### Overrule
+
+All settings which are set can be overruled.
+
+Overrule the setting before the @import of henris like:
+
+```scss
+$output: output-define([settingname], [value: true or false]);
+
+// example:
+$output: output-define(button, true);
+```
+
+#### parent settings
+
+Output is being overruled by its parent setting. Parent settings are the settings before the dash (-).
+
+For example:
+
+When button-icons is true, but button is not.
+
+```scss
+$output: output-define(button, false);
+$output: output-define(button-icons, true);
+
+.element {
+	width: 10px;
+	@if output(button-icons) {
+		width: 20px;
+	}
+}
+
+// results:
+.element {
+	width: 10px;
+}
+```
+
+When button-icons is true and button is also true.
+
+```scss
+$output: output-define(button, true);
+$output: output-define(button-icons, true);
+
+.element {
+	width: 10px;
+	@if output(button-icons) {
+		width: 20px;
+	}
+}
+
+// results:
+.element {
+	width: 20px;
+}
+```
+
+when button-icons is false and button is true.
+
+```scss
+$output: output-define(button, true);
+$output: output-define(button-icons, true);
+
+.element {
+	width: 10px;
+	@if output(button-icons) {
+		width: 20px;
+	}
+}
+
+// results:
+.element {
+	width: 10px;
+}
+```
+
 ### options
 
 <table v-for="list in outputs.output">

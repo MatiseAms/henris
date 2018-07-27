@@ -1,0 +1,14 @@
+// Check if the color function works properly
+@include test-module("Color [function]") {
+	@include test("Color should respond with the right color") {
+		// Assert the expected results
+		$returningBlack: map-get($default-color-set, "Black");
+		@include assert-equal(color(Black), $returningBlack);
+	}
+
+	@include test("Color should respond with the right opacity") {
+		// Assert the expected results
+		$returningBlack: rgba(map-get($default-color-set, "Black"), 0.5);
+		@include assert-equal(color(Black, 0.5), $returningBlack);
+	}
+}

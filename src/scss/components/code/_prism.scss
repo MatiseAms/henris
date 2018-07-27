@@ -10,7 +10,7 @@ $color-primary: color(Blue);
 $color-secondary: color(Red);
 $color-tertiary: color(Purple);
 
-@if output(("components", "code", "code-prism")) {
+@if output(components, code-prism) {
 	code[class*="language-"],
 	pre[class*="language-"] {
 		color: white;
