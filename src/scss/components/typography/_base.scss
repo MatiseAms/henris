@@ -1,94 +1,96 @@
 // -------------------------------------------------- */
 //				@extend default typographic elements
 // -------------------------------------------------- */
-body,
-html {
-	font-size: 16px;
-}
+@if output(("typography","typography-margins")) {
+	body,
+	html {
+		font-size: 16px;
+	}
 
-a,
-a:visited,
-a:link,
-a.link:visited,
-.alink:visited {
-	color: inherit;
-}
-// -------------------------------------------------- */
-//				@extend default typographic elements
-// -------------------------------------------------- */
+	a,
+	a:visited,
+	a:link,
+	a.link:visited,
+	.alink:visited {
+		color: inherit;
+	}
+	// -------------------------------------------------- */
+	//				@extend default typographic elements
+	// -------------------------------------------------- */
 
-h1 {
-	@extend %#{$base-prefix}h1 !optional;
-}
-h2 {
-	@extend %#{$base-prefix}h2 !optional;
-}
-h3 {
-	@extend %#{$base-prefix}h3 !optional;
-}
-h4 {
-	@extend %#{$base-prefix}h4 !optional;
-}
-h5 {
-	@extend %#{$base-prefix}h5 !optional;
-}
-h6 {
-	@extend %#{$base-prefix}h6 !optional;
-}
+	h1 {
+		@extend %#{$base-prefix}h1 !optional;
+	}
+	h2 {
+		@extend %#{$base-prefix}h2 !optional;
+	}
+	h3 {
+		@extend %#{$base-prefix}h3 !optional;
+	}
+	h4 {
+		@extend %#{$base-prefix}h4 !optional;
+	}
+	h5 {
+		@extend %#{$base-prefix}h5 !optional;
+	}
+	h6 {
+		@extend %#{$base-prefix}h6 !optional;
+	}
 
-// make font styles
-.font-bold,
-strong {
-	@extend %#{$base-prefix}font-bold !optional;
-}
-small {
-	@extend %#{$base-prefix}small !optional;
-}
-del {
-	@extend %#{$base-prefix}del !optional;
-}
-ins {
-	@extend %#{$base-prefix}ins !optional;
-}
-sub {
-	@extend %#{$base-prefix}sub !optional;
-}
-sup {
-	@extend %#{$base-prefix}sup !optional;
-}
-p {
-	@extend %#{$base-prefix}p !optional;
-}
-.content {
-	li {
+	// make font styles
+	.font-bold,
+	strong {
+		@extend %#{$base-prefix}font-bold !optional;
+	}
+	small {
+		@extend %#{$base-prefix}small !optional;
+	}
+	del {
+		@extend %#{$base-prefix}del !optional;
+	}
+	ins {
+		@extend %#{$base-prefix}ins !optional;
+	}
+	sub {
+		@extend %#{$base-prefix}sub !optional;
+	}
+	sup {
+		@extend %#{$base-prefix}sup !optional;
+	}
+	p {
 		@extend %#{$base-prefix}p !optional;
 	}
-}
-.text-large {
-	font-size: 1.25em;
-}
-blockquote {
-	@extend %#{$base-prefix}blockquote !optional;
-}
-div {
-	@extend %#{$base-prefix}default-font-rules !optional;
-}
-
-// Variations
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	&.fancy {
-		font-style: italic;
+	.content {
+		li {
+			@extend %#{$base-prefix}p !optional;
+		}
 	}
-	&.thin {
-		font-weight: 100;
+	.text-large {
+		font-size: 1.25em;
 	}
-	&.caps {
-		text-transform: uppercase;
+	blockquote {
+		@extend %#{$base-prefix}blockquote !optional;
+	}
+	div {
+		@extend %#{$base-prefix}default-font-rules !optional;
+	}
+
+	// Variations
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		&.fancy {
+			font-style: italic;
+		}
+		&.thin {
+			font-weight: 100;
+		}
+		&.caps {
+			text-transform: uppercase;
+		}
 	}
 }

@@ -1,15 +1,17 @@
-input[type="button"],
-input[type="submit"] {
-	margin-top: 1rem;
-	@if output("button") {
-		&:not(.button) {
-			@extend .button;
+@if output(form-button) {
+	input[type="button"],
+	input[type="submit"] {
+		margin-top: 1rem;
+		@if output("button") {
+			&:not(.button) {
+				@extend .button;
+			}
 		}
 	}
-}
-label {
-	& + input[type="button"],
-	& + input[type="submit"] {
-		margin-top: 1rem;
+	label {
+		& + input[type="button"],
+		& + input[type="submit"] {
+			margin-top: 1rem;
+		}
 	}
 }

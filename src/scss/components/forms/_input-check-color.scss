@@ -1,85 +1,87 @@
-[class^="input-check-color"] {
-	height: auto;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	label {
-		display: block;
-		margin-top: 0;
+@if output(form-check-color) {
+	[class^="input-check-color"] {
+		height: auto;
+		width: auto;
 		padding: 0;
-		padding-left: 2rem;
-		line-height: 2;
-		position: relative;
-		&:after,
-		&:before {
-			content: "";
-		}
-	}
-	input[type="checkbox"],
-	input[type="radio"] {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		width: 0;
-		height: 0;
 		margin: 0;
-		padding: 0;
-		position: absolute;
-		opacity: 0;
-	}
-
-	label:before {
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0.25em;
-		width: 1.5em;
-		height: 1.5em;
-		border-radius: 50%;
-		box-shadow: 0 2px 0 0 color(White, 0.15);
-	}
-
-	label:after {
-		display: block;
-		position: absolute;
-		left: 0.5em;
-		top: 0.75em;
-		width: 0.5em;
-		height: 0.5em;
-		background-color: white;
-		border-radius: 50%;
-		transform: scale(0);
-	}
-	input:checked {
-		& + label:after {
-			animation: inputCheckColorPop 0.3s forwards;
+		label {
+			display: block;
+			margin-top: 0;
+			padding: 0;
+			padding-left: 2rem;
+			line-height: 2;
+			position: relative;
+			&:after,
+			&:before {
+				content: "";
+			}
 		}
-	}
-}
-@keyframes inputCheckColorPop {
-	0% {
-		transform: scale(0);
-	}
-	75% {
-		transform: scale(1.2);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-@each $colorName, $colorValue in $colors {
-	.input-check-color--#{$colorName} {
+		input[type="checkbox"],
+		input[type="radio"] {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			width: 0;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			opacity: 0;
+		}
+
 		label:before {
-			background-color: $colorValue;
-			box-shadow: 0 2px 0 0 darken($colorValue, 20%);
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0.25em;
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 50%;
+			box-shadow: 0 2px 0 0 color(White, 0.15);
 		}
+
 		label:after {
-			background-color: contra($colorName);
+			display: block;
+			position: absolute;
+			left: 0.5em;
+			top: 0.75em;
+			width: 0.5em;
+			height: 0.5em;
+			background-color: white;
+			border-radius: 50%;
+			transform: scale(0);
+		}
+		input:checked {
+			& + label:after {
+				animation: inputCheckColorPop 0.3s forwards;
+			}
 		}
 	}
-}
-.input-check--nolabel {
-	label {
-		text-indent: -999em;
+	@keyframes inputCheckColorPop {
+		0% {
+			transform: scale(0);
+		}
+		75% {
+			transform: scale(1.2);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	@each $colorName, $colorValue in $colors {
+		.input-check-color--#{$colorName} {
+			label:before {
+				background-color: $colorValue;
+				box-shadow: 0 2px 0 0 darken($colorValue, 20%);
+			}
+			label:after {
+				background-color: contra($colorName);
+			}
+		}
+	}
+	.input-check--nolabel {
+		label {
+			text-indent: -999em;
+		}
 	}
 }

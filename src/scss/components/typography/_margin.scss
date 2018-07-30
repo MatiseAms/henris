@@ -1,57 +1,60 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-table,
-img,
-ul,
-ol {
-	& + h1,
-	& + h2,
-	& + h3,
-	& + h4,
-	& + h5,
-	& + h6,
-	& + p,
-	& + blockquote,
-	& + table,
-	& + img,
-	& + ul,
-	& + ol {
-		margin-top: 1em;
+// -------------------------------------------------- */
+@if output("typography") {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	table,
+	img,
+	ul,
+	ol {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + p,
+		& + blockquote,
+		& + table,
+		& + img,
+		& + ul,
+		& + ol {
+			margin-top: 1em;
+		}
 	}
-}
 
-h1 {
-	& + h2,
-	& + h3 {
-		margin-top: 1em;
+	h1 {
+		& + h2,
+		& + h3 {
+			margin-top: 1em;
+		}
 	}
-}
 
-p,
-ul,
-ol,
-img,
-table,
-div,
-blockquote,
-pre {
-	& + h1,
-	& + h2,
-	& + h3,
-	& + h4,
-	& + h5,
-	& + h6,
-	& + p,
-	& + blockquote,
-	& + table,
-	& + img,
-	& + pre {
-		margin-top: 1em;
+	p,
+	ul,
+	ol,
+	img,
+	table,
+	div,
+	blockquote,
+	pre {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + p,
+		& + blockquote,
+		& + table,
+		& + img,
+		& + pre {
+			margin-top: 1em;
+		}
 	}
 }
