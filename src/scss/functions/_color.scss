@@ -1,51 +1,45 @@
-//
+// --------------------------------------
 //    Define the default color set
-//
+// ------------------------------------
 
 $default-color-set: $color-default !default;
 
-//
+// ------------------------------------------------------------------------
 //    There has been made another colorset, lets check it an apply it.
-//
+// ----------------------------------------------------------------------
 
 @function define-custom-colorset($current-color-set) {
 	$passed: true;
+	// Let's first check if it has values
 
-	/*
-    Let's first check if it has values
-    */
 	@if length($custom-colorset) < 1 {
 		$passed: false;
 		@warn "[function define-custom-colorset] The custom colorset you've made, doesnt have any values an therefor the default colorset will be used.";
 	}
 
-	/*
-    If the colorset is not a map, it won't work. So lets check that too.
-    */
+	// If the colorset is not a map, it won't work. So lets check that too.
+
 	@else if type-of($custom-colorset) != "map" {
 		$passed: false;
 		@warn "[function define-custom-colorset] The custom colorset you've made, is not a map.";
 	}
 
-	/*
-    If the colorset doesn't have Black, it won't work. 
-    */
+	// If the colorset doesn't have Black, it won't work.
+
 	@else if map-get($custom-colorset, "Black") == null {
 		$passed: false;
 		@warn "[function define-custom-colorset] Your colorset doesn't have Black defined. Therefore not appplied.";
 	}
 
-	/*
-    If the colorset doesn't have White, it won't work. 
-    */
+	// If the colorset doesn't have White, it won't work.
+
 	@else if map-get($custom-colorset, "White") == null {
 		$passed: false;
 		@warn "[function define-custom-colorset] Your colorset doesn't have White defined. Therefore not appplied.";
 	}
 
-	/*
-    It appears that everything is alright. Lets change the set to your new set. 
-    */
+	// It appears that everything is alright. Lets change the set to your new set.
+
 	@if $passed {
 		@return $custom-colorset;
 	} @else {
@@ -53,15 +47,15 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// ---------------------------------------------------------------------------------------------
 //    If you defined custom colors, we will extend the existing colorset with these colors.
-//
+// -------------------------------------------------------------------------------------------
 
 @function define-custom-colors($current-color-set) {
 	$passed: true;
-	/*
-    Let's first check if it has values
-    */
+
+	// Let's first check if it has values
+
 	@if length($custom-colors) < 1 {
 		$passed: false;
 		@warn "[function define-custom-colors] The custom colorset you've made, doesnt have any values an therefor the default colorset will be used.";
@@ -78,9 +72,9 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// ------------------------------
 //    Define a set color set
-//
+// ----------------------------
 
 @function define-color-set() {
 	$set: ();
@@ -105,126 +99,114 @@ $default-color-set: $color-default !default;
 	@return $set;
 }
 
-//
+// -----------------------------------------------------
 //    Check if there has been set another color set
-//
+// ---------------------------------------------------
 
 @if type-of($default-color-set) == "string" {
 	$default-color-set: define-color-set();
 }
 
-//
+// ----------------------------------------------------------------------
 //    Let's check if there is a new colorset defined in the project.
-//
+// --------------------------------------------------------------------
 
 @if variable-exists(custom-colorset) {
 	$default-color-set: define-custom-colorset($default-color-set);
 }
 
-//
-//    Also, you might have extra colors to add to the default set, overrule or extend    */
-//
+// --------------------------------------------------------------------------------------
+//    Also, you might have extra colors to add to the default set, overrule or extend
+// ------------------------------------------------------------------------------------
 
 @if variable-exists(custom-colors) {
 	$default-color-set: define-custom-colors($default-color-set);
 }
 
-//
+// --------------------------------------------------------------------------
 //    The main color function, get the color from  the current colorset
-//
+// ------------------------------------------------------------------------
 
 @function color($value: null, $opacity: 1, $colorset: $default-color-set) {
-	/* 
-    Check if value atleast is set.
-    */
+	// Check if value atleast is set.
 	@if $value == null {
 		@warn "No color given";
 		@return null;
 	}
 
-	/*
-    check Value type and convert the color always to a string. 
-    */
+	// check Value type and convert the color always to a string.
+
 	$value-type: type-of($value);
 
-	/*
-    When the type is 'color' we need to either convert color to a string
-    or directly pass it back when its an actual color. 
-    */
+	// When the type is 'color' we need to either convert color to a string
+	// or directly pass it back when its an actual color
 	@if is-string-color($value) {
 		$value: to-string($value);
 	} @else {
 		@return to-string-color($value, $opacity);
 	}
 
-	/*
-    Check if the color exist in the current colorset
-    */
+	// Check if the color exist in the current colorset
+
 	@if color-exist($value, $colorset) {
 		@return rgba(get-color($value, $colorset), $opacity);
 	}
 
-	/*
-    The last resort for return
-    */
+	// The last resort for return
+
 	@else {
 		@warn "[function color] #{$value} does not exist in the current colorset.";
 		@return to-color(#000000);
 	}
 }
 
-//
+// -----------------------------------------------------------------------
 //    Check if the type of a color and return if its not a rgb or hex
-//
+// ---------------------------------------------------------------------
 
 @function is-string-color($value) {
 	$value: to-string($value);
-	/*
-    Check if the color is a hex color.
-    */
+	// Check if the color is a hex color.
+
 	@if str-slice(to-string($value), 1, 1) == "#" {
 		@return false;
 	}
 
-	/*
-    Check if the color is a rgb color. 
-    */
+	// Check if the color is a rgb color.
+
 	@else if str-slice(to-string($value), 1, 3) == "rgb" {
 		@return false;
 	}
 
-	/* 
-    Else, just return the string and make the best of it.
-    */
+	// Else, just return the string and make the best of it.
+
 	@else {
 		@return true;
 	}
 }
 
-//
-//    Convert the string back to an actual color   */
+// ------------------------------------------------
+//    Convert the string back to an actual color
 //    and always to a rgba color with opacity
-//
+// ---------------------------------------------
 
 @function to-string-color($value, $opacity: 1) {
-	/*
-    Check if the color is a hex color.
-    */
+	// Check if the color is a hex color.
+
 	@if str-slice(to-string($value), 1, 1) == "#" {
 		@return $value;
 	}
-	/*
-    Check if the color is a rgb color. 
-    */
+	// Check if the color is a rgb color.
+
 	@else if str-slice(to-string($value), 1, 3) == "rgb" {
 		@return rgba(red($value), green($value), blue($value), $opacity);
 	}
 }
 
-//
+// ------------------------------------------------------------
 //    Check if the color is a rgb, hex or a specific
 //    color from the existing colorset and return a color
-//
+// ---------------------------------------------------------
 
 @function to-defined-color($color) {
 	@if is-string-color(to-string($color)) {
@@ -234,14 +216,13 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// ----------------------------------------------------
 //    Check if the color exists in the current set
-//
+// --------------------------------------------------
 
 @function color-exist($value, $colorset: $default-color-set) {
-	/*
-    Return true if the color exists in the current colorset; Or false when not. 
-    */
+	// Return true if the color exists in the current colorset; Or false when not.
+
 	@if map-get($colorset, $value) {
 		@return true;
 	} @else {
@@ -249,14 +230,13 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// -----------------------------------------
 //    Get the color from the colorset;
-//
+// ---------------------------------------
 
 @function get-color($value, $colorset: $default-color-set) {
-	/*
-    Return the color if the color exists in the current colorset; Or nothing + a warning when not. 
-    */
+	// Return the color if the color exists in the current colorset; Or nothing + a warning when not.
+
 	@if color-exist($value, $colorset) {
 		@return map-get($colorset, $value);
 	} @else {
@@ -265,44 +245,40 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// ------------------------------------------
 //    Define the default black and white
-//
+// ----------------------------------------
 
 @function define-bw($opacity) {
-	/*
-    Standard set the default black and white;
-    */
+	// Standard set the default black and white;
+
 	$black: black;
 	$white: white;
 
-	/*
-     Black should exist in defined colorset
-    */
+	// Black should exist in defined colorset
+
 	@if color-exist("Black") {
 		$black: color(Black, $opacity);
 	} @else {
 		@warn "[function define-bw] 'Black' does not exist in defined colorset";
 	}
 
-	/*
-     White should exist in defined colorset
-    */
+	// White should exist in defined colorset
+
 	@if color-exist("White") {
 		$white: color(White, $opacity);
 	} @else {
 		@warn "[function define-bw] 'White' does not exist in defined colorset";
 	}
 
-	/*
-     Return Black and White
-    */
+	// Return Black and White
+
 	@return ($black, $white);
 }
 
-//
+// ------------------------------------------
 //    Get brightness of a specific color
-//
+// ----------------------------------------
 
 @function color-brightness($color, $percentage: true) {
 	// Check if the color is already al color or if we have to convert it to a color.
@@ -321,9 +297,9 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// --------------------------------------------------
 //    Calculate the brightness value of a color
-//
+// ------------------------------------------------
 
 @function color-brightness-calc($color) {
 	// Calculate all colors from the given color in percentages.
@@ -337,26 +313,21 @@ $default-color-set: $color-default !default;
 	@return $sum;
 }
 
-//
+// ------------------------------------------------------
 //    Get the opposite color (either black or white)
-//
+// ----------------------------------------------------
 
 @function contra($value, $opacity: 1, $colors: null, $contrast: 57.5) {
 	$color: black;
 	$bw: ();
-	/*
-        Define dark and light colors to return.
+	// Define dark and light colors to return.
 
-        Alternative dark and light can be given in a map form. 
-       `contra([COLOR],1,([DARKCOLOR],[LIGHTCOLOR]);`
-    */
+	//  Alternative dark and light can be given in a map form.
+	// `contra([COLOR],1,([DARKCOLOR],[LIGHTCOLOR]);`
 
 	@if $colors != null {
 		@if length($colors) == 2 {
-			$bw: (
-				nth($colors, 1),
-				nth($colors, 2)
-			);
+			$bw: (nth($colors, 1), nth($colors, 2));
 		} @else {
 			@warn "[function contra] Set with alternative has a invalid amount of values (#{length($colors)})";
 		}
@@ -364,15 +335,13 @@ $default-color-set: $color-default !default;
 		$bw: define-bw($opacity);
 	}
 
-	/*
-    When the type is 'color' we need to either convert color to a string
-    or directly pass it back when its an actual color. 
-    */
+	// When the type is 'color' we need to either convert color to a string
+	// or directly pass it back when its an actual color.
+
 	$color: to-defined-color($value);
 
-	/*
-     Get the brightness value
-    */
+	// Get the brightness value
+
 	$brightness: color-brightness($color, false);
 
 	@if $brightness > $contrast {
@@ -382,15 +351,15 @@ $default-color-set: $color-default !default;
 	}
 }
 
-//
+// -------------------------------------------------------------
 //    Populate variable $colors with the current colorset;
-//
+// -----------------------------------------------------------
 
 $colors: $default-color-set;
 
-//
+// -------------------------------------------------------------------------
 //    Define Black, White and Gray function with the existing colorset
-//
+// -----------------------------------------------------------------------
 
 @function black($opacity: 1) {
 	@if color-exist("Black") {
@@ -412,46 +381,40 @@ $colors: $default-color-set;
 	@return rgba($amount, $amount, $amount, $opacity);
 }
 
-//
+// --------------------------------------------------------
 //    Extend standard SASS function with more options.
-//
+// ------------------------------------------------------
 
 @function darken($color, $amount) {
-	/*
-    When the type is 'color' we need to either convert color to a string
-    or directly pass it back when its an actual color. 
-    */
+	//  When the type is 'color' we need to either convert color to a string
+	// or directly pass it back when its an actual color.
+
 	$color: to-defined-color($color);
-	/*
-    Apply the darkness to the color like the original function also does.
-    */
+	// Apply the darkness to the color like the original function also does.
+
 	$darkness: lightness($color) - $amount;
-	/*
-    Return the new darkened color. 
-    */
+	// Return the new darkened color.
+
 	@return hsl(hue($color), saturation($color), $darkness);
 }
 
 @function lighten($color, $amount) {
-	/*
-    When the type is 'color' we need to either convert color to a string
-    or directly pass it back when its an actual color. 
-    */
+	// When the type is 'color' we need to either convert color to a string
+	// or directly pass it back when its an actual color.
+
 	$color: to-defined-color($color);
-	/*
-    Apply the lightness to the color like the original function also does.
-    */
+	// Apply the lightness to the color like the original function also does.
+
 	$lightness: lightness($color) + $amount;
-	/*
-    Return the new darkened color. 
-    */
+	// Return the new darkened color.
+
 	@return hsl(hue($color), saturation($color), $lightness);
 }
 
-//
+// ----------------------------------------------------------------------
 //    SASS has a problem with the use of rgba with custom propertis,
 //    using this function fixes this.
-//
+// -------------------------------------------------------------------
 
 @function native-rgba($string, $opacity) {
 	@return #{"rgba(#{$string}, #{$opacity})"};

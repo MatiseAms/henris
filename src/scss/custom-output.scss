@@ -1,0 +1,50 @@
+@import "settings/output";
+
+// Reset a value
+@function map-set($map, $key, $value) {
+	$new: (
+		$key: $value
+	);
+	@return map-merge($map, $new);
+}
+// Set custom output
+@function set-output($var, $value) {
+	$output-temp: $output;
+	@if map-has-key($output, $var) {
+		@if $value == true OR $value == false {
+			$output-temp: map-set($output, $var, $value);
+		} @else {
+			@warn "Output can only be either 'true' or 'false'";
+		}
+	} @else {
+		@warn "#{$var} does not exist in output settings";
+	}
+	@return $output-temp;
+}
+
+@function show-output($key) {
+	$value: "";
+	@if $key {
+		@debug "output: #{$key} : #{map-get($output,$key)}";
+		$value: map-get($output, $key);
+	} @else {
+		@each $output-key, $output-value in $output {
+			@debug "output: #{$output-key} : #{$output-value}";
+		}
+		$value: $key;
+	}
+	@return $value;
+}
+@function return-output($key) {
+	$value: "";
+	@if $key {
+		$value: #{map-get($output, $key)};
+	} @else {
+		@warn 'no input given';
+	}
+	@return $value;
+}
+
+@mixin show-output($value: null) {
+	$show: show-output($value);
+}

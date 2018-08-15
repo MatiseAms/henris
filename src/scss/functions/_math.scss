@@ -1,6 +1,4 @@
-//
 // Calculations
-//
 @function pow($number, $exp) {
 	$value: 1;
 	@if $exp > 0 {
@@ -14,17 +12,10 @@
 	}
 	@return $value;
 }
-
-//
-// number-invert
-//
 @function number-invert($number) {
 	@return $number * -1;
 }
 
-//
-// fact
-//
 @function fact($number) {
 	$value: 1;
 	@if $number > 0 {
@@ -35,16 +26,10 @@
 	@return $value;
 }
 
-//
-// pi
-//
 @function pi() {
 	@return 3.14159265359;
 }
 
-//
-// rad
-//
 @function rad($angle) {
 	$unit: unit($angle);
 	$unitless: $angle / ($angle * 0 + 1);
@@ -55,9 +40,6 @@
 	@return $unitless;
 }
 
-//
-// sin
-//
 @function sin($angle) {
 	$sin: 0;
 	$angle: rad($angle);
@@ -68,9 +50,6 @@
 	@return $sin;
 }
 
-//
-// cos
-//
 @function cos($angle) {
 	$cos: 0;
 	$angle: rad($angle);
@@ -81,17 +60,9 @@
 	@return $cos;
 }
 
-//
-// tan
-//
-
 @function tan($angle) {
 	@return sin($angle) / cos($angle);
 }
-
-//
-// roundup decimals
-//
 
 @function decimal-round($number, $digits: 0, $mode: round) {
 	$n: 1;
@@ -122,18 +93,9 @@
 		@return $number;
 	}
 }
-
-//
-// ceil (shortcut)
-//
-
 @function decimal-ceil($number, $digits: 0) {
 	@return decimal-round($number, $digits, ceil);
 }
-
-//
-// floor (shortcut)
-//
 @function decimal-floor($number, $digits: 0) {
 	@return decimal-round($number, $digits, floor);
 }

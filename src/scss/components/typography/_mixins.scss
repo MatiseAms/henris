@@ -57,7 +57,6 @@
 			$italic: "Italic";
 		}
 		@for $i from 1 through length($weights) {
-			//		$weight: unquote("#{nth($weights,$i)}");
 			$weight: nth($weights, $i);
 			@include font-include(
 				$title,
@@ -113,25 +112,21 @@
 					}
 				}
 			}
-			//
 			// Check if a font path has been set, if so, override the default;
 			@if map-has-key($font, "path") {
 				$font-path: map-get($font, "path");
 			}
-			//
 			// Check if a font path has been set, if so, override the default;
 			@if map-has-key($font, "types") {
 				$font-types: map-get($font, "types");
 			}
-			//
 			// Check if a font files have been set
 			@if map-has-key($font, "files") {
 				$font-files: map-get($font, "files");
 			}
-			//
 			// Get the font name
 			$font-name: convertToFontname($font, true);
-			//
+
 			// Load the fonts if true
 			@if $load {
 				@include font-list(
@@ -143,7 +138,7 @@
 					$font-path
 				);
 			}
-			//
+
 			// Set use
 			@if map-has-key($font, "use") {
 				@include font-use(map-get($font, "use"));

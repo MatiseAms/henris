@@ -1,4 +1,4 @@
-@if output(form-check) {
+@if output(form-checkbox) {
 	input[type="checkbox"] {
 		-webkit-appearance: checkbox;
 		-moz-appearance: checkbox;
@@ -7,7 +7,7 @@
 		max-width: auto;
 		min-width: auto;
 	}
-	.input-checkbox {
+	.input--checkbox {
 		height: auto;
 		width: auto;
 		padding: 0;

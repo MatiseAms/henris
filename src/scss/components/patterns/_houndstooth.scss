@@ -1,0 +1,43 @@
+@if output("pattern", "pattern-houndstooth") {
+	.pattern-houndstooth {
+		background: linear-gradient(
+					-45deg,
+					var(--pattern-color-secondary) 25%,
+					transparent 25%,
+					transparent 75%,
+					var(--pattern-color-primary) 75%,
+					var(--pattern-color-primary)
+				)
+				0
+				0,
+			linear-gradient(
+					-45deg,
+					var(--pattern-color-primary) 25%,
+					transparent 25%,
+					transparent 75%,
+					var(--pattern-color-secondary) 75%,
+					var(--pattern-color-secondary)
+				)
+				calc(var(--pattern-size) / 2)
+				calc(var(--pattern-size) / 2),
+			linear-gradient(
+					45deg,
+					var(--pattern-color-primary) 17%,
+					transparent 17%,
+					transparent 25%,
+					var(--pattern-color-primary) 25%,
+					var(--pattern-color-primary) 36%,
+					transparent 36%,
+					transparent 64%,
+					var(--pattern-color-primary) 64%,
+					var(--pattern-color-primary) 75%,
+					transparent 75%,
+					transparent 83%,
+					var(--pattern-color-primary) 83%
+				)
+				calc(var(--pattern-size) / 2)
+				calc(var(--pattern-size) / 2);
+		background-color: var(--pattern-color-secondary);
+		background-size: var(--pattern-size) var(--pattern-size);
+	}
+}

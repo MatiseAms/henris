@@ -1,0 +1,18 @@
+{
+	"default": {
+		"input": [
+			{
+				"background-color": "{{color(White)}}",
+				"border-color": "{{color(Black)}}",
+				"border-style": "solid",
+				"border-width": "1px",
+				"font-size": "1rem",
+				"line-height": "1rem",
+				"border-radius": "2px",
+				"min-width": "10rem",
+				"max-width": "100%",
+				"padding": "0.75rem 0.75rem"
+			}
+		]
+	}
+}

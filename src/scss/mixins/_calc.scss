@@ -1,0 +1,12 @@
+@mixin calc($prop, $expr) {
+	$properties: str-to-list($prop, ',');
+	$expressions: str-to-list($expr, ',');
+
+	@each $property in $properties {
+		@each $expression in $expressions {
+			#{$property}: -moz-calc(#{$expression});
+			#{$property}: -webkit-calc(#{$expression});
+			#{$property}: calc(#{$expression});
+		}
+	}
+}

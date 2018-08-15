@@ -1,0 +1,12 @@
+@mixin icon($value) {
+	@each $iconFamily-name, $iconFamily-value in $icons {
+		@each $icon-name, $icon-value in $iconFamily-value {
+			//@debug $value;
+			@if $value == $icon-name {
+				content: '#{$icon-value}';
+				$family: '#{$iconFamily-name}-font-family';
+				@extend '%#{$family}';
+			}
+		}
+	}
+}

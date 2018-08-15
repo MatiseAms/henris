@@ -1,0 +1,234 @@
+@mixin nav($type, $n, $mq: null) {
+	$media-query: "";
+	$mqType: "";
+
+	@if $mq != null {
+		$media-query: media-query($mq);
+		$mqType: "#{$type}__#{$mq}";
+	} @else {
+		$media-query: "only screen and (max-width: 9999px)";
+		$mqType: $type;
+	}
+
+	@media #{$media-query} {
+		@if ($type == "basic") {
+			#{$n}--#{$mqType} {
+				max-width: 100vw;
+				overflow: auto;
+
+				// Modifiers
+				&[fixed] {
+					position: fixed;
+					top: 0;
+					width: 100%;
+				}
+
+				// Elements
+				#{$n}__list {
+					display: flex;
+				}
+				#{$n}__item {
+					margin: grid(0.5);
+					& + #{$n}__item {
+						margin-left: 0;
+					}
+				}
+				#{$n}__link {
+					display: block;
+					padding: grid(0.5);
+					color: currentColor;
+					text-decoration: none;
+				}
+				#{$n}__text {
+					font-size: 1em;
+					white-space: nowrap;
+					font-weight: 500;
+					color: currentColor;
+				}
+			}
+		} @else if ($type == "flow") {
+			#{$n}--#{$mqType} {
+				max-width: 100vw;
+				overflow: auto;
+
+				// Modifiers
+				&[fixed] {
+					position: fixed;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&#{$n}--left {
+				}
+
+				// Elements
+				#{$n}__list {
+					display: block;
+				}
+				#{$n}__item {
+					//		margin: grid(0.5);
+					// & + #{$n}__item {
+					// 	margin-left: 0;
+					// }
+				}
+				#{$n}__link {
+					display: block;
+					padding: grid(0.25 0.5);
+					color: currentColor;
+					text-decoration: none;
+				}
+				#{$n}__text {
+					font-size: 1em;
+					white-space: nowrap;
+					font-weight: 500;
+					color: currentColor;
+				}
+			}
+		} @else if ($type == "left") {
+			#{$n}--#{$mqType} {
+				background-color: var(--menu-bg, transparent);
+				overflow: auto;
+				width: grid(5);
+				height: 100vh;
+				@include min-("width", 5, 160);
+				@include max-("width", 5, 320);
+
+				& ~ main {
+					position: absolute;
+					width: calc(100% - #{grid(5)});
+					left: grid(5);
+					top: 0;
+					height: 100vh;
+					overflow: auto;
+					@include min-(null, 5, 160) {
+						left: 160px;
+						width: calc(100% - 160px);
+					}
+					@include max-(null, 5, 320) {
+						left: 320px;
+						width: calc(100% - 320px);
+					}
+				}
+				// Modifiers
+				&[fixed] {
+					position: fixed;
+					left: 0;
+				}
+
+				// Elements
+				#{$n}__list {
+					display: block;
+				}
+				#{$n}__item {
+					//		margin: grid(0.5);
+					// & + #{$n}__item {
+					// 	margin-left: 0;
+					// }
+					&.has-children {
+						& > #{$n}__link {
+							#{$n}__text {
+								font-weight: 700;
+							}
+						}
+						margin-top: grid(1);
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+				}
+				#{$n}__link {
+					display: block;
+					padding: 0.5em 1em;
+					color: currentColor;
+					text-decoration: none;
+				}
+				#{$n}__text {
+					font-size: 1em;
+					white-space: nowrap;
+					font-weight: 500;
+					color: var(--menu-text, currentColor);
+				}
+			}
+		} @else if ($type == "mobile") {
+			input#{$n}__trigger-input:checked {
+				& ~ #{$n}--#{$mqType} {
+					transform: translateX(0%);
+				}
+			}
+			#{$n}--#{$mqType} {
+				width: 100vw;
+				height: 100vh;
+				z-index: 10;
+				overflow: auto;
+				background-color: var(--menu-bg, color(Black, 0.75));
+				color: white;
+				top: 0;
+				position: fixed;
+				transform: translateX(100%);
+				overflow: auto;
+
+				// Elements
+				#{$n}__list {
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				#{$n}__item {
+					display: block;
+				}
+				#{$n}__link {
+					display: block;
+					padding: grid(0.5 0.5);
+					color: currentColor;
+					text-decoration: none;
+				}
+				#{$n}__text {
+					font-size: 2em;
+					white-space: nowrap;
+					display: block;
+					text-align: center;
+					font-weight: 500;
+					color: currentColor;
+				}
+			}
+		}
+	}
+	// Default trigger
+
+	#{$n}__trigger {
+		width: calc(#{grid(1)} + 1em);
+		height: calc(#{grid(1)} + 1em);
+		display: block;
+		position: fixed !important;
+		left: 0;
+		top: 0;
+		transform: translateX(-100%);
+		z-index: 12;
+		background-color: var(--nav-trigger-bg, transparent);
+		&:before {
+			content: none;
+		}
+		@include min-("width", 1, 60) {
+			height: 60px;
+		}
+		// Need to figure out a way to only invoke this when mobile class is used
+		@media #{$small-only} {
+			transform: translateX(0%);
+		}
+		span {
+			@include menu();
+		}
+		&-input {
+			&:checked {
+				& ~ #{$n}__trigger {
+					span {
+						@include menu-close();
+					}
+				}
+			}
+		}
+	}
+}

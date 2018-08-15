@@ -1,0 +1,55 @@
+@if output(card) {
+	.card {
+		border-radius: $base-border-radius;
+		// box-shadow: $base-box-shadow;
+		position: relative;
+		&__holder {
+			padding: var(--card-space, 1rem);
+		}
+		&__row {
+			position: relative;
+			width: calc(
+				100% + ((var(--card-padding, 1rem) + var(--card-space, 1rem)) * 2)
+			);
+			margin-left: calc(
+				(var(--card-padding, 1rem) + var(--card-space, 1rem)) * -1
+			);
+		}
+		header {
+			padding: var(--card-padding, 1rem);
+		}
+		main {
+			padding: var(--card-padding, 1rem);
+			table {
+				width: calc(100% + (var(--card-padding, 1rem) * 2));
+				position: relative;
+				left: calc(var(--card-padding, 1rem) * -1);
+				tr {
+					display: flex;
+					flex-wrap: wrap;
+					td {
+					}
+				}
+			}
+		}
+		&--expand-main {
+			main {
+				background-color: color(White, 0.2);
+				//	max-height: 0;
+				//	position: absolute;
+				overflow: hidden;
+				transition: $base-transition;
+				width: 100%;
+				top: 100%;
+				left: 0;
+			}
+			&:hover {
+				z-index: 10;
+				//		main{ max-height: 999px; }
+			}
+		}
+	}
+	.column .card {
+		height: 100%;
+	}
+}

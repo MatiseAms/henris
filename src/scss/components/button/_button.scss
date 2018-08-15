@@ -7,24 +7,24 @@
 	border-radius: $base-border-radius;
 	width: auto;
 	padding: 0.75em 1.5em;
-	background-color: color(Blue);
-	color: contra(color(Blue));
+	background-color: $primary-color;
+	color: contra($primary-color);
 	border: none;
 	font-size: 1rem;
 	cursor: pointer;
 	line-height: 1em;
-	border-bottom: var(--button-depth,2px) solid darken(color(Blue), 10%);
+	border-bottom: var(--button-depth,2px) solid darken($primary-color, 10%);
 	text-decoration: none;
 	&:hover {
-		background-color: darken(Blue, 10%);
-		border-bottom: var(--button-depth,2px) solid darken(color(Blue), 20%);
+		background-color: darken($primary-color, 10%);
+		border-bottom: var(--button-depth,2px) solid darken($primary-color, 20%);
 	}
 	&:focus {
 		outline: none;
 		box-shadow: 0 0 0.5rem 0 color(Black, 0.25);
 	}
 }
-@if output(components,button){
+@if output(('components','button')){
 	// ------------------------------------------------------------------------ */
 	//	Styling set on standard buttons and elements with a button class	   */
 	// ---------------------------------------------------------------------- */

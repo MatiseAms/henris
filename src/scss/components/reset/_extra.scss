@@ -1,4 +1,4 @@
-@if output("reset-extra") {
+@if output(reset-extra) {
 	ul,
 	li {
 		display: inline-block;

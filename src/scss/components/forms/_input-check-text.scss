@@ -1,13 +1,12 @@
 @if output(form-check-text) {
-	.input-check-text {
+	.input--check-text {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
 		label {
 			position: relative;
-
-			display: block;
+			display: inline-block;
 			left: 0;
 			min-width: 2.5em;
 			width: auto;
@@ -44,12 +43,12 @@
 				color: color(White);
 			}
 		}
-		&.input-check--nolabel {
+		&.input--check--nolabel {
 			margin: 0.25rem;
 			&:before {
 				top: 0 !important;
 			}
-			& + .input-check--nolabel {
+			& + .input--check--nolabel {
 				margin: 0.25rem;
 			}
 		}

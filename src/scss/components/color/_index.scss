@@ -1,10 +1,10 @@
-@if output(components, color) {
+@if output("components", "color") {
 	/* ------------------------------------------------------------ */
 	/*	Create all custom-properties for all the colors in the	   */
 	/*	current colorset. 										  */
 	/* --------------------------------------------------------- */
 
-	@if output(custom-properties) {
+	@if output("custom-properties") {
 		:root {
 			@each $color-name, $color-value in $default-color-set {
 				$variable: "--color-#{to-lower-case($color-name)}";
@@ -36,7 +36,7 @@
 	*/
 		// @debug output();
 
-		@if output(background-colors) {
+		@if output("background-colors") {
 			.bg-#{to-lower-case($color-name)},
 			.bg-#{$color-name} {
 				background-color: #{$color-value};
@@ -47,7 +47,7 @@
 		Create color classes to define text color.
 	*/
 
-		@if output(text-colors) {
+		@if output("text-colors") {
 			.color-#{to-lower-case($color-name)},
 			.color-#{$color-name} {
 				color: $color-value;
@@ -56,11 +56,13 @@
 	}
 }
 
-$dark: color(Black) !default;
-$light: color(White) !default;
-$primary: color(Purple) !default;
-$link: color(Blue) !default;
-$info: color(Turquoise) !default;
-$success: color(Green) !default;
-$warning: color(Orange) !default;
-$danger: color(Red) !default;
+$color-dark: color(Black) !default;
+$color-light: color(White) !default;
+$primary-color: color(Purple) !default;
+$secondary-color: color(Blue) !default;
+$tertiary-color: color(Pink) !default;
+$color-link: color(Blue) !default;
+$color-info: color(Turquoise) !default;
+$color-success: color(Green) !default;
+$color-warning: color(Orange) !default;
+$color-danger: color(Red) !default;

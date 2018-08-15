@@ -1,0 +1,177 @@
+@if output("spacing") {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	pre,
+	p,
+	.input--field,
+	form {
+		& + .input--field {
+			margin-top: 1rem;
+		}
+		& + h1 {
+			margin-top: 0.75rem;
+		}
+		& + p {
+			margin-top: 2rem;
+		}
+		& + .row {
+			margin-top: 1rem;
+		}
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + p {
+			margin-top: 1rem;
+		}
+		& + table,
+		& + .table__container {
+			margin-top: grid(2);
+		}
+		& + input,
+		& + select,
+		& + textarea,
+		& + form {
+			margin-top: grid(0.5);
+			@include min-("margin-top", 0.5, 16);
+		}
+	}
+	table,
+	.table__container {
+		& + .button,
+		& + .button__container {
+			margin-top: grid(1);
+		}
+	}
+	span.code,
+	pre {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5 {
+			margin-top: 2rem;
+		}
+	}
+	p {
+		@include wildcard("button", true) {
+			margin-top: 2rem;
+		}
+		& + p {
+			margin-top: 0.5rem;
+		}
+		& + table {
+			margin-top: 1rem;
+		}
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h6,
+		& + h5 {
+			margin-top: 2rem;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		& + dl {
+			margin-top: grid(0.25);
+		}
+		& + p {
+			margin-top: grid(0.25);
+		}
+		& + table {
+			margin-top: 1rem;
+		}
+		& + ul,
+		& + ol {
+			margin-top: 1rem;
+		}
+	}
+	h2,
+	h3,
+	h4 {
+		& + h5,
+		& + h6 {
+			margin-top: grid(0.2);
+		}
+	}
+
+	table {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + p {
+			margin-top: 2rem;
+		}
+	}
+	blockquote {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + p {
+			margin-top: 1rem;
+		}
+	}
+	ol,
+	ul,
+	blockquote {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + p {
+			margin-top: 1rem;
+		}
+	}
+
+	div,
+	p {
+		& + table,
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + ul {
+			margin-top: grid(0.5);
+			@include min-("margin-top", 0.5, 16);
+		}
+	}
+	input,
+	select,
+	textarea {
+		& + table,
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6,
+		& + ul,
+		& + p,
+		& + form {
+			margin-top: grid(0.5);
+			@include min-("margin-top", 0.5, 16);
+		}
+	}
+}

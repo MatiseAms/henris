@@ -5,10 +5,9 @@
 		"space": "1rem",
 		"font-size": "16px",
 		"font-path": "/fonts",
-		"image-path": "/images",
+		"image-path": "/fonts",
 		"transition": ".3s",
 		"transition-time": ".3",
-		"box-shadow": "0 0 100px 0 rgba(0,0,0,.1)",
-		"cubic-bezier": "cubic-bezier(.17,.67,.83,.67"
+		"box-shadow": "0 0 100px 0 rgba(0,0,0,.1)"
 	}
 }

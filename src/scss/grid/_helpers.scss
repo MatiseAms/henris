@@ -1,7 +1,4 @@
-//
-// Some helpers for the flexbox grid
-//
-@if output("grid-helpers") {
+@if output(grid-helpers) {
 	.align-center {
 		display: flex;
 		align-items: center;
