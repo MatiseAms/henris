@@ -38,6 +38,9 @@ $output-card: true !default; //
 $output-code: true !default; //
 $output-code-prism: false !default; //
 $output-color: true !default; //
+$output-color-custom-properties: true !default; //
+$output-color-background-colors: true !default; //
+$output-color-text-colors: true !default; //
 $output-content: true !default; //
 $output-content-link-filetypes: false !default; //
 $output-content-p-notices: false !default; //
@@ -131,6 +134,9 @@ $output: (
 	"code": true, 
 	"code-prism": false, 
 	"color": true, 
+	"color-custom-properties": true, 
+	"color-background-colors": true, 
+	"color-text-colors": true, 
 	"content": true, 
 	"content-link-filetypes": false, 
 	"content-p-notices": false, 

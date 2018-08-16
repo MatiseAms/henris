@@ -1,59 +1,52 @@
-@if output("components", "color") {
-	/* ------------------------------------------------------------ */
-	/*	Create all custom-properties for all the colors in the	   */
-	/*	current colorset. 										  */
-	/* --------------------------------------------------------- */
+// ------------------------------------------------------------ */
+//	Create all custom-properties for all the colors in the	   */
+//	current colorset. 										  */
+// --------------------------------------------------------- */
 
-	@if output("custom-properties") {
-		:root {
-			@each $color-name, $color-value in $default-color-set {
-				$variable: "--color-#{to-lower-case($color-name)}";
-				//hex
-				#{$variable}: $color-value;
-				//rgb
-				#{$variable}-r: red($color-value);
-				#{$variable}-g: green($color-value);
-				#{$variable}-b: blue($color-value);
-				#{$variable}-rgb: red($color-value), green($color-value),
-					blue($color-value);
-			}
-			// Social Colors in variables
-			// @each $color-name, $color-value in $color-social {
-			// 	$variable: "--color-#{to-lower-case($color-name)}";
-			// 	//hex
-			// 	#{$variable}: $color-value;
-			// }
+@if output("color-custom-properties") {
+	:root {
+		@each $color-name, $color-value in $default-color-set {
+			$variable: "--color-#{to-lower-case($color-name)}";
+			//hex
+			#{$variable}: $color-value;
+			//rgb
+			#{$variable}-r: red($color-value);
+			#{$variable}-g: green($color-value);
+			#{$variable}-b: blue($color-value);
+			#{$variable}-rgb: red($color-value), green($color-value),
+				blue($color-value);
 		}
 	}
+}
 
-	/* ----------------------------------------------------------- */
-	/*	Create all background color classes to use everywhere.    */
-	/* ----------------------------------------------------------- */
+// ----------------------------------------------------------- */
+//	Create all background color classes to use everywhere.    */
+// ----------------------------------------------------------- */
 
-	@each $color-name, $color-value in $default-color-set {
-		/*
-		Create background classes. With the first capital and without. 
-	*/
-		// @debug output();
+@each $color-name, $color-value in $default-color-set {
+	//
+	//		Create background classes. With the first capital and without.
+	//
 
-		@if output("background-colors") {
-			.background--#{to-lower-case($color-name)},
-			.background--#{$color-name},
-			.bg---#{to-lower-case($color-name)},
-			.bg--#{$color-name} {
-				background-color: #{$color-value};
-				color: contra($color-value);
-			}
+	@if output("color-background-colors") {
+		.background--#{to-lower-case($color-name)},
+		.background--#{$color-name},
+		.bg---#{to-lower-case($color-name)},
+		.bg--#{$color-name} {
+			background-color: #{$color-value};
+			color: contra($color-value);
 		}
-		/*
-		Create color classes to define text color.
-	*/
+	}
+	//
+	//	Create color classes to define text color.
+	//
 
-		@if output("text-colors") {
-			.color--#{to-lower-case($color-name)},
-			.color--#{$color-name} {
-				color: $color-value;
-			}
+	@if output("color-text-colors") {
+		.text--#{to-lower-case($color-name)},
+		.text--#{$color-name},
+		.color--#{to-lower-case($color-name)},
+		.color--#{$color-name} {
+			color: $color-value;
 		}
 	}
 }

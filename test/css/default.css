@@ -2322,10 +2322,6 @@
   .show-for-large-only {
     display: none; } }
 
-/* ------------------------------------------------------------ */
-/*	Create all custom-properties for all the colors in the	   */
-/*	current colorset. 										  */
-/* --------------------------------------------------------- */
 :root {
   --color-black: #101010;
   --color-black-r: 16;
@@ -2398,12 +2394,6 @@
   --color-turquoise-b: 195;
   --color-turquoise-rgb: 63, 234, 195; }
 
-/* ----------------------------------------------------------- */
-/*	Create all background color classes to use everywhere.    */
-/* ----------------------------------------------------------- */
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--black,
 .background--Black,
 .bg---black,
@@ -2411,16 +2401,10 @@
   background-color: #101010;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--black,
 .color--Black {
   color: #101010; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--dark,
 .background--Dark,
 .bg---dark,
@@ -2428,16 +2412,10 @@
   background-color: #303030;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--dark,
 .color--Dark {
   color: #303030; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--white,
 .background--White,
 .bg---white,
@@ -2445,16 +2423,10 @@
   background-color: #ffffff;
   color: #101010; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--white,
 .color--White {
   color: #ffffff; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--offwhite,
 .background--Offwhite,
 .bg---offwhite,
@@ -2462,16 +2434,10 @@
   background-color: #f7f7f7;
   color: #101010; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--offwhite,
 .color--Offwhite {
   color: #f7f7f7; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--gray,
 .background--Gray,
 .bg---gray,
@@ -2479,16 +2445,10 @@
   background-color: #7f7f7f;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--gray,
 .color--Gray {
   color: #7f7f7f; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--green,
 .background--Green,
 .bg---green,
@@ -2496,16 +2456,10 @@
   background-color: #10c565;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--green,
 .color--Green {
   color: #10c565; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--blue,
 .background--Blue,
 .bg---blue,
@@ -2513,16 +2467,10 @@
   background-color: #1eb3e0;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--blue,
 .color--Blue {
   color: #1eb3e0; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--red,
 .background--Red,
 .bg---red,
@@ -2530,16 +2478,10 @@
   background-color: #eb0f33;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--red,
 .color--Red {
   color: #eb0f33; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--brown,
 .background--Brown,
 .bg---brown,
@@ -2547,16 +2489,10 @@
   background-color: #aa834f;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--brown,
 .color--Brown {
   color: #aa834f; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--yellow,
 .background--Yellow,
 .bg---yellow,
@@ -2564,16 +2500,10 @@
   background-color: #f5c505;
   color: #101010; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--yellow,
 .color--Yellow {
   color: #f5c505; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--orange,
 .background--Orange,
 .bg---orange,
@@ -2581,16 +2511,10 @@
   background-color: #f6790b;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--orange,
 .color--Orange {
   color: #f6790b; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--pink,
 .background--Pink,
 .bg---pink,
@@ -2598,16 +2522,10 @@
   background-color: #ca1387;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--pink,
 .color--Pink {
   color: #ca1387; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--purple,
 .background--Purple,
 .bg---purple,
@@ -2615,16 +2533,10 @@
   background-color: #7329b1;
   color: white; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--purple,
 .color--Purple {
   color: #7329b1; }
 
-/*
-		Create background classes. With the first capital and without. 
-	*/
 .background--turquoise,
 .background--Turquoise,
 .bg---turquoise,
@@ -2632,9 +2544,6 @@
   background-color: #3feac3;
   color: #101010; }
 
-/*
-		Create color classes to define text color.
-	*/
 .color--turquoise,
 .color--Turquoise {
   color: #3feac3; }
