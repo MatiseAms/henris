@@ -1,6 +1,6 @@
 $select-arrow-size: 0.3rem !default;
 @if output(form-select) {
-	.input--field {
+	.input-field {
 		select {
 			@extend %default-input;
 			min-width: 12rem;

@@ -1,5 +1,5 @@
 @if output(form-check-color) {
-	.input--check-color {
+	.input-check-color {
 		height: auto;
 		width: auto;
 		padding: 0;
@@ -88,7 +88,7 @@
 			}
 		}
 	}
-	.input--check--nolabel {
+	.input-check--nolabel {
 		label {
 			text-indent: -999em;
 		}

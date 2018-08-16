@@ -1,5 +1,5 @@
 @if output(form-textarea) {
-	.input--field {
+	.input-field {
 		textarea {
 			@extend %default-input;
 			resize: none;

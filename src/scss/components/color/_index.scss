@@ -37,8 +37,10 @@
 		// @debug output();
 
 		@if output("background-colors") {
-			.bg-#{to-lower-case($color-name)},
-			.bg-#{$color-name} {
+			.background--#{to-lower-case($color-name)},
+			.background--#{$color-name},
+			.bg---#{to-lower-case($color-name)},
+			.bg--#{$color-name} {
 				background-color: #{$color-value};
 				color: contra($color-value);
 			}
@@ -48,8 +50,8 @@
 	*/
 
 		@if output("text-colors") {
-			.color-#{to-lower-case($color-name)},
-			.color-#{$color-name} {
+			.color--#{to-lower-case($color-name)},
+			.color--#{$color-name} {
 				color: $color-value;
 			}
 		}

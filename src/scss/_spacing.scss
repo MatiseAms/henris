@@ -7,9 +7,9 @@
 	h6,
 	pre,
 	p,
-	.input--field,
+	.input-field,
 	form {
-		& + .input--field {
+		& + .input-field {
 			margin-top: 1rem;
 		}
 		& + h1 {

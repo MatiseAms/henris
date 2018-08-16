@@ -7,7 +7,7 @@ $default-input-line-height: 1rem !default; //
 $default-input-border-radius: 2px !default; //
 $default-input-min-width: 10rem !default; //
 $default-input-max-width: 100% !default; //
-$default-input-padding: 0.75rem 0.75rem !default; //
+$default-input-padding: 0.75rem !default; //
 $default-input: (
 	"background-color": undefined, 
 	"border-color": undefined, 
@@ -18,5 +18,5 @@ $default-input: (
 	"border-radius": 2px, 
 	"min-width": 10rem, 
 	"max-width": 100%, 
-	"padding": 0.75rem 0.75rem
+	"padding": 0.75rem
 ) !default; //

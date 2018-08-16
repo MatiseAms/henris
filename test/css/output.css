@@ -5725,211 +5725,239 @@
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-black,
-.bg-Black {
+.background--black,
+.background--Black,
+.bg---black,
+.bg--Black {
   background-color: #101010;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-black,
-.color-Black {
+.color--black,
+.color--Black {
   color: #101010; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-dark,
-.bg-Dark {
+.background--dark,
+.background--Dark,
+.bg---dark,
+.bg--Dark {
   background-color: #303030;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-dark,
-.color-Dark {
+.color--dark,
+.color--Dark {
   color: #303030; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-white,
-.bg-White {
+.background--white,
+.background--White,
+.bg---white,
+.bg--White {
   background-color: #ffffff;
   color: #101010; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-white,
-.color-White {
+.color--white,
+.color--White {
   color: #ffffff; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-offwhite,
-.bg-Offwhite {
+.background--offwhite,
+.background--Offwhite,
+.bg---offwhite,
+.bg--Offwhite {
   background-color: #f7f7f7;
   color: #101010; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-offwhite,
-.color-Offwhite {
+.color--offwhite,
+.color--Offwhite {
   color: #f7f7f7; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-gray,
-.bg-Gray {
+.background--gray,
+.background--Gray,
+.bg---gray,
+.bg--Gray {
   background-color: #7f7f7f;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-gray,
-.color-Gray {
+.color--gray,
+.color--Gray {
   color: #7f7f7f; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-green,
-.bg-Green {
+.background--green,
+.background--Green,
+.bg---green,
+.bg--Green {
   background-color: #10c565;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-green,
-.color-Green {
+.color--green,
+.color--Green {
   color: #10c565; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-blue,
-.bg-Blue {
+.background--blue,
+.background--Blue,
+.bg---blue,
+.bg--Blue {
   background-color: #1eb3e0;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-blue,
-.color-Blue {
+.color--blue,
+.color--Blue {
   color: #1eb3e0; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-red,
-.bg-Red {
+.background--red,
+.background--Red,
+.bg---red,
+.bg--Red {
   background-color: #eb0f33;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-red,
-.color-Red {
+.color--red,
+.color--Red {
   color: #eb0f33; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-brown,
-.bg-Brown {
+.background--brown,
+.background--Brown,
+.bg---brown,
+.bg--Brown {
   background-color: #aa834f;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-brown,
-.color-Brown {
+.color--brown,
+.color--Brown {
   color: #aa834f; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-yellow,
-.bg-Yellow {
+.background--yellow,
+.background--Yellow,
+.bg---yellow,
+.bg--Yellow {
   background-color: #f5c505;
   color: #101010; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-yellow,
-.color-Yellow {
+.color--yellow,
+.color--Yellow {
   color: #f5c505; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-orange,
-.bg-Orange {
+.background--orange,
+.background--Orange,
+.bg---orange,
+.bg--Orange {
   background-color: #f6790b;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-orange,
-.color-Orange {
+.color--orange,
+.color--Orange {
   color: #f6790b; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-pink,
-.bg-Pink {
+.background--pink,
+.background--Pink,
+.bg---pink,
+.bg--Pink {
   background-color: #ca1387;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-pink,
-.color-Pink {
+.color--pink,
+.color--Pink {
   color: #ca1387; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-purple,
-.bg-Purple {
+.background--purple,
+.background--Purple,
+.bg---purple,
+.bg--Purple {
   background-color: #7329b1;
   color: white; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-purple,
-.color-Purple {
+.color--purple,
+.color--Purple {
   color: #7329b1; }
 
 /*
 		Create background classes. With the first capital and without. 
 	*/
-.bg-turquoise,
-.bg-Turquoise {
+.background--turquoise,
+.background--Turquoise,
+.bg---turquoise,
+.bg--Turquoise {
   background-color: #3feac3;
   color: #101010; }
 
 /*
 		Create color classes to define text color.
 	*/
-.color-turquoise,
-.color-Turquoise {
+.color--turquoise,
+.color--Turquoise {
   color: #3feac3; }
 
 * {
@@ -6104,7 +6132,7 @@ blockquote {
 .button, [class^="button-icon"], input[type="button"]:not(.button):not([class^="button-icon"]),
 input[type="submit"]:not(.button):not([class^="button-icon"]),
 button, [class^='button-basic'],
-[class*=' button-basic'], .input--field input[type="submit"], .input--field input[type="button"] {
+[class*=' button-basic'], .input-field input[type="submit"], .input-field input[type="button"] {
   display: inline-block;
   border-radius: 3px;
   width: auto;
@@ -6120,13 +6148,13 @@ button, [class^='button-basic'],
   .button:hover, :hover[class^="button-icon"], input:hover[type="button"]:not(.button):not([class^="button-icon"]),
   input:hover[type="submit"]:not(.button):not([class^="button-icon"]),
   button:hover, :hover[class^='button-basic'],
-  :hover[class*=' button-basic'], .input--field input:hover[type="submit"], .input--field input:hover[type="button"] {
+  :hover[class*=' button-basic'], .input-field input:hover[type="submit"], .input-field input:hover[type="button"] {
     background-color: #581f88;
     border-bottom: var(--button-depth, 2px) solid #3d165e; }
   .button:focus, :focus[class^="button-icon"], input:focus[type="button"]:not(.button):not([class^="button-icon"]),
   input:focus[type="submit"]:not(.button):not([class^="button-icon"]),
   button:focus, :focus[class^='button-basic'],
-  :focus[class*=' button-basic'], .input--field input:focus[type="submit"], .input--field input:focus[type="button"] {
+  :focus[class*=' button-basic'], .input-field input:focus[type="submit"], .input-field input:focus[type="button"] {
     outline: none;
     box-shadow: 0 0 0.5rem 0 rgba(16, 16, 16, 0.25); }
 
@@ -7393,7 +7421,7 @@ dl {
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
-.input--field input[type="text"], .input--field input[type="email"], .input--field input[type="tel"], .input--field input[type="number"], .input--field input[type="password"], .input--field input[type="url"], .input--field textarea, .input--field select {
+.input-field input[type="text"], .input-field input[type="email"], .input-field input[type="tel"], .input-field input[type="number"], .input-field input[type="password"], .input-field input[type="url"], .input-field textarea, .input-field select {
   background: white;
   border: 1px solid rgba(16, 16, 16, 0.1);
   font-size: 1rem;
@@ -7403,398 +7431,398 @@ dl {
   min-width: 10rem;
   max-width: 100%;
   -webkit-appearance: none; }
-  .input--field input[type="text"]::placeholder, .input--field input[type="email"]::placeholder, .input--field input[type="tel"]::placeholder, .input--field input[type="number"]::placeholder, .input--field input[type="password"]::placeholder, .input--field input[type="url"]::placeholder, .input--field textarea::placeholder, .input--field select::placeholder {
+  .input-field input[type="text"]::placeholder, .input-field input[type="email"]::placeholder, .input-field input[type="tel"]::placeholder, .input-field input[type="number"]::placeholder, .input-field input[type="password"]::placeholder, .input-field input[type="url"]::placeholder, .input-field textarea::placeholder, .input-field select::placeholder {
     color: rgba(16, 16, 16, 0.1);
     opacity: 1;
     transition: filter 0.3s; }
-  .input--field input:focus[type="text"], .input--field input:focus[type="email"], .input--field input:focus[type="tel"], .input--field input:focus[type="number"], .input--field input:focus[type="password"], .input--field input:focus[type="url"], .input--field textarea:focus, .input--field select:focus {
+  .input-field input:focus[type="text"], .input-field input:focus[type="email"], .input-field input:focus[type="tel"], .input-field input:focus[type="number"], .input-field input:focus[type="password"], .input-field input:focus[type="url"], .input-field textarea:focus, .input-field select:focus {
     outline: 2px solid rgba(115, 41, 177, 0.25); }
-  .input--field input[type="text"]:focus::placeholder, .input--field input[type="email"]:focus::placeholder, .input--field input[type="tel"]:focus::placeholder, .input--field input[type="number"]:focus::placeholder, .input--field input[type="password"]:focus::placeholder, .input--field input[type="url"]:focus::placeholder, .input--field textarea:focus::placeholder, .input--field select:focus::placeholder, .input--field input[type="text"]:focus:hover::placeholder, .input--field input[type="email"]:focus:hover::placeholder, .input--field input[type="tel"]:focus:hover::placeholder, .input--field input[type="number"]:focus:hover::placeholder, .input--field input[type="password"]:focus:hover::placeholder, .input--field input[type="url"]:focus:hover::placeholder, .input--field textarea:focus:hover::placeholder, .input--field select:focus:hover::placeholder {
+  .input-field input[type="text"]:focus::placeholder, .input-field input[type="email"]:focus::placeholder, .input-field input[type="tel"]:focus::placeholder, .input-field input[type="number"]:focus::placeholder, .input-field input[type="password"]:focus::placeholder, .input-field input[type="url"]:focus::placeholder, .input-field textarea:focus::placeholder, .input-field select:focus::placeholder, .input-field input[type="text"]:focus:hover::placeholder, .input-field input[type="email"]:focus:hover::placeholder, .input-field input[type="tel"]:focus:hover::placeholder, .input-field input[type="number"]:focus:hover::placeholder, .input-field input[type="password"]:focus:hover::placeholder, .input-field input[type="url"]:focus:hover::placeholder, .input-field textarea:focus:hover::placeholder, .input-field select:focus:hover::placeholder {
     filter: blur(5px); }
-  .input--field input:hover[type="text"], .input--field input:hover[type="email"], .input--field input:hover[type="tel"], .input--field input:hover[type="number"], .input--field input:hover[type="password"], .input--field input:hover[type="url"], .input--field textarea:hover, .input--field select:hover {
+  .input-field input:hover[type="text"], .input-field input:hover[type="email"], .input-field input:hover[type="tel"], .input-field input:hover[type="number"], .input-field input:hover[type="password"], .input-field input:hover[type="url"], .input-field textarea:hover, .input-field select:hover {
     border: 1px solid rgba(16, 16, 16, 0.2); }
-    .input--field input[type="text"]:hover::placeholder, .input--field input[type="email"]:hover::placeholder, .input--field input[type="tel"]:hover::placeholder, .input--field input[type="number"]:hover::placeholder, .input--field input[type="password"]:hover::placeholder, .input--field input[type="url"]:hover::placeholder, .input--field textarea:hover::placeholder, .input--field select:hover::placeholder {
+    .input-field input[type="text"]:hover::placeholder, .input-field input[type="email"]:hover::placeholder, .input-field input[type="tel"]:hover::placeholder, .input-field input[type="number"]:hover::placeholder, .input-field input[type="password"]:hover::placeholder, .input-field input[type="url"]:hover::placeholder, .input-field textarea:hover::placeholder, .input-field select:hover::placeholder {
       color: rgba(16, 16, 16, 0.2);
       filter: blur(0px); }
-  .input--field .input--ghost input[type="text"], .input--field .input--ghost input[type="email"], .input--field .input--ghost input[type="tel"], .input--field .input--ghost input[type="number"], .input--field .input--ghost input[type="password"], .input--field .input--ghost input[type="url"], .input--field .input--naked input[type="text"], .input--field .input--naked input[type="email"], .input--field .input--naked input[type="tel"], .input--field .input--naked input[type="number"], .input--field .input--naked input[type="password"], .input--field .input--naked input[type="url"] {
+  .input-field .input--ghost input[type="text"], .input-field .input--ghost input[type="email"], .input-field .input--ghost input[type="tel"], .input-field .input--ghost input[type="number"], .input-field .input--ghost input[type="password"], .input-field .input--ghost input[type="url"], .input-field .input--naked input[type="text"], .input-field .input--naked input[type="email"], .input-field .input--naked input[type="tel"], .input-field .input--naked input[type="number"], .input-field .input--naked input[type="password"], .input-field .input--naked input[type="url"] {
     background-color: transparent;
     color: currentColor; }
-    .bg-black .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-black input[type="text"], .bg-black .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-black input[type="email"], .bg-black .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-black input[type="tel"], .bg-black .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-black input[type="number"], .bg-black .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-black input[type="password"], .bg-black .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-black input[type="url"], .bg-black .input--field .input--naked input[type="text"], .input--field .input--naked .bg-black input[type="text"], .bg-black .input--field .input--naked input[type="email"], .input--field .input--naked .bg-black input[type="email"], .bg-black .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-black input[type="tel"], .bg-black .input--field .input--naked input[type="number"], .input--field .input--naked .bg-black input[type="number"], .bg-black .input--field .input--naked input[type="password"], .input--field .input--naked .bg-black input[type="password"], .bg-black .input--field .input--naked input[type="url"], .input--field .input--naked .bg-black input[type="url"],
-    .bg-Black .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Black input[type="text"],
-    .bg-Black .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Black input[type="email"],
-    .bg-Black .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Black input[type="tel"],
-    .bg-Black .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Black input[type="number"],
-    .bg-Black .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Black input[type="password"],
-    .bg-Black .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Black input[type="url"],
-    .bg-Black .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Black input[type="text"],
-    .bg-Black .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Black input[type="email"],
-    .bg-Black .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Black input[type="tel"],
-    .bg-Black .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Black input[type="number"],
-    .bg-Black .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Black input[type="password"],
-    .bg-Black .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Black input[type="url"] {
+    .bg-black .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-black input[type="text"], .bg-black .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-black input[type="email"], .bg-black .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-black input[type="tel"], .bg-black .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-black input[type="number"], .bg-black .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-black input[type="password"], .bg-black .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-black input[type="url"], .bg-black .input-field .input--naked input[type="text"], .input-field .input--naked .bg-black input[type="text"], .bg-black .input-field .input--naked input[type="email"], .input-field .input--naked .bg-black input[type="email"], .bg-black .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-black input[type="tel"], .bg-black .input-field .input--naked input[type="number"], .input-field .input--naked .bg-black input[type="number"], .bg-black .input-field .input--naked input[type="password"], .input-field .input--naked .bg-black input[type="password"], .bg-black .input-field .input--naked input[type="url"], .input-field .input--naked .bg-black input[type="url"],
+    .bg-Black .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Black input[type="text"],
+    .bg-Black .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Black input[type="email"],
+    .bg-Black .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Black input[type="tel"],
+    .bg-Black .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Black input[type="number"],
+    .bg-Black .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Black input[type="password"],
+    .bg-Black .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Black input[type="url"],
+    .bg-Black .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Black input[type="text"],
+    .bg-Black .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Black input[type="email"],
+    .bg-Black .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Black input[type="tel"],
+    .bg-Black .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Black input[type="number"],
+    .bg-Black .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Black input[type="password"],
+    .bg-Black .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Black input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-dark .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-dark input[type="text"], .bg-dark .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-dark input[type="email"], .bg-dark .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-dark input[type="tel"], .bg-dark .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-dark input[type="number"], .bg-dark .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-dark input[type="password"], .bg-dark .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-dark input[type="url"], .bg-dark .input--field .input--naked input[type="text"], .input--field .input--naked .bg-dark input[type="text"], .bg-dark .input--field .input--naked input[type="email"], .input--field .input--naked .bg-dark input[type="email"], .bg-dark .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-dark input[type="tel"], .bg-dark .input--field .input--naked input[type="number"], .input--field .input--naked .bg-dark input[type="number"], .bg-dark .input--field .input--naked input[type="password"], .input--field .input--naked .bg-dark input[type="password"], .bg-dark .input--field .input--naked input[type="url"], .input--field .input--naked .bg-dark input[type="url"],
-    .bg-Dark .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Dark input[type="text"],
-    .bg-Dark .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Dark input[type="email"],
-    .bg-Dark .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Dark input[type="tel"],
-    .bg-Dark .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Dark input[type="number"],
-    .bg-Dark .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Dark input[type="password"],
-    .bg-Dark .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Dark input[type="url"],
-    .bg-Dark .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Dark input[type="text"],
-    .bg-Dark .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Dark input[type="email"],
-    .bg-Dark .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Dark input[type="tel"],
-    .bg-Dark .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Dark input[type="number"],
-    .bg-Dark .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Dark input[type="password"],
-    .bg-Dark .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Dark input[type="url"] {
+    .bg-dark .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-dark input[type="text"], .bg-dark .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-dark input[type="email"], .bg-dark .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-dark input[type="tel"], .bg-dark .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-dark input[type="number"], .bg-dark .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-dark input[type="password"], .bg-dark .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-dark input[type="url"], .bg-dark .input-field .input--naked input[type="text"], .input-field .input--naked .bg-dark input[type="text"], .bg-dark .input-field .input--naked input[type="email"], .input-field .input--naked .bg-dark input[type="email"], .bg-dark .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-dark input[type="tel"], .bg-dark .input-field .input--naked input[type="number"], .input-field .input--naked .bg-dark input[type="number"], .bg-dark .input-field .input--naked input[type="password"], .input-field .input--naked .bg-dark input[type="password"], .bg-dark .input-field .input--naked input[type="url"], .input-field .input--naked .bg-dark input[type="url"],
+    .bg-Dark .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Dark input[type="text"],
+    .bg-Dark .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Dark input[type="email"],
+    .bg-Dark .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Dark input[type="tel"],
+    .bg-Dark .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Dark input[type="number"],
+    .bg-Dark .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Dark input[type="password"],
+    .bg-Dark .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Dark input[type="url"],
+    .bg-Dark .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Dark input[type="text"],
+    .bg-Dark .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Dark input[type="email"],
+    .bg-Dark .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Dark input[type="tel"],
+    .bg-Dark .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Dark input[type="number"],
+    .bg-Dark .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Dark input[type="password"],
+    .bg-Dark .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Dark input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-white .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-white input[type="text"], .bg-white .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-white input[type="email"], .bg-white .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-white input[type="tel"], .bg-white .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-white input[type="number"], .bg-white .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-white input[type="password"], .bg-white .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-white input[type="url"], .bg-white .input--field .input--naked input[type="text"], .input--field .input--naked .bg-white input[type="text"], .bg-white .input--field .input--naked input[type="email"], .input--field .input--naked .bg-white input[type="email"], .bg-white .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-white input[type="tel"], .bg-white .input--field .input--naked input[type="number"], .input--field .input--naked .bg-white input[type="number"], .bg-white .input--field .input--naked input[type="password"], .input--field .input--naked .bg-white input[type="password"], .bg-white .input--field .input--naked input[type="url"], .input--field .input--naked .bg-white input[type="url"],
-    .bg-White .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-White input[type="text"],
-    .bg-White .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-White input[type="email"],
-    .bg-White .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-White input[type="tel"],
-    .bg-White .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-White input[type="number"],
-    .bg-White .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-White input[type="password"],
-    .bg-White .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-White input[type="url"],
-    .bg-White .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-White input[type="text"],
-    .bg-White .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-White input[type="email"],
-    .bg-White .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-White input[type="tel"],
-    .bg-White .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-White input[type="number"],
-    .bg-White .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-White input[type="password"],
-    .bg-White .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-White input[type="url"] {
+    .bg-white .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-white input[type="text"], .bg-white .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-white input[type="email"], .bg-white .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-white input[type="tel"], .bg-white .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-white input[type="number"], .bg-white .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-white input[type="password"], .bg-white .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-white input[type="url"], .bg-white .input-field .input--naked input[type="text"], .input-field .input--naked .bg-white input[type="text"], .bg-white .input-field .input--naked input[type="email"], .input-field .input--naked .bg-white input[type="email"], .bg-white .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-white input[type="tel"], .bg-white .input-field .input--naked input[type="number"], .input-field .input--naked .bg-white input[type="number"], .bg-white .input-field .input--naked input[type="password"], .input-field .input--naked .bg-white input[type="password"], .bg-white .input-field .input--naked input[type="url"], .input-field .input--naked .bg-white input[type="url"],
+    .bg-White .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-White input[type="text"],
+    .bg-White .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-White input[type="email"],
+    .bg-White .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-White input[type="tel"],
+    .bg-White .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-White input[type="number"],
+    .bg-White .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-White input[type="password"],
+    .bg-White .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-White input[type="url"],
+    .bg-White .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-White input[type="text"],
+    .bg-White .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-White input[type="email"],
+    .bg-White .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-White input[type="tel"],
+    .bg-White .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-White input[type="number"],
+    .bg-White .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-White input[type="password"],
+    .bg-White .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-White input[type="url"] {
       color: #101010;
       border-color: #101010; }
-    .bg-offwhite .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-offwhite input[type="text"], .bg-offwhite .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-offwhite input[type="email"], .bg-offwhite .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-offwhite input[type="tel"], .bg-offwhite .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-offwhite input[type="number"], .bg-offwhite .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-offwhite input[type="password"], .bg-offwhite .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-offwhite input[type="url"], .bg-offwhite .input--field .input--naked input[type="text"], .input--field .input--naked .bg-offwhite input[type="text"], .bg-offwhite .input--field .input--naked input[type="email"], .input--field .input--naked .bg-offwhite input[type="email"], .bg-offwhite .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-offwhite input[type="tel"], .bg-offwhite .input--field .input--naked input[type="number"], .input--field .input--naked .bg-offwhite input[type="number"], .bg-offwhite .input--field .input--naked input[type="password"], .input--field .input--naked .bg-offwhite input[type="password"], .bg-offwhite .input--field .input--naked input[type="url"], .input--field .input--naked .bg-offwhite input[type="url"],
-    .bg-Offwhite .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Offwhite input[type="text"],
-    .bg-Offwhite .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Offwhite input[type="email"],
-    .bg-Offwhite .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Offwhite input[type="tel"],
-    .bg-Offwhite .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Offwhite input[type="number"],
-    .bg-Offwhite .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Offwhite input[type="password"],
-    .bg-Offwhite .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Offwhite input[type="url"],
-    .bg-Offwhite .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Offwhite input[type="text"],
-    .bg-Offwhite .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Offwhite input[type="email"],
-    .bg-Offwhite .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Offwhite input[type="tel"],
-    .bg-Offwhite .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Offwhite input[type="number"],
-    .bg-Offwhite .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Offwhite input[type="password"],
-    .bg-Offwhite .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Offwhite input[type="url"] {
+    .bg-offwhite .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-offwhite input[type="text"], .bg-offwhite .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-offwhite input[type="email"], .bg-offwhite .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-offwhite input[type="tel"], .bg-offwhite .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-offwhite input[type="number"], .bg-offwhite .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-offwhite input[type="password"], .bg-offwhite .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-offwhite input[type="url"], .bg-offwhite .input-field .input--naked input[type="text"], .input-field .input--naked .bg-offwhite input[type="text"], .bg-offwhite .input-field .input--naked input[type="email"], .input-field .input--naked .bg-offwhite input[type="email"], .bg-offwhite .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-offwhite input[type="tel"], .bg-offwhite .input-field .input--naked input[type="number"], .input-field .input--naked .bg-offwhite input[type="number"], .bg-offwhite .input-field .input--naked input[type="password"], .input-field .input--naked .bg-offwhite input[type="password"], .bg-offwhite .input-field .input--naked input[type="url"], .input-field .input--naked .bg-offwhite input[type="url"],
+    .bg-Offwhite .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Offwhite input[type="text"],
+    .bg-Offwhite .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Offwhite input[type="email"],
+    .bg-Offwhite .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Offwhite input[type="tel"],
+    .bg-Offwhite .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Offwhite input[type="number"],
+    .bg-Offwhite .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Offwhite input[type="password"],
+    .bg-Offwhite .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Offwhite input[type="url"],
+    .bg-Offwhite .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Offwhite input[type="text"],
+    .bg-Offwhite .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Offwhite input[type="email"],
+    .bg-Offwhite .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Offwhite input[type="tel"],
+    .bg-Offwhite .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Offwhite input[type="number"],
+    .bg-Offwhite .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Offwhite input[type="password"],
+    .bg-Offwhite .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Offwhite input[type="url"] {
       color: #101010;
       border-color: #101010; }
-    .bg-gray .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-gray input[type="text"], .bg-gray .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-gray input[type="email"], .bg-gray .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-gray input[type="tel"], .bg-gray .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-gray input[type="number"], .bg-gray .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-gray input[type="password"], .bg-gray .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-gray input[type="url"], .bg-gray .input--field .input--naked input[type="text"], .input--field .input--naked .bg-gray input[type="text"], .bg-gray .input--field .input--naked input[type="email"], .input--field .input--naked .bg-gray input[type="email"], .bg-gray .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-gray input[type="tel"], .bg-gray .input--field .input--naked input[type="number"], .input--field .input--naked .bg-gray input[type="number"], .bg-gray .input--field .input--naked input[type="password"], .input--field .input--naked .bg-gray input[type="password"], .bg-gray .input--field .input--naked input[type="url"], .input--field .input--naked .bg-gray input[type="url"],
-    .bg-Gray .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Gray input[type="text"],
-    .bg-Gray .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Gray input[type="email"],
-    .bg-Gray .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Gray input[type="tel"],
-    .bg-Gray .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Gray input[type="number"],
-    .bg-Gray .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Gray input[type="password"],
-    .bg-Gray .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Gray input[type="url"],
-    .bg-Gray .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Gray input[type="text"],
-    .bg-Gray .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Gray input[type="email"],
-    .bg-Gray .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Gray input[type="tel"],
-    .bg-Gray .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Gray input[type="number"],
-    .bg-Gray .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Gray input[type="password"],
-    .bg-Gray .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Gray input[type="url"] {
+    .bg-gray .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-gray input[type="text"], .bg-gray .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-gray input[type="email"], .bg-gray .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-gray input[type="tel"], .bg-gray .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-gray input[type="number"], .bg-gray .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-gray input[type="password"], .bg-gray .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-gray input[type="url"], .bg-gray .input-field .input--naked input[type="text"], .input-field .input--naked .bg-gray input[type="text"], .bg-gray .input-field .input--naked input[type="email"], .input-field .input--naked .bg-gray input[type="email"], .bg-gray .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-gray input[type="tel"], .bg-gray .input-field .input--naked input[type="number"], .input-field .input--naked .bg-gray input[type="number"], .bg-gray .input-field .input--naked input[type="password"], .input-field .input--naked .bg-gray input[type="password"], .bg-gray .input-field .input--naked input[type="url"], .input-field .input--naked .bg-gray input[type="url"],
+    .bg-Gray .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Gray input[type="text"],
+    .bg-Gray .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Gray input[type="email"],
+    .bg-Gray .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Gray input[type="tel"],
+    .bg-Gray .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Gray input[type="number"],
+    .bg-Gray .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Gray input[type="password"],
+    .bg-Gray .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Gray input[type="url"],
+    .bg-Gray .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Gray input[type="text"],
+    .bg-Gray .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Gray input[type="email"],
+    .bg-Gray .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Gray input[type="tel"],
+    .bg-Gray .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Gray input[type="number"],
+    .bg-Gray .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Gray input[type="password"],
+    .bg-Gray .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Gray input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-green .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-green input[type="text"], .bg-green .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-green input[type="email"], .bg-green .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-green input[type="tel"], .bg-green .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-green input[type="number"], .bg-green .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-green input[type="password"], .bg-green .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-green input[type="url"], .bg-green .input--field .input--naked input[type="text"], .input--field .input--naked .bg-green input[type="text"], .bg-green .input--field .input--naked input[type="email"], .input--field .input--naked .bg-green input[type="email"], .bg-green .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-green input[type="tel"], .bg-green .input--field .input--naked input[type="number"], .input--field .input--naked .bg-green input[type="number"], .bg-green .input--field .input--naked input[type="password"], .input--field .input--naked .bg-green input[type="password"], .bg-green .input--field .input--naked input[type="url"], .input--field .input--naked .bg-green input[type="url"],
-    .bg-Green .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Green input[type="text"],
-    .bg-Green .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Green input[type="email"],
-    .bg-Green .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Green input[type="tel"],
-    .bg-Green .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Green input[type="number"],
-    .bg-Green .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Green input[type="password"],
-    .bg-Green .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Green input[type="url"],
-    .bg-Green .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Green input[type="text"],
-    .bg-Green .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Green input[type="email"],
-    .bg-Green .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Green input[type="tel"],
-    .bg-Green .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Green input[type="number"],
-    .bg-Green .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Green input[type="password"],
-    .bg-Green .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Green input[type="url"] {
+    .bg-green .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-green input[type="text"], .bg-green .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-green input[type="email"], .bg-green .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-green input[type="tel"], .bg-green .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-green input[type="number"], .bg-green .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-green input[type="password"], .bg-green .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-green input[type="url"], .bg-green .input-field .input--naked input[type="text"], .input-field .input--naked .bg-green input[type="text"], .bg-green .input-field .input--naked input[type="email"], .input-field .input--naked .bg-green input[type="email"], .bg-green .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-green input[type="tel"], .bg-green .input-field .input--naked input[type="number"], .input-field .input--naked .bg-green input[type="number"], .bg-green .input-field .input--naked input[type="password"], .input-field .input--naked .bg-green input[type="password"], .bg-green .input-field .input--naked input[type="url"], .input-field .input--naked .bg-green input[type="url"],
+    .bg-Green .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Green input[type="text"],
+    .bg-Green .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Green input[type="email"],
+    .bg-Green .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Green input[type="tel"],
+    .bg-Green .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Green input[type="number"],
+    .bg-Green .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Green input[type="password"],
+    .bg-Green .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Green input[type="url"],
+    .bg-Green .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Green input[type="text"],
+    .bg-Green .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Green input[type="email"],
+    .bg-Green .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Green input[type="tel"],
+    .bg-Green .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Green input[type="number"],
+    .bg-Green .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Green input[type="password"],
+    .bg-Green .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Green input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-blue .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-blue input[type="text"], .bg-blue .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-blue input[type="email"], .bg-blue .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-blue input[type="tel"], .bg-blue .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-blue input[type="number"], .bg-blue .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-blue input[type="password"], .bg-blue .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-blue input[type="url"], .bg-blue .input--field .input--naked input[type="text"], .input--field .input--naked .bg-blue input[type="text"], .bg-blue .input--field .input--naked input[type="email"], .input--field .input--naked .bg-blue input[type="email"], .bg-blue .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-blue input[type="tel"], .bg-blue .input--field .input--naked input[type="number"], .input--field .input--naked .bg-blue input[type="number"], .bg-blue .input--field .input--naked input[type="password"], .input--field .input--naked .bg-blue input[type="password"], .bg-blue .input--field .input--naked input[type="url"], .input--field .input--naked .bg-blue input[type="url"],
-    .bg-Blue .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Blue input[type="text"],
-    .bg-Blue .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Blue input[type="email"],
-    .bg-Blue .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Blue input[type="tel"],
-    .bg-Blue .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Blue input[type="number"],
-    .bg-Blue .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Blue input[type="password"],
-    .bg-Blue .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Blue input[type="url"],
-    .bg-Blue .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Blue input[type="text"],
-    .bg-Blue .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Blue input[type="email"],
-    .bg-Blue .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Blue input[type="tel"],
-    .bg-Blue .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Blue input[type="number"],
-    .bg-Blue .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Blue input[type="password"],
-    .bg-Blue .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Blue input[type="url"] {
+    .bg-blue .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-blue input[type="text"], .bg-blue .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-blue input[type="email"], .bg-blue .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-blue input[type="tel"], .bg-blue .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-blue input[type="number"], .bg-blue .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-blue input[type="password"], .bg-blue .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-blue input[type="url"], .bg-blue .input-field .input--naked input[type="text"], .input-field .input--naked .bg-blue input[type="text"], .bg-blue .input-field .input--naked input[type="email"], .input-field .input--naked .bg-blue input[type="email"], .bg-blue .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-blue input[type="tel"], .bg-blue .input-field .input--naked input[type="number"], .input-field .input--naked .bg-blue input[type="number"], .bg-blue .input-field .input--naked input[type="password"], .input-field .input--naked .bg-blue input[type="password"], .bg-blue .input-field .input--naked input[type="url"], .input-field .input--naked .bg-blue input[type="url"],
+    .bg-Blue .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Blue input[type="text"],
+    .bg-Blue .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Blue input[type="email"],
+    .bg-Blue .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Blue input[type="tel"],
+    .bg-Blue .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Blue input[type="number"],
+    .bg-Blue .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Blue input[type="password"],
+    .bg-Blue .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Blue input[type="url"],
+    .bg-Blue .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Blue input[type="text"],
+    .bg-Blue .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Blue input[type="email"],
+    .bg-Blue .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Blue input[type="tel"],
+    .bg-Blue .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Blue input[type="number"],
+    .bg-Blue .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Blue input[type="password"],
+    .bg-Blue .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Blue input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-red .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-red input[type="text"], .bg-red .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-red input[type="email"], .bg-red .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-red input[type="tel"], .bg-red .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-red input[type="number"], .bg-red .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-red input[type="password"], .bg-red .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-red input[type="url"], .bg-red .input--field .input--naked input[type="text"], .input--field .input--naked .bg-red input[type="text"], .bg-red .input--field .input--naked input[type="email"], .input--field .input--naked .bg-red input[type="email"], .bg-red .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-red input[type="tel"], .bg-red .input--field .input--naked input[type="number"], .input--field .input--naked .bg-red input[type="number"], .bg-red .input--field .input--naked input[type="password"], .input--field .input--naked .bg-red input[type="password"], .bg-red .input--field .input--naked input[type="url"], .input--field .input--naked .bg-red input[type="url"],
-    .bg-Red .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Red input[type="text"],
-    .bg-Red .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Red input[type="email"],
-    .bg-Red .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Red input[type="tel"],
-    .bg-Red .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Red input[type="number"],
-    .bg-Red .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Red input[type="password"],
-    .bg-Red .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Red input[type="url"],
-    .bg-Red .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Red input[type="text"],
-    .bg-Red .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Red input[type="email"],
-    .bg-Red .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Red input[type="tel"],
-    .bg-Red .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Red input[type="number"],
-    .bg-Red .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Red input[type="password"],
-    .bg-Red .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Red input[type="url"] {
+    .bg-red .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-red input[type="text"], .bg-red .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-red input[type="email"], .bg-red .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-red input[type="tel"], .bg-red .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-red input[type="number"], .bg-red .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-red input[type="password"], .bg-red .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-red input[type="url"], .bg-red .input-field .input--naked input[type="text"], .input-field .input--naked .bg-red input[type="text"], .bg-red .input-field .input--naked input[type="email"], .input-field .input--naked .bg-red input[type="email"], .bg-red .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-red input[type="tel"], .bg-red .input-field .input--naked input[type="number"], .input-field .input--naked .bg-red input[type="number"], .bg-red .input-field .input--naked input[type="password"], .input-field .input--naked .bg-red input[type="password"], .bg-red .input-field .input--naked input[type="url"], .input-field .input--naked .bg-red input[type="url"],
+    .bg-Red .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Red input[type="text"],
+    .bg-Red .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Red input[type="email"],
+    .bg-Red .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Red input[type="tel"],
+    .bg-Red .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Red input[type="number"],
+    .bg-Red .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Red input[type="password"],
+    .bg-Red .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Red input[type="url"],
+    .bg-Red .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Red input[type="text"],
+    .bg-Red .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Red input[type="email"],
+    .bg-Red .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Red input[type="tel"],
+    .bg-Red .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Red input[type="number"],
+    .bg-Red .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Red input[type="password"],
+    .bg-Red .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Red input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-brown .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-brown input[type="text"], .bg-brown .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-brown input[type="email"], .bg-brown .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-brown input[type="tel"], .bg-brown .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-brown input[type="number"], .bg-brown .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-brown input[type="password"], .bg-brown .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-brown input[type="url"], .bg-brown .input--field .input--naked input[type="text"], .input--field .input--naked .bg-brown input[type="text"], .bg-brown .input--field .input--naked input[type="email"], .input--field .input--naked .bg-brown input[type="email"], .bg-brown .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-brown input[type="tel"], .bg-brown .input--field .input--naked input[type="number"], .input--field .input--naked .bg-brown input[type="number"], .bg-brown .input--field .input--naked input[type="password"], .input--field .input--naked .bg-brown input[type="password"], .bg-brown .input--field .input--naked input[type="url"], .input--field .input--naked .bg-brown input[type="url"],
-    .bg-Brown .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Brown input[type="text"],
-    .bg-Brown .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Brown input[type="email"],
-    .bg-Brown .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Brown input[type="tel"],
-    .bg-Brown .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Brown input[type="number"],
-    .bg-Brown .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Brown input[type="password"],
-    .bg-Brown .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Brown input[type="url"],
-    .bg-Brown .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Brown input[type="text"],
-    .bg-Brown .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Brown input[type="email"],
-    .bg-Brown .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Brown input[type="tel"],
-    .bg-Brown .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Brown input[type="number"],
-    .bg-Brown .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Brown input[type="password"],
-    .bg-Brown .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Brown input[type="url"] {
+    .bg-brown .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-brown input[type="text"], .bg-brown .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-brown input[type="email"], .bg-brown .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-brown input[type="tel"], .bg-brown .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-brown input[type="number"], .bg-brown .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-brown input[type="password"], .bg-brown .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-brown input[type="url"], .bg-brown .input-field .input--naked input[type="text"], .input-field .input--naked .bg-brown input[type="text"], .bg-brown .input-field .input--naked input[type="email"], .input-field .input--naked .bg-brown input[type="email"], .bg-brown .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-brown input[type="tel"], .bg-brown .input-field .input--naked input[type="number"], .input-field .input--naked .bg-brown input[type="number"], .bg-brown .input-field .input--naked input[type="password"], .input-field .input--naked .bg-brown input[type="password"], .bg-brown .input-field .input--naked input[type="url"], .input-field .input--naked .bg-brown input[type="url"],
+    .bg-Brown .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Brown input[type="text"],
+    .bg-Brown .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Brown input[type="email"],
+    .bg-Brown .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Brown input[type="tel"],
+    .bg-Brown .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Brown input[type="number"],
+    .bg-Brown .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Brown input[type="password"],
+    .bg-Brown .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Brown input[type="url"],
+    .bg-Brown .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Brown input[type="text"],
+    .bg-Brown .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Brown input[type="email"],
+    .bg-Brown .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Brown input[type="tel"],
+    .bg-Brown .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Brown input[type="number"],
+    .bg-Brown .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Brown input[type="password"],
+    .bg-Brown .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Brown input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-yellow .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-yellow input[type="text"], .bg-yellow .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-yellow input[type="email"], .bg-yellow .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-yellow input[type="tel"], .bg-yellow .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-yellow input[type="number"], .bg-yellow .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-yellow input[type="password"], .bg-yellow .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-yellow input[type="url"], .bg-yellow .input--field .input--naked input[type="text"], .input--field .input--naked .bg-yellow input[type="text"], .bg-yellow .input--field .input--naked input[type="email"], .input--field .input--naked .bg-yellow input[type="email"], .bg-yellow .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-yellow input[type="tel"], .bg-yellow .input--field .input--naked input[type="number"], .input--field .input--naked .bg-yellow input[type="number"], .bg-yellow .input--field .input--naked input[type="password"], .input--field .input--naked .bg-yellow input[type="password"], .bg-yellow .input--field .input--naked input[type="url"], .input--field .input--naked .bg-yellow input[type="url"],
-    .bg-Yellow .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Yellow input[type="text"],
-    .bg-Yellow .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Yellow input[type="email"],
-    .bg-Yellow .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Yellow input[type="tel"],
-    .bg-Yellow .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Yellow input[type="number"],
-    .bg-Yellow .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Yellow input[type="password"],
-    .bg-Yellow .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Yellow input[type="url"],
-    .bg-Yellow .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Yellow input[type="text"],
-    .bg-Yellow .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Yellow input[type="email"],
-    .bg-Yellow .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Yellow input[type="tel"],
-    .bg-Yellow .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Yellow input[type="number"],
-    .bg-Yellow .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Yellow input[type="password"],
-    .bg-Yellow .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Yellow input[type="url"] {
+    .bg-yellow .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-yellow input[type="text"], .bg-yellow .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-yellow input[type="email"], .bg-yellow .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-yellow input[type="tel"], .bg-yellow .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-yellow input[type="number"], .bg-yellow .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-yellow input[type="password"], .bg-yellow .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-yellow input[type="url"], .bg-yellow .input-field .input--naked input[type="text"], .input-field .input--naked .bg-yellow input[type="text"], .bg-yellow .input-field .input--naked input[type="email"], .input-field .input--naked .bg-yellow input[type="email"], .bg-yellow .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-yellow input[type="tel"], .bg-yellow .input-field .input--naked input[type="number"], .input-field .input--naked .bg-yellow input[type="number"], .bg-yellow .input-field .input--naked input[type="password"], .input-field .input--naked .bg-yellow input[type="password"], .bg-yellow .input-field .input--naked input[type="url"], .input-field .input--naked .bg-yellow input[type="url"],
+    .bg-Yellow .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Yellow input[type="text"],
+    .bg-Yellow .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Yellow input[type="email"],
+    .bg-Yellow .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Yellow input[type="tel"],
+    .bg-Yellow .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Yellow input[type="number"],
+    .bg-Yellow .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Yellow input[type="password"],
+    .bg-Yellow .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Yellow input[type="url"],
+    .bg-Yellow .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Yellow input[type="text"],
+    .bg-Yellow .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Yellow input[type="email"],
+    .bg-Yellow .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Yellow input[type="tel"],
+    .bg-Yellow .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Yellow input[type="number"],
+    .bg-Yellow .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Yellow input[type="password"],
+    .bg-Yellow .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Yellow input[type="url"] {
       color: #101010;
       border-color: #101010; }
-    .bg-orange .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-orange input[type="text"], .bg-orange .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-orange input[type="email"], .bg-orange .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-orange input[type="tel"], .bg-orange .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-orange input[type="number"], .bg-orange .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-orange input[type="password"], .bg-orange .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-orange input[type="url"], .bg-orange .input--field .input--naked input[type="text"], .input--field .input--naked .bg-orange input[type="text"], .bg-orange .input--field .input--naked input[type="email"], .input--field .input--naked .bg-orange input[type="email"], .bg-orange .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-orange input[type="tel"], .bg-orange .input--field .input--naked input[type="number"], .input--field .input--naked .bg-orange input[type="number"], .bg-orange .input--field .input--naked input[type="password"], .input--field .input--naked .bg-orange input[type="password"], .bg-orange .input--field .input--naked input[type="url"], .input--field .input--naked .bg-orange input[type="url"],
-    .bg-Orange .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Orange input[type="text"],
-    .bg-Orange .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Orange input[type="email"],
-    .bg-Orange .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Orange input[type="tel"],
-    .bg-Orange .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Orange input[type="number"],
-    .bg-Orange .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Orange input[type="password"],
-    .bg-Orange .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Orange input[type="url"],
-    .bg-Orange .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Orange input[type="text"],
-    .bg-Orange .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Orange input[type="email"],
-    .bg-Orange .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Orange input[type="tel"],
-    .bg-Orange .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Orange input[type="number"],
-    .bg-Orange .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Orange input[type="password"],
-    .bg-Orange .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Orange input[type="url"] {
+    .bg-orange .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-orange input[type="text"], .bg-orange .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-orange input[type="email"], .bg-orange .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-orange input[type="tel"], .bg-orange .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-orange input[type="number"], .bg-orange .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-orange input[type="password"], .bg-orange .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-orange input[type="url"], .bg-orange .input-field .input--naked input[type="text"], .input-field .input--naked .bg-orange input[type="text"], .bg-orange .input-field .input--naked input[type="email"], .input-field .input--naked .bg-orange input[type="email"], .bg-orange .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-orange input[type="tel"], .bg-orange .input-field .input--naked input[type="number"], .input-field .input--naked .bg-orange input[type="number"], .bg-orange .input-field .input--naked input[type="password"], .input-field .input--naked .bg-orange input[type="password"], .bg-orange .input-field .input--naked input[type="url"], .input-field .input--naked .bg-orange input[type="url"],
+    .bg-Orange .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Orange input[type="text"],
+    .bg-Orange .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Orange input[type="email"],
+    .bg-Orange .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Orange input[type="tel"],
+    .bg-Orange .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Orange input[type="number"],
+    .bg-Orange .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Orange input[type="password"],
+    .bg-Orange .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Orange input[type="url"],
+    .bg-Orange .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Orange input[type="text"],
+    .bg-Orange .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Orange input[type="email"],
+    .bg-Orange .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Orange input[type="tel"],
+    .bg-Orange .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Orange input[type="number"],
+    .bg-Orange .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Orange input[type="password"],
+    .bg-Orange .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Orange input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-pink .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-pink input[type="text"], .bg-pink .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-pink input[type="email"], .bg-pink .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-pink input[type="tel"], .bg-pink .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-pink input[type="number"], .bg-pink .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-pink input[type="password"], .bg-pink .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-pink input[type="url"], .bg-pink .input--field .input--naked input[type="text"], .input--field .input--naked .bg-pink input[type="text"], .bg-pink .input--field .input--naked input[type="email"], .input--field .input--naked .bg-pink input[type="email"], .bg-pink .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-pink input[type="tel"], .bg-pink .input--field .input--naked input[type="number"], .input--field .input--naked .bg-pink input[type="number"], .bg-pink .input--field .input--naked input[type="password"], .input--field .input--naked .bg-pink input[type="password"], .bg-pink .input--field .input--naked input[type="url"], .input--field .input--naked .bg-pink input[type="url"],
-    .bg-Pink .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Pink input[type="text"],
-    .bg-Pink .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Pink input[type="email"],
-    .bg-Pink .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Pink input[type="tel"],
-    .bg-Pink .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Pink input[type="number"],
-    .bg-Pink .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Pink input[type="password"],
-    .bg-Pink .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Pink input[type="url"],
-    .bg-Pink .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Pink input[type="text"],
-    .bg-Pink .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Pink input[type="email"],
-    .bg-Pink .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Pink input[type="tel"],
-    .bg-Pink .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Pink input[type="number"],
-    .bg-Pink .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Pink input[type="password"],
-    .bg-Pink .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Pink input[type="url"] {
+    .bg-pink .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-pink input[type="text"], .bg-pink .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-pink input[type="email"], .bg-pink .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-pink input[type="tel"], .bg-pink .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-pink input[type="number"], .bg-pink .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-pink input[type="password"], .bg-pink .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-pink input[type="url"], .bg-pink .input-field .input--naked input[type="text"], .input-field .input--naked .bg-pink input[type="text"], .bg-pink .input-field .input--naked input[type="email"], .input-field .input--naked .bg-pink input[type="email"], .bg-pink .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-pink input[type="tel"], .bg-pink .input-field .input--naked input[type="number"], .input-field .input--naked .bg-pink input[type="number"], .bg-pink .input-field .input--naked input[type="password"], .input-field .input--naked .bg-pink input[type="password"], .bg-pink .input-field .input--naked input[type="url"], .input-field .input--naked .bg-pink input[type="url"],
+    .bg-Pink .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Pink input[type="text"],
+    .bg-Pink .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Pink input[type="email"],
+    .bg-Pink .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Pink input[type="tel"],
+    .bg-Pink .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Pink input[type="number"],
+    .bg-Pink .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Pink input[type="password"],
+    .bg-Pink .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Pink input[type="url"],
+    .bg-Pink .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Pink input[type="text"],
+    .bg-Pink .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Pink input[type="email"],
+    .bg-Pink .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Pink input[type="tel"],
+    .bg-Pink .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Pink input[type="number"],
+    .bg-Pink .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Pink input[type="password"],
+    .bg-Pink .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Pink input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-purple .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-purple input[type="text"], .bg-purple .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-purple input[type="email"], .bg-purple .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-purple input[type="tel"], .bg-purple .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-purple input[type="number"], .bg-purple .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-purple input[type="password"], .bg-purple .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-purple input[type="url"], .bg-purple .input--field .input--naked input[type="text"], .input--field .input--naked .bg-purple input[type="text"], .bg-purple .input--field .input--naked input[type="email"], .input--field .input--naked .bg-purple input[type="email"], .bg-purple .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-purple input[type="tel"], .bg-purple .input--field .input--naked input[type="number"], .input--field .input--naked .bg-purple input[type="number"], .bg-purple .input--field .input--naked input[type="password"], .input--field .input--naked .bg-purple input[type="password"], .bg-purple .input--field .input--naked input[type="url"], .input--field .input--naked .bg-purple input[type="url"],
-    .bg-Purple .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Purple input[type="text"],
-    .bg-Purple .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Purple input[type="email"],
-    .bg-Purple .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Purple input[type="tel"],
-    .bg-Purple .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Purple input[type="number"],
-    .bg-Purple .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Purple input[type="password"],
-    .bg-Purple .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Purple input[type="url"],
-    .bg-Purple .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Purple input[type="text"],
-    .bg-Purple .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Purple input[type="email"],
-    .bg-Purple .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Purple input[type="tel"],
-    .bg-Purple .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Purple input[type="number"],
-    .bg-Purple .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Purple input[type="password"],
-    .bg-Purple .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Purple input[type="url"] {
+    .bg-purple .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-purple input[type="text"], .bg-purple .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-purple input[type="email"], .bg-purple .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-purple input[type="tel"], .bg-purple .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-purple input[type="number"], .bg-purple .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-purple input[type="password"], .bg-purple .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-purple input[type="url"], .bg-purple .input-field .input--naked input[type="text"], .input-field .input--naked .bg-purple input[type="text"], .bg-purple .input-field .input--naked input[type="email"], .input-field .input--naked .bg-purple input[type="email"], .bg-purple .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-purple input[type="tel"], .bg-purple .input-field .input--naked input[type="number"], .input-field .input--naked .bg-purple input[type="number"], .bg-purple .input-field .input--naked input[type="password"], .input-field .input--naked .bg-purple input[type="password"], .bg-purple .input-field .input--naked input[type="url"], .input-field .input--naked .bg-purple input[type="url"],
+    .bg-Purple .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Purple input[type="text"],
+    .bg-Purple .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Purple input[type="email"],
+    .bg-Purple .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Purple input[type="tel"],
+    .bg-Purple .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Purple input[type="number"],
+    .bg-Purple .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Purple input[type="password"],
+    .bg-Purple .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Purple input[type="url"],
+    .bg-Purple .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Purple input[type="text"],
+    .bg-Purple .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Purple input[type="email"],
+    .bg-Purple .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Purple input[type="tel"],
+    .bg-Purple .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Purple input[type="number"],
+    .bg-Purple .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Purple input[type="password"],
+    .bg-Purple .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Purple input[type="url"] {
       color: white;
       border-color: white; }
-    .bg-turquoise .input--field .input--ghost input[type="text"], .input--field .input--ghost .bg-turquoise input[type="text"], .bg-turquoise .input--field .input--ghost input[type="email"], .input--field .input--ghost .bg-turquoise input[type="email"], .bg-turquoise .input--field .input--ghost input[type="tel"], .input--field .input--ghost .bg-turquoise input[type="tel"], .bg-turquoise .input--field .input--ghost input[type="number"], .input--field .input--ghost .bg-turquoise input[type="number"], .bg-turquoise .input--field .input--ghost input[type="password"], .input--field .input--ghost .bg-turquoise input[type="password"], .bg-turquoise .input--field .input--ghost input[type="url"], .input--field .input--ghost .bg-turquoise input[type="url"], .bg-turquoise .input--field .input--naked input[type="text"], .input--field .input--naked .bg-turquoise input[type="text"], .bg-turquoise .input--field .input--naked input[type="email"], .input--field .input--naked .bg-turquoise input[type="email"], .bg-turquoise .input--field .input--naked input[type="tel"], .input--field .input--naked .bg-turquoise input[type="tel"], .bg-turquoise .input--field .input--naked input[type="number"], .input--field .input--naked .bg-turquoise input[type="number"], .bg-turquoise .input--field .input--naked input[type="password"], .input--field .input--naked .bg-turquoise input[type="password"], .bg-turquoise .input--field .input--naked input[type="url"], .input--field .input--naked .bg-turquoise input[type="url"],
-    .bg-Turquoise .input--field .input--ghost input[type="text"],
-    .input--field .input--ghost .bg-Turquoise input[type="text"],
-    .bg-Turquoise .input--field .input--ghost input[type="email"],
-    .input--field .input--ghost .bg-Turquoise input[type="email"],
-    .bg-Turquoise .input--field .input--ghost input[type="tel"],
-    .input--field .input--ghost .bg-Turquoise input[type="tel"],
-    .bg-Turquoise .input--field .input--ghost input[type="number"],
-    .input--field .input--ghost .bg-Turquoise input[type="number"],
-    .bg-Turquoise .input--field .input--ghost input[type="password"],
-    .input--field .input--ghost .bg-Turquoise input[type="password"],
-    .bg-Turquoise .input--field .input--ghost input[type="url"],
-    .input--field .input--ghost .bg-Turquoise input[type="url"],
-    .bg-Turquoise .input--field .input--naked input[type="text"],
-    .input--field .input--naked .bg-Turquoise input[type="text"],
-    .bg-Turquoise .input--field .input--naked input[type="email"],
-    .input--field .input--naked .bg-Turquoise input[type="email"],
-    .bg-Turquoise .input--field .input--naked input[type="tel"],
-    .input--field .input--naked .bg-Turquoise input[type="tel"],
-    .bg-Turquoise .input--field .input--naked input[type="number"],
-    .input--field .input--naked .bg-Turquoise input[type="number"],
-    .bg-Turquoise .input--field .input--naked input[type="password"],
-    .input--field .input--naked .bg-Turquoise input[type="password"],
-    .bg-Turquoise .input--field .input--naked input[type="url"],
-    .input--field .input--naked .bg-Turquoise input[type="url"] {
+    .bg-turquoise .input-field .input--ghost input[type="text"], .input-field .input--ghost .bg-turquoise input[type="text"], .bg-turquoise .input-field .input--ghost input[type="email"], .input-field .input--ghost .bg-turquoise input[type="email"], .bg-turquoise .input-field .input--ghost input[type="tel"], .input-field .input--ghost .bg-turquoise input[type="tel"], .bg-turquoise .input-field .input--ghost input[type="number"], .input-field .input--ghost .bg-turquoise input[type="number"], .bg-turquoise .input-field .input--ghost input[type="password"], .input-field .input--ghost .bg-turquoise input[type="password"], .bg-turquoise .input-field .input--ghost input[type="url"], .input-field .input--ghost .bg-turquoise input[type="url"], .bg-turquoise .input-field .input--naked input[type="text"], .input-field .input--naked .bg-turquoise input[type="text"], .bg-turquoise .input-field .input--naked input[type="email"], .input-field .input--naked .bg-turquoise input[type="email"], .bg-turquoise .input-field .input--naked input[type="tel"], .input-field .input--naked .bg-turquoise input[type="tel"], .bg-turquoise .input-field .input--naked input[type="number"], .input-field .input--naked .bg-turquoise input[type="number"], .bg-turquoise .input-field .input--naked input[type="password"], .input-field .input--naked .bg-turquoise input[type="password"], .bg-turquoise .input-field .input--naked input[type="url"], .input-field .input--naked .bg-turquoise input[type="url"],
+    .bg-Turquoise .input-field .input--ghost input[type="text"],
+    .input-field .input--ghost .bg-Turquoise input[type="text"],
+    .bg-Turquoise .input-field .input--ghost input[type="email"],
+    .input-field .input--ghost .bg-Turquoise input[type="email"],
+    .bg-Turquoise .input-field .input--ghost input[type="tel"],
+    .input-field .input--ghost .bg-Turquoise input[type="tel"],
+    .bg-Turquoise .input-field .input--ghost input[type="number"],
+    .input-field .input--ghost .bg-Turquoise input[type="number"],
+    .bg-Turquoise .input-field .input--ghost input[type="password"],
+    .input-field .input--ghost .bg-Turquoise input[type="password"],
+    .bg-Turquoise .input-field .input--ghost input[type="url"],
+    .input-field .input--ghost .bg-Turquoise input[type="url"],
+    .bg-Turquoise .input-field .input--naked input[type="text"],
+    .input-field .input--naked .bg-Turquoise input[type="text"],
+    .bg-Turquoise .input-field .input--naked input[type="email"],
+    .input-field .input--naked .bg-Turquoise input[type="email"],
+    .bg-Turquoise .input-field .input--naked input[type="tel"],
+    .input-field .input--naked .bg-Turquoise input[type="tel"],
+    .bg-Turquoise .input-field .input--naked input[type="number"],
+    .input-field .input--naked .bg-Turquoise input[type="number"],
+    .bg-Turquoise .input-field .input--naked input[type="password"],
+    .input-field .input--naked .bg-Turquoise input[type="password"],
+    .bg-Turquoise .input-field .input--naked input[type="url"],
+    .input-field .input--naked .bg-Turquoise input[type="url"] {
       color: #101010;
       border-color: #101010; }
 
@@ -7888,45 +7916,45 @@ fieldset legend {
   letter-spacing: 1px;
   font-size: 14px; }
 
-.input--field input:not([type]) {
+.input-field input:not([type]) {
   outline: 1px dashed #eb0f33; }
 
-.input--field input[type="color"] {
+.input-field input[type="color"] {
   -webkit-appearance: none;
   border: none;
   width: 32px;
   height: 32px; }
-  .input--field input[type="color"]::-webkit-color-swatch-wrapper {
+  .input-field input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0; }
-  .input--field input[type="color"]::-webkit-color-swatch {
+  .input-field input[type="color"]::-webkit-color-swatch {
     border: none; }
 
-.input--field textarea {
+.input-field textarea {
   resize: none;
   min-height: 5rem; }
-  .input--field textarea:not(:empty) {
+  .input-field textarea:not(:empty) {
     border: 1px solid rgba(16, 16, 16, 0.25); }
 
-.input--field select {
+.input-field select {
   min-width: 12rem;
   -webkit-appearance: none;
   background-image: linear-gradient(to right bottom, rgba(16, 16, 16, 0.2) 50%, transparent 50%), linear-gradient(to left bottom, rgba(16, 16, 16, 0.2) 50%, transparent 50%);
   background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
   background-repeat: no-repeat;
   background-position: top 50% right 1rem, top 50% right calc(1.3rem - 1px); }
-  .input--field select:hover {
+  .input-field select:hover {
     animation: selectArrow 0.3s forwards; }
-  .input--field select[size]:not([size="1"]) {
+  .input-field select[size]:not([size="1"]) {
     padding: 0;
     line-height: 2rem;
     background-position: top calc(100% - 1.25rem) right 1rem, top calc(100% - 1.25rem) right calc(1.3rem - 1px); }
-    .input--field select[size]:not([size="1"]) option {
+    .input-field select[size]:not([size="1"]) option {
       border-bottom: 1px solid rgba(16, 16, 16, 0.1);
       padding: 0.75rem;
       line-height: 2; }
-      .input--field select[size]:not([size="1"]) option:selected {
+      .input-field select[size]:not([size="1"]) option:selected {
         background-color: #7329b1; }
-    .input--field select[size]:not([size="1"]):hover {
+    .input-field select[size]:not([size="1"]):hover {
       animation: selectArrowSize 0.3s forwards; }
 
 @keyframes selectArrow {
@@ -8043,22 +8071,22 @@ label + input[type="submit"] {
   .input--range input[type="range"]:focus::-ms-fill-upper {
     background: rgba(127, 127, 127, 0.5); }
 
-.input--check-color {
+.input-check-color {
   height: auto;
   width: auto;
   padding: 0;
   margin: 0; }
-  .input--check-color label {
+  .input-check-color label {
     display: block;
     margin-top: 0;
     padding: 0;
     padding-left: 2rem;
     line-height: 2;
     position: relative; }
-    .input--check-color label:after, .input--check-color label:before {
+    .input-check-color label:after, .input-check-color label:before {
       content: ""; }
-  .input--check-color input[type="checkbox"],
-  .input--check-color input[type="radio"] {
+  .input-check-color input[type="checkbox"],
+  .input-check-color input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -8068,13 +8096,13 @@ label + input[type="submit"] {
     padding: 0;
     position: absolute;
     opacity: 0; }
-    .input--check-color input[type="checkbox"]:focus label,
-    .input--check-color input[type="radio"]:focus label {
+    .input-check-color input[type="checkbox"]:focus label,
+    .input-check-color input[type="radio"]:focus label {
       border: 2px solid red; }
-    .input--check-color input[type="checkbox"]:focus label:before,
-    .input--check-color input[type="radio"]:focus label:before {
+    .input-check-color input[type="checkbox"]:focus label:before,
+    .input-check-color input[type="radio"]:focus label:before {
       box-shadow: 0 2px 0 0 rgba(115, 41, 177, 0.25); }
-  .input--check-color label:before {
+  .input-check-color label:before {
     display: block;
     position: absolute;
     left: 0;
@@ -8084,7 +8112,7 @@ label + input[type="submit"] {
     border-radius: 50%;
     box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.15);
     background-color: var(--check-color); }
-  .input--check-color label:after {
+  .input-check-color label:after {
     display: block;
     position: absolute;
     left: 0.5em;
@@ -8094,7 +8122,7 @@ label + input[type="submit"] {
     background-color: white;
     border-radius: 50%;
     transform: scale(0); }
-  .input--check-color input:checked + label:after {
+  .input-check-color input:checked + label:after {
     animation: inputCheckColorPop 0.3s forwards; }
 
 @keyframes inputCheckColorPop {
@@ -8203,15 +8231,15 @@ label + input[type="submit"] {
 .input-check-color--Turquoise label:after {
   background-color: #101010; }
 
-.input--check--nolabel label {
+.input-check--nolabel label {
   text-indent: -999em; }
 
-.input--check-icon {
+.input-check-icon {
   height: auto;
   width: auto;
   padding: 0;
   margin: 0; }
-  .input--check-icon label {
+  .input-check-icon label {
     display: block;
     margin-top: 0;
     padding: 0;
@@ -8219,10 +8247,10 @@ label + input[type="submit"] {
     line-height: 2.5;
     position: relative;
     min-width: 2.5em; }
-    .input--check-icon label:after, .input--check-icon label:before {
+    .input-check-icon label:after, .input-check-icon label:before {
       content: ""; }
-  .input--check-icon input[type="checkbox"],
-  .input--check-icon input[type="radio"] {
+  .input-check-icon input[type="checkbox"],
+  .input-check-icon input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -8232,7 +8260,7 @@ label + input[type="submit"] {
     padding: 0;
     position: absolute;
     opacity: 0; }
-  .input--check-icon label:before {
+  .input-check-icon label:before {
     display: block;
     position: absolute;
     left: 0;
@@ -8244,7 +8272,7 @@ label + input[type="submit"] {
     text-indent: 0;
     box-shadow: 0 0 0 1px rgba(16, 16, 16, 0.15);
     border-radius: 3px; }
-  .input--check-icon label:after {
+  .input-check-icon label:after {
     display: block;
     position: absolute;
     left: 0.5em;
@@ -8253,111 +8281,111 @@ label + input[type="submit"] {
     height: 0.5em;
     background-color: white;
     transform: scale(0); }
-  .input--check-icon input:checked + label:before {
+  .input-check-icon input:checked + label:before {
     background-color: #101010;
     color: white; }
-  .input--check-icon.input--check--nolabel {
+  .input-check-icon.input-check--nolabel {
     width: 2.5rem;
     margin: 0.25rem;
     display: inline-block;
     text-indent: -999em; }
-    .input--check-icon.input--check--nolabel:before {
+    .input-check-icon.input-check--nolabel:before {
       text-indent: 0;
       top: 0 !important; }
-    .input--check-icon.input--check--nolabel + .input--check--nolabel {
+    .input-check-icon.input-check--nolabel + .input-check--nolabel {
       margin: 0.25rem; }
 
-.input--check-icon--play label:before {
+.input-check-icon--play label:before {
   content: "▶"; }
 
-.input--check-icon--stop label:before {
+.input-check-icon--stop label:before {
   content: "◼"; }
 
-.input--check-icon--pause label:before {
+.input-check-icon--pause label:before {
   content: "❙❙"; }
 
-.input--check-icon--plus label:before {
+.input-check-icon--plus label:before {
   content: "➕"; }
 
-.input--check-icon--minus label:before {
+.input-check-icon--minus label:before {
   content: "➖"; }
 
-.input--check-icon--close label:before {
+.input-check-icon--close label:before {
   content: "✕"; }
 
-.input--check-icon--close2 label:before {
+.input-check-icon--close2 label:before {
   content: "✖"; }
 
-.input--check-icon--close3 label:before {
+.input-check-icon--close3 label:before {
   content: "✗"; }
 
-.input--check-icon--close4 label:before {
+.input-check-icon--close4 label:before {
   content: "╳"; }
 
-.input--check-icon--arrow-left label:before {
+.input-check-icon--arrow-left label:before {
   content: "←"; }
 
-.input--check-icon--arrow-up label:before {
+.input-check-icon--arrow-up label:before {
   content: "↑"; }
 
-.input--check-icon--arrow-right label:before {
+.input-check-icon--arrow-right label:before {
   content: "→"; }
 
-.input--check-icon--arrow-down label:before {
+.input-check-icon--arrow-down label:before {
   content: "↓"; }
 
-.input--check-icon--arrow-left-up label:before {
+.input-check-icon--arrow-left-up label:before {
   content: "↖"; }
 
-.input--check-icon--arrow-right-up label:before {
+.input-check-icon--arrow-right-up label:before {
   content: "↗"; }
 
-.input--check-icon--arrow-right-down label:before {
+.input-check-icon--arrow-right-down label:before {
   content: "↘"; }
 
-.input--check-icon--arrow-left-down label:before {
+.input-check-icon--arrow-left-down label:before {
   content: "↙"; }
 
-.input--check-icon--to-up label:before {
+.input-check-icon--to-up label:before {
   content: "⤴"; }
 
-.input--check-icon--to-down label:before {
+.input-check-icon--to-down label:before {
   content: "⤵"; }
 
-.input--check-icon--to-left label:before {
+.input-check-icon--to-left label:before {
   content: "⤷"; }
 
-.input--check-icon--to-right label:before {
+.input-check-icon--to-right label:before {
   content: "⤸"; }
 
-.input--check-icon--hamburger label:before {
+.input-check-icon--hamburger label:before {
   content: "☰"; }
 
-.input--check-icon--real-arrow label:before {
+.input-check-icon--real-arrow label:before {
   content: "➔"; }
 
-.input--check-icon--go-prev label:before {
+.input-check-icon--go-prev label:before {
   content: "❮"; }
 
-.input--check-icon--go-next label:before {
+.input-check-icon--go-next label:before {
   content: "❯"; }
 
-.input--check-icon--glasses label:before {
+.input-check-icon--glasses label:before {
   content: "◯◠◯";
   letter-spacing: -1.5px; }
 
-.input--check-icon--star-lines label:before {
+.input-check-icon--star-lines label:before {
   content: "☆"; }
 
-.input--check-icon--star label:before {
+.input-check-icon--star label:before {
   content: "★"; }
 
-.input--check-text {
+.input-check-text {
   height: auto;
   width: auto;
   padding: 0;
   margin: 0; }
-  .input--check-text label {
+  .input-check-text label {
     position: relative;
     display: inline-block;
     left: 0;
@@ -8369,10 +8397,10 @@ label + input[type="submit"] {
     text-indent: 0;
     box-shadow: 0 0 0 1px rgba(16, 16, 16, 0.15);
     border-radius: 3px; }
-    .input--check-text label:before {
+    .input-check-text label:before {
       content: attr(data-text); }
-  .input--check-text input[type="checkbox"],
-  .input--check-text input[type="radio"] {
+  .input-check-text input[type="checkbox"],
+  .input-check-text input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -8382,14 +8410,14 @@ label + input[type="submit"] {
     padding: 0;
     position: absolute;
     opacity: 0; }
-  .input--check-text input:checked + label {
+  .input-check-text input:checked + label {
     background-color: #101010;
     color: white; }
-  .input--check-text.input--check--nolabel {
+  .input-check-text.input-check--nolabel {
     margin: 0.25rem; }
-    .input--check-text.input--check--nolabel:before {
+    .input-check-text.input-check--nolabel:before {
       top: 0 !important; }
-    .input--check-text.input--check--nolabel + .input--check--nolabel {
+    .input-check-text.input-check--nolabel + .input-check--nolabel {
       margin: 0.25rem; }
 
 .input--switch {
@@ -8454,12 +8482,12 @@ input[type="checkbox"] {
   max-width: auto;
   min-width: auto; }
 
-.input--checkbox {
+.input-checkbox {
   height: auto;
   width: auto;
   padding: 0;
   margin: 0; }
-  .input--checkbox input[type="checkbox"] {
+  .input-checkbox input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -8467,15 +8495,15 @@ input[type="checkbox"] {
     height: 0;
     margin: 0;
     padding: 0; }
-    .input--checkbox input[type="checkbox"]:not(.hidden) {
+    .input-checkbox input[type="checkbox"]:not(.hidden) {
       width: 0;
       height: 0;
       opacity: 0; }
-    .input--checkbox input[type="checkbox"] + label {
+    .input-checkbox input[type="checkbox"] + label {
       padding-left: 1rem;
       position: relative;
       cursor: pointer; }
-      .input--checkbox input[type="checkbox"] + label:before {
+      .input-checkbox input[type="checkbox"] + label:before {
         content: "";
         display: block;
         position: absolute;
@@ -8484,7 +8512,7 @@ input[type="checkbox"] {
         width: 1rem;
         height: 1rem;
         background: white; }
-      .input--checkbox input[type="checkbox"] + label:after {
+      .input-checkbox input[type="checkbox"] + label:after {
         content: "";
         display: block;
         position: absolute;
@@ -8496,29 +8524,29 @@ input[type="checkbox"] {
         border-radius: 0%;
         opacity: 0;
         transition: 0.3s; }
-    .input--checkbox input[type="checkbox"]:checked + label:after {
+    .input-checkbox input[type="checkbox"]:checked + label:after {
       opacity: 1;
       transition: 0.3s; }
-    .input--checkbox input[type="checkbox"] + label:before {
+    .input-checkbox input[type="checkbox"] + label:before {
       box-shadow: 0 0 0 1px rgba(16, 16, 16, 0.2) inset;
       top: 50%;
       transform: translateY(-50%); }
-    .input--checkbox input[type="checkbox"] + label:after {
+    .input-checkbox input[type="checkbox"] + label:after {
       top: calc(50%);
       transform: translateY(-50%); }
-    .input--checkbox input[type="checkbox"] + label {
+    .input-checkbox input[type="checkbox"] + label {
       position: relative;
       padding: 0;
       padding-left: 2rem;
       width: auto;
       line-height: 2rem;
       margin: 0; }
-    .input--checkbox input[type="checkbox"].hidden {
+    .input-checkbox input[type="checkbox"].hidden {
       width: 0;
       height: 0;
       opacity: 0;
       position: absolute; }
-      .input--checkbox input[type="checkbox"].hidden + label:before, .input--checkbox input[type="checkbox"].hidden + label:after {
+      .input-checkbox input[type="checkbox"].hidden + label:before, .input-checkbox input[type="checkbox"].hidden + label:after {
         content: none; }
 
 input[type="radio"] {
@@ -12505,16 +12533,16 @@ table {
     table.responsive tr {
       display: block; } }
 
-h1 + .input--field,
-h2 + .input--field,
-h3 + .input--field,
-h4 + .input--field,
-h5 + .input--field,
-h6 + .input--field,
-pre + .input--field,
-p + .input--field,
-.input--field + .input--field,
-form + .input--field {
+h1 + .input-field,
+h2 + .input-field,
+h3 + .input-field,
+h4 + .input-field,
+h5 + .input-field,
+h6 + .input-field,
+pre + .input-field,
+p + .input-field,
+.input-field + .input-field,
+form + .input-field {
   margin-top: 1rem; }
 
 h1 + h1,
@@ -12525,7 +12553,7 @@ h5 + h1,
 h6 + h1,
 pre + h1,
 p + h1,
-.input--field + h1,
+.input-field + h1,
 form + h1 {
   margin-top: 0.75rem; }
 
@@ -12537,7 +12565,7 @@ h5 + p,
 h6 + p,
 pre + p,
 p + p,
-.input--field + p,
+.input-field + p,
 form + p {
   margin-top: 2rem; }
 
@@ -12549,7 +12577,7 @@ h5 + .row,
 h6 + .row,
 pre + .row,
 p + .row,
-.input--field + .row,
+.input-field + .row,
 form + .row {
   margin-top: 1rem; }
 
@@ -12609,13 +12637,13 @@ p + h4,
 p + h5,
 p + h6,
 p + p,
-.input--field + h1,
-.input--field + h2,
-.input--field + h3,
-.input--field + h4,
-.input--field + h5,
-.input--field + h6,
-.input--field + p,
+.input-field + h1,
+.input-field + h2,
+.input-field + h3,
+.input-field + h4,
+.input-field + h5,
+.input-field + h6,
+.input-field + p,
 form + h1,
 form + h2,
 form + h3,
@@ -12641,8 +12669,8 @@ pre + table,
 pre + .table__container,
 p + table,
 p + .table__container,
-.input--field + table,
-.input--field + .table__container,
+.input-field + table,
+.input-field + .table__container,
 form + table,
 form + .table__container {
   margin-top: 8.33333vw; }
@@ -12679,10 +12707,10 @@ p + input,
 p + select,
 p + textarea,
 p + form,
-.input--field + input,
-.input--field + select,
-.input--field + textarea,
-.input--field + form,
+.input-field + input,
+.input-field + select,
+.input-field + textarea,
+.input-field + form,
 form + input,
 form + select,
 form + textarea,
@@ -12721,10 +12749,10 @@ form + form {
     p + select,
     p + textarea,
     p + form,
-    .input--field + input,
-    .input--field + select,
-    .input--field + textarea,
-    .input--field + form,
+    .input-field + input,
+    .input-field + select,
+    .input-field + textarea,
+    .input-field + form,
     form + input,
     form + select,
     form + textarea,

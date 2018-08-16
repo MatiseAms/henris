@@ -1,5 +1,5 @@
 @if output(form-check-icon) {
-	.input--check-icon {
+	.input-check-icon {
 		height: auto;
 		width: auto;
 		padding: 0;
@@ -61,7 +61,7 @@
 				// transform: scale(1);
 			}
 		}
-		&.input--check--nolabel {
+		&.input-check--nolabel {
 			width: 2.5rem;
 			margin: 0.25rem;
 			display: inline-block;
@@ -70,13 +70,13 @@
 				text-indent: 0;
 				top: 0 !important;
 			}
-			& + .input--check--nolabel {
+			& + .input-check--nolabel {
 				margin: 0.25rem;
 			}
 		}
 	}
 	@each $iconName, $iconValue in $iconset-basic {
-		.input--check-icon--#{$iconName} {
+		.input-check-icon--#{$iconName} {
 			label:before {
 				content: "#{$iconValue}";
 				@include icon-specific-style($iconName);

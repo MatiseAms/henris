@@ -1,7 +1,7 @@
 @if output(form-input) {
 	// position: absolute;
 	// border: 10px solid purple;
-	.input--field {
+	.input-field {
 		input {
 			&[type="text"],
 			&[type="email"],
