@@ -1,4 +1,4 @@
-@if output(components, ease-classes) {
+@if output("components", "ease", "ease-classes") {
 	$temp: ();
 	@each $ease-name, $ease-value in $ease {
 		.ease-#{$ease-name} {

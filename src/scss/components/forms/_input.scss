@@ -1,45 +1,59 @@
 @if output(form-input) {
-	.input,
-	input {
-		&:not([type="range"]),
-		&:not([type="checkbox"]),
-		&:not([type="radio"]),
-		&:not([type="submit"]),
-		&[type="text"],
-		&[type="email"],
-		&[type="tel"],
-		&[type="number"],
-		&[type="url"] {
-			@extend %default-input;
-			&:not(:placeholder-shown) {
-				border: 1px solid color(Black, 0.25);
+	// position: absolute;
+	// border: 10px solid purple;
+	.input-field {
+		input {
+			&[type="text"],
+			&[type="email"],
+			&[type="tel"],
+			&[type="number"],
+			&[type="password"],
+			&[type="url"] {
+				@extend %default-input;
+				// &:not(:placeholder-shown) {
+				// 	border: 1px solid color(Black, 0.25);
+				// }
 			}
+		}
+		input:not([type]) {
+			outline: 1px dashed color(Red);
+		}
+		.input {
 			&--ghost,
 			&--naked {
-				@extend %default-input--ghost;
+				input {
+					&[type="text"],
+					&[type="email"],
+					&[type="tel"],
+					&[type="number"],
+					&[type="password"],
+					&[type="url"] {
+						@extend %default-input--ghost;
+					}
+				}
 			}
 		}
-	}
 
-	input {
-		&[type="submit"],
-		&[type="button"] {
-			@extend %default-button;
-		}
-	}
-
-	input {
-		&[type="color"] {
-			-webkit-appearance: none;
-			border: none;
-			width: 32px;
-			height: 32px;
-
-			&::-webkit-color-swatch-wrapper {
-				padding: 0;
+		input {
+			&[type="submit"],
+			&[type="button"] {
+				@extend %default-button;
 			}
-			&::-webkit-color-swatch {
+		}
+
+		input {
+			&[type="color"] {
+				-webkit-appearance: none;
 				border: none;
+				width: 32px;
+				height: 32px;
+
+				&::-webkit-color-swatch-wrapper {
+					padding: 0;
+				}
+				&::-webkit-color-swatch {
+					border: none;
+				}
 			}
 		}
 	}

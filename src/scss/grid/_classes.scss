@@ -1,10 +1,6 @@
-@if output("grid") {
-	//
-	// The row is the main element, the row always needs to be set around
-	// a group of columns.
-	//
+@if output(grid) {
 	.row {
-		max-width: #{$grid-row-width}px;
+		max-width: $grid-row-width;
 		width: 100%;
 		margin: auto;
 		@include createGridClasses(true);
@@ -12,46 +8,35 @@
 		justify-content: flex-start;
 		flex-flow: row wrap;
 
-		@if output("grid-cssgrid") {
+		@if $grid-cssgrid {
 			@supports (display: grid) {
-				display: grid;
-				grid-template-columns: repeat($grid-columns, 1fr);
-				grid-gap: 0rem;
+				display: grid; //
+				grid-template-columns: repeat($grid-columns, 1fr); //
+				grid-gap: 0rem; //
 			}
 		}
-		//
-		// Centering columns in a row is done by adding a 'center' class to the row
-		//
 		&.center {
 			justify-items: center;
 			justify-content: center;
 
-			@if output("grid-cssgrid") {
+			@if $grid-cssgrid {
 				> .column {
 					align-self: center;
 					justify-self: center;
 				}
 			}
 		}
-		//
-		// Aligning columns to the right in a row is done by adding a 'right' class to the row
-		//
 		&.right {
 			justify-items: right;
 			justify-content: flex-end;
 
-			@if output("grid-cssgrid") {
+			@if $grid-cssgrid {
 				> .column {
 					align-self: right;
 					justify-self: right;
 				}
 			}
 		}
-		//
-		// In some cases you might want to reverse the order or columns
-		// for instance on a specific breakpoint. Use the grid class + '-reverse'
-		// to achieve this.
-		//
 		@each $grid-name, $grid-value in $grid-breakpoints {
 			// @debug $grid-name;
 			&.#{$grid-name}-reverse {
@@ -63,11 +48,6 @@
 		}
 	}
 
-	//
-	// The actual column, create all elements with columns and class them in
-	// order to give them sizes and respond to different window widths.
-	// The columns can also inherit the widths from the row when set.
-	//
 	.column {
 		@include createGridClasses(false);
 	}

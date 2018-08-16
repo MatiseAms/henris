@@ -2,11 +2,20 @@
 // To make it easier what and what not to create in the system
 // we made the output function. The output function will check
 // the value from the given output if true or false in the settings.
+//
+
+// Let check if the output is set already, if not. Let's set it.
+$output-current: () !default;
+@if length($output-current) < 1 {
+	$output-current: $output;
+}
+
 @function output($args...) {
 	// Set a default of output true
 	$doOutput: true;
-
-	// Go through all $arguments
+	//
+	//	Go through all $arguments
+	//
 	@each $arg in $args {
 		@if type-of($arg) == "string" {
 			$doOutput: check-output($arg, true, $doOutput);
@@ -17,46 +26,46 @@
 			}
 		}
 	}
-
-	// The overruler to create all the css
-	@if $output-full == true {
-		$doOutput: true;
-	}
-
-	// Check the overall setting. If false, do not output any css
-	@if $output-css == false {
+	//
+	//  Check the overall setting. If false, do not output any css
+	//
+	@if map-get($output-current, css) == false OR $output-css == true {
 		$doOutput: false;
 	}
-
-	// In the end, determine if this prop should return anything.
+	//
+	//	The overruler to create all the css
+	//
+	@if map-get($output-current, full) == true OR $output-full == true {
+		$doOutput: true;
+	}
+	//
+	//      In the end, determine if this prop should return anything.
+	//
 	@return $doOutput;
 }
 
 @function check-output($arg, $warn: false, $doOutput: true) {
 	$Return: $doOutput;
-	@if map-has-key($output, $arg) {
-		@if map-get($output, $arg) == false {
+	@if map-has-key($output-current, $arg) {
+		@if map-get($output-current, $arg) == false {
 			$Return: false;
 		}
-
+		//
 		// Check if the argument has a parent argument to overrule.
 		// Get the first item from the list and check this value. If this value is false, all
 		// children won't be outputted.
+		//
 		$newList: str-split($arg, "-");
 		@if length($newList) > 1 {
-			@if check-output(nth($newList, 1)) == false {
-				$Return: false;
-			}
+			$Return: check-output(nth($newList, 1));
 		}
 	} @else {
+		//
 		// Only warn when checking the children. Don't check on the parents, this is not relevant.
+		//
 		@if $warn {
 			@warn "#{$arg} does not exist in the settings.";
 		}
 	}
 	@return $Return;
-}
-
-@function output-define($key, $val) {
-	@return map-set($output, $key, $val);
 }

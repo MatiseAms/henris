@@ -6,9 +6,6 @@
 	}
 	@return $collection;
 }
-@function contains($list, $item) {
-	@return index($list, $item) != null;
-}
 
 @function str-to-list($string, $separator: ".", $startAt: 1) {
 	$string: str-replace($string, "__", "."); //
