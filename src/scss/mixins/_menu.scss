@@ -7,13 +7,13 @@
 	$round: 0,
 	$transition-duration: 0.3s
 ) {
-	@if unit($width) == 'px' {
+	@if unit($width) == "px" {
 		$width: rem($width);
 	}
-	@if unit($height) == 'px' {
+	@if unit($height) == "px" {
 		$height: rem($height);
 	}
-	@if unit($gutter) == 'px' {
+	@if unit($gutter) == "px" {
 		$gutter: rem($gutter);
 	}
 
@@ -61,7 +61,7 @@
 	&:before,
 	&:after {
 		position: absolute;
-		content: '';
+		content: "";
 	}
 
 	// Top bar

@@ -1,3 +1,7 @@
+//
+// The list of media queries. This can be used to output a full list
+// or just keep it in order.
+//
 $media-queries: (
 	"small-only": mq(0, bp("small")),
 	"small-up": mq(0, 9999),
@@ -18,10 +22,18 @@ $media-queries: (
 	"portrait": "#{$grid-screen} and (orientation: portrait)"
 );
 
+//
+// A little function to retrieve a media query from the list by its name.
+// doesn't do much, but who knows what the future will bring?
+//
 @function media-query($qry) {
 	@return map-get($media-queries, $qry);
 }
 
+//
+// Variables for media queries, easy to use in the frontend by
+// using `@media #{$small-only} { .element{ display: none; }};` for instance.
+//
 $small-only: media-query("small-only"); //
 $medium-only: media-query("medium-only"); //
 $medium-up: media-query("medium-up"); //
@@ -34,6 +46,11 @@ $xlarge-up: media-query("xlarge-up"); //
 $xlarge-down: media-query("xlarge-down"); //
 $xxlarge-only: media-query("xxlarge-only"); //
 
+//
+// In rare case you might want to know and have media queries in
+// custom properties. This piece of code will output all media queries
+// as custom properties. (needs to be enabled in the outputs)
+//
 @if output("grid-mq-custom-properties") {
 	:root {
 		@each $qry-name, $qry-value in $media-queries {

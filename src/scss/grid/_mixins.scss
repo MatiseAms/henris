@@ -18,41 +18,6 @@
 	}
 }
 
-// Just making it simpler to understand
-
-@mixin min-width($columns, $min-width, $alt: false) {
-	@include min-("width", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
-@mixin min-height($columns, $min-width, $alt: false) {
-	@include min-("height", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-@mixin min-left($columns, $min-width, $alt: false) {
-	@include min-("left", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
-@mixin min-right($columns, $min-width, $alt: false) {
-	@include min-("right", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-@mixin min-fontsize($columns, $min-width, $alt: false) {
-	@include min-("font-size", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-@mixin min-line-height($columns, $min-width, $alt: false) {
-	@include min-("line-height", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
 // Default use:
 //  @include min-(width,4,240);
 
@@ -74,49 +39,23 @@
 	}
 }
 
-// Just making is simpler to understand
-
-@mixin max-width($columns, $min-width, $alt: false) {
-	@include max-("width", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-@mixin max-height($columns, $min-width, $alt: false) {
-	@include max-("height", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
-@mixin max-left($columns, $min-width, $alt: false) {
-	@include max-("left", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
-@mixin max-right($columns, $min-width, $alt: false) {
-	@include max-("right", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
-@mixin max-fontsize($columns, $min-width, $alt: false) {
-	@include max-("font-size", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-@mixin max-line-height($columns, $min-width, $alt: false) {
-	@include max-("line-height", $columns, $min-width, $alt) {
-		@content;
-	}
-}
-
-// Generate the classes
-
+//
+// A mixin to create all the classes for columns
+//
 @mixin createGridClasses($child: false) {
+	//
+	// The childclasses make it possible to create classes for
+	// the row which the columns will respond to. Default the
+	// mixins doesnt create child classes. But when true, the columns will
+	// be made in the classes.
+	//
 	$childClass: "";
 	@if $child == true {
 		$childClass: "> .#{$base-prefix}column";
 	}
+	//
+	// Create the default classes for widths without any media query
+	//
 	@for $a from 0 through $grid-columns {
 		$percentage: percentage($a/$grid-columns); //
 		$column: #{$a}#{$childClass};
@@ -147,34 +86,50 @@
 		}
 	}
 
+	//
+	// Create the list with
+	//
+
 	$min-width: 0;
 	@each $bp-name, $bp-value in $grid-breakpoints {
 		$mq-only: "#{$grid-screen} and (min-width: #{$min-width}px) and (max-width: #{$bp-value}px)";
 		$mq: "#{$grid-screen} and (min-width: #{$min-width}px)";
 		$min-width: $bp-value + 1;
-		@each $part, $percentage in $grid-parts {
-			&%#{$part}#{$childClass},
-			&.#{$base-prefix}#{$part}#{$childClass} {
-				width: percentage($percentage);
-				@if $grid-cssgrid == true {
-					@supports (display: grid) {
-						$parts: $percentage * $grid-columns;
-						width: #{$parts}fr;
+		//
+		// The partials make it easier to use in the system. Create a
+		// class small-half and always create a column which is half the
+		// size of its parent. Also when you alter the amount of columns
+		//
+
+		@if output("grid-parts") {
+			@each $part, $percentage in $grid-parts {
+				&%#{$part}#{$childClass},
+				&.#{$base-prefix}#{$part}#{$childClass} {
+					width: percentage($percentage);
+					@if $grid-cssgrid == true {
+						@supports (display: grid) {
+							$parts: $percentage * $grid-columns;
+							width: #{$parts}fr;
+						}
 					}
 				}
 			}
 		}
-		@media #{$mq-only} {
-			&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
-				width: 0;
-				display: none;
-			}
-			@each $part, $percentage in $grid-parts {
-				// @debug '.#{$bp-name}-only-#{$part}#{$childClass}';
-				// @debug '.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass}';
-				.#{$bp-name}-only-#{$part}#{$childClass},
-				&.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass} {
-					width: percentage($percentage);
+		//
+		// Grid only classes make it possible to create a specific size
+		// for a specific breakpoint.
+		//
+		@if output("grid-only-classes") {
+			@media #{$mq-only} {
+				&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
+					width: 0;
+					display: none;
+				}
+				@each $part, $percentage in $grid-parts {
+					.#{$bp-name}-only-#{$part}#{$childClass},
+					&.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass} {
+						width: percentage($percentage);
+					}
 				}
 			}
 			@for $a from 1 through $grid-columns {
@@ -200,51 +155,65 @@
 				}
 			}
 		}
+
 		@media #{$mq} {
+			//
+			// Sometimes you need a zero, which does the same as a hide for a breakpoint.
+			//
 			.#{$bp-name}-0#{$childClass}
 				&.#{$base-prefix}#{$bp-name}-0#{$childClass} {
 				width: 0;
 				display: none;
 			}
-			@each $part, $percentage in $grid-parts {
-				%#{$bp-name}-#{$part}#{$childClass},
-				&.#{$base-prefix}#{$bp-name}-#{$part}#{$childClass} {
-					width: percentage($percentage);
+			//
+			// Create columns with parts with breakpoints
+			//
+			@if output("grid-parts") {
+				@each $part, $percentage in $grid-parts {
+					%#{$bp-name}-#{$part}#{$childClass},
+					&.#{$base-prefix}#{$bp-name}-#{$part}#{$childClass} {
+						width: percentage($percentage);
 
-					@if $grid-cssgrid == true {
-						@supports (display: grid) {
-							$parts: $percentage * $grid-columns;
-							width: #{$parts}fr;
+						@if $grid-cssgrid == true {
+							@supports (display: grid) {
+								$parts: $percentage * $grid-columns;
+								width: #{$parts}fr;
+							}
 						}
 					}
 				}
 			}
-			@for $a from 1 through $grid-columns {
-				$percentage: percentage($a/$grid-columns);
+			//
+			// Create columns with amount of columns with breakpoints
+			//
+			@if output(("grid-columns", "grid-counted-columns")) {
+				@for $a from 1 through $grid-columns {
+					$percentage: percentage($a/$grid-columns);
 
-				&.#{$base-prefix}#{$bp-name}-#{$a}#{$childClass} {
-					width: $percentage;
-					@if $grid-cssgrid == true {
-						@supports (display: grid) {
-							$parts: ($a/$grid-columns) * $grid-columns; //
-							width: auto;
-							grid-column: #{$parts} span;
+					&.#{$base-prefix}#{$bp-name}-#{$a}#{$childClass} {
+						width: $percentage;
+						@if $grid-cssgrid == true {
+							@supports (display: grid) {
+								$parts: ($a/$grid-columns) * $grid-columns; //
+								width: auto;
+								grid-column: #{$parts} span;
+							}
 						}
 					}
-				}
-				@if output(grid-offset) {
-					&.#{$base-prefix}offset-#{$bp-name}-#{$a}#{$childClass} {
-						margin-left: $percentage;
+					@if output(grid-offset) {
+						&.#{$base-prefix}offset-#{$bp-name}-#{$a}#{$childClass} {
+							margin-left: $percentage;
+						}
 					}
-				}
-				@if output(grid-push) {
-					&.#{$base-prefix}push-#{$bp-name}-#{$a}#{$childClass} {
-						margin-right: $percentage;
+					@if output(grid-push) {
+						&.#{$base-prefix}push-#{$bp-name}-#{$a}#{$childClass} {
+							margin-right: $percentage;
+						}
 					}
-				}
-				@if output(grid-pull) {
-					&.#{$base-prefix}pull-#{$bp-name}-#{$a}#{$childClass} {
-						margin-left: -#{$percentage};
+					@if output(grid-pull) {
+						&.#{$base-prefix}pull-#{$bp-name}-#{$a}#{$childClass} {
+							margin-left: -#{$percentage};
+						}
 					}
 				}
 			}

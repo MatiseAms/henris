@@ -1,12 +1,18 @@
-@import 'calc',
-	'placeholder',
-	'family',
-	'elements',
-	'animation',
-	'parent',
-	'typography',
-	'menu',
-	'input',
-	'icons',
-	'wildcard',
-	'browser';
+// Create prefixed placeholders
+@import "placeholder";
+// Target many more items with easy mixins
+@import "family";
+// Count elements
+@import "elements";
+// Select the parent
+@import "parent";
+// Typography
+@import "typography";
+// Create an easy hamburger
+@import "menu";
+// The input styles
+@import "input";
+// Make a wildcard
+@import "wildcard";
+// Target browsers
+@import "browser";
