@@ -2401,6 +2401,8 @@
   background-color: #101010;
   color: white; }
 
+.text--black,
+.text--Black,
 .color--black,
 .color--Black {
   color: #101010; }
@@ -2412,6 +2414,8 @@
   background-color: #303030;
   color: white; }
 
+.text--dark,
+.text--Dark,
 .color--dark,
 .color--Dark {
   color: #303030; }
@@ -2423,6 +2427,8 @@
   background-color: #ffffff;
   color: #101010; }
 
+.text--white,
+.text--White,
 .color--white,
 .color--White {
   color: #ffffff; }
@@ -2434,6 +2440,8 @@
   background-color: #f7f7f7;
   color: #101010; }
 
+.text--offwhite,
+.text--Offwhite,
 .color--offwhite,
 .color--Offwhite {
   color: #f7f7f7; }
@@ -2445,6 +2453,8 @@
   background-color: #7f7f7f;
   color: white; }
 
+.text--gray,
+.text--Gray,
 .color--gray,
 .color--Gray {
   color: #7f7f7f; }
@@ -2456,6 +2466,8 @@
   background-color: #10c565;
   color: white; }
 
+.text--green,
+.text--Green,
 .color--green,
 .color--Green {
   color: #10c565; }
@@ -2467,6 +2479,8 @@
   background-color: #1eb3e0;
   color: white; }
 
+.text--blue,
+.text--Blue,
 .color--blue,
 .color--Blue {
   color: #1eb3e0; }
@@ -2478,6 +2492,8 @@
   background-color: #eb0f33;
   color: white; }
 
+.text--red,
+.text--Red,
 .color--red,
 .color--Red {
   color: #eb0f33; }
@@ -2489,6 +2505,8 @@
   background-color: #aa834f;
   color: white; }
 
+.text--brown,
+.text--Brown,
 .color--brown,
 .color--Brown {
   color: #aa834f; }
@@ -2500,6 +2518,8 @@
   background-color: #f5c505;
   color: #101010; }
 
+.text--yellow,
+.text--Yellow,
 .color--yellow,
 .color--Yellow {
   color: #f5c505; }
@@ -2511,6 +2531,8 @@
   background-color: #f6790b;
   color: white; }
 
+.text--orange,
+.text--Orange,
 .color--orange,
 .color--Orange {
   color: #f6790b; }
@@ -2522,6 +2544,8 @@
   background-color: #ca1387;
   color: white; }
 
+.text--pink,
+.text--Pink,
 .color--pink,
 .color--Pink {
   color: #ca1387; }
@@ -2533,6 +2557,8 @@
   background-color: #7329b1;
   color: white; }
 
+.text--purple,
+.text--Purple,
 .color--purple,
 .color--Purple {
   color: #7329b1; }
@@ -2544,6 +2570,8 @@
   background-color: #3feac3;
   color: #101010; }
 
+.text--turquoise,
+.text--Turquoise,
 .color--turquoise,
 .color--Turquoise {
   color: #3feac3; }
