@@ -36,6 +36,9 @@
 	}
 
 	@font-face {
+		@if (str-index($name, " ")) {
+			$name: "#{$name}";
+		}
 		font-family: $name;
 		src: to-string($src, ",");
 		font-weight: $weight;
@@ -59,7 +62,7 @@
 		@for $i from 1 through length($weights) {
 			$weight: nth($weights, $i);
 			@include font-include(
-				$title,
+				font-quotes($title),
 				unquote("#{$name}-#{nth($weight, 1)}#{$italic}"),
 				nth($weight, 2),
 				$type,
@@ -71,11 +74,21 @@
 }
 
 //
+// Define where to use the font directly from the embed
 //
-@mixin font-use($use) {
-	@if (type-of($use) == "list") {
-	} @else {
-		@warn "#{$use} is not a list";
+@mixin font-use($use, $family) {
+	@if output(typography-usage) {
+		@if (type-of($use) == "list") {
+			@each $selector in $use {
+				#{$selector} {
+					font-family: #{font-quotes($family)};
+				}
+			}
+		} @else {
+			#{$use} {
+				font-family: #{font-quotes($family)};
+			}
+		}
 	}
 }
 
@@ -141,7 +154,7 @@
 
 			// Set use
 			@if map-has-key($font, "use") {
-				@include font-use(map-get($font, "use"));
+				@include font-use(map-get($font, "use"), map-get($font, "font-family"));
 			}
 		}
 	}

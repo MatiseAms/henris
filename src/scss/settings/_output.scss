@@ -86,6 +86,7 @@ $output-table: true !default; //
 $output-typography: true !default; //
 $output-typography-headings: true !default; //
 $output-typography-margins: true !default; //
+$output-typography-usage: true !default; //
 $output-pattern: false !default; //
 $output-pattern-checkered: true !default; //
 $output-pattern-cubes: true !default; //
@@ -182,6 +183,7 @@ $output: (
 	"typography": true, 
 	"typography-headings": true, 
 	"typography-margins": true, 
+	"typography-usage": true, 
 	"pattern": false, 
 	"pattern-checkered": true, 
 	"pattern-cubes": true, 
