@@ -1,0 +1,20 @@
+// ------------------------------------------------------------ */
+//	Create all custom-properties for all the colors in the	   */
+//	current colorset. 										  */
+// --------------------------------------------------------- */
+
+@if output("color-custom-properties") {
+	:root {
+		@each $color-name, $color-value in $default-color-set {
+			$variable: "--color-#{to-lower-case($color-name)}";
+			//hex
+			#{$variable}: $color-value;
+			//rgb
+			#{$variable}-r: red($color-value);
+			#{$variable}-g: green($color-value);
+			#{$variable}-b: blue($color-value);
+			#{$variable}-rgb: red($color-value), green($color-value),
+				blue($color-value);
+		}
+	}
+}

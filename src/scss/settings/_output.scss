@@ -1,5 +1,8 @@
 $output-css: false !default; //
 $output-full: false !default; //
+$output-debug: true !default; //
+$output-debug-image-alt: true !default; //
+$output-debug-input-type: true !default; //
 $output-background-colors: true !default; //
 $output-text-colors: true !default; //
 $output-custom-properties: true !default; //
@@ -78,7 +81,6 @@ $output-icon: true !default; //
 $output-icons-specific: false !default; //
 $output-print: true !default; //
 $output-navigation: false !default; //
-$output-reminder: true !default; //
 $output-section: true !default; //
 $output-showmore: false !default; //
 $output-spacing: true !default; //
@@ -87,6 +89,7 @@ $output-typography: true !default; //
 $output-typography-headings: true !default; //
 $output-typography-margins: true !default; //
 $output-typography-usage: true !default; //
+$output-typography-weight-classes: false !default; //
 $output-pattern: false !default; //
 $output-pattern-checkered: true !default; //
 $output-pattern-cubes: true !default; //
@@ -97,6 +100,9 @@ $output-pattern-zigzag: true !default; //
 $output: (
 	"css": false, 
 	"full": false, 
+	"debug": true, 
+	"debug-image-alt": true, 
+	"debug-input-type": true, 
 	"background-colors": true, 
 	"text-colors": true, 
 	"custom-properties": true, 
@@ -175,7 +181,6 @@ $output: (
 	"icons-specific": false, 
 	"print": true, 
 	"navigation": false, 
-	"reminder": true, 
 	"section": true, 
 	"showmore": false, 
 	"spacing": true, 
@@ -184,6 +189,7 @@ $output: (
 	"typography-headings": true, 
 	"typography-margins": true, 
 	"typography-usage": true, 
+	"typography-weight-classes": false, 
 	"pattern": false, 
 	"pattern-checkered": true, 
 	"pattern-cubes": true, 

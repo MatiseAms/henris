@@ -1,0 +1,31 @@
+// ----------------------------------------------------------- */
+//	Create all background color classes to use everywhere.    */
+// ----------------------------------------------------------- */
+
+@each $color-name, $color-value in $default-color-set {
+	//
+	//		Create background classes. With the first capital and without.
+	//
+
+	@if output("color-background-colors") {
+		.background--#{to-lower-case($color-name)},
+		.background--#{$color-name},
+		.bg---#{to-lower-case($color-name)},
+		.bg--#{$color-name} {
+			background-color: #{$color-value};
+			color: contra($color-value);
+		}
+	}
+	//
+	//	Create color classes to define text color.
+	//
+
+	@if output("color-text-colors") {
+		.text--#{to-lower-case($color-name)},
+		.text--#{$color-name},
+		.color--#{to-lower-case($color-name)},
+		.color--#{$color-name} {
+			color: $color-value;
+		}
+	}
+}
