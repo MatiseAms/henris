@@ -10,7 +10,7 @@ $output-current: () !default;
 	$output-current: $output;
 }
 
-@function output($args...) {
+@function output($args..., $overrule: false) {
 	// Set a default of output true
 	$doOutput: true;
 	//
@@ -41,7 +41,11 @@ $output-current: () !default;
 	//
 	//      In the end, determine if this prop should return anything.
 	//
-	@return $doOutput;
+	@if $overrule {
+		@return true;
+	} @else {
+		@return $doOutput;
+	}
 }
 
 @function check-output($arg, $warn: false, $doOutput: true) {

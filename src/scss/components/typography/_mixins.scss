@@ -162,6 +162,17 @@
 			@if map-has-key($font, "use") {
 				@include font-use(map-get($font, "use"), map-get($font, "font-family"));
 			}
+			$weight-classes: false;
+			@if map-has-key($font, "weight-classes") {
+				$weight-classes: map-get($font, "weight-classes");
+			}
+			@if output("typography-weight-classes", $weightClasses) {
+				@each $weight-name, $weight-value in map-get($font, weights) {
+					.font-#{to-lower-case($weight-name)} {
+						font-weight: $weight-value;
+					}
+				}
+			}
 		}
 	}
 }
