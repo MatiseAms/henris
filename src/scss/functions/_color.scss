@@ -256,12 +256,10 @@ $default-color-set: $color-default !default;
 
 @function define-bw($opacity) {
 	// Standard set the default black and white;
-
 	$black: black;
 	$white: white;
 
 	// Black should exist in defined colorset
-
 	@if color-exist("Black") {
 		$black: color(Black, $opacity);
 	} @else {
@@ -269,7 +267,6 @@ $default-color-set: $color-default !default;
 	}
 
 	// White should exist in defined colorset
-
 	@if color-exist("White") {
 		$white: color(White, $opacity);
 	} @else {
@@ -277,7 +274,6 @@ $default-color-set: $color-default !default;
 	}
 
 	// Return Black and White
-
 	@return ($black, $white);
 }
 
