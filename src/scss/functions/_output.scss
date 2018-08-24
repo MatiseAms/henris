@@ -44,11 +44,7 @@ $output-current: () !default;
 	//
 	//      In the end, determine if this prop should return anything.
 	//
-	// @if $overrule {
-	// 	@return true;
-	// } @else {
 	@return $doOutput;
-	// }
 }
 
 @function check-output($arg, $warn: false, $doOutput: true) {
