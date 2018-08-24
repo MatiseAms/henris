@@ -11,3 +11,20 @@
 	}
 	@return $font-name;
 }
+
+@function font-quotes($values) {
+	$list: $values;
+	@if type-of($values) != "list" {
+		$list: #{$values};
+	} @else {
+		$newlist: ();
+		@each $item in $list {
+			@if str-index($item, " ") {
+				$item: '"#{$item}"';
+			}
+			$newlist: append($newlist, $item, comma);
+		}
+		$list: $newlist;
+	}
+	@return $list;
+}

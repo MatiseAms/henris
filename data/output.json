@@ -89,6 +89,7 @@
 			"typography": true,
 			"typography-headings": true,
 			"typography-margins": true,
+			"typography-usage": true,
 			"pattern": false,
 			"pattern-checkered": true,
 			"pattern-cubes": true,
