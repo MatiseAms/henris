@@ -103,10 +103,16 @@
 	$font-path: $base-font-path !default;
 	$font-files: ("eot", "woff", "svg", "ttf");
 	$family: "";
+
 	//
 	// Check if the variable is a map
 	// if it's not a map, its not a font to include.
 	@if type-of($font) == "map" {
+		//
+		// Check if the include has a files prop;
+		@if map-has-key($font, "files") {
+			$font-files: map-get($font, "files");
+		}
 		//
 		// Check if the include has a font-family;
 		@if map-has-key($font, "font-family") == false {
