@@ -10,9 +10,6 @@
 				@extend %default-input;
 			}
 		}
-		input:not([type]) {
-			outline: 1px dashed color(Red);
-		}
 		.input {
 			&--ghost,
 			&--naked {
