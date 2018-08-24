@@ -208,11 +208,17 @@ $default-color-set: $color-default !default;
 //    color from the existing colorset and return a color
 // ---------------------------------------------------------
 
-@function to-defined-color($color) {
+@function to-defined-color($color, $return: "string") {
 	@if is-string-color(to-string($color)) {
-		@return color(to-string($color));
-	} @else {
+		@if color-exist(to-string($color)) {
+			@return color(to-string($color));
+		} @else {
+			@return $color;
+		}
+	} @else if $return == "string" {
 		@return to-string-color($color);
+	} @else if $return == "color" {
+		@return $color;
 	}
 }
 
@@ -222,7 +228,6 @@ $default-color-set: $color-default !default;
 
 @function color-exist($value, $colorset: $default-color-set) {
 	// Return true if the color exists in the current colorset; Or false when not.
-
 	@if map-get($colorset, $value) {
 		@return true;
 	} @else {
@@ -393,7 +398,8 @@ $colors: $default-color-set;
 		$amount: percentage(1 * $amount);
 	}
 
-	$color: to-defined-color($color);
+	$color: to-defined-color($color, "color");
+
 	// Apply the darkness to the color like the original function also does.
 
 	$darkness: lightness($color) - $amount;
