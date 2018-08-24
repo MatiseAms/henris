@@ -1,5 +1,5 @@
 .row {
-  max-width: 4096;
+  max-width: 4096px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -2712,10 +2712,9 @@ li {
   list-style-type: none; }
 
 * {
-  box-sizing: border-box; }
-
-a {
-  color: inherit; }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 blockquote {
   position: relative;
@@ -3447,9 +3446,6 @@ fieldset legend {
   letter-spacing: 1px;
   font-size: 14px; }
 
-.input-field input:not([type]) {
-  outline: 1px dashed #eb0f33; }
-
 .input-field input[type="color"] {
   -webkit-appearance: none;
   border: none;
@@ -3803,6 +3799,9 @@ img:not([alt]),
 img[alt=""] {
   outline: 5px solid red; }
 
+input:not([type]) {
+  outline: 1px dashed #eb0f33; }
+
 section.basic {
   padding: 8.33333vw 0; }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
@@ -3863,22 +3862,18 @@ body,
 html {
   font-size: 16px; }
 
-a,
-a:visited,
-a:link,
-a.link:visited,
-.alink:visited {
+a {
   color: inherit; }
 
 .text-large {
   font-size: 1.25em; }
 
-h1.fancy,
-h2.fancy,
-h3.fancy,
-h4.fancy,
-h5.fancy,
-h6.fancy {
+h1.oblique,
+h2.oblique,
+h3.oblique,
+h4.oblique,
+h5.oblique,
+h6.oblique {
   font-style: italic; }
 
 h1.thin,

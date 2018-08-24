@@ -26,7 +26,7 @@
   --mq-portrait: "only screen and (orientation: portrait)"; }
 
 .row {
-  max-width: 4096;
+  max-width: 4096px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -6504,10 +6504,9 @@ li {
   list-style-type: none; }
 
 * {
-  box-sizing: border-box; }
-
-a {
-  color: inherit; }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 blockquote {
   position: relative;
@@ -7438,7 +7437,7 @@ pre[class*="language-"] {
 .token.number,
 .token.constant,
 .token.symbol {
-  color: #cb1388; }
+  color: #ef54b6; }
 
 .token.selector,
 .token.attr-name,
@@ -7446,7 +7445,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #10c665; }
+  color: #4bf098; }
 
 .token.operator,
 .token.entity,
@@ -7454,16 +7453,16 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-  color: #fcde64; }
+  color: white; }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #cb1388; }
+  color: #ef54b6; }
 
 .token.regex,
 .token.important {
-  color: #ec0f33; }
+  color: #f66a81; }
 
 .token.important,
 .token.bold {
@@ -7476,7 +7475,7 @@ pre[class*="language-"] {
   cursor: help; }
 
 .token.deleted {
-  color: #ec0f33; }
+  color: #f66a81; }
 
 /* --------------------------------------------- */
 /*	Styled links when not used for other use	*/
@@ -7589,17 +7588,17 @@ p.error:before, p.success:before, p.notice:before {
 p.error:before {
   content: "\2717";
   background-color: rgba(235, 15, 51, 0.75);
-  border-bottom: 1px solid #bb0c29; }
+  border-bottom: 1px solid black; }
 
 p.notice:before {
   content: "\2071";
   background-color: rgba(30, 179, 224, 0.75);
-  border-bottom: 1px solid #188fb3; }
+  border-bottom: 1px solid black; }
 
 p.success:before {
   content: "\2713";
   background-color: rgba(16, 197, 101, 0.75);
-  border-bottom: 1px solid #0c964d; }
+  border-bottom: 1px solid black; }
 
 /* --------------------- */
 /*  Link to filetypes 	*/
@@ -8323,9 +8322,6 @@ fieldset legend {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px; }
-
-.input-field input:not([type]) {
-  outline: 1px dashed #eb0f33; }
 
 .input-field input[type="color"] {
   -webkit-appearance: none;
@@ -12812,6 +12808,9 @@ img:not([alt]),
 img[alt=""] {
   outline: 5px solid red; }
 
+input:not([type]) {
+  outline: 1px dashed #eb0f33; }
+
 section.basic {
   padding: 8.33333vw 0; }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
@@ -12945,22 +12944,18 @@ body,
 html {
   font-size: 16px; }
 
-a,
-a:visited,
-a:link,
-a.link:visited,
-.alink:visited {
+a {
   color: inherit; }
 
 .text-large {
   font-size: 1.25em; }
 
-h1.fancy,
-h2.fancy,
-h3.fancy,
-h4.fancy,
-h5.fancy,
-h6.fancy {
+h1.oblique,
+h2.oblique,
+h3.oblique,
+h4.oblique,
+h5.oblique,
+h6.oblique {
   font-style: italic; }
 
 h1.thin,
