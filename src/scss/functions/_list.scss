@@ -29,8 +29,8 @@
 
 // List Functions
 
-@function prepend($list, $value) {
-	@return join($value, $list);
+@function prepend($list, $value, $seperator: space) {
+	@return join($value, $list, $seperator);
 }
 
 @function to-string($list, $glue: "", $is-nested: false) {

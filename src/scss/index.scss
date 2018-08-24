@@ -6,9 +6,11 @@
 @import "spacing";
 
 @if output(css) {
+	$primary-font-family: unquote($typography-fonts-system) !default;
+
 	body,
 	html {
-		font-family: unquote($typography-fonts-system);
+		font-family: $primary-font-family;
 		background-color: color(Offwhite);
 		color: color(Dark);
 		width: 100%;

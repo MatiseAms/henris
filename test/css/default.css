@@ -3859,6 +3859,326 @@ table {
     table.responsive tr {
       display: block; } }
 
+body,
+html {
+  font-size: 16px; }
+
+a,
+a:visited,
+a:link,
+a.link:visited,
+.alink:visited {
+  color: inherit; }
+
+.text-large {
+  font-size: 1.25em; }
+
+h1.fancy,
+h2.fancy,
+h3.fancy,
+h4.fancy,
+h5.fancy,
+h6.fancy {
+  font-style: italic; }
+
+h1.thin,
+h2.thin,
+h3.thin,
+h4.thin,
+h5.thin,
+h6.thin {
+  font-weight: 100; }
+
+h1.caps,
+h2.caps,
+h3.caps,
+h4.caps,
+h5.caps,
+h6.caps {
+  text-transform: uppercase; }
+
+h1 + h1,
+h1 + h2,
+h1 + h3,
+h1 + h4,
+h1 + h5,
+h1 + h6,
+h1 + p,
+h1 + blockquote,
+h1 + table,
+h1 + img,
+h1 + ul,
+h1 + ol,
+h2 + h1,
+h2 + h2,
+h2 + h3,
+h2 + h4,
+h2 + h5,
+h2 + h6,
+h2 + p,
+h2 + blockquote,
+h2 + table,
+h2 + img,
+h2 + ul,
+h2 + ol,
+h3 + h1,
+h3 + h2,
+h3 + h3,
+h3 + h4,
+h3 + h5,
+h3 + h6,
+h3 + p,
+h3 + blockquote,
+h3 + table,
+h3 + img,
+h3 + ul,
+h3 + ol,
+h4 + h1,
+h4 + h2,
+h4 + h3,
+h4 + h4,
+h4 + h5,
+h4 + h6,
+h4 + p,
+h4 + blockquote,
+h4 + table,
+h4 + img,
+h4 + ul,
+h4 + ol,
+h5 + h1,
+h5 + h2,
+h5 + h3,
+h5 + h4,
+h5 + h5,
+h5 + h6,
+h5 + p,
+h5 + blockquote,
+h5 + table,
+h5 + img,
+h5 + ul,
+h5 + ol,
+h6 + h1,
+h6 + h2,
+h6 + h3,
+h6 + h4,
+h6 + h5,
+h6 + h6,
+h6 + p,
+h6 + blockquote,
+h6 + table,
+h6 + img,
+h6 + ul,
+h6 + ol,
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6,
+p + p,
+p + blockquote,
+p + table,
+p + img,
+p + ul,
+p + ol,
+blockquote + h1,
+blockquote + h2,
+blockquote + h3,
+blockquote + h4,
+blockquote + h5,
+blockquote + h6,
+blockquote + p,
+blockquote + blockquote,
+blockquote + table,
+blockquote + img,
+blockquote + ul,
+blockquote + ol,
+table + h1,
+table + h2,
+table + h3,
+table + h4,
+table + h5,
+table + h6,
+table + p,
+table + blockquote,
+table + table,
+table + img,
+table + ul,
+table + ol,
+img + h1,
+img + h2,
+img + h3,
+img + h4,
+img + h5,
+img + h6,
+img + p,
+img + blockquote,
+img + table,
+img + img,
+img + ul,
+img + ol,
+ul + h1,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6,
+ul + p,
+ul + blockquote,
+ul + table,
+ul + img,
+ul + ul,
+ul + ol,
+ol + h1,
+ol + h2,
+ol + h3,
+ol + h4,
+ol + h5,
+ol + h6,
+ol + p,
+ol + blockquote,
+ol + table,
+ol + img,
+ol + ul,
+ol + ol {
+  margin-top: 1em; }
+
+h1 + h2,
+h1 + h3 {
+  margin-top: 1em; }
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6,
+p + p,
+p + blockquote,
+p + table,
+p + img,
+p + pre,
+ul + h1,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6,
+ul + p,
+ul + blockquote,
+ul + table,
+ul + img,
+ul + pre,
+ol + h1,
+ol + h2,
+ol + h3,
+ol + h4,
+ol + h5,
+ol + h6,
+ol + p,
+ol + blockquote,
+ol + table,
+ol + img,
+ol + pre,
+img + h1,
+img + h2,
+img + h3,
+img + h4,
+img + h5,
+img + h6,
+img + p,
+img + blockquote,
+img + table,
+img + img,
+img + pre,
+table + h1,
+table + h2,
+table + h3,
+table + h4,
+table + h5,
+table + h6,
+table + p,
+table + blockquote,
+table + table,
+table + img,
+table + pre,
+div + h1,
+div + h2,
+div + h3,
+div + h4,
+div + h5,
+div + h6,
+div + p,
+div + blockquote,
+div + table,
+div + img,
+div + pre,
+blockquote + h1,
+blockquote + h2,
+blockquote + h3,
+blockquote + h4,
+blockquote + h5,
+blockquote + h6,
+blockquote + p,
+blockquote + blockquote,
+blockquote + table,
+blockquote + img,
+blockquote + pre,
+pre + h1,
+pre + h2,
+pre + h3,
+pre + h4,
+pre + h5,
+pre + h6,
+pre + p,
+pre + blockquote,
+pre + table,
+pre + img,
+pre + pre {
+  margin-top: 1em; }
+
+h1 {
+  font-size: 4.16667vw;
+  line-height: 1; }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 32px; } }
+
+h2 {
+  font-size: 3.33333vw;
+  line-height: 1; }
+  @media only screen and (max-width: 840px) {
+    h2 {
+      font-size: 28px; } }
+
+h3 {
+  font-size: 2.5vw;
+  line-height: 1.25; }
+  @media only screen and (max-width: 960px) {
+    h3 {
+      font-size: 24px; } }
+
+h4 {
+  font-size: 2.08333vw;
+  line-height: 1.25; }
+  @media only screen and (max-width: 960px) {
+    h4 {
+      font-size: 20px; } }
+
+h5 {
+  font-size: 1.66667vw;
+  line-height: 1.25; }
+  @media only screen and (max-width: 1080px) {
+    h5 {
+      font-size: 18px; } }
+
+h6 {
+  font-size: 1.25vw;
+  line-height: 1.25; }
+  @media only screen and (max-width: 1280px) {
+    h6 {
+      font-size: 16px; } }
+
 h1 + .input-field,
 h2 + .input-field,
 h3 + .input-field,
