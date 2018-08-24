@@ -389,6 +389,10 @@ $colors: $default-color-set;
 	//  When the type is 'color' we need to either convert color to a string
 	// or directly pass it back when its an actual color.
 
+	@if is-percentage($amount) == false {
+		$amount: percentage(1 * $amount);
+	}
+
 	$color: to-defined-color($color);
 	// Apply the darkness to the color like the original function also does.
 
@@ -401,6 +405,10 @@ $colors: $default-color-set;
 @function lighten($color, $amount) {
 	// When the type is 'color' we need to either convert color to a string
 	// or directly pass it back when its an actual color.
+
+	@if is-percentage($amount) == false {
+		$amount: percentage(1 * $amount);
+	}
 
 	$color: to-defined-color($color);
 	// Apply the lightness to the color like the original function also does.
