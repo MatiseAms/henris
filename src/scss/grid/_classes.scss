@@ -1,6 +1,6 @@
 @if output(grid) {
 	.row {
-		max-width: $grid-row-width;
+		max-width: #{$grid-row-width}px;
 		width: 100%;
 		margin: auto;
 		@include createGridClasses(true);

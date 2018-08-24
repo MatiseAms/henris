@@ -7,11 +7,7 @@
 		font-size: 16px;
 	}
 
-	a,
-	a:visited,
-	a:link,
-	a.link:visited,
-	.alink:visited {
+	a {
 		color: inherit;
 	}
 	// -------------------------------------------------- */
@@ -83,7 +79,7 @@
 	h4,
 	h5,
 	h6 {
-		&.fancy {
+		&.oblique {
 			font-style: italic;
 		}
 		&.thin {
