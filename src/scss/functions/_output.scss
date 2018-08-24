@@ -10,7 +10,7 @@ $output-current: () !default;
 	$output-current: $output;
 }
 
-@function output($args..., $overrule: false) {
+@function output($args...) {
 	// Set a default of output true
 	$doOutput: true;
 	//
@@ -20,9 +20,12 @@ $output-current: () !default;
 		@if type-of($arg) == "string" {
 			$doOutput: check-output($arg, true, $doOutput);
 		} @else {
-			// @debug type-of($arg);
 			@each $listArg in $arg {
-				$doOutput: check-output($listArg, true, $doOutput);
+				@if type-of($arg) == "bool" {
+					$doOutput: $arg;
+				} @else {
+					$doOutput: check-output($listArg, true, $doOutput);
+				}
 			}
 		}
 	}
@@ -41,11 +44,11 @@ $output-current: () !default;
 	//
 	//      In the end, determine if this prop should return anything.
 	//
-	@if $overrule {
-		@return true;
-	} @else {
-		@return $doOutput;
-	}
+	// @if $overrule {
+	// 	@return true;
+	// } @else {
+	@return $doOutput;
+	// }
 }
 
 @function check-output($arg, $warn: false, $doOutput: true) {
