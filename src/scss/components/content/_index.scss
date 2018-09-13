@@ -6,9 +6,6 @@
 	@if output(content-default-link) {
 		a:not([class])[href] {
 			color: currentColor;
-			text-decoration: none;
-			display: inline-block;
-			font-style: italic;
 		}
 	}
 
