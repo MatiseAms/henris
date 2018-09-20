@@ -231,11 +231,11 @@
 	$min: setting('grid-min'),
 	$max: setting('grid-max')
 ) {
-	#{$what}: grid($grid);
+	#{$property}: grid($grid);
 	@if $max > 0 {
-		@include max-($what, $grid, $max * $grid);
+		@include max-($property, $grid, $max * $grid);
 	}
 	@if $min > 0 {
-		@include min-($what, $grid, $min * $grid);
+		@include min-($property, $grid, $min * $grid);
 	}
 }
