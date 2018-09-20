@@ -17,11 +17,11 @@ $output-current: () !default;
 	//	Go through all $arguments
 	//
 	@each $arg in $args {
-		@if type-of($arg) == "string" {
+		@if type-of($arg) == 'string' {
 			$doOutput: check-output($arg, true, $doOutput);
 		} @else {
 			@each $listArg in $arg {
-				@if type-of($arg) == "bool" {
+				@if type-of($arg) == 'bool' {
 					$doOutput: $arg;
 				} @else {
 					$doOutput: check-output($listArg, true, $doOutput);
@@ -42,7 +42,7 @@ $output-current: () !default;
 		$doOutput: true;
 	}
 	//
-	//      In the end, determine if this prop should return anything.
+	//	In the end, determine if this prop should return anything.
 	//
 	@return $doOutput;
 }
@@ -58,7 +58,7 @@ $output-current: () !default;
 		// Get the first item from the list and check this value. If this value is false, all
 		// children won't be outputted.
 		//
-		$newList: str-split($arg, "-");
+		$newList: str-split($arg, '-');
 		@if length($newList) > 1 {
 			$Return: check-output(nth($newList, 1));
 		}

@@ -1,4 +1,4 @@
-@import "settings/output";
+@import 'settings/output';
 
 // Reset a value
 @function map-set($map, $key, $value) {
@@ -23,20 +23,20 @@
 }
 
 @function show-output($key) {
-	$value: "";
+	$value: '';
 	@if $key {
-		@debug "output: #{$key} : #{map-get($output,$key)}";
+		@debug 'output: #{$key} : #{map-get($output,$key)}';
 		$value: map-get($output, $key);
 	} @else {
 		@each $output-key, $output-value in $output {
-			@debug "output: #{$output-key} : #{$output-value}";
+			@debug 'output: #{$output-key} : #{$output-value}';
 		}
 		$value: $key;
 	}
 	@return $value;
 }
 @function return-output($key) {
-	$value: "";
+	$value: '';
 	@if $key {
 		$value: #{map-get($output, $key)};
 	} @else {
@@ -47,4 +47,18 @@
 
 @mixin show-output($value: null) {
 	$show: show-output($value);
+}
+
+// SETTINGSSSS
+
+@import 'settings/setting';
+// Set custom setting
+@function set-setting($var, $value) {
+	$setting-temp: $setting;
+	@if map-has-key($setting, $var) {
+		$setting-temp: map-set($setting, $var, $value);
+	} @else {
+		@warn "#{$var} does not exist in settings";
+	}
+	@return $setting-temp;
 }

@@ -1,10 +1,10 @@
-@if output("debug-image-alt") {
+@if output(debug-image-alt) {
 	img:not([alt]),
-	img[alt=""] {
+	img[alt=''] {
 		outline: 5px solid red;
 	}
 }
-@if output("debug-input-type") {
+@if output(debug-input-type) {
 	input:not([type]) {
 		outline: 1px dashed color(Red);
 	}
