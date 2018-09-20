@@ -1,9 +1,11 @@
-@import "settings/index";
-@import "functions/index";
-@import "mixins/index";
-@import "grid/index";
-@import "components/index";
-@import "spacing";
+@import 'settings/index';
+@import 'functions/index';
+@import 'mixins/index';
+@import 'grid/index';
+@import 'components/index';
+@import 'spacing';
+
+$henris: true;
 
 @if output(css) {
 	$primary-font-family: unquote($typography-fonts-system) !default;
