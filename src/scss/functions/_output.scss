@@ -62,9 +62,6 @@ $output-current: () !default;
 		$newList: str-split($arg, '-');
 
 		@if length($newList) > 1 {
-			@if nth($newList, 1) == 'debug' {
-				@debug '#{$newList} #{nth($newList, 1)} #{check-output(nth($newList, 1))}';
-			}
 			$Return: check-output(nth($newList, 1));
 		}
 	} @else {

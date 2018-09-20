@@ -7481,10 +7481,7 @@ pre[class*="language-"] {
 /*	Styled links when not used for other use	*/
 /* ------------------------------------------- */
 a:not([class])[href] {
-  color: currentColor;
-  text-decoration: none;
-  display: inline-block;
-  font-style: italic; }
+  color: currentColor; }
 
 /* ------------------------- */
 /*	The horizontal rule   	*/
@@ -12805,7 +12802,7 @@ hr {
     content: " (" attr(href) ") "; } }
 
 img:not([alt]),
-img[alt=""] {
+img[alt=''] {
   outline: 5px solid red; }
 
 input:not([type]) {
