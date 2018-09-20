@@ -29,6 +29,14 @@
 	@return $haystack;
 }
 
+@function to-string($string) {
+	@if type-of($string) == 'string' {
+		@return $string;
+	} @else if type-of('#{$string}') == 'string' {
+		@return '#{$string}';
+	}
+}
+
 @function str-split($string, $separator) {
 	// empty array/list
 	$split-arr: ();
