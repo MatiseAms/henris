@@ -1,5 +1,5 @@
 @if output(form-switch) {
-	.input-switch {
+	.input--switch {
 		display: inline-block;
 		position: relative;
 		input[type="checkbox"] {
@@ -33,7 +33,7 @@
 				}
 				@include input-checkbox-label {
 					position: relative;
-					padding-left: 2rem;
+					padding-left: 4rem;
 				}
 			}
 		}

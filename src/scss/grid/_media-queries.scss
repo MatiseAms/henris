@@ -21,6 +21,7 @@ $media-queries: (
 	"landscape": "#{$grid-screen} and (orientation: landscape)",
 	"portrait": "#{$grid-screen} and (orientation: portrait)"
 );
+
 //
 // A little function to retrieve a media query from the list by its name.
 // doesn't do much, but who knows what the future will bring?
@@ -50,7 +51,7 @@ $xxlarge-only: media-query("xxlarge-only"); //
 // custom properties. This piece of code will output all media queries
 // as custom properties. (needs to be enabled in the outputs)
 //
-@if output("custom-properties-media-queries") {
+@if output("grid-mq-custom-properties") {
 	:root {
 		@each $qry-name, $qry-value in $media-queries {
 			$variable: "--mq-#{to-lower-case($qry-name)}";

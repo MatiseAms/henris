@@ -5,7 +5,6 @@
 @function str-replace($haystack, $needle, $replace: '') {
 	// First make sure needle nor haystack are empty values;
 	@if type-of($haystack) == null OR type-of($needle) == null {
-		@warn "You havent give a string to replace";
 		@return $haystack;
 	} @else {
 		// And check if the needle and haystack are actually strings, otherwise warn.
@@ -37,6 +36,7 @@
 		@return '#{$string}';
 	}
 }
+
 @function str-split($string, $separator) {
 	// empty array/list
 	$split-arr: ();

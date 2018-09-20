@@ -1,7 +1,8 @@
-$output-css: true !default; //
+$output-css: false !default; //
 $output-full: false !default; //
-$output-mode-dev: false !default; //
-$output-mode-prod: true !default; //
+$output-debug: true !default; //
+$output-debug-image-alt: true !default; //
+$output-debug-input-type: true !default; //
 $output-background-colors: true !default; //
 $output-text-colors: true !default; //
 $output-custom-properties: true !default; //
@@ -18,28 +19,12 @@ $output-button-rotated: true !default; //
 $output-button-border: true !default; //
 $output-custom-properties-media-queries: false !default; //
 $output-custom-properties-colors: false !default; //
-$output-details: true !default; //
-$output-fieldset: true !default; //
-$output-form: true !default; //
-$output-form-range: true !default; //
-$output-form-input: true !default; //
-$output-form-label: true !default; //
-$output-form-check: true !default; //
-$output-form-check-icon: false !default; //
-$output-form-check-color: false !default; //
-$output-form-check-text: false !default; //
-$output-form-switch: false !default; //
-$output-form-textarea: true !default; //
-$output-form-button: true !default; //
-$output-form-select: true !default; //
-$output-form-fieldset: true !default; //
-$output-form-radio: false !default; //
-$output-form-hidden: false !default; //
 $output-grid: true !default; //
 $output-grid-helpers: false !default; //
 $output-grid-hide-show-classes: true !default; //
 $output-grid-only-classes: true !default; //
 $output-grid-counted-columns: true !default; //
+$output-grid-column: true !default; //
 $output-grid-parts: true !default; //
 $output-grid-offset: false !default; //
 $output-grid-push: false !default; //
@@ -48,12 +33,17 @@ $output-grid-non-breaking-column: false !default; //
 $output-grid-columns: true !default; //
 $output-grid-cssgrid: false !default; //
 $output-grid-row-breakpoints: true !default; //
+$output-grid-mq-custom-properties: false !default; //
 $output-components: true !default; //
 $output-blockquote: true !default; //
 $output-button-group: false !default; //
+$output-card: true !default; //
 $output-code: true !default; //
 $output-code-prism: false !default; //
 $output-color: true !default; //
+$output-color-custom-properties: true !default; //
+$output-color-background-colors: true !default; //
+$output-color-text-colors: true !default; //
 $output-content: true !default; //
 $output-content-link-filetypes: false !default; //
 $output-content-p-notices: false !default; //
@@ -62,8 +52,26 @@ $output-content-line-height: true !default; //
 $output-content-hr: true !default; //
 $output-content-default-link: true !default; //
 $output-detail-list: true !default; //
+$output-data-label: true !default; //
 $output-ease: true !default; //
-$output-forms: true !default; //
+$output-form: true !default; //
+$output-form-fieldset: true !default; //
+$output-form-form: true !default; //
+$output-form-button: true !default; //
+$output-form-input-text: true !default; //
+$output-form-check-color: false !default; //
+$output-form-check-icon: false !default; //
+$output-form-check-text: false !default; //
+$output-form-checkbox: true !default; //
+$output-form-hidden: true !default; //
+$output-form-radio: true !default; //
+$output-form-range: true !default; //
+$output-form-switch: false !default; //
+$output-form-input: true !default; //
+$output-form-textarea: true !default; //
+$output-form-select: true !default; //
+$output-form-label: true !default; //
+$output-form-field: true !default; //
 $output-helpers: true !default; //
 $output-reset: true !default; //
 $output-reset-meyerweb: true !default; //
@@ -72,17 +80,29 @@ $output-horizontal-rule: true !default; //
 $output-icon: true !default; //
 $output-icons-specific: false !default; //
 $output-print: true !default; //
-$output-reminder: true !default; //
+$output-navigation: false !default; //
 $output-section: true !default; //
+$output-showmore: false !default; //
+$output-spacing: true !default; //
 $output-table: true !default; //
 $output-typography: true !default; //
 $output-typography-headings: true !default; //
 $output-typography-margins: true !default; //
+$output-typography-usage: true !default; //
+$output-typography-weight-classes: false !default; //
+$output-pattern: false !default; //
+$output-pattern-checkered: true !default; //
+$output-pattern-cubes: true !default; //
+$output-pattern-dots: true !default; //
+$output-pattern-houndstooth: true !default; //
+$output-pattern-lines: true !default; //
+$output-pattern-zigzag: true !default; //
 $output: (
-	"css": true, 
+	"css": false, 
 	"full": false, 
-	"mode-dev": false, 
-	"mode-prod": true, 
+	"debug": true, 
+	"debug-image-alt": true, 
+	"debug-input-type": true, 
 	"background-colors": true, 
 	"text-colors": true, 
 	"custom-properties": true, 
@@ -99,28 +119,12 @@ $output: (
 	"button-border": true, 
 	"custom-properties-media-queries": false, 
 	"custom-properties-colors": false, 
-	"details": true, 
-	"fieldset": true, 
-	"form": true, 
-	"form-range": true, 
-	"form-input": true, 
-	"form-label": true, 
-	"form-check": true, 
-	"form-check-icon": false, 
-	"form-check-color": false, 
-	"form-check-text": false, 
-	"form-switch": false, 
-	"form-textarea": true, 
-	"form-button": true, 
-	"form-select": true, 
-	"form-fieldset": true, 
-	"form-radio": false, 
-	"form-hidden": false, 
 	"grid": true, 
 	"grid-helpers": false, 
 	"grid-hide-show-classes": true, 
 	"grid-only-classes": true, 
 	"grid-counted-columns": true, 
+	"grid-column": true, 
 	"grid-parts": true, 
 	"grid-offset": false, 
 	"grid-push": false, 
@@ -129,12 +133,17 @@ $output: (
 	"grid-columns": true, 
 	"grid-cssgrid": false, 
 	"grid-row-breakpoints": true, 
+	"grid-mq-custom-properties": false, 
 	"components": true, 
 	"blockquote": true, 
 	"button-group": false, 
+	"card": true, 
 	"code": true, 
 	"code-prism": false, 
 	"color": true, 
+	"color-custom-properties": true, 
+	"color-background-colors": true, 
+	"color-text-colors": true, 
 	"content": true, 
 	"content-link-filetypes": false, 
 	"content-p-notices": false, 
@@ -143,8 +152,26 @@ $output: (
 	"content-hr": true, 
 	"content-default-link": true, 
 	"detail-list": true, 
+	"data-label": true, 
 	"ease": true, 
-	"forms": true, 
+	"form": true, 
+	"form-fieldset": true, 
+	"form-form": true, 
+	"form-button": true, 
+	"form-input-text": true, 
+	"form-check-color": false, 
+	"form-check-icon": false, 
+	"form-check-text": false, 
+	"form-checkbox": true, 
+	"form-hidden": true, 
+	"form-radio": true, 
+	"form-range": true, 
+	"form-switch": false, 
+	"form-input": true, 
+	"form-textarea": true, 
+	"form-select": true, 
+	"form-label": true, 
+	"form-field": true, 
 	"helpers": true, 
 	"reset": true, 
 	"reset-meyerweb": true, 
@@ -153,10 +180,21 @@ $output: (
 	"icon": true, 
 	"icons-specific": false, 
 	"print": true, 
-	"reminder": true, 
+	"navigation": false, 
 	"section": true, 
+	"showmore": false, 
+	"spacing": true, 
 	"table": true, 
 	"typography": true, 
 	"typography-headings": true, 
-	"typography-margins": true
+	"typography-margins": true, 
+	"typography-usage": true, 
+	"typography-weight-classes": false, 
+	"pattern": false, 
+	"pattern-checkered": true, 
+	"pattern-cubes": true, 
+	"pattern-dots": true, 
+	"pattern-houndstooth": true, 
+	"pattern-lines": true, 
+	"pattern-zigzag": true
 ) !default; //

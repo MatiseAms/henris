@@ -1,6 +1,8 @@
 // a map-set function (not included with Sass)
 @function map-set($map, $key, $value) {
-	$new: ($key: $value);
+	$new: (
+		$key: $value
+	);
 	@return map-merge($map, $new);
 }
 
@@ -8,7 +10,9 @@
 	$newmap: ();
 	@if type-of($list) == "list" {
 		@each $item-name, $item-value in $list {
-			$item: ("#{$item-name}": $item-value);
+			$item: (
+				"#{$item-name}": $item-value
+			);
 			$newmap: map-merge($newmap, $item);
 		}
 		@return $newmap;

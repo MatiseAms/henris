@@ -1,0 +1,15 @@
+//
+// Define settings for henris.
+//
+
+// Let check if the setting is set already, if not. Let's set it.
+$setting-current: () !default;
+@if length($setting-current) < 1 {
+	$setting-current: $setting;
+}
+// Get the setting value
+@function setting($arg) {
+	@if map-get($setting-current, $arg) {
+		@return map-get($setting-current, $arg);
+	}
+}

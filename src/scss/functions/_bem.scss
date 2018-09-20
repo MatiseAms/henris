@@ -9,11 +9,11 @@
 	$return: nth($list, $sum);
 	@return $return;
 }
-//
+
 // Usage:
 // In list use  $c:c($c); to capture values
 // recall by using example:  #{map-get($c,'bg-holder')}
-//
+
 $c: ();
 
 @function c($map: ()) {
@@ -29,7 +29,9 @@ $c: ();
 			$map: ();
 		}
 	}
-	$new: (slugify($value): $value); //
+	$new: (
+		slugify($value): $value
+	); //
 	$map: map-merge($map, $new);
 	//  @debug $map;
 	@return $map;

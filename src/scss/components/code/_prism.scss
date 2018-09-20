@@ -1,4 +1,4 @@
-// @if output(("components", "code-prism")) {
+// @if output("components", "code-prism") {
 // PrismJS 1.14.0 https://prismjs.com/download.html#themes=prism-dark&languages=markup+css+clike+javascript */
 //
 // prism.js Dark theme for JavaScript, CSS and HTML
@@ -6,11 +6,7 @@
 // @author Lea Verou
 //
 
-$color-primary: color(Blue);
-$color-secondary: color(Red);
-$color-tertiary: color(Purple);
-
-@if output(components, code-prism) {
+@if output("components", "code", "code-prism") {
 	code[class*="language-"],
 	pre[class*="language-"] {
 		color: white;
@@ -35,7 +31,7 @@ $color-tertiary: color(Purple);
 
 	pre[class*="language-"],
 	:not(pre) > code[class*="language-"] {
-		background: $dark;
+		background: $color-dark;
 	}
 
 	/* Code blocks */
@@ -58,7 +54,7 @@ $color-tertiary: color(Purple);
 	.token.prolog,
 	.token.doctype,
 	.token.cdata {
-		color: rgba($light, 0.5);
+		color: rgba($color-light, 0.5);
 	}
 
 	.token.punctuation {

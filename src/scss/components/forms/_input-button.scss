@@ -8,6 +8,8 @@
 			}
 		}
 	}
+}
+@if output(form-button) {
 	label {
 		& + input[type="button"],
 		& + input[type="submit"] {

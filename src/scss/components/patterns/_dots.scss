@@ -1,0 +1,39 @@
+@mixin pattern-dots($args, $var: false) {
+	$primary-color: "";
+	$secondary-color: "";
+	$pattern-size: "";
+	$pattern-spacing: 4;
+
+	@if $args != null {
+		@if length($args) == 3 {
+			$primary-color: nth($args, 1);
+			$secondary-color: nth($args, 2);
+			$pattern-size: nth($args, 3);
+		} @else if length($args) == 4 {
+			$pattern-spacing: nth($args, 4);
+		} @else {
+			@warn 'pattern-dots does not have the right amount of arguments. (color-primary, color-secondary, pattern-size, spacing)';
+		}
+	}
+	@if $var {
+		$primary-color: var(--pattern-color-primary, white);
+		$secondary-color: var(--pattern-color-secondary, black);
+		$pattern-size: var(--pattern-size, 1rem);
+		$pattern-spacing: var(--pattern-spacing, 4);
+	}
+
+	background-image: radial-gradient(#{$primary-color} 25%, transparent 25%),
+		radial-gradient(#{$primary-color} 25%, #{$secondary-color} 25%);
+	background-repeat: repeat;
+	background-size: calc(#{$pattern-size} * #{$pattern-spacing})
+			calc(#{$pattern-size} * #{$pattern-spacing}),
+		calc(#{$pattern-size} * #{$pattern-spacing})
+			calc(#{$pattern-size} * #{$pattern-spacing});
+	background-position: 0 0,
+		calc(#{$pattern-size} * 2) calc(#{$pattern-size} * 2);
+}
+@if output("pattern", "pattern-dots") {
+	.pattern-dots {
+		@include pattern-dots(null, true);
+	}
+}

@@ -1,14 +1,11 @@
-@if output(components, content) {
+@if output("components", "content") {
 	/* --------------------------------------------- */
 	/*	Styled links when not used for other use	*/
 	/* ------------------------------------------- */
 
-	@if output(content-default-link) {
+	@if output("content-default-link") {
 		a:not([class])[href] {
 			color: currentColor;
-			text-decoration: none;
-			display: inline-block;
-			font-style: italic;
 		}
 	}
 
@@ -16,7 +13,7 @@
 	/*	The horizontal rule   	*/
 	/* ----------------------- */
 
-	@if output(content-hr) {
+	@if output("content-hr") {
 		hr {
 			height: 1px;
 			background-color: currentColor;
@@ -31,13 +28,13 @@
 	/*	Sytling specific for content	*/
 	/* ------------------------------- */
 
-	@if output(content-line-height) {
+	@if output("content-line-height") {
 		.content {
 			line-height: 1.5;
 		}
 	}
 
-	@if output(content-list) {
+	@if output("content-list") {
 		/* ----------------------------- */
 		/*	Ordered & Unordered lists	*/
 		/* --------------------------- */
@@ -156,7 +153,7 @@
 	/*  Special notices 	*/
 	/* ------------------- */
 
-	@if output(content-p-notices) {
+	@if output("content-p-notices") {
 		p {
 			&.error,
 			&.success,
@@ -190,7 +187,7 @@
 			}
 		}
 	}
-	@if output(content-link-filetypes) {
+	@if output("content-link-filetypes") {
 		/* --------------------- */
 		/*  Link to filetypes 	*/
 		/* ------------------- */
@@ -281,7 +278,7 @@
 			}
 		}
 	}
-	// @if output(content-row-example") {
+	// @if output("content-row-example") {
 
 	.content .example {
 		.row {

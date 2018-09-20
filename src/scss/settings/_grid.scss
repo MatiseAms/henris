@@ -1,7 +1,10 @@
 $grid-row-width: 4096 !default; //
+$grid-row-class: 'row' !default; //
 $grid-design-width: 1920 !default; //
 $grid-columns: 24 !default; //
+$grid-column-class: 'column' !default; //
 $grid-screen: 'only screen' !default; //
+$grid-cssgrid: false !default; //
 $grid-breakpoints-small: 750 !default; //
 $grid-breakpoints-medium: 960 !default; //
 $grid-breakpoints-large: 1280 !default; //
