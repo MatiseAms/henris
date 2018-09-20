@@ -226,7 +226,7 @@
 // When a grid-min size and a grid-max size are defined, as a overal setting or in the include like:
 // @include grid([property], [grid-size], [min-size], [max-size]);
 @mixin grid(
-	$what,
+	$property,
 	$grid,
 	$min: setting('grid-min'),
 	$max: setting('grid-max')
