@@ -58,8 +58,13 @@ $output-current: () !default;
 		// Get the first item from the list and check this value. If this value is false, all
 		// children won't be outputted.
 		//
+
 		$newList: str-split($arg, '-');
+
 		@if length($newList) > 1 {
+			@if nth($newList, 1) == 'debug' {
+				@debug '#{$newList} #{nth($newList, 1)} #{check-output(nth($newList, 1))}';
+			}
 			$Return: check-output(nth($newList, 1));
 		}
 	} @else {
