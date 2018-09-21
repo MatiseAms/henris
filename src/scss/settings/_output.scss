@@ -49,6 +49,7 @@ $output-content-link-filetypes: false !default; //
 $output-content-p-notices: false !default; //
 $output-content-list: true !default; //
 $output-content-line-height: true !default; //
+$output-content-row-example: false !default; //
 $output-content-hr: true !default; //
 $output-content-default-link: true !default; //
 $output-detail-list: true !default; //
@@ -149,6 +150,7 @@ $output: (
 	"content-p-notices": false, 
 	"content-list": true, 
 	"content-line-height": true, 
+	"content-row-example": false, 
 	"content-hr": true, 
 	"content-default-link": true, 
 	"detail-list": true, 

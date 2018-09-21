@@ -52,6 +52,7 @@
 			"content-p-notices": false,
 			"content-list": true,
 			"content-line-height": true,
+			"content-row-example": false,
 			"content-hr": true,
 			"content-default-link": true,
 			"detail-list": true,

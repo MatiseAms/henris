@@ -1,9 +1,9 @@
-@if output("components", "content") {
+@if output('components', 'content') {
 	/* --------------------------------------------- */
 	/*	Styled links when not used for other use	*/
 	/* ------------------------------------------- */
 
-	@if output("content-default-link") {
+	@if output(content-default-link) {
 		a:not([class])[href] {
 			color: currentColor;
 		}
@@ -13,7 +13,7 @@
 	/*	The horizontal rule   	*/
 	/* ----------------------- */
 
-	@if output("content-hr") {
+	@if output(content-hr) {
 		hr {
 			height: 1px;
 			background-color: currentColor;
@@ -28,13 +28,13 @@
 	/*	Sytling specific for content	*/
 	/* ------------------------------- */
 
-	@if output("content-line-height") {
+	@if output(content-line-height) {
 		.content {
 			line-height: 1.5;
 		}
 	}
 
-	@if output("content-list") {
+	@if output(content-list) {
 		/* ----------------------------- */
 		/*	Ordered & Unordered lists	*/
 		/* --------------------------- */
@@ -62,7 +62,7 @@
 				display: block;
 				padding-left: 1.5rem;
 				&:before {
-					content: "\2014 ";
+					content: '\2014 ';
 				}
 			}
 		}
@@ -84,7 +84,7 @@
 			> li {
 				counter-increment: level1;
 				&:before {
-					content: counter(level1) ".";
+					content: counter(level1) '.';
 				}
 				ol {
 					counter-reset: level2;
@@ -92,7 +92,7 @@
 						counter-increment: level2;
 						padding-left: 2rem;
 						&:before {
-							content: counter(level1) "." counter(level2) ".";
+							content: counter(level1) '.' counter(level2) '.';
 						}
 						ol {
 							counter-reset: level3;
@@ -100,11 +100,11 @@
 								counter-increment: level3;
 								&:before {
 									content: counter(level1)
-										"."
+										'.'
 										counter(level2)
-										"."
+										'.'
 										counter(level3)
-										". ";
+										'. ';
 								}
 								ol {
 									counter-reset: level4;
@@ -113,13 +113,13 @@
 										counter-increment: level4;
 										&:before {
 											content: counter(level1)
-												"."
+												'.'
 												counter(level2)
-												"."
+												'.'
 												counter(level3)
-												"."
+												'.'
 												counter(level4)
-												". ";
+												'. ';
 										}
 										ol {
 											counter-reset: level5;
@@ -127,15 +127,15 @@
 												counter-increment: level5;
 												&:before {
 													content: counter(level1)
-														"."
+														'.'
 														counter(level2)
-														"."
+														'.'
 														counter(level3)
-														"."
+														'.'
 														counter(level4)
-														"."
+														'.'
 														counter(level5)
-														". ";
+														'. ';
 												}
 											}
 										}
@@ -153,14 +153,14 @@
 	/*  Special notices 	*/
 	/* ------------------- */
 
-	@if output("content-p-notices") {
+	@if output(content-p-notices) {
 		p {
 			&.error,
 			&.success,
 			&.notice {
 				&:before {
 					margin-right: 10px;
-					content: "";
+					content: '';
 					width: 1rem;
 					height: 1rem;
 					display: inline-block;
@@ -171,34 +171,34 @@
 				}
 			}
 			&.error:before {
-				content: "\2717";
+				content: '\2717';
 				background-color: color(Red, 0.75);
 				border-bottom: 1px solid darken(Red, 10);
 			}
 			&.notice:before {
-				content: "\2071";
+				content: '\2071';
 				background-color: color(Blue, 0.75);
 				border-bottom: 1px solid darken(Blue, 10);
 			}
 			&.success:before {
-				content: "\2713";
+				content: '\2713';
 				background-color: color(Green, 0.75);
 				border-bottom: 1px solid darken(Green, 10);
 			}
 		}
 	}
-	@if output("content-link-filetypes") {
+	@if output(content-link-filetypes) {
 		/* --------------------- */
 		/*  Link to filetypes 	*/
 		/* ------------------- */
 
 		a {
-			&[href^=".doc"],
-			&[href*=".doc"],
-			&[href^=".pdf"],
-			&[href*=".pdf"],
-			&[href^=".xls"],
-			&[href*=".xls"] {
+			&[href^='.doc'],
+			&[href*='.doc'],
+			&[href^='.pdf'],
+			&[href*='.pdf'],
+			&[href^='.xls'],
+			&[href*='.xls'] {
 				margin-left: 1.5rem;
 				position: relative;
 				&:before {
@@ -206,7 +206,7 @@
 					left: -1.25rem;
 					top: 50%;
 					transform: translateY(-50%);
-					content: "";
+					content: '';
 					font-weight: bold;
 					display: inline-block;
 					width: 12px;
@@ -228,12 +228,12 @@
 				}
 			}
 
-			&[href^=".rss"],
-			&[href*=".rss"] {
+			&[href^='.rss'],
+			&[href*='.rss'] {
 				margin-left: 1.5rem;
 				position: relative;
 				&:before {
-					content: "";
+					content: '';
 					display: inline-block;
 					position: absolute;
 					left: -1.25rem;
@@ -253,8 +253,8 @@
 					background-repeat: no-repeat;
 				}
 			}
-			&[href^="mailto:"],
-			&[href*="mailto:"] {
+			&[href^='mailto:'],
+			&[href*='mailto:'] {
 				margin-left: 1.75rem;
 				position: relative;
 				&:before {
@@ -262,7 +262,7 @@
 					left: -1.5rem;
 					top: 50%;
 					transform: translateY(-50%);
-					content: "";
+					content: '';
 					font-weight: bold;
 					display: inline-block;
 					width: 1rem;
@@ -278,28 +278,28 @@
 			}
 		}
 	}
-	// @if output("content-row-example") {
+	@if output(content-row-example) {
+		.content .example {
+			.row {
+				border: 1px solid color(Black, 0.1);
+				border-bottom: 0;
+				&:first-child {
+					border-radius: $base-border-radius $base-border-radius 0 0;
+				}
+				&:last-child {
+					border-radius: 0 0 $base-border-radius $base-border-radius;
 
-	.content .example {
-		.row {
-			border: 1px solid color(Black, 0.1);
-			border-bottom: 0;
-			&:first-child {
-				border-radius: $base-border-radius $base-border-radius 0 0;
-			}
-			&:last-child {
-				border-radius: 0 0 $base-border-radius $base-border-radius;
+					border-bottom: 1px solid color(Black, 0.1);
+				}
+				&:nth-child(odd) {
+					background-color: color(Blue, 0.05);
+				}
 
-				border-bottom: 1px solid color(Black, 0.1);
-			}
-			&:nth-child(odd) {
-				background-color: color(Blue, 0.05);
-			}
-
-			.column {
-				padding: 0.5rem 1rem;
-				& + .column {
-					border-left: 1px solid color(Black, 0.1);
+				.column {
+					padding: 0.5rem 1rem;
+					& + .column {
+						border-left: 1px solid color(Black, 0.1);
+					}
 				}
 			}
 		}
