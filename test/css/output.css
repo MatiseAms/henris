@@ -7532,7 +7532,7 @@ ul:not([class]) li {
   display: block;
   padding-left: 1.5rem; }
   ul:not([class]) li:before {
-    content: "\2014 "; }
+    content: '\2014 '; }
 
 ol:not([class]) > li {
   display: block;
@@ -7582,7 +7582,7 @@ ol:not([class]) {
 /* ------------------- */
 p.error:before, p.success:before, p.notice:before {
   margin-right: 10px;
-  content: "";
+  content: '';
   width: 1rem;
   height: 1rem;
   display: inline-block;
@@ -7592,32 +7592,32 @@ p.error:before, p.success:before, p.notice:before {
   border-radius: 3px; }
 
 p.error:before {
-  content: "\2717";
+  content: '\2717';
   background-color: rgba(235, 15, 51, 0.75);
   border-bottom: 1px solid black; }
 
 p.notice:before {
-  content: "\2071";
+  content: '\2071';
   background-color: rgba(30, 179, 224, 0.75);
   border-bottom: 1px solid black; }
 
 p.success:before {
-  content: "\2713";
+  content: '\2713';
   background-color: rgba(16, 197, 101, 0.75);
   border-bottom: 1px solid black; }
 
 /* --------------------- */
 /*  Link to filetypes 	*/
 /* ------------------- */
-a[href^=".doc"], a[href*=".doc"], a[href^=".pdf"], a[href*=".pdf"], a[href^=".xls"], a[href*=".xls"] {
+a[href^='.doc'], a[href*='.doc'], a[href^='.pdf'], a[href*='.pdf'], a[href^='.xls'], a[href*='.xls'] {
   margin-left: 1.5rem;
   position: relative; }
-  a[href^=".doc"]:before, a[href*=".doc"]:before, a[href^=".pdf"]:before, a[href*=".pdf"]:before, a[href^=".xls"]:before, a[href*=".xls"]:before {
+  a[href^='.doc']:before, a[href*='.doc']:before, a[href^='.pdf']:before, a[href*='.pdf']:before, a[href^='.xls']:before, a[href*='.xls']:before {
     position: absolute;
     left: -1.25rem;
     top: 50%;
     transform: translateY(-50%);
-    content: "";
+    content: '';
     font-weight: bold;
     display: inline-block;
     width: 12px;
@@ -7631,11 +7631,11 @@ a[href^=".doc"], a[href*=".doc"], a[href^=".pdf"], a[href*=".pdf"], a[href^=".xl
     background-repeat: no-repeat;
     clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%); }
 
-a[href^=".rss"], a[href*=".rss"] {
+a[href^='.rss'], a[href*='.rss'] {
   margin-left: 1.5rem;
   position: relative; }
-  a[href^=".rss"]:before, a[href*=".rss"]:before {
-    content: "";
+  a[href^='.rss']:before, a[href*='.rss']:before {
+    content: '';
     display: inline-block;
     position: absolute;
     left: -1.25rem;
@@ -7648,15 +7648,15 @@ a[href^=".rss"], a[href*=".rss"] {
     background-position: left center, right center;
     background-repeat: no-repeat; }
 
-a[href^="mailto:"], a[href*="mailto:"] {
+a[href^='mailto:'], a[href*='mailto:'] {
   margin-left: 1.75rem;
   position: relative; }
-  a[href^="mailto:"]:before, a[href*="mailto:"]:before {
+  a[href^='mailto:']:before, a[href*='mailto:']:before {
     position: absolute;
     left: -1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    content: "";
+    content: '';
     font-weight: bold;
     display: inline-block;
     width: 1rem;
