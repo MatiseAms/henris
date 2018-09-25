@@ -13,10 +13,14 @@ $output-current: () !default;
 @function output($args...) {
 	// Set a default of output true
 	$doOutput: true;
+	$test: false;
 	//
 	//	Go through all $arguments
 	//
 	@each $arg in $args {
+		@if $arg == 'grid' {
+			$test: true;
+		}
 		@if type-of($arg) == 'string' {
 			$doOutput: check-output($arg, true, $doOutput);
 		} @else {
@@ -29,18 +33,21 @@ $output-current: () !default;
 			}
 		}
 	}
+
 	//
 	//  Check the overall setting. If false, do not output any css
 	//
-	@if map-get($output-current, css) == false OR $output-css == true {
+	@if check-output('css', true, $doOutput) == false {
 		$doOutput: false;
 	}
-	//
-	//	The overruler to create all the css
-	//
-	@if map-get($output-current, full) == true OR $output-full == true {
+	// //
+	// //	The overruler to create all the css
+	// //
+
+	@if check-output('full', true) == true {
 		$doOutput: true;
 	}
+
 	//
 	//	In the end, determine if this prop should return anything.
 	//
@@ -49,6 +56,7 @@ $output-current: () !default;
 
 @function check-output($arg, $warn: false, $doOutput: true) {
 	$Return: $doOutput;
+
 	@if map-has-key($output-current, $arg) {
 		@if map-get($output-current, $arg) == false {
 			$Return: false;
@@ -66,6 +74,8 @@ $output-current: () !default;
 				$Return: false;
 			}
 		}
+	} @else if $arg == 'full' {
+		$Return: true;
 	} @else {
 		//
 		// Only warn when checking the children. Don't check on the parents, this is not relevant.

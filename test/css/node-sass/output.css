@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/* # Module: Output [function] */
+/* --------------------------- */
+/* Test: Output CSS should by default return 'false' */
+/*   ✔ [assert-equal] Output CSS should by default return 'false' */
+/*  */
+/* Test: Output FULL should by default return 'false' */
+/*   ✔ [assert-equal] Output FULL should by default return 'false' */
+/*  */
+/*  */
 .align-center {
   display: flex;
   align-items: center; }
@@ -6536,8 +6545,8 @@ blockquote {
     blockquote cite a {
       color: currentColor; }
 
-.button, [class^="button-icon"], input[type="button"]:not(.button):not([class^="button-icon"]),
-input[type="submit"]:not(.button):not([class^="button-icon"]),
+.button, [class^='button-icon'], input[type="button"]:not(.button):not([class^='button-icon']),
+input[type="submit"]:not(.button):not([class^='button-icon']),
 button, [class^='button-basic'],
 [class*=' button-basic'], .input-field input[type="submit"], .input-field input[type="button"] {
   display: inline-block;
@@ -6552,14 +6561,14 @@ button, [class^='button-basic'],
   line-height: 1em;
   border-bottom: var(--button-depth, 2px) solid #581f88;
   text-decoration: none; }
-  .button:hover, :hover[class^="button-icon"], input:hover[type="button"]:not(.button):not([class^="button-icon"]),
-  input:hover[type="submit"]:not(.button):not([class^="button-icon"]),
+  .button:hover, :hover[class^='button-icon'], input:hover[type="button"]:not(.button):not([class^='button-icon']),
+  input:hover[type="submit"]:not(.button):not([class^='button-icon']),
   button:hover, :hover[class^='button-basic'],
   :hover[class*=' button-basic'], .input-field input:hover[type="submit"], .input-field input:hover[type="button"] {
     background-color: #581f88;
     border-bottom: var(--button-depth, 2px) solid #3d165e; }
-  .button:focus, :focus[class^="button-icon"], input:focus[type="button"]:not(.button):not([class^="button-icon"]),
-  input:focus[type="submit"]:not(.button):not([class^="button-icon"]),
+  .button:focus, :focus[class^='button-icon'], input:focus[type="button"]:not(.button):not([class^='button-icon']),
+  input:focus[type="submit"]:not(.button):not([class^='button-icon']),
   button:focus, :focus[class^='button-basic'],
   :focus[class*=' button-basic'], .input-field input:focus[type="submit"], .input-field input:focus[type="button"] {
     outline: none;
@@ -6830,13 +6839,13 @@ button {
     padding-left: 0.5em;
     padding-right: 0.5em; }
   
-  .button--round[class^="button-icon"] {
+  .button--round[class^='button-icon'] {
     padding-left: 0em; }
     
-    .button--round[class^="button-icon"]:before {
+    .button--round[class^='button-icon']:before {
       content: none; }
     
-    .button--round[class^="button-icon"] span span:before {
+    .button--round[class^='button-icon'] span span:before {
       display: inline-block;
       margin: 0 1em; }
   
@@ -7194,30 +7203,30 @@ button {
     line-height: 2.5em;
     text-align: center; }
 
-[class^="button-icon"] {
+[class^='button-icon'] {
   position: relative;
   padding-left: 3em; }
-  [class^="button-icon"]:before {
+  [class^='button-icon']:before {
     position: absolute;
     left: 0;
     width: 3em;
     text-align: center;
     color: var(--button-icon-color, inherit); }
-  [class^="button-icon"].button-icon--right {
+  [class^='button-icon'].button-icon--right {
     padding-left: 1.5em;
     padding-right: 3em; }
-    [class^="button-icon"].button-icon--right:before {
+    [class^='button-icon'].button-icon--right:before {
       left: auto;
       right: 0; }
-  [class^="button-icon"].button-icon--only {
+  [class^='button-icon'].button-icon--only {
     width: 2.5em;
     text-indent: -999em;
     padding-left: 0 !important;
     padding-right: 0 !important; }
-    [class^="button-icon"].button-icon--only:before {
+    [class^='button-icon'].button-icon--only:before {
       text-indent: 0;
       width: 2.5em !important; }
-    [class^="button-icon"].button-icon--only:after {
+    [class^='button-icon'].button-icon--only:after {
       text-indent: 0;
       width: 2.5em !important; }
 
@@ -7306,22 +7315,22 @@ button {
 .button-icon--star:before {
   content: "★"; }
 
-.button[data-icon-before], [data-icon-before][class^="button-icon"], input[data-icon-before][type="button"]:not(.button):not([class^="button-icon"]),
-input[data-icon-before][type="submit"]:not(.button):not([class^="button-icon"]) {
+.button[data-icon-before], [data-icon-before][class^='button-icon'], input[data-icon-before][type="button"]:not(.button):not([class^='button-icon']),
+input[data-icon-before][type="submit"]:not(.button):not([class^='button-icon']) {
   padding-left: 3em; }
-  .button[data-icon-before]:before, [class^="button-icon"][data-icon-before]:before, input:not(.button):not([class^="button-icon"])[type="button"][data-icon-before]:before,
-  input:not(.button):not([class^="button-icon"])[type="submit"][data-icon-before]:before {
+  .button[data-icon-before]:before, [class^='button-icon'][data-icon-before]:before, input:not(.button):not([class^='button-icon'])[type="button"][data-icon-before]:before,
+  input:not(.button):not([class^='button-icon'])[type="submit"][data-icon-before]:before {
     position: absolute;
     left: 0;
     width: 3em;
     text-align: center;
     content: attr(data-icon-before); }
 
-.button[data-icon-after], [data-icon-after][class^="button-icon"], input[data-icon-after][type="button"]:not(.button):not([class^="button-icon"]),
-input[data-icon-after][type="submit"]:not(.button):not([class^="button-icon"]) {
+.button[data-icon-after], [data-icon-after][class^='button-icon'], input[data-icon-after][type="button"]:not(.button):not([class^='button-icon']),
+input[data-icon-after][type="submit"]:not(.button):not([class^='button-icon']) {
   padding-right: 3em; }
-  .button[data-icon-after]:before, [class^="button-icon"][data-icon-after]:before, input:not(.button):not([class^="button-icon"])[type="button"][data-icon-after]:before,
-  input:not(.button):not([class^="button-icon"])[type="submit"][data-icon-after]:before {
+  .button[data-icon-after]:before, [class^='button-icon'][data-icon-after]:before, input:not(.button):not([class^='button-icon'])[type="button"][data-icon-after]:before,
+  input:not(.button):not([class^='button-icon'])[type="submit"][data-icon-after]:before {
     position: absolute;
     right: 0;
     width: 3em;
@@ -13479,13 +13488,13 @@ form + form {
     form + form {
       margin-top: 16px; } }
 
-table + .button, table + [class^="button-icon"], table + input[type="button"]:not(.button):not([class^="button-icon"]),
-table + input[type="submit"]:not(.button):not([class^="button-icon"]),
+table + .button, table + [class^='button-icon'], table + input[type="button"]:not(.button):not([class^='button-icon']),
+table + input[type="submit"]:not(.button):not([class^='button-icon']),
 table + .button__container,
 .table__container + .button,
-.table__container + [class^="button-icon"],
-.table__container + input[type="button"]:not(.button):not([class^="button-icon"]),
-.table__container + input[type="submit"]:not(.button):not([class^="button-icon"]),
+.table__container + [class^='button-icon'],
+.table__container + input[type="button"]:not(.button):not([class^='button-icon']),
+.table__container + input[type="submit"]:not(.button):not([class^='button-icon']),
 .table__container + .button__container {
   margin-top: 4.16667vw; }
 
@@ -13501,7 +13510,8 @@ pre + h4,
 pre + h5 {
   margin-top: 2rem; }
 
-p[true^='button'], p[true*=' button'] {
+p p[true^='button'],
+p p[true*=' button'] {
   margin-top: 2rem; }
 
 p + p {
@@ -13724,3 +13734,13 @@ main.center {
   main.center.dark {
     background-color: #303030;
     color: white; }
+
+/* # Module: Output [function] */
+/* --------------------------- */
+/* Test: Output CSS should be changed and return 'true' (map-set function) */
+/*   ✔ [assert-equal] Output CSS should be changed and return 'true' (map-set function) */
+/*  */
+/* Test: Output BUTTON should be changed and return 'true' (set-output function) */
+/*   ✔ [assert-equal] Output BUTTON should be changed and return 'true' (set-output function) */
+/*  */
+/*  */

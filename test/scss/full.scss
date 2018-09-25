@@ -1,5 +1,5 @@
-@import "src/scss/custom-output";
+@import '../../src/scss/custom-output.scss';
 
 $output: set-output(full, true);
 
-@import "src/scss/index";
+@import '../../src/scss/index';
