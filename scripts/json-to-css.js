@@ -224,7 +224,11 @@ function createImport(files) {
 	files.forEach(function(file) {
 		code = code + '@import "' + file + '";\n';
 		codes.push(
-			'\t' + chalk.magenta.bold('@import ') + "'" + chalk.green(file) + "';\n"
+			'\t' +
+				chalk.hex('#7329b1').bold('@import ') +
+				"'" +
+				chalk.green(file) +
+				"';\n"
 		);
 	});
 	console.log('\n\n\t' + chalk.yellow.bold('Create @imports') + '\n');
@@ -245,7 +249,12 @@ function createImport(files) {
 let settingFiles = [];
 let i = 0;
 var table = new Table({
-	head: ['file', 'input', 'to', 'output'],
+	head: [
+		chalk.hex('#7329b1').bold('File'),
+		chalk.hex('#7329b1').bold('Input'),
+		chalk.hex('#7329b1').bold('To'),
+		chalk.hex('#7329b1').bold('Output')
+	],
 	colWidths: [20, 25, 10, 25]
 });
 console.log('\n\n\t' + chalk.yellow.bold('Convert json data to Sass') + '\n');

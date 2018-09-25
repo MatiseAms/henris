@@ -7,7 +7,7 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "npm run settings && node test/sass.js && node test/test.js",
+		"test": "npm run settings && node test/node-sass.js && node test/sass.js && node test/test.js",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings",
 		"build": "npm run settings && rm -rf dist/**/* && npm run build-dist",
@@ -37,7 +37,6 @@
 		"i": "^0.3.6",
 		"node-sass": "^4.9.3",
 		"npm": "^6.4.1",
-		"ora": "^3.0.0",
 		"postcss": "^6.0.22",
 		"postcss-loader": "^2.1.1",
 		"request": "^2.87.0",

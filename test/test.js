@@ -25,7 +25,12 @@ function isBigger(file1, file2) {
 
 // instantiate
 var table = new Table({
-	head: ['', 'Empty', 'Default', 'Full'],
+	head: [
+		chalk.hex('#7329b1').bold(''),
+		chalk.hex('#7329b1').bold('Empty'),
+		chalk.hex('#7329b1').bold('Default'),
+		chalk.hex('#7329b1').bold('Full')
+	],
 	colWidths: [20, 20, 20, 20]
 });
 
