@@ -16496,10 +16496,11 @@ pre + h5 {
   margin-top: 2rem;
 }
 
-p p[true^=button],
-p p[true*=" button"] {
+p[true^=button],
+p[true*=" button"] {
   margin-top: 2rem;
 }
+
 p + p {
   margin-top: 0.5rem;
 }
