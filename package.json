@@ -34,7 +34,6 @@
 		"cli-table": "^0.3.1",
 		"file-loader": "^1.1.11",
 		"flat": "^4.0.0",
-		"i": "^0.3.6",
 		"node-sass": "^4.9.3",
 		"npm": "^6.4.1",
 		"postcss": "^6.0.22",
@@ -43,7 +42,6 @@
 		"sass": "^1.14.0",
 		"sass-loader": "^7.0.3",
 		"sass-true": "^4.0.0",
-		"vuepress": "^0.11.0",
 		"webfonts-generator": "^0.4.0"
 	}
 }
