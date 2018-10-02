@@ -31,8 +31,12 @@
 
 @function to-string($string) {
 	@if type-of($string) == 'string' {
+		@debug type-of($string);
 		@return $string;
 	} @else if type-of('#{$string}') == 'string' {
+		@debug type-of('#{$string}');
+		@return '#{$string}';
+	} @else {
 		@return '#{$string}';
 	}
 }

@@ -1,16 +1,16 @@
-@import "../../node_modules/sass-true/sass/true";
+@import '../../node_modules/sass-true/sass/true';
 
-@import "src/scss/custom-output";
+@import '../../src/scss/custom-output';
 
 @function to-bool($value) {
-	@return not($value or $value == "" or $value == 0 or $value == ());
+	@return not($value or $value == '' or $value == 0 or $value == ());
 }
 @function to-string($value) {
 	@return inspect($value);
 }
 
 // Check if the color function works properly
-@include test-module("Output [function]") {
+@include test-module('Output [function]') {
 	@include test("Output CSS should by default return 'false'") {
 		// Assert the expected results
 		@include assert-equal(to-string(false), to-string(return-output(css)));
@@ -32,10 +32,10 @@ $output: set-output(button, true);
 $output: set-output(card, true);
 $output: set-output(code, false);
 
-@import "src/scss/index";
+@import '../../src/scss/index';
 
 // Check if the color function works properly
-@include test-module("Output [function]") {
+@include test-module('Output [function]') {
 	@include test(
 		"Output CSS should be changed and return 'true' (map-set function)"
 	) {

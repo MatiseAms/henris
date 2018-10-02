@@ -1,26 +1,26 @@
-@import "../../node_modules/sass-true/sass/true";
-@import "src/scss/index";
+@import '../../node_modules/sass-true/sass/true';
+@import '../../src/scss/index';
 
 // Check if the grid function works properly
-@include test-module("Grid [function]") {
-	@include test("Grid returns a viewport value back") {
+@include test-module('Grid [function]') {
+	@include test('Grid returns a viewport value back') {
 		// Assert the expected results
-		$expected: "#{(100/$grid-columns)*1}vw";
+		$expected: '#{(100/$grid-columns)*1}vw';
 		@include assert-equal(grid(1), $expected);
 	}
 }
 
 // Check if the color function works properly
-@include test-module("Color [function]") {
-	@include test("Color should respond with the right color") {
+@include test-module('Color [function]') {
+	@include test('Color should respond with the right color') {
 		// Assert the expected results
-		$returningBlack: map-get($default-color-set, "Black");
+		$returningBlack: map-get($default-color-set, 'Black');
 		@include assert-equal(color(Black), $returningBlack);
 	}
 
-	@include test("Color should respond with the right opacity") {
+	@include test('Color should respond with the right opacity') {
 		// Assert the expected results
-		$returningBlack: rgba(map-get($default-color-set, "Black"), 0.5);
+		$returningBlack: rgba(map-get($default-color-set, 'Black'), 0.5);
 		@include assert-equal(color(Black, 0.5), $returningBlack);
 	}
 }

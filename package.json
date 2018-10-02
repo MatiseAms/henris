@@ -7,18 +7,13 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "npm run settings && npm run test-default && npm run test-full && npm run test-empty && npm run test-output && node test/test.js",
-		"test-functions": "node-sass test/scss/index.scss test/css/functions.css",
-		"test-empty": "node-sass test/scss/empty.scss test/css/empty.css",
-		"test-default": "node-sass test/scss/default.scss test/css/default.css",
-		"test-full": "node-sass test/scss/full.scss test/css/full.css",
-		"test-output": "node-sass test/scss/output.scss test/css/output.css",
+		"test": "npm run settings && node test/node-sass.js && node test/sass.js && node test/test.js",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings",
 		"build": "npm run settings && rm -rf dist/**/* && npm run build-dist",
 		"build-dist": "npm run build-default && npm run build-full",
-		"build-default": "node-sass dist-input/default.scss dist/henris.css --output-style nested && node-sass dist-input/default.scss dist/henris.min.css  --output-style compressed",
-		"build-full": "node-sass dist-input/full.scss dist/henris.full.css nested --output-style && node-sass dist-input/full.scss dist/henris.full.min.css  --output-style compressed",
+		"build-default": "sass dist-input/default.scss dist/henris.css --output-style nested && sass dist-input/default.scss dist/henris.min.css  --output-style compressed",
+		"build-full": "sass dist-input/full.scss dist/henris.full.css nested --output-style && sass dist-input/full.scss dist/henris.full.min.css  --output-style compressed",
 		"prepublishOnly": "npm run test && npm run build",
 		"icons": "node scripts/icons.js src/icons dist/fonts",
 		"icons-generator": "icon-font-generator src/icons/_brands/*.svg -o dist",
@@ -35,17 +30,18 @@
 	"license": "MIT",
 	"devDependencies": {
 		"autoprefixer": "^8.5.2",
+		"chalk": "^2.4.1",
+		"cli-table": "^0.3.1",
+		"file-loader": "^1.1.11",
 		"flat": "^4.0.0",
+		"node-sass": "^4.9.3",
+		"npm": "^6.4.1",
 		"postcss": "^6.0.22",
 		"postcss-loader": "^2.1.1",
-		"file-loader": "^1.1.11",
-		"vuepress": "^0.11.0",
-		"webfonts-generator": "^0.4.0",
-		"sass-true": "^4.0.0",
+		"request": "^2.87.0",
+		"sass": "^1.14.0",
 		"sass-loader": "^7.0.3",
-		"request": "^2.87.0"
-	},
-	"dependencies": {
-		"node-sass": "^4.9.2"
+		"sass-true": "^4.0.0",
+		"webfonts-generator": "^0.4.0"
 	}
 }

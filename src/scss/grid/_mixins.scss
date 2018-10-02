@@ -100,7 +100,6 @@
 		// class small-half and always create a column which is half the
 		// size of its parent. Also when you alter the amount of columns
 		//
-
 		@if output('grid-parts') {
 			@each $part, $percentage in $grid-parts {
 				&%#{$part}#{$childClass},

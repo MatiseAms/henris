@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/* # Module: Output [function] */
-/* --------------------------- */
-/* Test: Output CSS should by default return 'false' */
-/*   ✔ [assert-equal] Output CSS should by default return 'false' */
-/*  */
-/* Test: Output FULL should by default return 'false' */
-/*   ✔ [assert-equal] Output FULL should by default return 'false' */
-/*  */
-/*  */
 .align-center {
   display: flex;
   align-items: center; }
@@ -13510,8 +13501,8 @@ pre + h4,
 pre + h5 {
   margin-top: 2rem; }
 
-p p[true^='button'],
-p p[true*=' button'] {
+p[true^='button'],
+p[true*=' button'] {
   margin-top: 2rem; }
 
 p + p {
@@ -13734,13 +13725,3 @@ main.center {
   main.center.dark {
     background-color: #303030;
     color: white; }
-
-/* # Module: Output [function] */
-/* --------------------------- */
-/* Test: Output CSS should be changed and return 'true' (map-set function) */
-/*   ✔ [assert-equal] Output CSS should be changed and return 'true' (map-set function) */
-/*  */
-/* Test: Output BUTTON should be changed and return 'true' (set-output function) */
-/*   ✔ [assert-equal] Output BUTTON should be changed and return 'true' (set-output function) */
-/*  */
-/*  */
