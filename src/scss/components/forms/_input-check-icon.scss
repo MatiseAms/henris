@@ -14,11 +14,11 @@
 			min-width: 2.5em;
 			&:after,
 			&:before {
-				content: "";
+				content: '';
 			}
 		}
-		input[type="checkbox"],
-		input[type="radio"] {
+		input[type='checkbox'],
+		input[type='radio'] {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
@@ -78,7 +78,7 @@
 	@each $iconName, $iconValue in $iconset-basic {
 		.input-check-icon--#{$iconName} {
 			label:before {
-				content: "#{$iconValue}";
+				content: '#{$iconValue}';
 				@include icon-specific-style($iconName);
 			}
 		}

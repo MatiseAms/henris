@@ -13,11 +13,11 @@
 			position: relative;
 			&:after,
 			&:before {
-				content: "";
+				content: '';
 			}
 		}
-		input[type="checkbox"],
-		input[type="radio"] {
+		input[type='checkbox'],
+		input[type='radio'] {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
@@ -77,14 +77,16 @@
 			transform: scale(1);
 		}
 	}
-	@each $colorName, $colorValue in $colors {
-		.input-check-color--#{$colorName} {
-			label:before {
-				background-color: var(--check-color, #{$colorValue});
-				box-shadow: 0 2px 0 0 var(--check-color, #{darken($colorValue, 20%)});
-			}
-			label:after {
-				background-color: contra($colorName);
+	@if output('form-input-colored') {
+		@each $colorName, $colorValue in $colors {
+			.input-check-color--#{$colorName} {
+				label:before {
+					background-color: var(--check-color, #{$colorValue});
+					box-shadow: 0 2px 0 0 var(--check-color, #{darken($colorValue, 20%)});
+				}
+				label:after {
+					background-color: contra($colorName);
+				}
 			}
 		}
 	}

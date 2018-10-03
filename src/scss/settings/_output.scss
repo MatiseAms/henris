@@ -18,11 +18,11 @@ $output-button-text-transform: true !default; //
 $output-button-rotated: true !default; //
 $output-button-border: true !default; //
 $output-custom-properties-media-queries: false !default; //
-$output-custom-properties-colors: false !default; //
+$output-custom-properties-color: false !default; //
 $output-grid: true !default; //
 $output-grid-helpers: false !default; //
 $output-grid-hide-show-classes: true !default; //
-$output-grid-only-classes: true !default; //
+$output-grid-only-classes: false !default; //
 $output-grid-counted-columns: true !default; //
 $output-grid-column: true !default; //
 $output-grid-parts: true !default; //
@@ -34,6 +34,12 @@ $output-grid-columns: true !default; //
 $output-grid-cssgrid: false !default; //
 $output-grid-row-breakpoints: true !default; //
 $output-grid-mq-custom-properties: false !default; //
+$output-grid-no-mq-classes: false !default; //
+$output-grid-mq-small: true !default; //
+$output-grid-mq-medium: true !default; //
+$output-grid-mq-large: true !default; //
+$output-grid-mq-xlarge: true !default; //
+$output-grid-mq-xxlarge: false !default; //
 $output-components: true !default; //
 $output-blockquote: true !default; //
 $output-button-group: false !default; //
@@ -41,7 +47,6 @@ $output-card: true !default; //
 $output-code: true !default; //
 $output-code-prism: false !default; //
 $output-color: true !default; //
-$output-color-custom-properties: true !default; //
 $output-color-background-colors: true !default; //
 $output-color-text-colors: true !default; //
 $output-content: true !default; //
@@ -69,6 +74,7 @@ $output-form-radio: true !default; //
 $output-form-range: true !default; //
 $output-form-switch: false !default; //
 $output-form-input: true !default; //
+$output-form-input-colored: false !default; //
 $output-form-textarea: true !default; //
 $output-form-select: true !default; //
 $output-form-label: true !default; //
@@ -119,11 +125,11 @@ $output: (
 	"button-rotated": true, 
 	"button-border": true, 
 	"custom-properties-media-queries": false, 
-	"custom-properties-colors": false, 
+	"custom-properties-color": false, 
 	"grid": true, 
 	"grid-helpers": false, 
 	"grid-hide-show-classes": true, 
-	"grid-only-classes": true, 
+	"grid-only-classes": false, 
 	"grid-counted-columns": true, 
 	"grid-column": true, 
 	"grid-parts": true, 
@@ -135,6 +141,12 @@ $output: (
 	"grid-cssgrid": false, 
 	"grid-row-breakpoints": true, 
 	"grid-mq-custom-properties": false, 
+	"grid-no-mq-classes": false, 
+	"grid-mq-small": true, 
+	"grid-mq-medium": true, 
+	"grid-mq-large": true, 
+	"grid-mq-xlarge": true, 
+	"grid-mq-xxlarge": false, 
 	"components": true, 
 	"blockquote": true, 
 	"button-group": false, 
@@ -142,7 +154,6 @@ $output: (
 	"code": true, 
 	"code-prism": false, 
 	"color": true, 
-	"color-custom-properties": true, 
 	"color-background-colors": true, 
 	"color-text-colors": true, 
 	"content": true, 
@@ -170,6 +181,7 @@ $output: (
 	"form-range": true, 
 	"form-switch": false, 
 	"form-input": true, 
+	"form-input-colored": false, 
 	"form-textarea": true, 
 	"form-select": true, 
 	"form-label": true, 

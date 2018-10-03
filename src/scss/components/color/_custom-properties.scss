@@ -3,10 +3,10 @@
 //	current colorset. 										  */
 // --------------------------------------------------------- */
 
-@if output("color-custom-properties") {
+@if output('custom-properties-color') {
 	:root {
 		@each $color-name, $color-value in $default-color-set {
-			$variable: "--color-#{to-lower-case($color-name)}";
+			$variable: '--color-#{to-lower-case($color-name)}';
 			//hex
 			#{$variable}: $color-value;
 			//rgb

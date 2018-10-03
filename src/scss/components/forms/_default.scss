@@ -33,11 +33,13 @@
 	&--ghost {
 		background-color: transparent;
 		color: currentColor;
-		@each $color-name, $color-value in $colors {
-			.bg-#{to-lower-case($color-name)} &,
-			.bg-#{$color-name} & {
-				color: contra($color-name);
-				border-color: contra($color-name);
+		@if output('form-input-colored') {
+			@each $color-name, $color-value in $colors {
+				.bg-#{to-lower-case($color-name)} &,
+				.bg-#{$color-name} & {
+					color: contra($color-name);
+					border-color: contra($color-name);
+				}
 			}
 		}
 	}

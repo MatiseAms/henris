@@ -2,7 +2,7 @@
 	.input--switch {
 		display: inline-block;
 		position: relative;
-		input[type="checkbox"] {
+		input[type='checkbox'] {
 			position: absolute;
 			&:not(.hidden) {
 				@include input-checkbox(

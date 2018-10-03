@@ -1,12 +1,12 @@
 @if output(form-input) {
 	.input-field {
 		input {
-			&[type="text"],
-			&[type="email"],
-			&[type="tel"],
-			&[type="number"],
-			&[type="password"],
-			&[type="url"] {
+			&[type='text'],
+			&[type='email'],
+			&[type='tel'],
+			&[type='number'],
+			&[type='password'],
+			&[type='url'] {
 				@extend %default-input;
 			}
 		}
@@ -14,12 +14,12 @@
 			&--ghost,
 			&--naked {
 				input {
-					&[type="text"],
-					&[type="email"],
-					&[type="tel"],
-					&[type="number"],
-					&[type="password"],
-					&[type="url"] {
+					&[type='text'],
+					&[type='email'],
+					&[type='tel'],
+					&[type='number'],
+					&[type='password'],
+					&[type='url'] {
 						@extend %default-input--ghost;
 					}
 				}
@@ -27,14 +27,14 @@
 		}
 
 		input {
-			&[type="submit"],
-			&[type="button"] {
+			&[type='submit'],
+			&[type='button'] {
 				@extend %default-button;
 			}
 		}
 
 		input {
-			&[type="color"] {
+			&[type='color'] {
 				-webkit-appearance: none;
 				border: none;
 				width: 32px;

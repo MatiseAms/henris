@@ -52,7 +52,7 @@ $xxlarge-only: media-query('xxlarge-only'); //
 // as custom properties. (needs to be enabled in the outputs)
 //
 
-@if output('grid-mq-custom-properties') {
+@if output('custom-properties-media-queries') {
 	:root {
 		@each $qry-name, $qry-value in $media-queries {
 			$variable: '--mq-#{to-lower-case($qry-name)}';
