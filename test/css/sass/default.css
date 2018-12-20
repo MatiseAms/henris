@@ -1907,11 +1907,15 @@ hr {
 }
 img:not([alt]),
 img[alt=""] {
-  outline: 5px solid red;
+  outline: 1px dashed red;
 }
 
 input:not([type]) {
-  outline: 1px dashed #eb0f33;
+  outline: 1px dashed red;
+}
+
+a[target=_blank]:not([rel^=noopener]) {
+  outline: 1px dashed red;
 }
 
 section.basic {
