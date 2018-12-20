@@ -1,11 +1,16 @@
 @if output(debug-image-alt) {
 	img:not([alt]),
 	img[alt=''] {
-		outline: 5px solid red;
+		outline: 1px dashed red;
 	}
 }
 @if output(debug-input-type) {
 	input:not([type]) {
 		outline: 1px dashed color(Red);
+	}
+}
+@if output(debug-target-blank) {
+	a[target='_blank']:not([rel='noopener']) {
+		outline: 1px dashed red;
 	}
 }
