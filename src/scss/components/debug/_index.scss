@@ -20,7 +20,9 @@
 }
 
 @if output(debug-input-type) {
-	input:not([type]) {
+	input:not([type]),
+	input[type=' '],
+	input[type=''] {
 		@include debug-warning('Input always requires an input type');
 	}
 }
