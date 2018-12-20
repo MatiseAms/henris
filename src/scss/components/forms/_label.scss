@@ -1,12 +1,10 @@
-@if output(form-label) {
-	label {
+@mixin henris-label($el: 'label') {
+	#{$el} {
 		padding-left: 0;
 		transition: padding-left 0.3s ease-in-out;
 		padding-right: 1rem;
 		form & {
 			&:hover {
-				//padding-left: 0.25rem;
-				//	background-color: color(Black, 0.1);
 				& + input,
 				& + textarea,
 				& + select {
@@ -15,4 +13,8 @@
 			}
 		}
 	}
+}
+
+@if output(form-label) {
+	@include henris-label();
 }

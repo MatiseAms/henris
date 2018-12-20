@@ -1,9 +1,10 @@
-@if output(form-check-icon) {
-	.input-check-icon {
+@mixin henris-check-icon($el: '.input-check-icon') {
+	#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
+		@content;
 		label {
 			display: block;
 			margin-top: 0;
@@ -76,11 +77,15 @@
 		}
 	}
 	@each $iconName, $iconValue in $iconset-basic {
-		.input-check-icon--#{$iconName} {
+		#{$el}--#{$iconName} {
 			label:before {
 				content: '#{$iconValue}';
 				@include icon-specific-style($iconName);
 			}
 		}
 	}
+}
+
+@if output(form-check-icon) {
+	@include henris-check-icon();
 }

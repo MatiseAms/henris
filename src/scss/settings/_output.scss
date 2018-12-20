@@ -3,6 +3,16 @@ $output-full: false !default; //
 $output-debug: true !default; //
 $output-debug-image-alt: true !default; //
 $output-debug-input-type: true !default; //
+$output-debug-target-blank: true !default; //
+$output-debug-summary-first: true !default; //
+$output-debug-legend-first: true !default; //
+$output-debug-abbr-title: true !default; //
+$output-debug-javascript-link: true !default; //
+$output-debug-detail-list-children: true !default; //
+$output-debug-figcaption: true !default; //
+$output-debug-div: true !default; //
+$output-debug-list: true !default; //
+$output-debug-bad-compute: true !default; //
 $output-background-colors: true !default; //
 $output-text-colors: true !default; //
 $output-custom-properties: true !default; //
@@ -41,10 +51,10 @@ $output-grid-mq-large: true !default; //
 $output-grid-mq-xlarge: true !default; //
 $output-grid-mq-xxlarge: false !default; //
 $output-components: true !default; //
-$output-blockquote: true !default; //
+$output-blockquote: false !default; //
 $output-button-group: false !default; //
-$output-card: true !default; //
-$output-code: true !default; //
+$output-card: false !default; //
+$output-code: false !default; //
 $output-code-prism: false !default; //
 $output-color: true !default; //
 $output-color-background-colors: true !default; //
@@ -57,10 +67,11 @@ $output-content-line-height: true !default; //
 $output-content-row-example: false !default; //
 $output-content-hr: true !default; //
 $output-content-default-link: true !default; //
-$output-detail-list: true !default; //
-$output-data-label: true !default; //
+$output-content-detail-list: false !default; //
+$output-data-label: false !default; //
+$output-detail-list: false !default; //
 $output-ease: true !default; //
-$output-form: true !default; //
+$output-form: false !default; //
 $output-form-fieldset: true !default; //
 $output-form-form: true !default; //
 $output-form-button: true !default; //
@@ -91,7 +102,7 @@ $output-navigation: false !default; //
 $output-section: true !default; //
 $output-showmore: false !default; //
 $output-spacing: true !default; //
-$output-table: true !default; //
+$output-table: false !default; //
 $output-typography: true !default; //
 $output-typography-headings: true !default; //
 $output-typography-margins: true !default; //
@@ -110,6 +121,16 @@ $output: (
 	"debug": true, 
 	"debug-image-alt": true, 
 	"debug-input-type": true, 
+	"debug-target-blank": true, 
+	"debug-summary-first": true, 
+	"debug-legend-first": true, 
+	"debug-abbr-title": true, 
+	"debug-javascript-link": true, 
+	"debug-detail-list-children": true, 
+	"debug-figcaption": true, 
+	"debug-div": true, 
+	"debug-list": true, 
+	"debug-bad-compute": true, 
 	"background-colors": true, 
 	"text-colors": true, 
 	"custom-properties": true, 
@@ -148,10 +169,10 @@ $output: (
 	"grid-mq-xlarge": true, 
 	"grid-mq-xxlarge": false, 
 	"components": true, 
-	"blockquote": true, 
+	"blockquote": false, 
 	"button-group": false, 
-	"card": true, 
-	"code": true, 
+	"card": false, 
+	"code": false, 
 	"code-prism": false, 
 	"color": true, 
 	"color-background-colors": true, 
@@ -164,10 +185,11 @@ $output: (
 	"content-row-example": false, 
 	"content-hr": true, 
 	"content-default-link": true, 
-	"detail-list": true, 
-	"data-label": true, 
+	"content-detail-list": false, 
+	"data-label": false, 
+	"detail-list": false, 
 	"ease": true, 
-	"form": true, 
+	"form": false, 
 	"form-fieldset": true, 
 	"form-form": true, 
 	"form-button": true, 
@@ -198,7 +220,7 @@ $output: (
 	"section": true, 
 	"showmore": false, 
 	"spacing": true, 
-	"table": true, 
+	"table": false, 
 	"typography": true, 
 	"typography-headings": true, 
 	"typography-margins": true, 

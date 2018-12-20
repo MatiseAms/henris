@@ -1,5 +1,5 @@
-@if output(form-switch) {
-	.input--switch {
+@mixin henris-input-switch($el: '.input-switch') {
+	#{$el} {
 		display: inline-block;
 		position: relative;
 		input[type='checkbox'] {
@@ -16,7 +16,6 @@
 				);
 				@include input-checkbox-body {
 					box-shadow: 0 0 0 1px color(Black, 0.2) inset;
-					// top: 50%;
 				}
 
 				@include input-checkbox-check {
@@ -38,4 +37,8 @@
 			}
 		}
 	}
+}
+
+@if output(form-switch) {
+	@include henris-input-switch();
 }
