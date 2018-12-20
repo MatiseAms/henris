@@ -3,6 +3,7 @@ $output-full: false !default; //
 $output-debug: true !default; //
 $output-debug-image-alt: true !default; //
 $output-debug-input-type: true !default; //
+$output-debug-target-blank: true !default; //
 $output-background-colors: true !default; //
 $output-text-colors: true !default; //
 $output-custom-properties: true !default; //
@@ -111,6 +112,7 @@ $output: (
 	"debug": true, 
 	"debug-image-alt": true, 
 	"debug-input-type": true, 
+	"debug-target-blank": true, 
 	"background-colors": true, 
 	"text-colors": true, 
 	"custom-properties": true, 
