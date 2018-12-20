@@ -4,12 +4,11 @@
 		margin-top: 1rem;
 		@if output('button') {
 			&:not(.button) {
-				@extend .button;
+				@include henris-button-default();
 			}
 		}
 	}
-}
-@if output(form-button) {
+
 	label {
 		& + input[type='button'],
 		& + input[type='submit'] {

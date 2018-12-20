@@ -1,8 +1,8 @@
-@if output(card) {
-	.card {
+@mixin henris-card($el: '.card') {
+	#{$el} {
 		border-radius: $base-border-radius;
-		// box-shadow: $base-box-shadow;
 		position: relative;
+		@content;
 		&__holder {
 			padding: var(--card-space, 1rem);
 		}
@@ -45,7 +45,11 @@
 			}
 		}
 	}
-	.column .card {
+	.column #{$el} {
 		height: 100%;
 	}
+}
+
+@if output(card) {
+	@include henris-card();
 }
