@@ -1,6 +1,3 @@
-@if output(data-label) {
-	@include data-label();
-}
 
 @mixin data-label() {
 	*[data-label] {
@@ -21,4 +18,8 @@
 			font-size: 0.875rem;
 		}
 	}
+}
+
+@if output(data-label) {
+	@include data-label();
 }

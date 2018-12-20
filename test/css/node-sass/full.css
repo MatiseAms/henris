@@ -7348,8 +7348,8 @@ input[data-icon-after][type='submit']:not(.button):not([class^='button-icon']) {
     padding: var(--card-space, 1rem); }
   .card__row {
     position: relative;
-    width: calc( 100% + ((var(--card-padding, 1rem) + var(--card-space, 1rem)) * 2));
-    margin-left: calc( (var(--card-padding, 1rem) + var(--card-space, 1rem)) * -1); }
+    width: calc(100% + ((var(--card-padding, 1rem) * 2) * 2));
+    margin-left: calc((var(--card-padding, 1rem) * 2) * -1); }
   .card header {
     padding: var(--card-padding, 1rem); }
   .card main {
