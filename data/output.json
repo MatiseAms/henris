@@ -6,6 +6,7 @@
 			"debug": true,
 			"debug-image-alt": true,
 			"debug-input-type": true,
+			"debug-target-blank": true,
 			"background-colors": true,
 			"text-colors": true,
 			"custom-properties": true,
