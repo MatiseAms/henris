@@ -1,4 +1,8 @@
 @if output(data-label) {
+	@include data-label();
+}
+
+@mixin data-label() {
 	*[data-label] {
 		position: relative;
 		&:before {
