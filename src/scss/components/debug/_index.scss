@@ -6,11 +6,11 @@
 }
 @if output(debug-input-type) {
 	input:not([type]) {
-		outline: 1px dashed color(Red);
+		outline: 1px dashed red;
 	}
 }
 @if output(debug-target-blank) {
-	a[target='_blank']:not([rel='noopener']) {
+	a[target='_blank']:not([rel^='noopener']) {
 		outline: 1px dashed red;
 	}
 }
