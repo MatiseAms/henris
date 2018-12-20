@@ -2,15 +2,45 @@
 	img:not([alt]),
 	img[alt=''] {
 		outline: 1px dashed red;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 0.25rem 0.5rem;
+			color: white;
+			background-color: red;
+			content: 'Images always need an alt text.';
+		}
 	}
 }
 @if output(debug-input-type) {
 	input:not([type]) {
 		outline: 1px dashed red;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 0.25rem 0.5rem;
+			color: white;
+			background-color: red;
+			content: 'Input always requires an input type';
+		}
 	}
 }
 @if output(debug-target-blank) {
 	a[target='_blank']:not([rel^='noopener']) {
 		outline: 1px dashed red;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 0.25rem 0.5rem;
+			color: white;
+			background-color: red;
+			content: 'a[target=_blank] always needs a rel=noopener';
+		}
 	}
 }
