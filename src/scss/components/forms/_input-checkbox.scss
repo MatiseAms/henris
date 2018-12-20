@@ -1,5 +1,5 @@
 @mixin henris-checkbox($el: '.input-checkbox') {
-	input[type='checkbox'] {
+	[type='checkbox'] {
 		-webkit-appearance: checkbox;
 		-moz-appearance: checkbox;
 		appearance: checkbox;
@@ -12,7 +12,7 @@
 		width: auto;
 		padding: 0;
 		margin: 0;
-		input[type='checkbox'] {
+		[type='checkbox'] {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
