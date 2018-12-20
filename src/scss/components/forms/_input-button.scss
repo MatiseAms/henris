@@ -1,4 +1,4 @@
-@if output(form-button) {
+@mixin henris-input-button() {
 	input[type='button'],
 	input[type='submit'] {
 		margin-top: 1rem;
@@ -7,6 +7,7 @@
 				@include henris-button-default();
 			}
 		}
+		@content;
 	}
 
 	label {
@@ -15,4 +16,7 @@
 			margin-top: 1rem;
 		}
 	}
+}
+@if output(form-button) {
+	@include henris-input-button();
 }

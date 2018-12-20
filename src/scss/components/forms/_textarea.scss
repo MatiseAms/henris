@@ -1,12 +1,16 @@
-@if output(form-textarea) {
-	.input-field {
-		textarea {
-			@extend %default-input;
-			resize: none;
-			min-height: 5rem;
-			&:not(:empty) {
-				border: 1px solid color(Black, 0.25);
-			}
+@mixin henris-textarea($el: 'textarea'){
+	#{$el} {
+		@include henris-input-default();
+		resize: none;
+		min-height: 5rem;
+		&:not(:empty) {
+			border: 1px solid color(Black, 0.25);
 		}
 	}
 }
+@if output(form-textarea) {
+	@include henris-input-field(){
+		@include henris-textarea();
+	}
+}
+

@@ -1,6 +1,5 @@
-@if output(form-field) {
-	.input,
-	.input-field {
-		// display: block;
+@mixin henris-input-field($el: '.input,.input-field') {
+	#{$el} {
+		@content;
 	}
 }

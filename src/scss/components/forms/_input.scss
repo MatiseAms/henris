@@ -1,5 +1,5 @@
-@if output(form-input) {
-	.input-field {
+@mixin henris-input($el: '.input-field'){
+	#{$el} {
 		input {
 			&[type='text'],
 			&[type='email'],
@@ -7,7 +7,7 @@
 			&[type='number'],
 			&[type='password'],
 			&[type='url'] {
-				@extend %default-input;
+				@include henris-input-default();
 			}
 		}
 		.input {
@@ -20,7 +20,7 @@
 					&[type='number'],
 					&[type='password'],
 					&[type='url'] {
-						@extend %default-input--ghost;
+						@include henris-input-ghost();
 					}
 				}
 			}
@@ -49,4 +49,7 @@
 			}
 		}
 	}
+}
+@if output(form-input) {
+	@include henris-input();
 }

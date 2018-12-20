@@ -1,5 +1,5 @@
-@if output(form-checkbox) {
-	input[type="checkbox"] {
+@mixin henris-checkbox($el: '.input-checkbox') {
+	input[type='checkbox'] {
 		-webkit-appearance: checkbox;
 		-moz-appearance: checkbox;
 		appearance: checkbox;
@@ -7,12 +7,12 @@
 		max-width: auto;
 		min-width: auto;
 	}
-	.input-checkbox {
+	#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
-		input[type="checkbox"] {
+		input[type='checkbox'] {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
@@ -62,4 +62,7 @@
 			}
 		}
 	}
+}
+@if output('form-checkbox') {
+	@include henris-checkbox();
 }

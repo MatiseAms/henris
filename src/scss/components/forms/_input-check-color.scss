@@ -1,9 +1,10 @@
-@if output(form-check-color) {
-	.input-check-color {
+@mixin henris-check-color($el: '.input-check-color') {
+	#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
+		@content;
 		label {
 			display: block;
 			margin-top: 0;
@@ -79,7 +80,7 @@
 	}
 	@if output('form-input-colored') {
 		@each $colorName, $colorValue in $colors {
-			.input-check-color--#{$colorName} {
+			#{$el}--#{$colorName} {
 				label:before {
 					background-color: var(--check-color, #{$colorValue});
 					box-shadow: 0 2px 0 0 var(--check-color, #{darken($colorValue, 20%)});
@@ -90,9 +91,14 @@
 			}
 		}
 	}
+	#{$el}--nolabel,
 	.input-check--nolabel {
 		label {
 			text-indent: -999em;
 		}
 	}
+}
+
+@if output(form-check-color) {
+	@include henris-check-color();
 }
