@@ -1,46 +1,122 @@
+@mixin debug-warning($text) {
+	outline: 1px dashed red;
+	position: relative;
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 0.25rem 0.5rem;
+		color: white;
+		background-color: red;
+		content: #{$text};
+	}
+}
+
 @if output(debug-image-alt) {
 	img:not([alt]),
 	img[alt=''] {
-		outline: 1px dashed red;
-		position: relative;
-		&:before {
-			position: absolute;
-			left: 0;
-			top: 0;
-			padding: 0.25rem 0.5rem;
-			color: white;
-			background-color: red;
-			content: 'Images always need an alt text.';
-		}
+		@include debug-warning('Images always need an alt text.');
 	}
 }
+
 @if output(debug-input-type) {
 	input:not([type]) {
-		outline: 1px dashed red;
-		position: relative;
-		&:before {
-			position: absolute;
-			left: 0;
-			top: 0;
-			padding: 0.25rem 0.5rem;
-			color: white;
-			background-color: red;
-			content: 'Input always requires an input type';
-		}
+		@include debug-warning('Input always requires an input type');
 	}
 }
+
 @if output(debug-target-blank) {
-	a[target='_blank']:not([rel^='noopener']) {
-		outline: 1px dashed red;
-		position: relative;
-		&:before {
-			position: absolute;
-			left: 0;
-			top: 0;
-			padding: 0.25rem 0.5rem;
-			color: white;
-			background-color: red;
-			content: 'a[target=_blank] always needs a rel=noopener';
-		}
+	a[target$='blank']:not([rel]),
+	a[target$='blank']:not([rel*='noopener']),
+	a[target$='blank']:not([rel*='noreferrer']) {
+		@include debug-warning('a[target=_blank] always needs a rel=noopener');
+	}
+}
+
+@if output(debug-summary-first) {
+	details > summary:not(:first-child) {
+		@include debug-warning(
+			'Summary should always be the first child in a details'
+		);
+	}
+}
+
+@if output(debug-legend-first) {
+	fieldset > legend:not(:first-child) {
+		@include debug-warning(
+			'Legend should always be the first child in a fieldset'
+		);
+	}
+}
+
+@if output(debug-abbr-title) {
+	abbr:not([title]),
+	abbr[title=' '],
+	abbr[title=''] {
+		@include debug-warning(
+			'Summary should always be the first child in a details'
+		);
+	}
+}
+
+@if output(debug-javascript-link) {
+	a[href^='javascript']:not([role='button']) {
+		@include debug-warning(
+			"Don't add javascript to a link attribute, use a button instead"
+		);
+	}
+}
+
+@if output(debug-detail-list-children) {
+	dt + :not(dd),
+	:not(dt):not(dd) + dd {
+		@include debug-warning('DL can only have DT or DD as children');
+	}
+	:not(dl) > dt,
+	:not(dl) > dd,
+	dl > :not(dt):not(dd):not(div) {
+		@include debug-warning('DT and DD can only be used in a DL');
+	}
+}
+
+@if output(debug-figcaption) {
+	:not(figure) > figcaption {
+		@include debug-warning('Figcaption can only be used in a DL');
+	}
+}
+@if output(debug-list) {
+	ul > :not(li),
+	ol > :not(li),
+	:not(ul):not(ol) > li {
+		@include debug-warning('LI can only be used in a OL or UL');
+	}
+}
+
+@if output(debug-div) {
+	b div,
+	i div,
+	q div,
+	em div,
+	abbr div,
+	cite div,
+	code div,
+	span div,
+	small div,
+	label div,
+	strong div {
+		@include debug-warning("You shouldn't use a div in an inline element");
+	}
+}
+
+@if output(debug-bad-compute) {
+	[id*='NaN'],
+	[id*='null'],
+	[class*='NaN'],
+	[class*='null'],
+	[id*='undefined'],
+	[class*='undefined'] {
+		@include debug-warning(
+			'There is probably something wrong with this element, check the ID or class'
+		);
 	}
 }
