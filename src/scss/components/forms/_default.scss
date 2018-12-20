@@ -1,4 +1,4 @@
-%default-input {
+@mixin henris-input-default() {
 	background: rgba($color-light, 1);
 	border: 1px solid rgba($color-dark, 0.1);
 	font-size: 1rem;
@@ -29,17 +29,16 @@
 			filter: blur(0px);
 		}
 	}
-
-	&--ghost {
-		background-color: transparent;
-		color: currentColor;
-		@if output('form-input-colored') {
-			@each $color-name, $color-value in $colors {
-				.bg-#{to-lower-case($color-name)} &,
-				.bg-#{$color-name} & {
-					color: contra($color-name);
-					border-color: contra($color-name);
-				}
+}
+@mixin henris-input-ghost() {
+	background-color: transparent;
+	color: currentColor;
+	@if output('form-input-colored') {
+		@each $color-name, $color-value in $colors {
+			.bg-#{to-lower-case($color-name)} &,
+			.bg-#{$color-name} & {
+				color: contra($color-name);
+				border-color: contra($color-name);
 			}
 		}
 	}

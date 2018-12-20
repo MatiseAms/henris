@@ -1,4 +1,3 @@
-
 @mixin data-label() {
 	*[data-label] {
 		position: relative;
@@ -20,6 +19,6 @@
 	}
 }
 
-@if output(data-label) {
+@if output('components','data-label') {
 	@include data-label();
 }

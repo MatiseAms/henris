@@ -1,9 +1,10 @@
-@if output(form-check-text) {
-	.input-check-text {
+@mixin henris-check-text($el: '.input-check-text') {
+	#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
+		@content;
 		label {
 			position: relative;
 			display: inline-block;
@@ -34,9 +35,6 @@
 			opacity: 0;
 		}
 
-		label:before {
-		}
-
 		input:checked {
 			& + label {
 				background-color: color(Black);
@@ -53,4 +51,10 @@
 			}
 		}
 	}
+}
+
+
+
+@if output(form-check-text) {
+	@include henris-check-text();
 }

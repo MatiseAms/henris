@@ -1,5 +1,5 @@
 @if output(form-radio) {
-	input[type="radio"] {
+	[type="radio"] {
 		-webkit-appearance: radio;
 		-moz-appearance: radio;
 		appearance: radio;
@@ -7,12 +7,12 @@
 		max-width: auto;
 		min-width: auto;
 	}
-	.input--radio {
+	.input-radio {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
-		input[type="radio"] {
+		[type="radio"] {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;

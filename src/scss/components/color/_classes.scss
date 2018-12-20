@@ -2,30 +2,35 @@
 //	Create all background color classes to use everywhere.    */
 // ----------------------------------------------------------- */
 
-@each $color-name, $color-value in $default-color-set {
+@mixin henris-background-color($prefix: '.background--') {
 	//
 	//		Create background classes. With the first capital and without.
 	//
-
-	@if output("color-background-colors") {
-		.background--#{to-lower-case($color-name)},
-		.background--#{$color-name},
-		.bg---#{to-lower-case($color-name)},
-		.bg--#{$color-name} {
+	@each $color-name, $color-value in $default-color-set {
+		#{$prefix}#{to-lower-case($color-name)},
+		#{$prefix}#{$color-name} {
 			background-color: #{$color-value};
 			color: contra($color-value);
 		}
 	}
+}
+
+@mixin henris-text-color($prefix: '.color--') {
 	//
 	//	Create color classes to define text color.
 	//
-
-	@if output("color-text-colors") {
-		.text--#{to-lower-case($color-name)},
-		.text--#{$color-name},
-		.color--#{to-lower-case($color-name)},
-		.color--#{$color-name} {
+	@each $color-name, $color-value in $default-color-set {
+		#{$prefix}#{to-lower-case($color-name)},
+		#{$prefix}#{$color-name} {
 			color: $color-value;
 		}
 	}
+}
+
+@if output('color-background-colors') {
+	@include henris-background-color();
+}
+
+@if output('color-text-colors') {
+	@include henris-text-color();
 }

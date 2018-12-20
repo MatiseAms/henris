@@ -1,12 +1,9 @@
-@if output(form-fieldset) {
-	fieldset {
+@mixin henris-fieldset($el: 'fieldset'){
+	#{$el} {
 		margin: 0;
 		padding: 0;
-		// display: flex;
-		// flex-flow: row;
-		// flex-wrap: wrap;
 		border: none;
-		& + fieldset {
+		& + #{$el} {
 			margin-top: grid(0.5);
 			border-top: 1px solid color(Black, 0.1);
 			@include min-("margin-top", 0.5, 16);
@@ -43,22 +40,11 @@
 		label + textarea,
 		label + select {
 			margin-top: 1rem;
-
-			// margin-left: 1rem;
 		}
-		// textarea + label,
-		// select + label,
-		// input + label {
-		// 	&:before {
-		// 		//content: '';
-		// 		margin-top: 1rem;
-		// 		display: block;
-		// 		clear: both;
-		// 	}
-		// }
 	}
+
 	form {
-		fieldset {
+		#{$el} {
 			div:not([class]) {
 				& + div:not([class]) {
 					margin-top: 1rem;
@@ -117,7 +103,7 @@
 			transform: scale(1, -1) rotate(90deg);
 		}
 	}
-	fieldset {
+	#{$el} {
 		legend {
 			font-weight: bold;
 			text-transform: uppercase;
@@ -125,4 +111,10 @@
 			font-size: 14px;
 		}
 	}
+}
+
+
+
+@if output(form-fieldset) {
+	@include henris-fieldset();
 }

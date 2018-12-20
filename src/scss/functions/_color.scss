@@ -155,7 +155,7 @@ $default-color-set: $color-default !default;
 	// The last resort for return
 
 	@else {
-		@warn "[function color] #{type-of($value)} does not exist in the current colorset.";
+		@warn "[function color] #{$value} (#{type-of($value)}) does not exist in the current colorset.";
 		@return to-color(#000000);
 	}
 }
