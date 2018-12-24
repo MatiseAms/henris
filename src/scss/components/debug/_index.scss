@@ -61,13 +61,13 @@
 	}
 }
 
-@if output(debug-javascript-link) {
-	a[href^='javascript']:not([role='button']) {
-		@include debug-warning(
-			"Don't add javascript to a link attribute, use a button instead"
-		);
-	}
-}
+// @if output(debug-javascript-link) {
+// 	a[href^='javascript']:not([role='button']) {
+// 		@include debug-warning(
+// 			'Don\'t add javascript to a link attribute, use a button instead'
+// 		);
+// 	}
+// }
 
 @if output(debug-detail-list-children) {
 	dt + :not(dd),
@@ -94,21 +94,21 @@
 	}
 }
 
-@if output(debug-div) {
-	b div,
-	i div,
-	q div,
-	em div,
-	abbr div,
-	cite div,
-	code div,
-	span div,
-	small div,
-	label div,
-	strong div {
-		@include debug-warning("You shouldn't use a div in an inline element");
-	}
-}
+// @if output(debug-div) {
+// 	b div,
+// 	i div,
+// 	q div,
+// 	em div,
+// 	abbr div,
+// 	cite div,
+// 	code div,
+// 	span div,
+// 	small div,
+// 	label div,
+// 	strong div {
+// 		@include debug-warning("You shouldn\'t use a div in an inline element");
+// 	}
+// }
 
 @if output(debug-bad-compute) {
 	[id*='NaN'],
