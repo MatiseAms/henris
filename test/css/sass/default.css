@@ -1948,20 +1948,6 @@ abbr[title=""]:before {
   content: Summary should always be the first child in a details;
 }
 
-a[href^=javascript]:not([role=button]) {
-  outline: 1px dashed red;
-  position: relative;
-}
-a[href^=javascript]:not([role=button]):before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 0.25rem 0.5rem;
-  color: white;
-  background-color: red;
-  content: Don't add javascript to a link attribute, use a button instead;
-}
-
 dt + :not(dd),
 :not(dt):not(dd) + dd {
   outline: 1px dashed red;
@@ -2026,40 +2012,6 @@ ol > :not(li):before,
   color: white;
   background-color: red;
   content: LI can only be used in a OL or UL;
-}
-
-b div,
-i div,
-q div,
-em div,
-abbr div,
-cite div,
-code div,
-span div,
-small div,
-label div,
-strong div {
-  outline: 1px dashed red;
-  position: relative;
-}
-b div:before,
-i div:before,
-q div:before,
-em div:before,
-abbr div:before,
-cite div:before,
-code div:before,
-span div:before,
-small div:before,
-label div:before,
-strong div:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 0.25rem 0.5rem;
-  color: white;
-  background-color: red;
-  content: You shouldn't use a div in an inline element;
 }
 
 [id*=NaN],
