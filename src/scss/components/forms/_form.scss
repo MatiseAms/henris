@@ -1,9 +1,9 @@
 @mixin henris-fieldset($el: 'fieldset'){
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		margin: 0;
 		padding: 0;
 		border: none;
-		& + #{$el} {
+		& + #{$base-prefix}#{$el} {
 			margin-top: grid(0.5);
 			border-top: 1px solid color(Black, 0.1);
 			@include min-("margin-top", 0.5, 16);
@@ -44,7 +44,7 @@
 	}
 
 	form {
-		#{$el} {
+		#{$base-prefix}#{$el} {
 			div:not([class]) {
 				& + div:not([class]) {
 					margin-top: 1rem;
@@ -103,7 +103,7 @@
 			transform: scale(1, -1) rotate(90deg);
 		}
 	}
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		legend {
 			font-weight: bold;
 			text-transform: uppercase;

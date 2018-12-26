@@ -1,5 +1,5 @@
 @mixin henris-input-switch($el: '.input-switch') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		display: inline-block;
 		position: relative;
 		input[type='checkbox'] {

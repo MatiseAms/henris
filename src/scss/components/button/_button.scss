@@ -96,7 +96,7 @@ $button-font-weight: 600 !default; //
 		$el: #{$class}, button;
 	}
 
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		// ------------------------------------------------------------------------ */
 		//	Styling set on standard buttons and elements with a button class	   */
 		// ---------------------------------------------------------------------- */

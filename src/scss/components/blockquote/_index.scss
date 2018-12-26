@@ -1,5 +1,5 @@
 @mixin henris-blockquote($el: 'blockquote'){
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		position: relative;
 		display: inline-block;
 		border: 1px solid color(Black, 0.2);

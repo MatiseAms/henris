@@ -1,5 +1,5 @@
 @mixin henris-label($el: 'label') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		padding-left: 0;
 		transition: padding-left 0.3s ease-in-out;
 		padding-right: 1rem;
