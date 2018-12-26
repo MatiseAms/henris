@@ -1,13 +1,34 @@
 {
 	"button": {
-		"font-family":
-			"[[RobotoCondensed, Roboto Condensed, Helvetica Neue Condensed, Impact, sans-serif]]",
+		"height": "auto",
+		"width": "auto",
 		"background-color": "{{color(Black)}}",
-		"padding": "{{grid(0 1)}}",
-		"text-transform": "uppercase",
-		"font-size": "14px",
+		"border-color": "{{color(Black)}}",
 		"border-radius": "2px",
+		"border-width": "0",
+		"border-style": "solid",
+		"padding": "0.75em 1.5em",
+		"font-size": "16px",
+		"text-transform": "uppercase",
+		"text-decoration": "none",
 		"line-height": "1",
-		"font-weight": "{{assets(typography.font-weight.bold)}}"
+		"font-family": "{{assets(typography.fonts.system)}}",
+		"font-weight": "{{assets(typography.font-weight.bold)}}",
+		"cursor": "pointer",
+		"hover-background-color": "{{color(Black)}}",
+		"hover-border-color": "{{color(Black)}}",
+		"hover-border-width": "0",
+		"hover-border-style": "solid",
+		"hover-cursor": "pointer",
+		"focus-background-color": "{{color(Black)}}",
+		"focus-border-color": "{{color(Black)}}",
+		"fopcus-border-width": "0",
+		"focus-border-style": "solid",
+		"focus-cursor": "pointer",
+		"active-background-color": "{{color(Black)}}",
+		"active-border-color": "{{color(Black)}}",
+		"active-border-width": "0",
+		"active-border-style": "solid",
+		"active-cursor": "pointer"
 	}
 }

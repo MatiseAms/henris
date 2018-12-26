@@ -1,23 +1,83 @@
 @mixin henris-button-default {
 	display: inline-block;
-	border-radius: $base-border-radius;
-	width: auto;
-	padding: 0.75em 1.5em;
-	background-color: $primary-color;
-	color: contra($primary-color);
-	border: none;
-	font-size: 1rem;
-	cursor: pointer;
-	line-height: 1em;
-	text-decoration: none;
+	width: $button-height;
+	height: $button-height;
+	border-radius: $button-border-radius;
+	font-family: $button-font-family;
+	font-weight: $button-font-weight;
+	line-height: $button-line-height;
+	text-decoration: $button-text-decoration;
+	color: $button-color;
+	padding: $button-padding;
+	background-color: $button-background-color;
+	@if $button-border-width != 0 {
+		border-style: $button-border-style;
+		border-width: $button-border-width;
+		border-color: $button-border-color;
+	}
+	cursor: $button-cursor;
 	&:hover {
-		background-color: darken($primary-color, 10%);
+		background-color: $button-hover-background-color;
+		color: $button-hover-color;
+		@if $button-hover-border-width !=
+			0
+			&&
+			$button-border-width !=
+			$button-hover-border-width
+		{
+			border-style: $button-hover-border-style;
+			border-width: $button-hover-border-width;
+			border-color: $button-hover-border-color;
+		}
+		@if $button-hover-cursor != $button-cursor {
+			cursor: $button-hover-cursor;
+		}
 	}
 	&:focus {
 		outline: none;
-		background-color: lighten($primary-color, 10%);
+		background-color: $button-focus-background-color;
+		color: $button-focus-color;
+		@if $button-focus-border-width !=
+			0
+			&&
+			$button-border-width !=
+			$button-focus-border-width
+		{
+			border-style: $button-focus-border-style;
+			border-width: $button-focus-border-width;
+			border-color: $button-focus-border-color;
+		}
+		@if $button-focus-cursor != $button-cursor {
+			cursor: $button-focus-cursor;
+		}
+	}
+	&:active {
+		outline: none;
+		background-color: $button-active-background-color;
+		color: $button-active-color;
+		@if $button-active-border-width !=
+			0
+			&&
+			$button-border-width !=
+			$button-active-border-width
+		{
+			border-style: $button-active-border-style;
+			border-width: $button-active-border-width;
+			border-color: $button-active-border-color;
+		}
+		@if $button-active-cursor != $button-cursor {
+			cursor: $button-active-cursor;
+		}
 	}
 }
+$button-font-family: 'RobotoCondensed, Roboto Condensed, Helvetica Neue Condensed, Impact, sans-serif' !default; //
+$button-background-color: #101010 !default; //
+$button-padding: 0.75em 1.5em !default; //
+$button-text-transform: uppercase !default; //
+$button-font-size: 14px !default; //
+$button-border-radius: 2px !default; //
+$button-line-height: 1 !default; //
+$button-font-weight: 600 !default; //
 
 // ------------------------------------------------ */
 //	The default styling for almost every button	   */
