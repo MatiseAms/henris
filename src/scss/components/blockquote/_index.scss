@@ -1,10 +1,10 @@
-@if output("components", "blockquote") {
-	blockquote {
+@mixin henris-blockquote($el: 'blockquote'){
+	#{$el} {
 		position: relative;
 		display: inline-block;
 		border: 1px solid color(Black, 0.2);
 		padding: 1rem 2rem;
-		// @extend %p;
+		@content;
 		&:before,
 		&:after {
 			font-size: 2rem;
@@ -34,4 +34,8 @@
 			}
 		}
 	}
+}
+
+@if output("components", "blockquote") {
+	@include henris-blockquote();
 }

@@ -1,0 +1,5 @@
+@mixin henris-input-field($el: '.input,.input-field') {
+	#{$el} {
+		@content;
+	}
+}

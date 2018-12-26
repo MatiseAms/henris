@@ -1,46 +1,49 @@
-// ------------------------------------------------ */
-//	The default styling for almost every button	   */
-// ---------------------------------------------- */
-
-%default-button {
+@mixin henris-button-default {
 	display: inline-block;
 	border-radius: $base-border-radius;
 	width: auto;
 	padding: 0.75em 1.5em;
-	background-color: color(Blue);
-	color: contra(color(Blue));
+	background-color: $primary-color;
+	color: contra($primary-color);
 	border: none;
 	font-size: 1rem;
 	cursor: pointer;
 	line-height: 1em;
-	border-bottom: var(--button-depth,2px) solid darken(color(Blue), 10%);
 	text-decoration: none;
 	&:hover {
-		background-color: darken(Blue, 10%);
-		border-bottom: var(--button-depth,2px) solid darken(color(Blue), 20%);
+		background-color: darken($primary-color, 10%);
 	}
 	&:focus {
 		outline: none;
-		box-shadow: 0 0 0.5rem 0 color(Black, 0.25);
+		background-color: lighten($primary-color, 10%);
 	}
 }
-@if output(components,button){
-	// ------------------------------------------------------------------------ */
-	//	Styling set on standard buttons and elements with a button class	   */
-	// ---------------------------------------------------------------------- */
-	@if output(button-default) {
+
+// ------------------------------------------------ */
+//	The default styling for almost every button	   */
+// ---------------------------------------------- */
+
+@mixin henris-button($class: '.button', $button: false) {
+	$el: $class;
+
+	// If standard button is also styled:
+	@if $button {
+		// Reset styling:
 		button {
 			-webkit-appearance: none;
 			appearance: none;
 		}
-
-		.button,
-		button {
-			@extend %default-button;
-		}
+		$el: #{$class}, button;
 	}
-	%button,
-	.button {
+
+	#{$el} {
+		// ------------------------------------------------------------------------ */
+		//	Styling set on standard buttons and elements with a button class	   */
+		// ---------------------------------------------------------------------- */
+
+		@if output(button-default) {
+			@include henris-button-default();
+		}
 		// ------------------------------------------------------------ */
 		//	Create colored buttons made from the current colorset	   */
 		// ---------------------------------------------------------- */
@@ -48,12 +51,16 @@
 			@each $color-name, $color-value in $default-color-set {
 				&--#{to-lower-case($color-name)},
 				&--#{$color-name} {
-					border-bottom: var(--button-depth,2px) solid darken($color-value, 10%);
+					border-bottom: var(--button-depth, 2px)
+						solid
+						darken($color-value, 10%);
 					background-color: $color-value;
 					color: contra($color-value);
 					&:hover {
 						background-color: darken($color-value, 10%);
-						border-bottom: var(--button-depth,2px) solid darken($color-value,20%);
+						border-bottom: var(--button-depth, 2px)
+							solid
+							darken($color-value, 20%);
 					}
 				}
 			}
@@ -73,24 +80,26 @@
 		//	Rotation is also an option	   */
 		// ------------------------------ */
 		@if output(button-rotated) {
-			@for $i from 1 through 10{
-				&--#{$i * 45)}deg {
-					transform: rotate(#{$i * 45)}deg);
+			@for $i from 1 through 10 {
+				&--#{($i * 45)}deg {
+					transform: rotate(#{($i * 45)}deg);
 				}
 			}
-		}	
+		}
 		// -------------------- */
 		//	Capitalize It!	   */
 		// ------------------ */
 		@if output(button-text-transform) {
 			&--uppercase {
 				text-transform: uppercase;
-			}		
+			}
 			&--lowercase {
 				text-transform: lowercase;
-			}	
+			}
 			&--capitalized {
-				&:first-letter{ text-transform: uppercase; }
+				&:first-letter {
+					text-transform: uppercase;
+				}
 			}
 			&--bold {
 				font-weight: bold;
@@ -137,7 +146,7 @@
 				//	When there are sizes, a smaller version of the round button	   */
 				// -------------------------------------------------------------- */
 				@if output(button-icons) {
-					&[class^="button-icon"] {
+					&[class^='button-icon'] {
 						padding-left: 0em;
 						&:before {
 							content: none;
@@ -148,12 +157,12 @@
 						}
 					}
 					&.button-icon--right {
-						padding-right: 0 !important;
-						padding-left: 0 !important;
+						padding-right: 0;
+						padding-left: 0;
 						@each $icon-name, $icon-value in $iconset-basic {
 							&.button-icon--#{$icon-name} {
 								span span:after {
-									content: "#{$icon-value}";
+									content: '#{$icon-value}';
 									@include icon-specific-style($icon-name);
 								}
 							}
@@ -163,7 +172,7 @@
 						@each $icon-name, $icon-value in $iconset-basic {
 							&.button-icon--#{$icon-name} {
 								span span:before {
-									content: "#{$icon-value}";
+									content: '#{$icon-value}';
 									@include icon-specific-style($icon-name);
 								}
 							}
@@ -186,120 +195,124 @@
 				font-size: rem(12);
 			}
 		}
-			// -------------------------------- */
+		// -------------------------------- */
 		//	Different specified sizes	   */
 		// ------------------------------ */
 		@if output(button-border) {
 			&__border {
 				border-style: solid;
 				border-width: 2px;
-				border-color: currentColor; 
+				border-color: currentColor;
 				@each $color-name, $color-value in $default-color-set {
 					&--#{to-lower-case($color-name)},
 					&--#{$color-name} {
-						color: $color-value; 
+						color: $color-value;
 					}
 				}
 			}
 			&__border-width {
-				@for $i from 1 through 20{
-					&--#{$i}{
+				@for $i from 1 through 20 {
+					&--#{$i} {
 						border-width: #{$i}px;
 					}
 				}
 			}
-			&__border-style--solid { 
-				border-style: solid; 
+			&__border-style--solid {
+				border-style: solid;
 			}
 			&__border-style--dotted {
-				border-style: dotted; 
+				border-style: dotted;
 			}
 			&__border-style--dashed {
-				border-style: dashed; 
+				border-style: dashed;
 			}
 		}
 	}
+}
 
-	// -------------------------------------------------------------------- */
-	//	The icon buttons, using default html special character icons	   */
-	// ------------------------------------------------------------------ */
+@if output('button') {
+	@include henris-button();
+}
 
-	@if output(button-icons) {
-		@include wildcard("button-basic") {
-			@extend %default-button;
-			padding-left: 3rem;
-			position: relative;
-			&:before {
-				width: 2.5em;
-				height: 2.5em;
-				position: absolute;
-				left: 0;
-				top: 0;
-				line-height: 2.5em;
-				text-align: center;
-			}
+// -------------------------------------------------------------------- */
+//	The icon buttons, using default html special character icons	   */
+// ------------------------------------------------------------------ */
+
+@if output(button-icons) {
+	@include wildcard('button-basic') {
+		@include henris-button-default();
+		padding-left: 3rem;
+		position: relative;
+		&:before {
+			width: 2.5em;
+			height: 2.5em;
+			position: absolute;
+			left: 0;
+			top: 0;
+			line-height: 2.5em;
+			text-align: center;
 		}
-		[class^="button-icon"] {
-			@extend .button;
-			position: relative;
-			padding-left: 3em;
-			&:before {
-				position: absolute;
-				left: 0;
-				width: 3em;
-				text-align: center;
-				color: var(--button-icon-color, inherit);
-			}
-			&.button-icon--right {
-				padding-left: 1.5em;
-				padding-right: 3em;
-				&:before {
-					left: auto;
-					right: 0;
-				}
-			}
-			&.button-icon--only {
-				width: 2.5em;
-				text-indent: -999em;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-				&:before {
-					text-indent: 0;
-					width: 2.5em !important;
-				}
-				&:after {
-					text-indent: 0;
-					width: 2.5em !important;
-				}
-			}
+	}
+	[class^='button-icon'] {
+		@extend .button;
+		position: relative;
+		padding-left: 3em;
+		&:before {
+			position: absolute;
+			left: 0;
+			width: 3em;
+			text-align: center;
+			color: var(--button-icon-color, inherit);
 		}
-		@each $icon-name, $icon-value in $iconset-basic {
-			.button-icon--#{$icon-name} {
-				&:before {
-					content: "#{$icon-value}";
-					@include icon-specific-style($icon-name);
-				}
-			}
-		}
-		.button[data-icon-before] {
-			padding-left: 3em;
-			&:before {
-				position: absolute;
-				left: 0;
-				width: 3em;
-				text-align: center;
-				content: attr(data-icon-before);
-			}
-		}
-		.button[data-icon-after] {
+		&.button-icon--right {
+			padding-left: 1.5em;
 			padding-right: 3em;
 			&:before {
-				position: absolute;
+				left: auto;
 				right: 0;
-				width: 3em;
-				text-align: center;
-				content: attr(data-icon-after);
 			}
+		}
+		&.button-icon--only {
+			width: 2.5em;
+			text-indent: -999em;
+			padding-left: 0;
+			padding-right: 0;
+			&:before {
+				text-indent: 0;
+				width: 2.5em;
+			}
+			&:after {
+				text-indent: 0;
+				width: 2.5em;
+			}
+		}
+	}
+	@each $icon-name, $icon-value in $iconset-basic {
+		.button-icon--#{$icon-name} {
+			&:before {
+				content: '#{$icon-value}';
+				@include icon-specific-style($icon-name);
+			}
+		}
+	}
+	.button[data-icon-before] {
+		padding-left: 3em;
+		&:before {
+			position: absolute;
+			left: 0;
+			width: 3em;
+			text-align: center;
+			content: attr(data-icon-before);
+		}
+	}
+	.button[data-icon-after] {
+		padding-right: 3em;
+		&:before {
+			position: absolute;
+			right: 0;
+			width: 3em;
+			text-align: center;
+			content: attr(data-icon-after);
 		}
 	}
 }

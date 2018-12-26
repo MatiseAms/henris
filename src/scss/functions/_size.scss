@@ -1,4 +1,4 @@
-@function calculateRem($size) {
+@function calc-rem($size) {
 	$remSize: $size / #{$base-font-size}px;
 	@return $remSize * 1rem;
 }
@@ -39,20 +39,3 @@
 	}
 	@return $sizes;
 }
-@function space($value) {
-	$sizes: null;
-	@if length($value) > 1 {
-		@each $size in $value {
-			$sizes: $sizes #{rem($size * $space)};
-		}
-	} @else {
-		$sizes: #{rem($value * $space)};
-	}
-	@return $sizes;
-}
-
-@function spc($value) {
-	$size: space($value);
-	@return $size;
-}
-

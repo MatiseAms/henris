@@ -3,7 +3,7 @@
 /node_modules
 .DS_Store
 /docs/.vuepress/dist
+/test/**/*.css
 /test/*.css
 yarn-error.log
-test/*.css
 /test/output.css

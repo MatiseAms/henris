@@ -1,13 +1,13 @@
-@if output(form-check-text) {
-	.input-check-text {
+@mixin henris-check-text($el: '.input-check-text') {
+	#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;
 		margin: 0;
+		@content;
 		label {
 			position: relative;
-
-			display: block;
+			display: inline-block;
 			left: 0;
 			min-width: 2.5em;
 			width: auto;
@@ -22,8 +22,8 @@
 				content: attr(data-text);
 			}
 		}
-		input[type="checkbox"],
-		input[type="radio"] {
+		input[type='checkbox'],
+		input[type='radio'] {
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
@@ -33,9 +33,6 @@
 			padding: 0;
 			position: absolute;
 			opacity: 0;
-		}
-
-		label:before {
 		}
 
 		input:checked {
@@ -54,4 +51,10 @@
 			}
 		}
 	}
+}
+
+
+
+@if output(form-check-text) {
+	@include henris-check-text();
 }

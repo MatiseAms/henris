@@ -1,6 +1,6 @@
-@if output(form-textarea) {
-	textarea {
-		@extend %default-input;
+@mixin henris-textarea($el: 'textarea'){
+	#{$el} {
+		@include henris-input-default();
 		resize: none;
 		min-height: 5rem;
 		&:not(:empty) {
@@ -8,3 +8,9 @@
 		}
 	}
 }
+@if output(form-textarea) {
+	@include henris-input-field(){
+		@include henris-textarea();
+	}
+}
+

@@ -1,6 +1,6 @@
-%default-input {
-	background: color(White);
-	border: 1px solid color(Black, 0.1);
+@mixin henris-input-default() {
+	background: rgba($color-light, 1);
+	border: 1px solid rgba($color-dark, 0.1);
 	font-size: 1rem;
 	line-height: 1rem;
 	border-radius: $base-border-radius;
@@ -9,12 +9,12 @@
 	max-width: 100%;
 	-webkit-appearance: none;
 	&::placeholder {
-		color: color(Black, 0.1);
+		color: rgba($color-dark, 0.1);
 		opacity: 1;
 		transition: filter 0.3s;
 	}
 	&:focus {
-		outline: 2px solid color(Blue, 0.25);
+		outline: 2px solid rgba($primary-color, 0.25);
 	}
 	&:focus,
 	&:focus:hover {
@@ -25,15 +25,15 @@
 	&:hover {
 		border: 1px solid color(Black, 0.2);
 		&::placeholder {
-			color: color(Black, 0.2);
+			color: rgba($color-dark, 0.2);
 			filter: blur(0px);
 		}
 	}
-
-	&--ghost {
-		background-color: transparent;
-		color: currentColor;
-		border: 1px solid red;
+}
+@mixin henris-input-ghost() {
+	background-color: transparent;
+	color: currentColor;
+	@if output('form-input-colored') {
 		@each $color-name, $color-value in $colors {
 			.bg-#{to-lower-case($color-name)} &,
 			.bg-#{$color-name} & {

@@ -1,0 +1,16 @@
+@if output("pattern") {
+	:root {
+		--pattern-width: 0.5rem;
+		--pattern-space: 1rem;
+		--pattern-color-primary: white;
+		--pattern-color-secondary: transparent;
+		--pattern-total: calc((var(--pattern-width) * 2) + var(--pattern-space));
+		--pattern-size: 1rem;
+	}
+}
+@import "dots";
+@import "checkered";
+@import "cubes";
+@import "zigzag";
+@import "houndstooth";
+@import "lines";

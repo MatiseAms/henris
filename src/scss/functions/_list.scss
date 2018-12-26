@@ -6,9 +6,6 @@
 	}
 	@return $collection;
 }
-@function contains($list, $item) {
-	@return index($list, $item) != null;
-}
 
 @function str-to-list($string, $separator: ".", $startAt: 1) {
 	$string: str-replace($string, "__", "."); //
@@ -32,8 +29,8 @@
 
 // List Functions
 
-@function prepend($list, $value) {
-	@return join($value, $list);
+@function prepend($list, $value, $seperator: space) {
+	@return join($value, $list, $seperator);
 }
 
 @function to-string($list, $glue: "", $is-nested: false) {

@@ -1,7 +1,5 @@
-/*
-  Inspired by meyerweb.com
-*/
-@if output("reset-meyerweb") {
+// Inspired by meyerweb.com
+@if output(reset-meyerweb) {
 	* {
 		box-sizing: border-box;
 	}

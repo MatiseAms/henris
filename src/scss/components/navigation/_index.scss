@@ -1,0 +1,20 @@
+// The main class
+$mainNav: ".nav" !default;
+
+// Import styles
+@import "types";
+
+// And define it
+$types: ("basic", "flow", "mobile", "left");
+
+@if output(navigation) {
+	// Create the classes, including responsive
+	@each $type in $types {
+		@include nav($type, $mainNav, null);
+
+		@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+			@include nav($type, $mainNav, "#{$breakpoint-name}-only");
+			@include nav($type, $mainNav, "#{$breakpoint-name}-up");
+		}
+	}
+}

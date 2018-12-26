@@ -1,12 +1,9 @@
-@if output(form-fieldset) {
-	fieldset {
+@mixin henris-fieldset($el: 'fieldset'){
+	#{$el} {
 		margin: 0;
 		padding: 0;
-		// display: flex;
-		// flex-flow: row;
-		// flex-wrap: wrap;
 		border: none;
-		& + fieldset {
+		& + #{$el} {
 			margin-top: grid(0.5);
 			border-top: 1px solid color(Black, 0.1);
 			@include min-("margin-top", 0.5, 16);
@@ -43,22 +40,11 @@
 		label + textarea,
 		label + select {
 			margin-top: 1rem;
-
-			// margin-left: 1rem;
 		}
-		// textarea + label,
-		// select + label,
-		// input + label {
-		// 	&:before {
-		// 		//content: '';
-		// 		margin-top: 1rem;
-		// 		display: block;
-		// 		clear: both;
-		// 	}
-		// }
 	}
+
 	form {
-		fieldset {
+		#{$el} {
 			div:not([class]) {
 				& + div:not([class]) {
 					margin-top: 1rem;
@@ -73,4 +59,62 @@
 			}
 		}
 	}
+
+	details {
+		summary {
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 14px;
+			outline: none;
+			&:focus {
+				outline: none;
+			}
+			& + fieldset {
+				margin-top: 1rem;
+			}
+		}
+		transition: max-height 0.3s;
+		max-height: 50vh;
+		&:not([open]) {
+			max-height: 1rem;
+		}
+		&[open] {
+		}
+		& + details {
+			margin-top: 1rem;
+		}
+		summary::-webkit-details-marker {
+			display: none;
+		}
+		summary:after {
+			display: block;
+			content: "\276E";
+			width: 14px;
+			height: 14px;
+			line-height: 14px;
+			text-align: center;
+			float: left;
+			transition: transform 0.2s;
+			margin-right: 4px;
+			transform: scale(1, 1) rotate(90deg);
+		}
+		&[open] summary:after {
+			transform: scale(1, -1) rotate(90deg);
+		}
+	}
+	#{$el} {
+		legend {
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 14px;
+		}
+	}
+}
+
+
+
+@if output(form-fieldset) {
+	@include henris-fieldset();
 }

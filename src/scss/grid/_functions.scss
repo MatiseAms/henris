@@ -108,7 +108,7 @@
 		$width: strip-unit((strip-unit($columns) * 16) / $one-column);
 	}
 
-	$maximum-screenwidth: ($width/ $columns) * $grid-columns;
-	$result: "only screen and (min-width: #{strip-unit($maximum-screenwidth)}px)";
+	$minimum-screenwidth: ($width/ $columns) * $grid-columns;
+	$result: "only screen and (min-width: #{strip-unit($minimum-screenwidth)}px)";
 	@return $result;
 }

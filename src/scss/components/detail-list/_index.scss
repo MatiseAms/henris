@@ -1,5 +1,5 @@
-@if output(components, detail-list) {
-	dl {
+@mixin henris-detail-list($el: 'dl') {
+	#{$el} {
 		margin: 0px;
 		padding: 0px;
 		overflow: auto;
@@ -22,4 +22,8 @@
 			//	padding-top: 0;
 		}
 	}
+}
+
+@if output('components', 'detail-list') {
+	@include henris-detail-list();
 }

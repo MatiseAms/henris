@@ -36,6 +36,9 @@
 	}
 
 	@font-face {
+		@if (str-index($name, " ")) {
+			$name: "#{$name}";
+		}
 		font-family: $name;
 		src: to-string($src, ",");
 		font-weight: $weight;
@@ -57,10 +60,9 @@
 			$italic: "Italic";
 		}
 		@for $i from 1 through length($weights) {
-			//		$weight: unquote("#{nth($weights,$i)}");
 			$weight: nth($weights, $i);
 			@include font-include(
-				$title,
+				font-quotes($title),
 				unquote("#{$name}-#{nth($weight, 1)}#{$italic}"),
 				nth($weight, 2),
 				$type,
@@ -72,11 +74,21 @@
 }
 
 //
+// Define where to use the font directly from the embed
 //
-@mixin font-use($use) {
-	@if (type-of($use) == "list") {
-	} @else {
-		@warn "#{$use} is not a list";
+@mixin font-use($use, $family) {
+	@if output(typography-usage) {
+		@if (type-of($use) == "list") {
+			@each $selector in $use {
+				#{$selector} {
+					font-family: #{font-quotes($family)};
+				}
+			}
+		} @else {
+			#{$use} {
+				font-family: #{font-quotes($family)};
+			}
+		}
 	}
 }
 
@@ -91,10 +103,16 @@
 	$font-path: $base-font-path !default;
 	$font-files: ("eot", "woff", "svg", "ttf");
 	$family: "";
+
 	//
 	// Check if the variable is a map
 	// if it's not a map, its not a font to include.
 	@if type-of($font) == "map" {
+		//
+		// Check if the include has a files prop;
+		@if map-has-key($font, "files") {
+			$font-files: map-get($font, "files");
+		}
 		//
 		// Check if the include has a font-family;
 		@if map-has-key($font, "font-family") == false {
@@ -113,25 +131,21 @@
 					}
 				}
 			}
-			//
 			// Check if a font path has been set, if so, override the default;
 			@if map-has-key($font, "path") {
 				$font-path: map-get($font, "path");
 			}
-			//
 			// Check if a font path has been set, if so, override the default;
 			@if map-has-key($font, "types") {
 				$font-types: map-get($font, "types");
 			}
-			//
 			// Check if a font files have been set
 			@if map-has-key($font, "files") {
 				$font-files: map-get($font, "files");
 			}
-			//
 			// Get the font name
 			$font-name: convertToFontname($font, true);
-			//
+
 			// Load the fonts if true
 			@if $load {
 				@include font-list(
@@ -143,10 +157,21 @@
 					$font-path
 				);
 			}
-			//
+
 			// Set use
 			@if map-has-key($font, "use") {
-				@include font-use(map-get($font, "use"));
+				@include font-use(map-get($font, "use"), map-get($font, "font-family"));
+			}
+			$weight-classes: false;
+			@if map-has-key($font, "weight-classes") {
+				$weight-classes: map-get($font, "weight-classes");
+			}
+			@if output("typography-weight-classes", $weight-classes) {
+				@each $weight-name, $weight-value in map-get($font, weights) {
+					.font-#{to-lower-case($weight-name)} {
+						font-weight: $weight-value;
+					}
+				}
 			}
 		}
 	}
