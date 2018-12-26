@@ -66,10 +66,6 @@
 					display: block;
 				}
 				#{$n}__item {
-					//		margin: grid(0.5);
-					// & + #{$n}__item {
-					// 	margin-left: 0;
-					// }
 				}
 				#{$n}__link {
 					display: block;
@@ -120,10 +116,6 @@
 					display: block;
 				}
 				#{$n}__item {
-					//		margin: grid(0.5);
-					// & + #{$n}__item {
-					// 	margin-left: 0;
-					// }
 					&.has-children {
 						& > #{$n}__link {
 							#{$n}__text {

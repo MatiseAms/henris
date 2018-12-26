@@ -1,5 +1,5 @@
 @mixin data-label() {
-	*[data-label] {
+	[data-label] {
 		position: relative;
 		&:before {
 			content: attr(data-label);

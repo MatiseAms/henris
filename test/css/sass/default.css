@@ -1800,12 +1800,13 @@ ol:not([class]) > li ol > li ol > li ol > li ol > li:before {
 }
 
 .hidden {
-  clip: rect(0px, 0px, 0px, 0px);
-  height: 0px;
-  overflow: hidden;
   position: absolute;
-  white-space: nowrap;
-  width: 0px;
+  height: px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .flex-center {

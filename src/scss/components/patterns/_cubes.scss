@@ -48,8 +48,6 @@
 				var(--pattern-color-secondary) 75%,
 				var(--pattern-color-secondary)
 			);
-		// background-size: 80px 140px;
-		// background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 
 		--pattern-size-temp: calc((var(--pattern-size) / 8) * 9);
 		background-size: var(--pattern-size) calc(var(--pattern-size-temp) * 2);

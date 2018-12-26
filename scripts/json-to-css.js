@@ -3,9 +3,9 @@ const path = require('path');
 const flatten = require('flat');
 const chalk = require('chalk');
 const functions = require('./css-functions.js');
-var Table = require('cli-table');
+const Table = require('cli-table');
 
-let delimiter = '-',
+const delimiter = '-',
 	sourceFolder = 'data/',
 	distFolder = 'src/scss/';
 
@@ -54,11 +54,34 @@ function getFiles(dir, files_) {
 	return files_;
 }
 
+
+
+function isObject(item) {
+  return (item && typeof item === 'object' && !Array.isArray(item));
+}
+
+function mergeDeep(target, ...sources) {
+  if (!sources.length) return target;
+  const source = sources.shift();
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) Object.assign(target, { [key]: {} });
+        mergeDeep(target[key], source[key]);
+      } else {
+        Object.assign(target, { [key]: source[key] });
+      }
+    }
+  }
+  return mergeDeep(target, ...sources);
+}
+
+
 // Store the used data before compiling;
 let stored = {};
 getFiles(sourceFolder).forEach((file) => {
-	//	let fileName = file.split('/')[file.split('/').length - 1].replace('.json', '');
-	Object.assign(stored, JSON.parse(fs.readFileSync(file, 'utf8')));
+	stored = mergeDeep({},stored,JSON.parse(fs.readFileSync(file, 'utf8')));
 });
 
 function removeKeys(value) {

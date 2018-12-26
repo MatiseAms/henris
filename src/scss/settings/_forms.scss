@@ -1,5 +1,5 @@
-$default-input-background-color: undefined !default; //
-$default-input-border-color: undefined !default; //
+$default-input-background-color: #ffffff !default; //
+$default-input-border-color: #101010 !default; //
 $default-input-border-style: 'solid' !default; //
 $default-input-border-width: 1px !default; //
 $default-input-font-size: 1rem !default; //
@@ -9,8 +9,8 @@ $default-input-min-width: 10rem !default; //
 $default-input-max-width: 100% !default; //
 $default-input-padding: 0.75rem !default; //
 $default-input: (
-	"background-color": undefined, 
-	"border-color": undefined, 
+	"background-color": #ffffff, 
+	"border-color": #101010, 
 	"border-style": 'solid', 
 	"border-width": 1px, 
 	"font-size": 1rem, 

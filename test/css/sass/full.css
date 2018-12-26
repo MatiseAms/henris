@@ -9499,10 +9499,10 @@ a[href^="mailto:"]:before, a[href*="mailto:"]:before {
   border-left: 1px solid rgba(16, 16, 16, 0.1);
 }
 
-*[data-label] {
+[data-label] {
   position: relative;
 }
-*[data-label]:before {
+[data-label]:before {
   content: attr(data-label);
   position: absolute;
   right: calc(100% + 0.5rem);
@@ -10848,12 +10848,13 @@ input.hidden + label:before, input.hidden + label:after {
 }
 
 .hidden {
-  clip: rect(0px, 0px, 0px, 0px);
-  height: 0px;
-  overflow: hidden;
   position: absolute;
-  white-space: nowrap;
-  width: 0px;
+  height: px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .flex-center {
