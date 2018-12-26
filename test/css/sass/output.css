@@ -8362,23 +8362,40 @@ blockquote cite a {
 
 .button, [class^=button-icon] {
   display: inline-block;
-  border-radius: 3px;
-  width: auto;
-  padding: 0.75em 1.5em;
-  background-color: #7329b1;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  line-height: 1em;
+  width: "auto";
+  height: "auto";
+  border-radius: 2px;
+  font-family: "-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol";
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
+  color: "undefined";
+  padding: 0.75em 1.5em;
+  background-color: #101010;
+  cursor: "pointer";
 }
 .button:hover, [class^=button-icon]:hover {
-  background-color: #581f88;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 .button:focus, [class^=button-icon]:focus {
   outline: none;
-  background-color: #8d3bd2;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
+}
+.button:active, [class^=button-icon]:active {
+  outline: none;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 .button--black, .button--Black {
   border-bottom: var(--button-depth, 2px) solid black;
@@ -8894,27 +8911,45 @@ blockquote cite a {
 [class^=button-basic],
 [class*=" button-basic"] {
   display: inline-block;
-  border-radius: 3px;
-  width: auto;
-  padding: 0.75em 1.5em;
-  background-color: #7329b1;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  line-height: 1em;
+  width: "auto";
+  height: "auto";
+  border-radius: 2px;
+  font-family: "-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol";
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
+  color: "undefined";
+  padding: 0.75em 1.5em;
+  background-color: #101010;
+  cursor: "pointer";
   padding-left: 3rem;
   position: relative;
 }
 [class^=button-basic]:hover,
 [class*=" button-basic"]:hover {
-  background-color: #581f88;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 [class^=button-basic]:focus,
 [class*=" button-basic"]:focus {
   outline: none;
-  background-color: #8d3bd2;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
+}
+[class^=button-basic]:active,
+[class*=" button-basic"]:active {
+  outline: none;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 [class^=button-basic]:before,
 [class*=" button-basic"]:before {
@@ -9894,23 +9929,40 @@ fieldset legend {
 }
 .input-field input[type=submit], .input-field input[type=button] {
   display: inline-block;
-  border-radius: 3px;
-  width: auto;
-  padding: 0.75em 1.5em;
-  background-color: #7329b1;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  line-height: 1em;
+  width: "auto";
+  height: "auto";
+  border-radius: 2px;
+  font-family: "-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol";
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
+  color: "undefined";
+  padding: 0.75em 1.5em;
+  background-color: #101010;
+  cursor: "pointer";
 }
 .input-field input[type=submit]:hover, .input-field input[type=button]:hover {
-  background-color: #581f88;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 .input-field input[type=submit]:focus, .input-field input[type=button]:focus {
   outline: none;
-  background-color: #8d3bd2;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
+}
+.input-field input[type=submit]:active, .input-field input[type=button]:active {
+  outline: none;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 .input-field input[type=color] {
   -webkit-appearance: none;
@@ -10053,25 +10105,43 @@ input[type=submit] {
 input[type=button]:not(.button):not([class^=button-icon]),
 input[type=submit]:not(.button):not([class^=button-icon]) {
   display: inline-block;
-  border-radius: 3px;
-  width: auto;
-  padding: 0.75em 1.5em;
-  background-color: #7329b1;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  line-height: 1em;
+  width: "auto";
+  height: "auto";
+  border-radius: 2px;
+  font-family: "-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol";
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
+  color: "undefined";
+  padding: 0.75em 1.5em;
+  background-color: #101010;
+  cursor: "pointer";
 }
 input[type=button]:not(.button):not([class^=button-icon]):hover,
 input[type=submit]:not(.button):not([class^=button-icon]):hover {
-  background-color: #581f88;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 input[type=button]:not(.button):not([class^=button-icon]):focus,
 input[type=submit]:not(.button):not([class^=button-icon]):focus {
   outline: none;
-  background-color: #8d3bd2;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
+}
+input[type=button]:not(.button):not([class^=button-icon]):active,
+input[type=submit]:not(.button):not([class^=button-icon]):active {
+  outline: none;
+  background-color: #101010;
+  color: "undefined";
+  border-style: "solid";
+  border-width: 0;
+  border-color: #101010;
 }
 
 label + input[type=button], label + input[type=submit] {

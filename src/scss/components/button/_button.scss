@@ -21,7 +21,7 @@
 		color: $button-hover-color;
 		@if $button-hover-border-width !=
 			0
-			&&
+			AND
 			$button-border-width !=
 			$button-hover-border-width
 		{
@@ -39,7 +39,7 @@
 		color: $button-focus-color;
 		@if $button-focus-border-width !=
 			0
-			&&
+			AND
 			$button-border-width !=
 			$button-focus-border-width
 		{
@@ -57,7 +57,7 @@
 		color: $button-active-color;
 		@if $button-active-border-width !=
 			0
-			&&
+			AND
 			$button-border-width !=
 			$button-active-border-width
 		{
