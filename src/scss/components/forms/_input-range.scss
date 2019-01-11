@@ -1,5 +1,5 @@
 @mixin henris-input-range($el: '.input-range') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		display: flex;
 		[type='range'] {
 			-webkit-appearance: none;

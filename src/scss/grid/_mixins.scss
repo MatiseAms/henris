@@ -51,7 +51,7 @@
 	//
 	$childClass: '';
 	@if $child == true {
-		$childClass: '> .#{$base-prefix}column';
+		$childClass: '> .#{$base-prefix-grid}column';
 	}
 	//
 	// Create the default classes for widths without any media query
@@ -61,7 +61,7 @@
 			$percentage: percentage($a/$grid-columns); //
 			$column: #{$a}#{$childClass};
 			@if output(grid-column) {
-				&.#{$base-prefix}column-#{$column} {
+				&.#{$base-prefix-grid}column-#{$column} {
 					width: #{$percentage};
 					@if output(grid-cssgrid) {
 						@supports (display: grid) {
@@ -71,17 +71,17 @@
 				}
 			}
 			@if output(grid-offset) {
-				&.#{$base-prefix}offset-#{$column} {
+				&.#{$base-prefix-grid}offset-#{$column} {
 					margin-left: #{$percentage};
 				}
 			}
 			@if output(grid-push) {
-				&.#{$base-prefix}push-#{$column} {
+				&.#{$base-prefix-grid}push-#{$column} {
 					margin-right: #{$percentage};
 				}
 			}
 			@if output(grid-pull) {
-				&.#{$base-prefix}pull-#{$column} {
+				&.#{$base-prefix-grid}pull-#{$column} {
 					margin-left: -#{$percentage};
 				}
 			}
@@ -105,7 +105,7 @@
 		@if output('grid-parts') {
 			@each $part, $percentage in $grid-parts {
 				&%#{$part}#{$childClass},
-				&.#{$base-prefix}#{$part}#{$childClass} {
+				&.#{$base-prefix-grid}#{$part}#{$childClass} {
 					width: percentage($percentage);
 					@if $grid-cssgrid == true {
 						@supports (display: grid) {
@@ -122,35 +122,35 @@
 		//
 		@if output('grid-only-classes') {
 			@media #{$mq-only} {
-				&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
+				&.#{$base-prefix-grid}#{$bp-name}-only-0#{$childClass} {
 					width: 0;
 					display: none;
 				}
 				@each $part, $percentage in $grid-parts {
 					.#{$bp-name}-only-#{$part}#{$childClass},
-					&.#{$base-prefix}#{$bp-name}-only-#{$part}#{$childClass} {
+					&.#{$base-prefix-grid}#{$bp-name}-only-#{$part}#{$childClass} {
 						width: percentage($percentage);
 					}
 				}
 			}
 			@for $a from 1 through $grid-columns {
 				$percentage: percentage($a/$grid-columns);
-				&.#{$base-prefix}#{$bp-name}-only-#{$a}#{$childClass} {
+				&.#{$base-prefix-grid}#{$bp-name}-only-#{$a}#{$childClass} {
 					width: $percentage;
 				}
 
 				@if output(grid-offset) {
-					&.#{$base-prefix}offset-#{$bp-name}-only-#{$a}#{$childClass} {
+					&.#{$base-prefix-grid}offset-#{$bp-name}-only-#{$a}#{$childClass} {
 						margin-left: $percentage;
 					}
 				}
 				@if output(grid-push) {
-					&.#{$base-prefix}push-#{$bp-name}-only-#{$a}#{$childClass} {
+					&.#{$base-prefix-grid}push-#{$bp-name}-only-#{$a}#{$childClass} {
 						margin-right: $percentage;
 					}
 				}
 				@if output(grid-pull) {
-					&.#{$base-prefix}pull-#{$bp-name}-only-#{$a}#{$childClass} {
+					&.#{$base-prefix-grid}pull-#{$bp-name}-only-#{$a}#{$childClass} {
 						margin-left: -#{$percentage};
 					}
 				}
@@ -162,7 +162,7 @@
 				// Sometimes you need a zero, which does the same as a hide for a breakpoint.
 				//
 				.#{$bp-name}-0#{$childClass}
-					&.#{$base-prefix}#{$bp-name}-0#{$childClass} {
+					&.#{$base-prefix-grid}#{$bp-name}-0#{$childClass} {
 					width: 0;
 					display: none;
 				}
@@ -172,7 +172,7 @@
 				@if output('grid-parts') {
 					@each $part, $percentage in $grid-parts {
 						%#{$bp-name}-#{$part}#{$childClass},
-						&.#{$base-prefix}#{$bp-name}-#{$part}#{$childClass} {
+						&.#{$base-prefix-grid}#{$bp-name}-#{$part}#{$childClass} {
 							width: percentage($percentage);
 
 							@if $grid-cssgrid == true {
@@ -191,7 +191,7 @@
 					@for $a from 1 through $grid-columns {
 						$percentage: percentage($a/$grid-columns);
 
-						&.#{$base-prefix}#{$bp-name}-#{$a}#{$childClass} {
+						&.#{$base-prefix-grid}#{$bp-name}-#{$a}#{$childClass} {
 							width: $percentage;
 							@if $grid-cssgrid == true {
 								@supports (display: grid) {
@@ -202,17 +202,17 @@
 							}
 						}
 						@if output(grid-offset) {
-							&.#{$base-prefix}offset-#{$bp-name}-#{$a}#{$childClass} {
+							&.#{$base-prefix-grid}offset-#{$bp-name}-#{$a}#{$childClass} {
 								margin-left: $percentage;
 							}
 						}
 						@if output(grid-push) {
-							&.#{$base-prefix}push-#{$bp-name}-#{$a}#{$childClass} {
+							&.#{$base-prefix-grid}push-#{$bp-name}-#{$a}#{$childClass} {
 								margin-right: $percentage;
 							}
 						}
 						@if output(grid-pull) {
-							&.#{$base-prefix}pull-#{$bp-name}-#{$a}#{$childClass} {
+							&.#{$base-prefix-grid}pull-#{$bp-name}-#{$a}#{$childClass} {
 								margin-left: -#{$percentage};
 							}
 						}

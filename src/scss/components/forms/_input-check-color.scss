@@ -1,5 +1,5 @@
 @mixin henris-check-color($el: '.input-check-color') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;

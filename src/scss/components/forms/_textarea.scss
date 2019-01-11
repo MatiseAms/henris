@@ -1,5 +1,5 @@
 @mixin henris-textarea($el: 'textarea'){
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		@include henris-input-default();
 		resize: none;
 		min-height: 5rem;

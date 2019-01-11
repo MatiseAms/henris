@@ -1,6 +1,7 @@
 {
 	"base": {
 		"prefix": "",
+		"prefix-grid": "",
 		"border-radius": "3px",
 		"space": "1rem",
 		"font-size": "16px",

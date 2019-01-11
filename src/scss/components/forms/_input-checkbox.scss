@@ -7,7 +7,7 @@
 		max-width: auto;
 		min-width: auto;
 	}
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;

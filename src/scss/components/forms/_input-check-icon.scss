@@ -1,5 +1,5 @@
 @mixin henris-check-icon($el: '.input-check-icon') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		height: auto;
 		width: auto;
 		padding: 0;
