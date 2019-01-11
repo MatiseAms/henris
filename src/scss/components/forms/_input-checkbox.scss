@@ -7,7 +7,7 @@
 		-moz-appearance: checkbox;
 		appearance: checkbox;
 	}
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		width: auto;
 		height: auto;
 		padding: 0;

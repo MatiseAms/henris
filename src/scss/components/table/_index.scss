@@ -1,9 +1,9 @@
 @mixin henris-table($el: 'table'){
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		border-radius: $base-border-radius;
 		border-collapse: collapse;
 
-		& + #{$el} {
+		& + #{$base-prefix}#{$el} {
 			margin-top: grid(1);
 			@include min-("margin-top", 1, 30);
 		}

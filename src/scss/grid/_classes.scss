@@ -1,5 +1,5 @@
 @if output(grid) {
-	.row {
+	.#{$base-prefix-grid}row {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
@@ -15,23 +15,23 @@
 				grid-template-columns: repeat($grid-columns, 1fr); //
 			}
 		}
-		&.center {
+		&.#{$base-prefix-grid}center {
 			justify-content: center;
 			justify-items: center;
 
 			@if $grid-cssgrid {
-				> .column {
+				> .#{$base-prefix-grid}column {
 					align-self: center;
 					justify-self: center;
 				}
 			}
 		}
-		&.right {
+		&.#{$base-prefix-grid}right {
 			justify-content: flex-end;
 			justify-items: right;
 
 			@if $grid-cssgrid {
-				> .column {
+				> .#{$base-prefix-grid}column {
 					align-self: right;
 					justify-self: right;
 				}
@@ -39,7 +39,7 @@
 		}
 		@each $grid-name, $grid-value in $grid-breakpoints {
 			// @debug $grid-name;
-			&.#{$grid-name}-reverse {
+			&.#{$base-prefix-grid}#{$grid-name}-reverse {
 				$mq: media-query(#{$grid-name}-up);
 				@media #{$mq} {
 					flex-direction: row-reverse;
@@ -47,7 +47,7 @@
 			}
 		}
 	}
-	.column {
+	.#{$base-prefix-grid}column {
 		@include createGridClasses(false);
 	}
 }

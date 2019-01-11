@@ -1,6 +1,6 @@
 $select-arrow-size: 0.3rem !default;
 @mixin henris-select($el: 'select') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		@include henris-input-default();
 
 		min-width: 12rem;

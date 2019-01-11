@@ -1,38 +1,38 @@
 @if output(grid-hide-show-classes) {
 	// Hide classes
-	.hide-for-large-up {
+	.#{$base-prefix-grid}hide-for-large-up {
 		@media #{$large-up} {
 			display: none;
 		}
 	}
-	.hide-for-large-only {
+	.#{$base-prefix-grid}hide-for-large-only {
 		@media #{$large-only} {
 			display: none;
 		}
 	}
-	.hide-for-medium-up {
+	.#{$base-prefix-grid}hide-for-medium-up {
 		@media #{$medium-up} {
 			display: none;
 		}
 	}
-	.hide-for-medium-only {
+	.#{$base-prefix-grid}hide-for-medium-only {
 		@media #{$medium-only} {
 			display: none;
 		}
 	}
-	.hide-for-small {
+	.#{$base-prefix-grid}hide-for-small {
 		@media #{$small-only} {
 			display: none;
 		}
 	}
 
 	// Show classes
-	.show-for-small-only {
+	.#{$base-prefix-grid}show-for-small-only {
 		@media #{$medium-up} {
 			display: none;
 		}
 	}
-	.show-for-medium-only {
+	.#{$base-prefix-grid}show-for-medium-only {
 		@media #{$small-only} {
 			display: none;
 		}
@@ -40,7 +40,7 @@
 			display: none;
 		}
 	}
-	.show-for-large-only {
+	.#{$base-prefix-grid}show-for-large-only {
 		@media #{$medium-down} {
 			display: none;
 		}

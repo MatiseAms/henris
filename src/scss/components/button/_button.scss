@@ -85,8 +85,17 @@ $button-font-weight: 600 !default; //
 
 @mixin henris-button($class: '.button', $button: false) {
 	$el: $class;
+	#{$base-prefix}#{$el} {
+	// If standard button is also styled:
+  	@if $button {
+  		// Reset styling:
+	  	button {
+		  	-webkit-appearance: none;
+		  	appearance: none;
+		  }
+		  $el: #{$class}, button;
+	  }
 
-	#{$el} {
 		// ------------------------------------------------------------------------ */
 		//	Styling set on standard buttons and elements with a button class	   */
 		// ---------------------------------------------------------------------- */

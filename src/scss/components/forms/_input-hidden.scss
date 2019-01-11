@@ -1,5 +1,5 @@
 @mixin henris-hidden($el: 'input.hidden') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		position: absolute;
 		width: 0;
 		height: 0;

@@ -1,5 +1,5 @@
 @mixin henris-card($el: '.card') {
-	#{$el} {
+	#{$base-prefix}#{$el} {
 		position: relative;
 		border-radius: $base-border-radius;
 		@content;
@@ -42,7 +42,7 @@
 			}
 		}
 	}
-	.column #{$el} {
+	.column #{$base-prefix}#{$el} {
 		height: 100%;
 	}
 }
