@@ -5,7 +5,7 @@
 			@if $value == $icon-name {
 				$family: '#{$iconFamily-name}-font-family';
 				content: '#{$icon-value}';
-				@extend '%#{$family}';
+				@extend %#{$family};
 			}
 		}
 	}
