@@ -1,6 +1,6 @@
 @if output("print") {
 	@media print {
-		[href]:not([href^="#"]):after {
+		[href]:not([href^="#"])::after {
 			content: " (" attr(href) ") ";
 		}
 	}

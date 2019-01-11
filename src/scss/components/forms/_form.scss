@@ -87,7 +87,7 @@
 		summary::-webkit-details-marker {
 			display: none;
 		}
-		summary:after {
+		summary::after {
 			display: block;
 			content: "\276E";
 			width: 14px;
@@ -99,7 +99,7 @@
 			margin-right: 4px;
 			transform: scale(1, 1) rotate(90deg);
 		}
-		&[open] summary:after {
+		&[open] summary::after {
 			transform: scale(1, -1) rotate(90deg);
 		}
 	}

@@ -8,8 +8,8 @@
 		height: $size;
 		display: block;
 		text-indent: -999em;
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 			display: block;
 			width: 75%;
@@ -42,17 +42,17 @@
 }
 @mixin arrow-min() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 25%;
 			top: 25%;
 			transform-origin: 50% 50%;
 			width: 100%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(0deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(90deg);
 			width: 0;
 		}
@@ -60,98 +60,98 @@
 }
 @mixin arrow-plus() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 0%;
 			top: 50%;
 			transform-origin: 50% 50%;
 			width: 100%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(0deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 @mixin arrow-close() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 50%;
 			top: 50%;
 			transform-origin: 50% 50%;
 			width: 100%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(-45deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(135deg);
 		}
 	}
 }
 @mixin arrow-left() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 25%;
 			top: 50%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(-45deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(45deg);
 		}
 	}
 }
 @mixin arrow-right() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 75%;
 			top: 50%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(135deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(-135deg);
 		}
 	}
 }
 @mixin arrow-down() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 50%;
 			top: 75%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(-135deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(-45deg);
 		}
 	}
 }
 @mixin arrow-up() {
 	& {
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			left: 50%;
 			top: 25%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(45deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(-225deg);
 		}
 	}

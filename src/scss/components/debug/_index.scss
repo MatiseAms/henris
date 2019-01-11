@@ -1,7 +1,7 @@
 @mixin debug-warning($text) {
 	outline: 1px dashed red;
 	position: relative;
-	&:before {
+	&::before {
 		position: absolute;
 		left: 0;
 		top: 0;

@@ -54,8 +54,8 @@
 				opacity: 0;
 				position: absolute;
 				& + label {
-					&:before,
-					&:after {
+					&::before,
+					&::after {
 						content: none;
 					}
 				}

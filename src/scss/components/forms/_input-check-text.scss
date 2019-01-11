@@ -18,7 +18,7 @@
 			box-shadow: 0 0 0 1px color(Black, 0.15);
 			border-radius: $base-border-radius;
 
-			&:before {
+			&::before {
 				content: attr(data-text);
 			}
 		}
@@ -43,7 +43,7 @@
 		}
 		&.input-check--nolabel {
 			margin: 0.25rem;
-			&:before {
+			&::before {
 				top: 0 !important;
 			}
 			& + .input-check--nolabel {

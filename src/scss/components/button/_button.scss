@@ -208,10 +208,10 @@ $button-font-weight: 600 !default; //
 				@if output(button-icons) {
 					&[class^='button-icon'] {
 						padding-left: 0em;
-						&:before {
+						&::before {
 							content: none;
 						}
-						span span:before {
+						span span::before {
 							display: inline-block;
 							margin: 0 1em;
 						}
@@ -221,7 +221,7 @@ $button-font-weight: 600 !default; //
 						padding-left: 0;
 						@each $icon-name, $icon-value in $iconset-basic {
 							&.button-icon--#{$icon-name} {
-								span span:after {
+								span span::after {
 									content: '#{$icon-value}';
 									@include icon-specific-style($icon-name);
 								}
@@ -231,7 +231,7 @@ $button-font-weight: 600 !default; //
 					&:not(.button-icon--right) {
 						@each $icon-name, $icon-value in $iconset-basic {
 							&.button-icon--#{$icon-name} {
-								span span:before {
+								span span::before {
 									content: '#{$icon-value}';
 									@include icon-specific-style($icon-name);
 								}
@@ -303,7 +303,7 @@ $button-font-weight: 600 !default; //
 		@include henris-button-default();
 		padding-left: 3rem;
 		position: relative;
-		&:before {
+		&::before {
 			width: 2.5em;
 			height: 2.5em;
 			position: absolute;
@@ -317,7 +317,7 @@ $button-font-weight: 600 !default; //
 		@extend .button;
 		position: relative;
 		padding-left: 3em;
-		&:before {
+		&::before {
 			position: absolute;
 			left: 0;
 			width: 3em;
@@ -327,7 +327,7 @@ $button-font-weight: 600 !default; //
 		&.button-icon--right {
 			padding-left: 1.5em;
 			padding-right: 3em;
-			&:before {
+			&::before {
 				left: auto;
 				right: 0;
 			}
@@ -337,11 +337,11 @@ $button-font-weight: 600 !default; //
 			text-indent: -999em;
 			padding-left: 0;
 			padding-right: 0;
-			&:before {
+			&::before {
 				text-indent: 0;
 				width: 2.5em;
 			}
-			&:after {
+			&::after {
 				text-indent: 0;
 				width: 2.5em;
 			}
@@ -349,7 +349,7 @@ $button-font-weight: 600 !default; //
 	}
 	@each $icon-name, $icon-value in $iconset-basic {
 		.button-icon--#{$icon-name} {
-			&:before {
+			&::before {
 				content: '#{$icon-value}';
 				@include icon-specific-style($icon-name);
 			}
@@ -357,7 +357,7 @@ $button-font-weight: 600 !default; //
 	}
 	.button[data-icon-before] {
 		padding-left: 3em;
-		&:before {
+		&::before {
 			position: absolute;
 			left: 0;
 			width: 3em;
@@ -367,7 +367,7 @@ $button-font-weight: 600 !default; //
 	}
 	.button[data-icon-after] {
 		padding-right: 3em;
-		&:before {
+		&::before {
 			position: absolute;
 			right: 0;
 			width: 3em;

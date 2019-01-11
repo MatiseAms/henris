@@ -13,8 +13,8 @@
 			line-height: 2.5;
 			position: relative;
 			min-width: 2.5em;
-			&:after,
-			&:before {
+			&::after,
+			&::before {
 				content: '';
 			}
 		}
@@ -31,7 +31,7 @@
 			opacity: 0;
 		}
 
-		label:before {
+		label::before {
 			display: block;
 			position: absolute;
 			left: 0;
@@ -45,7 +45,7 @@
 			border-radius: $base-border-radius;
 		}
 
-		label:after {
+		label::after {
 			display: block;
 			position: absolute;
 			left: 0.5em;
@@ -56,7 +56,7 @@
 			transform: scale(0);
 		}
 		input:checked {
-			& + label:before {
+			& + label::before {
 				background-color: color(Black);
 				color: color(White);
 				// transform: scale(1);
@@ -67,7 +67,7 @@
 			margin: 0.25rem;
 			display: inline-block;
 			text-indent: -999em;
-			&:before {
+			&::before {
 				text-indent: 0;
 				top: 0 !important;
 			}
@@ -78,7 +78,7 @@
 	}
 	@each $iconName, $iconValue in $iconset-basic {
 		#{$el}--#{$iconName} {
-			label:before {
+			label::before {
 				content: '#{$iconValue}';
 				@include icon-specific-style($iconName);
 			}

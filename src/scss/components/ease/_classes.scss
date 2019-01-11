@@ -12,8 +12,8 @@
 	@each $ease-name, $ease-value in $ease {
 		#{$prefix}#{$ease-name} {
 			&,
-			&:before,
-			&:after {
+			&::before,
+			&::after {
 				animation-timing-function: cubic-bezier(#{unquote($ease-value)});
 				transition-timing-function: cubic-bezier(#{unquote($ease-value)});
 			}

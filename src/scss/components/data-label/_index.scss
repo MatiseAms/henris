@@ -1,7 +1,7 @@
 @mixin data-label() {
 	[data-label] {
 		position: relative;
-		&:before {
+		&::before {
 			content: attr(data-label);
 			position: absolute;
 			right: calc(100% + 0.5rem);

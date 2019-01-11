@@ -5,8 +5,8 @@
 		border: 1px solid color(Black, 0.2);
 		padding: 1rem 2rem;
 		@content;
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			font-size: 2rem;
 			font-family: serif;
 			display: block;
@@ -17,12 +17,12 @@
 			text-align: center;
 			line-height: 3rem;
 		}
-		&:before {
+		&::before {
 			top: 0;
 			left: 0;
 			content: "\201c";
 		}
-		&:after {
+		&::after {
 			bottom: 0;
 			right: 0;
 			content: "\201d";

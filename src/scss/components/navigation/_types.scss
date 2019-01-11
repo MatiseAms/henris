@@ -200,7 +200,7 @@
 		transform: translateX(-100%);
 		z-index: 12;
 		background-color: var(--nav-trigger-bg, transparent);
-		&:before {
+		&::before {
 			content: none;
 		}
 		@include min-("width", 1, 60) {

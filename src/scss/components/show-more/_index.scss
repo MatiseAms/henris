@@ -5,7 +5,7 @@
 			transition: $base-transition;
 			max-height: var(--max-height, 50vh);
 			overflow: hidden;
-			&:before {
+			&::before {
 				content: "";
 				z-index: 10;
 				position: absolute;
@@ -32,19 +32,19 @@
 			&:checked {
 				& ~ .showMore__container {
 					max-height: var(--expanded-height, 500vh);
-					&:before {
+					&::before {
 						opacity: 0;
 					}
 				}
 				& ~ .showMore__trigger {
-					&:before {
+					&::before {
 						content: var(--show-less, "");
 					}
 				}
 			}
 		}
 		&__trigger {
-			&:before {
+			&::before {
 				content: var(--show-more, "");
 			}
 		}
