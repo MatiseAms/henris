@@ -1,9 +1,6 @@
 @mixin henris-detail-list($el: 'dl') {
 
 	#{$base-prefix}#{$el} {
-		margin: 0px;
-		padding: 0px;
-		overflow: auto;
 		display: flex;
 		flex-wrap: wrap;
 		overflow: auto;

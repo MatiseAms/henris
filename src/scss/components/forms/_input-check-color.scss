@@ -80,7 +80,7 @@
 	}
 	@if output('form-input-colored') {
 		@each $colorName, $colorValue in $colors {
-			#{$el}--#{$colorName} {
+			#{$base-prefix}#{$el}--#{$colorName} {
 				label::before {
 					box-shadow: 0 2px 0 0 var(--check-color, #{darken($colorValue, 20%)});
 					background-color: var(--check-color, #{$colorValue});
@@ -91,7 +91,7 @@
 			}
 		}
 	}
-	#{$el}--nolabel,
+	#{$base-prefix}#{$el}--nolabel,
 	.input-check--nolabel {
 		label {
 			text-indent: -999em;
