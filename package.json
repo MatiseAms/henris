@@ -10,15 +10,17 @@
 		"test": "npm run settings && node test/node-sass.js && node test/sass.js && node test/test.js",
 		"settings": "node scripts/json-to-css.js",
 		"dev": "npm run settings",
-		"build": "npm run settings && rm -rf dist/**/* && npm run build-dist",
-		"build-dist": "npm run build-default && npm run build-full",
-		"build-default": "node-sass dist-input/default.scss dist/henris.css --output-style nested && node-sass dist-input/default.scss dist/henris.min.css  --output-style compressed",
-		"build-full": "node-sass dist-input/full.scss dist/henris.full.css  --output-style nested && node-sass dist-input/full.scss dist/henris.full.min.css --output-style compressed",
+		"build": "npm run settings && rm -rf dist/**/* && npm run build:dist",
+		"build:dist": "npm run build:default && npm run build:full",
+		"build:default": "node-sass dist-input/default.scss dist/henris.css --output-style nested && node-sass dist-input/default.scss dist/henris.min.css --output-style compressed",
+		"build:full": "node-sass dist-input/full.scss dist/henris.full.css --output-style nested && node-sass dist-input/full.scss dist/henris.full.min.css --output-style compressed",
 		"prepublishOnly": "npm run test && npm run build",
 		"icons": "node scripts/icons.js src/icons dist/fonts",
-		"icons-generator": "icon-font-generator src/icons/_brands/*.svg -o dist",
+		"icons:generate": "icon-font-generator src/icons/_brands/*.svg -o dist",
 		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs"
+		"docs:build": "vuepress build docs",
+		"stylelint": "stylelint 'src/scss/**/*.scss'",
+		"stylelint:fix": "stylelint 'src/scss/**/*.scss' --fix"
 	},
 	"keywords": [
 		"scss",
@@ -26,22 +28,39 @@
 		"sass",
 		"grid"
 	],
-	"author": "Sil van Diepen",
+	"author": {
+		"name": "Sil van Diepen",
+		"company": "Matise",
+		"email": "sil@matise.nl",
+		"url": "https://www.matise.nl/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/matiseams/henris.git"
+	},
 	"license": "MIT",
 	"devDependencies": {
-		"autoprefixer": "^8.5.2",
-		"chalk": "^2.4.1",
+		"autoprefixer": "^9.4.4",
+		"chalk": "^2.4.2",
 		"cli-table": "^0.3.1",
-		"file-loader": "^1.1.11",
-		"flat": "^4.0.0",
-		"node-sass": "^4.9.3",
-		"npm": "^6.4.1",
-		"postcss": "^6.0.22",
-		"postcss-loader": "^2.1.1",
-		"request": "^2.87.0",
-		"sass": "^1.14.0",
-		"sass-loader": "^7.0.3",
+		"file-loader": "^3.0.1",
+		"flat": "^4.1.0",
+		"node-sass": "^4.11.0",
+		"npm": "^6.5.0",
+		"postcss": "^7.0.8",
+		"postcss-loader": "^3.0.0",
+		"request": "^2.88.0",
+		"sass": "^1.16.0",
+		"sass-loader": "^7.1.0",
 		"sass-true": "^4.0.0",
+		"stylelint": "^9.9.0",
+		"stylelint-logical-order": "0.0.4",
+		"stylelint-order": "^2.0.0",
 		"webfonts-generator": "^0.4.0"
+	},
+	"stylelint": {
+		"extends": [
+			"stylelint-logical-order"
+		]
 	}
 }
