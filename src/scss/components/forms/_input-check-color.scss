@@ -1,17 +1,17 @@
 @mixin henris-check-color($el: '.input-check-color') {
 	#{$el} {
-		height: auto;
 		width: auto;
+		height: auto;
 		padding: 0;
 		margin: 0;
 		@content;
 		label {
+			position: relative;
 			display: block;
+			line-height: 2;
 			margin-top: 0;
 			padding: 0;
 			padding-left: 2rem;
-			line-height: 2;
-			position: relative;
 			&::after,
 			&::before {
 				content: '';
@@ -19,15 +19,15 @@
 		}
 		input[type='checkbox'],
 		input[type='radio'] {
+			position: absolute;
+			width: 0;
+			height: 0;
+			opacity: 0;
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
-			width: 0;
-			height: 0;
 			margin: 0;
 			padding: 0;
-			position: absolute;
-			opacity: 0;
 			&:focus {
 				label {
 					border: 2px solid red;
@@ -39,26 +39,26 @@
 		}
 
 		label::before {
-			display: block;
 			position: absolute;
-			left: 0;
 			top: 0.25em;
+			left: 0;
+			display: block;
 			width: 1.5em;
 			height: 1.5em;
-			border-radius: 50%;
 			box-shadow: 0 2px 0 0 rgba($color-light, 0.15);
+			border-radius: 50%;
 			background-color: var(--check-color);
 		}
 
 		label::after {
-			display: block;
 			position: absolute;
-			left: 0.5em;
 			top: 0.75em;
+			left: 0.5em;
+			display: block;
 			width: 0.5em;
 			height: 0.5em;
-			background-color: $color-light;
 			border-radius: 50%;
+			background-color: $color-light;
 			transform: scale(0);
 		}
 		input:checked {
@@ -82,8 +82,8 @@
 		@each $colorName, $colorValue in $colors {
 			#{$el}--#{$colorName} {
 				label::before {
-					background-color: var(--check-color, #{$colorValue});
 					box-shadow: 0 2px 0 0 var(--check-color, #{darken($colorValue, 20%)});
+					background-color: var(--check-color, #{$colorValue});
 				}
 				label::after {
 					background-color: contra($colorName);

@@ -25,12 +25,12 @@
 	background-image: radial-gradient(#{$primary-color} 25%, transparent 25%),
 		radial-gradient(#{$primary-color} 25%, #{$secondary-color} 25%);
 	background-repeat: repeat;
+	background-position: 0 0,
+		calc(#{$pattern-size} * 2) calc(#{$pattern-size} * 2);
 	background-size: calc(#{$pattern-size} * #{$pattern-spacing})
 			calc(#{$pattern-size} * #{$pattern-spacing}),
 		calc(#{$pattern-size} * #{$pattern-spacing})
 			calc(#{$pattern-size} * #{$pattern-spacing});
-	background-position: 0 0,
-		calc(#{$pattern-size} * 2) calc(#{$pattern-size} * 2);
 }
 @if output("pattern", "pattern-dots") {
 	.pattern-dots {

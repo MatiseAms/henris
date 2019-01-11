@@ -123,8 +123,8 @@
 		@if output('grid-only-classes') {
 			@media #{$mq-only} {
 				&.#{$base-prefix}#{$bp-name}-only-0#{$childClass} {
-					width: 0;
 					display: none;
+					width: 0;
 				}
 				@each $part, $percentage in $grid-parts {
 					.#{$bp-name}-only-#{$part}#{$childClass},
@@ -163,8 +163,8 @@
 				//
 				.#{$bp-name}-0#{$childClass}
 					&.#{$base-prefix}#{$bp-name}-0#{$childClass} {
-					width: 0;
 					display: none;
+					width: 0;
 				}
 				//
 				// Create columns with parts with breakpoints

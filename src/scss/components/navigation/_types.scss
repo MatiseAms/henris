@@ -1,6 +1,41 @@
 @mixin nav($type, $n, $mq: null) {
 	$media-query: "";
 	$mqType: "";
+	// Default trigger
+
+	#{$n}__trigger {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		z-index: 12;
+		display: block;
+		width: calc(#{grid(1)} + 1em);
+		height: calc(#{grid(1)} + 1em);
+		background-color: var(--nav-trigger-bg, transparent);
+		transform: translateX(-100%);
+		&::before {
+			content: none;
+		}
+		span {
+			@include menu();
+		}
+		&-input {
+			&:checked {
+				& ~ #{$n}__trigger {
+					span {
+						@include menu-close();
+					}
+				}
+			}
+		}
+		@include min-("width", 1, 60) {
+			height: 60px;
+		}
+		// Need to figure out a way to only invoke this when mobile class is used
+		@media #{$small-only} {
+			transform: translateX(0%);
+		}
+	}
 
 	@if $mq != null {
 		$media-query: media-query($mq);
@@ -40,10 +75,10 @@
 					text-decoration: none;
 				}
 				#{$n}__text {
+					color: currentColor;
+					font-weight: 500;
 					font-size: 1em;
 					white-space: nowrap;
-					font-weight: 500;
-					color: currentColor;
 				}
 			}
 		} @else if ($type == "flow") {
@@ -54,8 +89,8 @@
 				// Modifiers
 				&[fixed] {
 					position: fixed;
-					left: 0;
 					top: 50%;
+					left: 0;
 					transform: translateY(-50%);
 				}
 				&#{$n}--left {
@@ -74,26 +109,24 @@
 					text-decoration: none;
 				}
 				#{$n}__text {
+					color: currentColor;
+					font-weight: 500;
 					font-size: 1em;
 					white-space: nowrap;
-					font-weight: 500;
-					color: currentColor;
 				}
 			}
 		} @else if ($type == "left") {
 			#{$n}--#{$mqType} {
-				background-color: var(--menu-bg, transparent);
-				overflow: auto;
 				width: grid(5);
 				height: 100vh;
-				@include min-("width", 5, 160);
-				@include max-("width", 5, 320);
+				background-color: var(--menu-bg, transparent);
+				overflow: auto;
 
 				& ~ main {
 					position: absolute;
-					width: calc(100% - #{grid(5)});
-					left: grid(5);
 					top: 0;
+					left: grid(5);
+					width: calc(100% - #{grid(5)});
 					height: 100vh;
 					overflow: auto;
 					@include min-(null, 5, 160) {
@@ -117,12 +150,12 @@
 				}
 				#{$n}__item {
 					&.has-children {
+						margin-top: grid(1);
 						& > #{$n}__link {
 							#{$n}__text {
 								font-weight: 700;
 							}
 						}
-						margin-top: grid(1);
 
 						&:first-child {
 							margin-top: 0;
@@ -131,16 +164,18 @@
 				}
 				#{$n}__link {
 					display: block;
-					padding: 0.5em 1em;
 					color: currentColor;
 					text-decoration: none;
+					padding: 0.5em 1em;
 				}
 				#{$n}__text {
+					color: var(--menu-text, currentColor);
+					font-weight: 500;
 					font-size: 1em;
 					white-space: nowrap;
-					font-weight: 500;
-					color: var(--menu-text, currentColor);
 				}
+				@include min-("width", 5, 160);
+				@include max-("width", 5, 320);
 			}
 		} @else if ($type == "mobile") {
 			input#{$n}__trigger-input:checked {
@@ -149,23 +184,23 @@
 				}
 			}
 			#{$n}--#{$mqType} {
+				position: fixed;
+				top: 0;
+				z-index: 10;
 				width: 100vw;
 				height: 100vh;
-				z-index: 10;
-				overflow: auto;
 				background-color: var(--menu-bg, color(Black, 0.75));
 				color: white;
-				top: 0;
-				position: fixed;
 				transform: translateX(100%);
+				overflow: auto;
 				overflow: auto;
 
 				// Elements
 				#{$n}__list {
-					display: block;
 					position: absolute;
 					top: 50%;
 					left: 50%;
+					display: block;
 					transform: translate(-50%, -50%);
 				}
 				#{$n}__item {
@@ -173,52 +208,17 @@
 				}
 				#{$n}__link {
 					display: block;
-					padding: grid(0.5 0.5);
 					color: currentColor;
 					text-decoration: none;
+					padding: grid(0.5 0.5);
 				}
 				#{$n}__text {
+					display: block;
+					color: currentColor;
+					font-weight: 500;
 					font-size: 2em;
 					white-space: nowrap;
-					display: block;
 					text-align: center;
-					font-weight: 500;
-					color: currentColor;
-				}
-			}
-		}
-	}
-	// Default trigger
-
-	#{$n}__trigger {
-		width: calc(#{grid(1)} + 1em);
-		height: calc(#{grid(1)} + 1em);
-		display: block;
-		position: fixed !important;
-		left: 0;
-		top: 0;
-		transform: translateX(-100%);
-		z-index: 12;
-		background-color: var(--nav-trigger-bg, transparent);
-		&::before {
-			content: none;
-		}
-		@include min-("width", 1, 60) {
-			height: 60px;
-		}
-		// Need to figure out a way to only invoke this when mobile class is used
-		@media #{$small-only} {
-			transform: translateX(0%);
-		}
-		span {
-			@include menu();
-		}
-		&-input {
-			&:checked {
-				& ~ #{$n}__trigger {
-					span {
-						@include menu-close();
-					}
 				}
 			}
 		}

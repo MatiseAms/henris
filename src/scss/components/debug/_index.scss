@@ -1,14 +1,14 @@
 @mixin debug-warning($text) {
-	outline: 1px dashed red;
 	position: relative;
+	outline: 1px dashed red;
 	&::before {
-		position: absolute;
-		left: 0;
-		top: 0;
-		padding: 0.25rem 0.5rem;
-		color: white;
-		background-color: red;
 		content: #{$text};
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: red;
+		color: white;
+		padding: 0.25rem 0.5rem;
 	}
 }
 

@@ -3,19 +3,14 @@
 	width: $button-height;
 	height: $button-height;
 	border-radius: $button-border-radius;
-	font-family: $button-font-family;
+	background-color: $button-background-color;
+	color: $button-color;
 	font-weight: $button-font-weight;
+	font-family: $button-font-family;
 	line-height: $button-line-height;
 	text-decoration: $button-text-decoration;
-	color: $button-color;
-	padding: $button-padding;
-	background-color: $button-background-color;
-	@if $button-border-width != 0 {
-		border-style: $button-border-style;
-		border-width: $button-border-width;
-		border-color: $button-border-color;
-	}
 	cursor: $button-cursor;
+	padding: $button-padding;
 	&:hover {
 		background-color: $button-hover-background-color;
 		color: $button-hover-color;
@@ -25,8 +20,8 @@
 			$button-border-width !=
 			$button-hover-border-width
 		{
-			border-style: $button-hover-border-style;
 			border-width: $button-hover-border-width;
+			border-style: $button-hover-border-style;
 			border-color: $button-hover-border-color;
 		}
 		@if $button-hover-cursor != $button-cursor {
@@ -43,8 +38,8 @@
 			$button-border-width !=
 			$button-focus-border-width
 		{
-			border-style: $button-focus-border-style;
 			border-width: $button-focus-border-width;
+			border-style: $button-focus-border-style;
 			border-color: $button-focus-border-color;
 		}
 		@if $button-focus-cursor != $button-cursor {
@@ -61,13 +56,18 @@
 			$button-border-width !=
 			$button-active-border-width
 		{
-			border-style: $button-active-border-style;
 			border-width: $button-active-border-width;
+			border-style: $button-active-border-style;
 			border-color: $button-active-border-color;
 		}
 		@if $button-active-cursor != $button-cursor {
 			cursor: $button-active-cursor;
 		}
+	}
+	@if $button-border-width != 0 {
+		border-width: $button-border-width;
+		border-style: $button-border-style;
+		border-color: $button-border-color;
 	}
 }
 $button-font-family: 'RobotoCondensed, Roboto Condensed, Helvetica Neue Condensed, Impact, sans-serif' !default; //
@@ -85,16 +85,6 @@ $button-font-weight: 600 !default; //
 
 @mixin henris-button($class: '.button', $button: false) {
 	$el: $class;
-
-	// If standard button is also styled:
-	@if $button {
-		// Reset styling:
-		button {
-			-webkit-appearance: none;
-			appearance: none;
-		}
-		$el: #{$class}, button;
-	}
 
 	#{$el} {
 		// ------------------------------------------------------------------------ */
@@ -117,10 +107,10 @@ $button-font-weight: 600 !default; //
 					background-color: $color-value;
 					color: contra($color-value);
 					&:hover {
-						background-color: darken($color-value, 10%);
 						border-bottom: var(--button-depth, 2px)
 							solid
 							darken($color-value, 20%);
+						background-color: darken($color-value, 10%);
 					}
 				}
 			}
@@ -260,8 +250,8 @@ $button-font-weight: 600 !default; //
 		// ------------------------------ */
 		@if output(button-border) {
 			&__border {
-				border-style: solid;
 				border-width: 2px;
+				border-style: solid;
 				border-color: currentColor;
 				@each $color-name, $color-value in $default-color-set {
 					&--#{to-lower-case($color-name)},
@@ -288,6 +278,16 @@ $button-font-weight: 600 !default; //
 			}
 		}
 	}
+
+	// If standard button is also styled:
+	@if $button {
+		// Reset styling:
+		$el: #{$class}, button;
+		button {
+			-webkit-appearance: none;
+			appearance: none;
+		}
+	}
 }
 
 @if output('button') {
@@ -300,36 +300,35 @@ $button-font-weight: 600 !default; //
 
 @if output(button-icons) {
 	@include wildcard('button-basic') {
-		@include henris-button-default();
 		padding-left: 3rem;
 		position: relative;
 		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 2.5em;
 			height: 2.5em;
-			position: absolute;
-			left: 0;
-			top: 0;
 			line-height: 2.5em;
 			text-align: center;
 		}
+		@include henris-button-default();
 	}
 	[class^='button-icon'] {
-		@extend .button;
 		position: relative;
 		padding-left: 3em;
 		&::before {
 			position: absolute;
 			left: 0;
 			width: 3em;
-			text-align: center;
 			color: var(--button-icon-color, inherit);
+			text-align: center;
 		}
 		&.button-icon--right {
 			padding-left: 1.5em;
 			padding-right: 3em;
 			&::before {
-				left: auto;
 				right: 0;
+				left: auto;
 			}
 		}
 		&.button-icon--only {
@@ -338,14 +337,15 @@ $button-font-weight: 600 !default; //
 			padding-left: 0;
 			padding-right: 0;
 			&::before {
-				text-indent: 0;
 				width: 2.5em;
+				text-indent: 0;
 			}
 			&::after {
-				text-indent: 0;
 				width: 2.5em;
+				text-indent: 0;
 			}
 		}
+		@extend .button;
 	}
 	@each $icon-name, $icon-value in $iconset-basic {
 		.button-icon--#{$icon-name} {
@@ -358,21 +358,21 @@ $button-font-weight: 600 !default; //
 	.button[data-icon-before] {
 		padding-left: 3em;
 		&::before {
+			content: attr(data-icon-before);
 			position: absolute;
 			left: 0;
 			width: 3em;
 			text-align: center;
-			content: attr(data-icon-before);
 		}
 	}
 	.button[data-icon-after] {
 		padding-right: 3em;
 		&::before {
+			content: attr(data-icon-after);
 			position: absolute;
 			right: 0;
 			width: 3em;
 			text-align: center;
-			content: attr(data-icon-after);
 		}
 	}
 }

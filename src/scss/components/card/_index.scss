@@ -1,7 +1,7 @@
 @mixin henris-card($el: '.card') {
 	#{$el} {
-		border-radius: $base-border-radius;
 		position: relative;
+		border-radius: $base-border-radius;
 		@content;
 		&__holder {
 			padding: var(--card-space, 1rem);
@@ -17,9 +17,9 @@
 		main {
 			padding: var(--card-padding, 1rem);
 			table {
-				width: calc(100% + (var(--card-padding, 1rem) * 2));
 				position: relative;
 				left: calc(var(--card-padding, 1rem) * -1);
+				width: calc(100% + (var(--card-padding, 1rem) * 2));
 				tr {
 					display: flex;
 					flex-wrap: wrap;
@@ -30,12 +30,12 @@
 		}
 		&--expand-main {
 			main {
+				top: 100%;
+				left: 0;
+				width: 100%;
 				background-color: color(White, 0.2);
 				overflow: hidden;
 				transition: $base-transition;
-				width: 100%;
-				top: 100%;
-				left: 0;
 			}
 			&:hover {
 				z-index: 10;

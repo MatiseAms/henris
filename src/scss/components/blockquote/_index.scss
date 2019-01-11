@@ -7,25 +7,25 @@
 		@content;
 		&::before,
 		&::after {
+			position: absolute;
+			display: block;
+			width: 2rem;
+			height: 2rem;
+			color: color(Black, 0.2);
 			font-size: 2rem;
 			font-family: serif;
-			display: block;
-			position: absolute;
-			height: 2rem;
-			width: 2rem;
-			color: color(Black, 0.2);
-			text-align: center;
 			line-height: 3rem;
+			text-align: center;
 		}
 		&::before {
+			content: "\201c";
 			top: 0;
 			left: 0;
-			content: "\201c";
 		}
 		&::after {
-			bottom: 0;
-			right: 0;
 			content: "\201d";
+			right: 0;
+			bottom: 0;
 		}
 		cite {
 			color: currentColor;

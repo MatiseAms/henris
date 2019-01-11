@@ -33,15 +33,15 @@
 	$menu-margin-left: $margin-left !global;
 	$menu-margin-top: $margin-top !global;
 	$menu-top: $top !global;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-indent: -999em;
+	cursor: pointer;
 
 	// The code for the span
 	user-select: none;
-	position: absolute;
 	margin: #{$margin-top} auto #{$margin} -#{$margin-left};
-	text-indent: -999em;
-	top: 50%;
-	left: 50%;
-	cursor: pointer;
 
 	// Set styles to bars
 	&,
@@ -51,8 +51,8 @@
 		width: $width;
 		height: $height;
 		background-color: $color;
-		transition: $transition-duration;
 		opacity: 1;
+		transition: $transition-duration;
 		@if $round != 0 {
 			border-radius: $round;
 		}
@@ -60,8 +60,8 @@
 	// Bottom and top bar
 	&::before,
 	&::after {
-		position: absolute;
 		content: "";
+		position: absolute;
 	}
 
 	// Top bar
@@ -102,12 +102,12 @@
 		background-color: $menu-color;
 	}
 	&::before {
-		transform: translateY(0) rotate(0deg);
 		top: -#{$menu-top};
+		transform: translateY(0) rotate(0deg);
 	}
 	&::after {
-		transform: translateY(0) rotate(0deg);
 		top: #{$menu-top};
+		transform: translateY(0) rotate(0deg);
 	}
 }
 @mixin menu-body {

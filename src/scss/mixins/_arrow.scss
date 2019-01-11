@@ -4,18 +4,18 @@
 	}
 	// The Close button
 	& {
+		display: block;
 		width: $size;
 		height: $size;
-		display: block;
 		text-indent: -999em;
 		&::before,
 		&::after {
 			content: '';
+			position: absolute;
 			display: block;
 			width: 75%;
 			height: $thickness;
 			background-color: $bg;
-			position: absolute;
 		}
 	}
 	@if $direction == 'close' {
@@ -44,17 +44,17 @@
 	& {
 		&::before,
 		&::after {
-			left: 25%;
 			top: 25%;
-			transform-origin: 50% 50%;
+			left: 25%;
 			width: 100%;
+			transform-origin: 50% 50%;
 		}
 		&::before {
 			transform: rotate(0deg);
 		}
 		&::after {
-			transform: rotate(90deg);
 			width: 0;
+			transform: rotate(90deg);
 		}
 	}
 }
@@ -62,10 +62,10 @@
 	& {
 		&::before,
 		&::after {
-			left: 0%;
 			top: 50%;
-			transform-origin: 50% 50%;
+			left: 0%;
 			width: 100%;
+			transform-origin: 50% 50%;
 		}
 		&::before {
 			transform: rotate(0deg);
@@ -79,10 +79,10 @@
 	& {
 		&::before,
 		&::after {
-			left: 50%;
 			top: 50%;
-			transform-origin: 50% 50%;
+			left: 50%;
 			width: 100%;
+			transform-origin: 50% 50%;
 		}
 		&::before {
 			transform: rotate(-45deg);
@@ -96,8 +96,8 @@
 	& {
 		&::before,
 		&::after {
-			left: 25%;
 			top: 50%;
+			left: 25%;
 			transform-origin: 0% 50%;
 		}
 		&::before {
@@ -112,8 +112,8 @@
 	& {
 		&::before,
 		&::after {
-			left: 75%;
 			top: 50%;
+			left: 75%;
 			transform-origin: 0% 50%;
 		}
 		&::before {
@@ -128,8 +128,8 @@
 	& {
 		&::before,
 		&::after {
-			left: 50%;
 			top: 75%;
+			left: 50%;
 			transform-origin: 0% 50%;
 		}
 		&::before {
@@ -144,8 +144,8 @@
 	& {
 		&::before,
 		&::after {
-			left: 50%;
 			top: 25%;
+			left: 50%;
 			transform-origin: 0% 50%;
 		}
 		&::before {

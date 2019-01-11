@@ -10,19 +10,19 @@
 		}
 		label {
 			display: inline-block;
+			flex-shrink: 0;
+			width: 33%;
 			margin-top: 1rem;
 			padding-top: 0.75rem;
-			width: 33%;
-			flex-shrink: 0;
-			@media #{$small-only} {
-				width: 100%;
-			}
 			&:nth-child(1) {
 				&,
 				& + input,
 				& + select & + textarea {
 					margin-top: 0;
 				}
+			}
+			@media #{$small-only} {
+				width: 100%;
 			}
 		}
 		.input-group,
@@ -61,12 +61,14 @@
 	}
 
 	details {
+		max-height: 50vh;
+		transition: max-height 0.3s;
 		summary {
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-size: 14px;
 			outline: none;
+			font-weight: bold;
+			font-size: 14px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
 			&:focus {
 				outline: none;
 			}
@@ -74,8 +76,6 @@
 				margin-top: 1rem;
 			}
 		}
-		transition: max-height 0.3s;
-		max-height: 50vh;
 		&:not([open]) {
 			max-height: 1rem;
 		}
@@ -88,16 +88,16 @@
 			display: none;
 		}
 		summary::after {
-			display: block;
 			content: "\276E";
+			display: block;
+			float: left;
 			width: 14px;
 			height: 14px;
 			line-height: 14px;
 			text-align: center;
-			float: left;
+			transform: scale(1, 1) rotate(90deg);
 			transition: transform 0.2s;
 			margin-right: 4px;
-			transform: scale(1, 1) rotate(90deg);
 		}
 		&[open] summary::after {
 			transform: scale(1, -1) rotate(90deg);
@@ -106,9 +106,9 @@
 	#{$el} {
 		legend {
 			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 1px;
 			font-size: 14px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
 		}
 	}
 }

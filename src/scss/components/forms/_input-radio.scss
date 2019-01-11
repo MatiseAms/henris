@@ -1,23 +1,23 @@
 @if output(form-radio) {
 	[type="radio"] {
+		width: auto;
+		min-width: auto;
+		max-width: auto;
 		-webkit-appearance: radio;
 		-moz-appearance: radio;
 		appearance: radio;
-		width: auto;
-		max-width: auto;
-		min-width: auto;
 	}
 	.input-radio {
-		height: auto;
 		width: auto;
+		height: auto;
 		padding: 0;
 		margin: 0;
 		[type="radio"] {
+			width: 0;
+			height: 0;
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
-			width: 0;
-			height: 0;
 			margin: 0;
 			padding: 0;
 			@include input-radio(
@@ -30,8 +30,8 @@
 				100%
 			);
 			@include input-radio-body {
-				box-shadow: 0 0 0 1px color(Black, 0.2) inset;
 				top: 50%;
+				box-shadow: 0 0 0 1px color(Black, 0.2) inset;
 				transform: translateY(-50%);
 			}
 			@include input-radio-check {
@@ -40,10 +40,10 @@
 			}
 			@include input-radio-label {
 				position: relative;
-				padding: 0;
-				padding-left: 2rem;
 				width: auto;
 				line-height: 2rem;
+				padding: 0;
+				padding-left: 2rem;
 				margin: 0;
 			}
 		}

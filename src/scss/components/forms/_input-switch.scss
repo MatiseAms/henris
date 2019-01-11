@@ -1,7 +1,7 @@
 @mixin henris-input-switch($el: '.input-switch') {
 	#{$el} {
-		display: inline-block;
 		position: relative;
+		display: inline-block;
 		input[type='checkbox'] {
 			position: absolute;
 			&:not(.hidden) {
@@ -19,16 +19,16 @@
 				}
 
 				@include input-checkbox-check {
-					opacity: 1;
-					height: 1rem;
 					width: 1rem;
+					height: 1rem;
 					background-color: color(Black, 0.25);
 					transform: none;
+					opacity: 1;
 				}
 				@include input-checkbox-check-checked {
-					opacity: 1;
-					background-color: color(Blue);
 					left: 1.25rem;
+					background-color: color(Blue);
+					opacity: 1;
 				}
 				@include input-checkbox-label {
 					position: relative;

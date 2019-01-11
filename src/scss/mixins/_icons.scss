@@ -3,8 +3,8 @@
 		@each $icon-name, $icon-value in $iconFamily-value {
 			//@debug $value;
 			@if $value == $icon-name {
-				content: '#{$icon-value}';
 				$family: '#{$iconFamily-name}-font-family';
+				content: '#{$icon-value}';
 				@extend '%#{$family}';
 			}
 		}

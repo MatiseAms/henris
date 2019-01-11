@@ -39,9 +39,9 @@
 		@if (str-index($name, " ")) {
 			$name: "#{$name}";
 		}
-		font-family: $name;
 		src: to-string($src, ",");
 		font-weight: $weight;
+		font-family: $name;
 		font-style: unquote($type);
 	}
 }
