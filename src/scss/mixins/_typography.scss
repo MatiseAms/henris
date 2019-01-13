@@ -7,12 +7,12 @@
 ) {
 	$iefont: unquote("#{$eot}?#iefix");
 	@font-face {
+		src: $font-files;
 		font-family: quote($name);
 		@if $eot {
-			src: font-url($eot);
 			$font-files: font-url($iefont) unquote("format('eot')"), $font-files;
+			src: font-url($eot);
 		}
-		src: $font-files;
 		@if $weight {
 			font-weight: $weight;
 		}
@@ -25,7 +25,6 @@
 @mixin font-include($name, $file, $weight: normal, $type: normal) {
 	//	@include font-face("#{$name}", font-files("#{$file}.woff", "#{$file}.ttf", "#{$file}.svg", "#{$file}.otf"), "#{$file}.eot", $weight, $type);
 	@font-face {
-		font-family: $name;
 		src: url("#{$settings-base-font-path}/#{$file}.eot?#iefix")
 				format("embedded-opentype"),
 			/* IE6-IE8 */ url("#{$settings-base-font-path}/#{$file}.woff")
@@ -35,6 +34,7 @@
 			/* Safari, Android, iOS */
 				url("#{$settings-base-font-path}/#{$file}.svg##{$name}") format("svg"); /* Legacy iOS */
 		font-weight: $weight;
+		font-family: $name;
 		font-style: $type;
 	}
 }
@@ -67,10 +67,10 @@
 	$color: inherit,
 	$font-family: inherit
 ) {
-	font-size: rem-calc($font-size);
-	line-height: rem-calc($line-height);
 	color: $color;
+	font-size: rem-calc($font-size);
 	font-family: $font-family;
+	line-height: rem-calc($line-height);
 }
 
 @mixin baseline($font-size, $scale: 2) {
@@ -82,11 +82,11 @@
 
 	// calculate the new line-height
 	$line-height: $rhythm * $lines / $font-size;
+	$baseline-distance: ($line-height - $cap-height) / 2;
 
 	// use the results
 	font-size: $font-size;
 	line-height: $line-height;
-	$baseline-distance: ($line-height - $cap-height) / 2;
 
 	// METHOD 1
 	/////////////////

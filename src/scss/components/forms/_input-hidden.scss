@@ -1,12 +1,12 @@
 @mixin henris-hidden($el: 'input.hidden') {
 	#{$base-prefix}#{$el} {
+		position: absolute;
 		width: 0;
 		height: 0;
 		opacity: 0;
-		position: absolute;
 		& + label {
-			&:before,
-			&:after {
+			&::before,
+			&::after {
 				content: none;
 			}
 		}

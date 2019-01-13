@@ -1,23 +1,23 @@
 @if output(grid) {
 	.#{$base-prefix-grid}row {
-		max-width: #{$grid-row-width}px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
 		width: 100%;
+		max-width: #{$grid-row-width}px;
 		margin: auto;
 		@include createGridClasses(true);
-		display: flex;
-		justify-content: flex-start;
-		flex-flow: row wrap;
 
 		@if $grid-cssgrid {
 			@supports (display: grid) {
 				display: grid; //
-				grid-template-columns: repeat($grid-columns, 1fr); //
 				grid-gap: 0rem; //
+				grid-template-columns: repeat($grid-columns, 1fr); //
 			}
 		}
 		&.#{$base-prefix-grid}center {
-			justify-items: center;
 			justify-content: center;
+			justify-items: center;
 
 			@if $grid-cssgrid {
 				> .#{$base-prefix-grid}column {
@@ -27,8 +27,8 @@
 			}
 		}
 		&.#{$base-prefix-grid}right {
-			justify-items: right;
 			justify-content: flex-end;
+			justify-items: right;
 
 			@if $grid-cssgrid {
 				> .#{$base-prefix-grid}column {

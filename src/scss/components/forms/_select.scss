@@ -4,31 +4,31 @@ $select-arrow-size: 0.3rem !default;
 		@include henris-input-default();
 
 		min-width: 12rem;
-		-webkit-appearance: none;
 		background-image: linear-gradient(
 				to right bottom,
 				color(Black, 0.2) 50%,
 				transparent 50%
 			),
 			linear-gradient(to left bottom, color(Black, 0.2) 50%, transparent 50%);
-		background-size: #{$select-arrow-size} #{$select-arrow-size},
-			#{$select-arrow-size} #{$select-arrow-size};
 		background-repeat: no-repeat;
 		background-position: top 50% right 1rem,
 			top 50% right calc(#{(1rem + $select-arrow-size)} - 1px);
+		background-size: #{$select-arrow-size} #{$select-arrow-size},
+			#{$select-arrow-size} #{$select-arrow-size};
+		-webkit-appearance: none;
 		&:hover {
 			animation: selectArrow 0.3s forwards;
 		}
 		&[size]:not([size='1']) {
-			padding: 0;
-			line-height: 2rem;
 			background-position: top calc(100% - 1.25rem) right 1rem,
 				top calc(100% - 1.25rem) right
 					calc(#{(1rem + $select-arrow-size)} - 1px);
+			line-height: 2rem;
+			padding: 0;
 			option {
 				border-bottom: 1px solid color(Black, 0.1);
-				padding: 0.75rem;
 				line-height: 2;
+				padding: 0.75rem;
 				&:selected {
 					background-color: $primary-color;
 				}

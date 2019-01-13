@@ -35,10 +35,10 @@
 
 		input {
 			&[type='color'] {
-				-webkit-appearance: none;
-				border: none;
 				width: 32px;
 				height: 32px;
+				border: none;
+				-webkit-appearance: none;
 
 				&::-webkit-color-swatch-wrapper {
 					padding: 0;

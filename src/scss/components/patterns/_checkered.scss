@@ -12,11 +12,11 @@
 				var(--pattern-color-secondary) 75%,
 				var(--pattern-color-primary) 75%
 			);
-
-		background-size: calc(var(--pattern-size) * 4)
-			calc(var(--pattern-size) * 4);
 		background-position: 0 0, 0 calc(var(--pattern-size) * 2),
 			calc(var(--pattern-size) * 2) calc((var(--pattern-size) * 2) * -1),
 			calc((var(--pattern-size) * 2) * -1) 0px;
+
+		background-size: calc(var(--pattern-size) * 4)
+			calc(var(--pattern-size) * 4);
 	}
 }

@@ -1,15 +1,16 @@
 @mixin henris-detail-list($el: 'dl') {
+
 	#{$base-prefix}#{$el} {
-		margin: 0px;
-		padding: 0px;
-		overflow: auto;
 		display: flex;
 		flex-wrap: wrap;
+		overflow: auto;
+		margin: 0px;
+		padding: 0px;
 		dt,
 		dd {
 			display: inline-block;
-			min-width: 200px;
 			flex-grow: 1;
+			min-width: 200px;
 			padding: 1rem 0;
 		}
 		dt {

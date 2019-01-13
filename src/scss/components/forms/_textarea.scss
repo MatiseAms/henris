@@ -1,8 +1,8 @@
 @mixin henris-textarea($el: 'textarea'){
 	#{$base-prefix}#{$el} {
 		@include henris-input-default();
-		resize: none;
 		min-height: 5rem;
+		resize: none;
 		&:not(:empty) {
 			border: 1px solid color(Black, 0.25);
 		}

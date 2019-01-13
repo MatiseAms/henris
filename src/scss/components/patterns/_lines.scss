@@ -19,8 +19,8 @@
 				var(--pattern-color-primary) calc(var(--pattern-width) / 2),
 				var(--pattern-color-secondary) calc(var(--pattern-width) / 2)
 			);
+		background-repeat: repeat;
 
 		background-size: var(--pattern-size);
-		background-repeat: repeat;
 	}
 }

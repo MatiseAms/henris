@@ -1,7 +1,7 @@
 @mixin ease($ease-name, $property: null) {
 	@if length(map-get($ease, $ease-name) > 0) {
-		animation-timing-function: cubic-bezier(#{unquote($ease-value)});
 		transition-timing-function: cubic-bezier(#{unquote($ease-value)});
+		animation-timing-function: cubic-bezier(#{unquote($ease-value)});
 	} @else {
 		@warn "#{$ease-name} doesn't exist";
 	}
@@ -11,13 +11,13 @@
 	$temp: ();
 	@each $ease-name, $ease-value in $ease {
 		#{$prefix}#{$ease-name} {
-			&,
-			&:before,
-			&:after {
-				animation-timing-function: cubic-bezier(#{unquote($ease-value)});
-				transition-timing-function: cubic-bezier(#{unquote($ease-value)});
-			}
 			$temp: join($temp, $ease-name);
+			&,
+			&::before,
+			&::after {
+				transition-timing-function: cubic-bezier(#{unquote($ease-value)});
+				animation-timing-function: cubic-bezier(#{unquote($ease-value)});
+			}
 		}
 	}
 }

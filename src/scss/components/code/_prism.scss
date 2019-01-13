@@ -9,15 +9,15 @@
 @if output("components", "code", "code-prism") {
 	code[class*="language-"],
 	pre[class*="language-"] {
-		color: white;
 		background: none;
+		color: white;
 		font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-		text-align: left;
-		white-space: pre;
-		word-spacing: normal;
-		word-break: normal;
-		word-wrap: normal;
 		line-height: 1.5;
+		white-space: pre;
+		text-align: left;
+		word-wrap: normal;
+		word-break: normal;
+		word-spacing: normal;
 		tab-size: 4;
 		hyphens: none;
 	}
@@ -36,18 +36,18 @@
 
 	/* Code blocks */
 	pre[class*="language-"] {
+		border-radius: 0.5em;
+		overflow: auto;
 		padding: 1em;
 		margin: 0.5em 0;
-		overflow: auto;
-		border-radius: 0.5em;
 	}
 
 	/* Inline code */
 	:not(pre) > code[class*="language-"] {
-		padding: 2rem;
 		border-radius: $base-border-radius;
-		white-space: normal;
 		background: transparent;
+		white-space: normal;
+		padding: 2rem;
 	}
 
 	.token.comment,
