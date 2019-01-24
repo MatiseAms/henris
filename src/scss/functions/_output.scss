@@ -13,13 +13,16 @@ $output-current: () !default;
 @function output($args...) {
 	// Set a default of output true
 	$doOutput: true;
-	$test: false;
+	$isGrid: false;
 	//
 	//	Go through all $arguments
 	//
 	@each $arg in $args {
-		@if $arg == 'grid' {
-			$test: true;
+		//
+		// Check if its a grid output
+		//
+		@if type-of($arg) == 'string' and str-index($arg, 'grid') == 1 {
+			$isGrid: true;
 		}
 		@if type-of($arg) == 'string' {
 			$doOutput: check-output($arg, true, $doOutput);
@@ -40,12 +43,24 @@ $output-current: () !default;
 	@if check-output('css', true, $doOutput) == false {
 		$doOutput: false;
 	}
-	// //
-	// //	The overruler to create all the css
-	// //
+	//
+	//	The overruler to create all the css
+	//
 
 	@if check-output('full', true) == true {
 		$doOutput: true;
+	}
+
+	//
+	//	Grid Only output
+	//
+
+	@if check-output('grid-only', true) == true {
+		@if $isGrid == false {
+			$doOutput: false;
+		} @else {
+			@debug '#{$args} : #{$doOutput}';
+		}
 	}
 
 	//

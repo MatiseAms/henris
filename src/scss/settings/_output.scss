@@ -30,6 +30,7 @@ $output-button-border: true !default; //
 $output-custom-properties-media-queries: false !default; //
 $output-custom-properties-color: false !default; //
 $output-grid: true !default; //
+$output-grid-only: false !default; //
 $output-grid-helpers: false !default; //
 $output-grid-hide-show-classes: true !default; //
 $output-grid-only-classes: false !default; //
@@ -148,6 +149,7 @@ $output: (
 	"custom-properties-media-queries": false, 
 	"custom-properties-color": false, 
 	"grid": true, 
+	"grid-only": false, 
 	"grid-helpers": false, 
 	"grid-hide-show-classes": true, 
 	"grid-only-classes": false, 
