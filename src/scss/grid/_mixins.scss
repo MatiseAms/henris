@@ -56,7 +56,7 @@
 	//
 	// Create the default classes for widths without any media query
 	//
-	@if output('grid-no-mq-classes') {
+	@if output("grid-no-mq-classes") {
 		@for $a from 0 through $grid-columns {
 			$percentage: percentage($a/$grid-columns); //
 			$column: #{$a}#{$childClass};
@@ -156,7 +156,7 @@
 				}
 			}
 		}
-		@if output('grid-mq-#{$bp-name}') {
+		@if output("grid-mq-#{$bp-name}") {
 			@media #{$mq} {
 				//
 				// Sometimes you need a zero, which does the same as a hide for a breakpoint.
