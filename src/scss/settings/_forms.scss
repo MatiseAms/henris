@@ -1,6 +1,6 @@
 $default-input-background-color: #ffffff !default; //
 $default-input-border-color: #101010 !default; //
-$default-input-border-style: 'solid' !default; //
+$default-input-border-style: solid !default; //
 $default-input-border-width: 1px !default; //
 $default-input-font-size: 1rem !default; //
 $default-input-line-height: 1rem !default; //
@@ -11,7 +11,7 @@ $default-input-padding: 0.75rem !default; //
 $default-input: (
 	"background-color": #ffffff, 
 	"border-color": #101010, 
-	"border-style": 'solid', 
+	"border-style": solid, 
 	"border-width": 1px, 
 	"font-size": 1rem, 
 	"line-height": 1rem, 

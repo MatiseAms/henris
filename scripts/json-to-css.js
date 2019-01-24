@@ -111,7 +111,7 @@ function makeList(value) {
 function stringValue(value) {
 	if (typeof value == 'string') {
 		let quotes = true;
-		let noquotes = ['normal', 'regular', 'lowercase', 'uppercase', 'none', '0'];
+		let noquotes = ['normal', 'regular', 'lowercase', 'uppercase', 'none', '0', 'auto', 'pointer', 'solid'];
 		if (
 			value.indexOf('px') > -1 ||
 			value.indexOf('ch') > -1 ||

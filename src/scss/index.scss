@@ -14,8 +14,8 @@ $henris: true;
 	html {
 		min-width: 100%;
 		min-height: 100%;
-		background-color: color(Offwhite);
-		color: color(Dark);
+		background-color: var(--color-body, --base-body, #{$base-color-light});
+		color: var(--color-text, --base-text, #{$base-color-dark});
 		font-family: $primary-font-family;
 		margin: 0;
 		padding: 0;
@@ -28,8 +28,12 @@ $henris: true;
 		width: 100%;
 		height: 100%;
 		&.dark {
-			background-color: color(Dark);
-			color: color(White);
+			background-color: var(
+				--color-text,
+				--base-color-text,
+				#{$base-color-dark}
+			);
+			color: var(--color-body, --base-color-body, #{$base-color-light});
 		}
 	}
 }

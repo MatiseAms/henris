@@ -2,8 +2,8 @@
 	"button": {
 		"height": "auto",
 		"width": "auto",
-		"color": "{{color(White}}",
-		"background-color": "{{color(Black)}}",
+		"color": "{{color(White)}}",
+		"background-color": "{{color(Blue)}}",
 		"border-color": "{{color(Black)}}",
 		"border-radius": "2px",
 		"border-width": "0",

@@ -26,14 +26,15 @@
 					1rem,
 					0,
 					0.25rem,
-					color(White),
-					color(Blue),
+					#{$form-body-color},
+					#{$form-accent-color},
 					0%
 				);
 				@include input-checkbox-body {
 					top: 50%;
-					box-shadow: 0 0 0 1px color(Black, 0.2) inset;
 					transform: translateY(-50%);
+					box-shadow: 0 0 0 #{$form-border-width} #{$form-border-color} inset;
+					border-radius: #{$form-border-radius};
 				}
 				@include input-checkbox-check {
 					top: calc(50%);

@@ -1,5 +1,6 @@
 @mixin henris-input-button() {
 	input[type='button'],
+	input[type='reset'],
 	input[type='submit'] {
 		margin-top: 1rem;
 		@if output('button') {

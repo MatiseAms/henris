@@ -1,8 +1,49 @@
+// $form-body-color: var(--color-light, var(--form-body), #{$base-color-light});
+// $form-border-color: var(--color-dark, var(--form-border), #{$base-color-dark});
+// $form-shadow-color: var(--color-shadow, var(--form-shadow), #{$base-color-shadow});
+// $form-accent-color: var(--color-primary, var(--form-accent), #{$base-color-primary});
+
+$form-body-color: var(--color-light, var(--form-body, #{$base-color-light}));
+$form-border-color: var(
+	--color-dark,
+	var(--form-border, #{rgba($base-color-dark, 0.25)})
+);
+$form-border-hover-color: var(
+	--color-dark,
+	var(--form-border-hover, #{rgba($base-color-dark, 0.5)})
+);
+$form-border-focus-color: var(
+	--color-dark,
+	var(--form-border-focus, #{$base-color-primary})
+);
+$form-border-width: var(
+	--border-width,
+	var(--form-border-width, #{$base-border-width})
+);
+$form-border-radius: var(
+	--border-radius,
+	var(--form-border-radius, #{$base-border-radius})
+);
+$form-outline-focus: var(
+	--outline-focus,
+	var(--form-outline-focus)
+);
+$form-shadow-color: var(
+	--color-shadow,
+	var(--form-shadow, #{$base-color-shadow})
+);
+$form-accent-color: var(
+	--color-primary,
+	var(--form-accent, #{$base-color-primary})
+);
+
 @mixin henris-input-default() {
 	min-width: 10rem;
 	max-width: 100%;
-	border: 1px solid rgba($color-dark, 0.1);
-	border-radius: $base-border-radius;
+	border-width: #{$form-border-width};
+	border-style: solid;
+	border-color: #{$form-border-color};
+	border-radius: #{$form-border-radius};
 	background: rgba($color-light, 1);
 	font-size: 1rem;
 	line-height: 1rem;
@@ -14,7 +55,8 @@
 		transition: filter 0.3s;
 	}
 	&:focus {
-		outline: 2px solid rgba($primary-color, 0.25);
+		border-color: #{$form-border-focus-color};
+		outline: #{$form-outline-focus};
 	}
 	&:focus,
 	&:focus:hover {
@@ -23,7 +65,7 @@
 		}
 	}
 	&:hover {
-		border: 1px solid color(Black, 0.2);
+		border-color: #{$form-border-hover-color};
 		&::placeholder {
 			color: rgba($color-dark, 0.2);
 			filter: blur(0px);

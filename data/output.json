@@ -86,7 +86,7 @@
 			"form-hidden": true,
 			"form-radio": true,
 			"form-range": true,
-			"form-switch": false,
+			"form-switch": true,
 			"form-input": true,
 			"form-input-colored": false,
 			"form-textarea": true,

@@ -83,7 +83,7 @@ $output-form-checkbox: true !default; //
 $output-form-hidden: true !default; //
 $output-form-radio: true !default; //
 $output-form-range: true !default; //
-$output-form-switch: false !default; //
+$output-form-switch: true !default; //
 $output-form-input: true !default; //
 $output-form-input-colored: false !default; //
 $output-form-textarea: true !default; //
@@ -201,7 +201,7 @@ $output: (
 	"form-hidden": true, 
 	"form-radio": true, 
 	"form-range": true, 
-	"form-switch": false, 
+	"form-switch": true, 
 	"form-input": true, 
 	"form-input-colored": false, 
 	"form-textarea": true, 
