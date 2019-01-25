@@ -16,12 +16,12 @@
 			width: 100%;
 			height: 0.5rem;
 			border-radius: 25px;
-			background-color: var(--range-track-background, #{$form-border-color});
+			background: var(--range-track-background, #{$form-border-color});
 			animation-timing-function: 0.2s;
 			cursor: pointer;
 		}
 		[type='range']:focus::-webkit-slider-runnable-track {
-			background-color: var(
+			background: var(
 				--range-track-focus-background,
 				#{$form-accent-color}
 			);
@@ -47,7 +47,7 @@
 			height: 0.5rem;
 			// border: #{$form-border-width} solid #{$form-border-color};
 			border-radius: 25px;
-			background-color: var(--range-track-background, #{$form-border-color});
+			background: var(--range-track-background, #{$form-border-color});
 			animation-timing-function: 0.2s;
 			cursor: pointer;
 		}
@@ -64,7 +64,7 @@
 			height: 0.5rem;
 			border-width: 1rem 0;
 			border-color: transparent;
-			background-color: var(--range-track-background, #{$form-border-color});
+			background: var(--range-track-background, #{$form-border-color});
 			color: transparent;
 			animation-timing-function: 0.2s;
 			cursor: pointer;
@@ -89,13 +89,13 @@
 			cursor: pointer;
 		}
 		[type='range']:focus::-ms-fill-lower {
-			background-color: var(
+			background: var(
 				--range-track-focus-background,
 				#{$form-accent-color}
 			);
 		}
 		[type='range']:focus::-ms-fill-upper {
-			background-color: var(
+			background: var(
 				--range-track-focus-background,
 				#{$form-accent-color}
 			);
