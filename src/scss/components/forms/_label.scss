@@ -5,16 +5,7 @@
 		padding-left: 0;
 		margin-right: 1rem;
 		padding: var(--form-input-padding, #{$form-input-padding});
-
-		form & {
-			&:hover {
-				& + input,
-				& + textarea,
-				& + select {
-					background-color: color(Offwhite);
-				}
-			}
-		}
+		color: var(--form-label-color, inherit);
 	}
 }
 
