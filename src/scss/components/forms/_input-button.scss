@@ -2,7 +2,7 @@
 	input[type='button'],
 	input[type='reset'],
 	input[type='submit'] {
-		margin-top: 1rem;
+		// margin-top: 1rem;
 		@if output('button') {
 			&:not(.button) {
 				@include henris-button-default();
@@ -14,7 +14,7 @@
 	label {
 		& + input[type='button'],
 		& + input[type='submit'] {
-			margin-top: 1rem;
+			// margin-top: 1rem;
 		}
 	}
 }

@@ -2,7 +2,8 @@
 	#{$base-prefix}#{$el} {
 		padding-left: 0;
 		transition: padding-left 0.3s ease-in-out;
-		padding-right: 1rem;
+		margin-right: 1rem;
+		line-height: calc(var(--form-input-line-height,#{$form-input-line-height}) + (var(--form-input-padding, #{$form-input-padding}) * 2));
 		form & {
 			&:hover {
 				& + input,

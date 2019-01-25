@@ -4,7 +4,7 @@
 		[type='range'] {
 			background: transparent;
 			-webkit-appearance: none;
-			margin: 10px 0;
+			// margin: 10px 0;
 		}
 		[type='range']:focus {
 			outline: none;
@@ -96,6 +96,9 @@
 				--range-track-focus-background,
 				#{$form-accent-color}
 			);
+		}
+		& + label{
+			margin-left: 1rem;
 		}
 	}
 }

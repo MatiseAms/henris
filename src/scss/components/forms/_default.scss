@@ -1,8 +1,3 @@
-// $form-body-color: var(--color-light, var(--form-body), #{$base-color-light});
-// $form-border-color: var(--color-dark, var(--form-border), #{$base-color-dark});
-// $form-shadow-color: var(--color-shadow, var(--form-shadow), #{$base-color-shadow});
-// $form-accent-color: var(--color-primary, var(--form-accent), #{$base-color-primary});
-
 $form-body-color: var(--color-light, var(--form-body, #{$base-color-light}));
 $form-border-color: var(
 	--color-dark,
@@ -18,11 +13,11 @@ $form-border-focus-color: var(
 );
 $form-border-width: var(
 	--border-width,
-	var(--form-border-width, #{$base-border-width})
+	var(--form-border-width, #{$form-input-border-width})
 );
 $form-border-radius: var(
 	--border-radius,
-	var(--form-border-radius, #{$base-border-radius})
+	var(--form-border-radius, #{$form-input-border-radius})
 );
 $form-outline-focus: var(
 	--outline-focus,
@@ -46,9 +41,10 @@ $form-accent-color: var(
 	border-radius: #{$form-border-radius};
 	background: rgba($color-light, 1);
 	font-size: 1rem;
-	line-height: 1rem;
+	line-height:var(--form-input-line-height, #{$form-input-line-height});
 	-webkit-appearance: none;
-	padding: 0.75rem 0.75rem;
+	padding: var(--form-input-padding, #{$form-input-padding});
+	font-family: inherit;
 	&::placeholder {
 		color: rgba($color-dark, 0.1);
 		opacity: 1;

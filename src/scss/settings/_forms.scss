@@ -1,14 +1,14 @@
-$default-input-background-color: #ffffff !default; //
-$default-input-border-color: #101010 !default; //
-$default-input-border-style: solid !default; //
-$default-input-border-width: 1px !default; //
-$default-input-font-size: 1rem !default; //
-$default-input-line-height: 1rem !default; //
-$default-input-border-radius: 2px !default; //
-$default-input-min-width: 10rem !default; //
-$default-input-max-width: 100% !default; //
-$default-input-padding: 0.75rem !default; //
-$default-input: (
+$form-input-background-color: #ffffff !default; //
+$form-input-border-color: #101010 !default; //
+$form-input-border-style: solid !default; //
+$form-input-border-width: 1px !default; //
+$form-input-font-size: 1rem !default; //
+$form-input-line-height: 1rem !default; //
+$form-input-border-radius: 2px !default; //
+$form-input-min-width: 10rem !default; //
+$form-input-max-width: 100% !default; //
+$form-input-padding: 0.75rem !default; //
+$form-input: (
 	"background-color": #ffffff, 
 	"border-color": #101010, 
 	"border-style": solid, 
