@@ -1,7 +1,7 @@
 $form-body-color: var(--color-light, var(--form-body, #{$base-color-light}));
 $form-border-color: var(
 	--color-dark,
-	var(--form-border, #{rgba($base-color-dark, 0.25)})
+	var(--form-border-color, #{rgba($base-color-dark, 0.25)})
 );
 $form-border-hover-color: var(
 	--color-dark,
@@ -33,13 +33,12 @@ $form-accent-color: var(
 );
 
 @mixin henris-input-default() {
-	min-width: 10rem;
 	max-width: 100%;
 	border-width: #{$form-border-width};
 	border-style: solid;
 	border-color: #{$form-border-color};
 	border-radius: #{$form-border-radius};
-	background: rgba($color-light, 1);
+	background: #{$form-body-color};
 	font-size: 1rem;
 	font-family: inherit;
 	line-height:var(--form-input-line-height, #{$form-input-line-height});
