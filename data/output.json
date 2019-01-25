@@ -33,6 +33,7 @@
 			"custom-properties-media-queries": false,
 			"custom-properties-color": false,
 			"grid": true,
+			"grid-only": false,
 			"grid-helpers": false,
 			"grid-hide-show-classes": true,
 			"grid-only-classes": false,
