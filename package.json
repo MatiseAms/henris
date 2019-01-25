@@ -1,6 +1,6 @@
 {
 	"name": "henris",
-	"version": "0.6.0-rc7",
+	"version": "0.6.0-rc8",
 	"description": "SCSS framework - by Matise",
 	"main": "index.scss",
 	"directories": {

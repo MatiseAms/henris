@@ -2,6 +2,7 @@ $select-arrow-size: 0.3rem !default;
 @mixin henris-select($el: 'select') {
 	#{$base-prefix}#{$el} {
 		@include henris-input-default();
+		padding-right: 3rem;
 		background-image: linear-gradient(
 				to right bottom,
 				currentColor 50%,
