@@ -32,9 +32,9 @@
 				);
 				@include input-checkbox-body {
 					top: 50%;
-					transform: translateY(-50%);
 					box-shadow: 0 0 0 #{$form-border-width} #{$form-border-color} inset;
 					border-radius: #{$form-border-radius};
+					transform: translateY(-50%);
 				}
 				@include input-checkbox-check {
 					top: calc(50%);
@@ -63,14 +63,14 @@
 			}
 		}
 		label[for] + input[type='checkbox'] {
+			width: 1rem;
+			height: 1rem;
+			border: #{$form-border-width} solid #{$form-border-color};
+			border-radius: #{$form-border-radius};
+			opacity: 1;
 			-webkit-appearance: checkbox;
 			-moz-appearance: checkbox;
 			appearance: checkbox;
-			opacity: 1;
-			width: 1rem;
-			height: 1rem;
-			border-radius: #{$form-border-radius};
-			border: #{$form-border-width} solid #{$form-border-color};
 			
 		}
 	}

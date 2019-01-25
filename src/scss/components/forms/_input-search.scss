@@ -1,8 +1,8 @@
 @mixin henris-input-search($el: 'input-search') {
 	.#{$base-prefix}#{$el} {
 		background-image: radial-gradient(closest-side, transparent calc(100% - 2px), currentColor calc(100% - 2px), currentColor);
-		background-size: .75rem .75rem;
 		background-position: right .25rem top .25rem;
+		background-size: .75rem .75rem;
 	}
 }
 
