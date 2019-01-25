@@ -59,7 +59,7 @@ $output-current: () !default;
 		@if $isGrid == false {
 			$doOutput: false;
 		} @else {
-			@debug '#{$args} : #{$doOutput}';
+			// @debug '#{$args} : #{$doOutput}';
 		}
 	}
 

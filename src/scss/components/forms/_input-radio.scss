@@ -1,5 +1,5 @@
 @if output(form-radio) {
-	[type="radio"] {
+	[type='radio'] {
 		width: auto;
 		min-width: auto;
 		max-width: auto;
@@ -12,7 +12,7 @@
 		height: auto;
 		padding: 0;
 		margin: 0;
-		[type="radio"] {
+		[type='radio'] {
 			width: 0;
 			height: 0;
 			-webkit-appearance: none;
@@ -25,13 +25,13 @@
 				1rem,
 				0,
 				0.25rem,
-				color(White),
-				color(Blue),
+				#{$form-body-color},
+				#{$form-accent-color},
 				100%
 			);
 			@include input-radio-body {
 				top: 50%;
-				box-shadow: 0 0 0 1px color(Black, 0.2) inset;
+				box-shadow: 0 0 0 #{$form-border-width} #{$form-border-color} inset;
 				transform: translateY(-50%);
 			}
 			@include input-radio-check {
@@ -47,5 +47,15 @@
 				margin: 0;
 			}
 		}
+	}
+	label[for] + input[type="radio"]{ 
+		width: 1rem;
+		height: 1rem;
+		border: #{$form-border-width} solid #{$form-border-color};
+		border-radius: 50%;
+		opacity: 1;
+		-webkit-appearance: radio;
+		-moz-appearance: radio;
+		appearance: radio;
 	}
 }

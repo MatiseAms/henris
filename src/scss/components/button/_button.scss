@@ -1,28 +1,40 @@
 @mixin henris-button-default {
 	display: inline-block;
-	width: $button-height;
-	height: $button-height;
-	border-radius: $button-border-radius;
-	background-color: $button-background-color;
-	color: $button-color;
-	font-weight: $button-font-weight;
-	font-family: $button-font-family;
-	line-height: $button-line-height;
-	text-decoration: $button-text-decoration;
-	cursor: $button-cursor;
-	padding: $button-padding;
+	width: var(--button-width, $button-width);
+	height: var(--button-height, $button-height);
+	border-radius: var(--button-border-radius, $button-border-radius);
+	background-color: var(--button-background-color, $button-background-color);
+	color: var(--button-color, $button-color);
+	font-weight: var(--button-font-weight, $button-font-weight);
+	font-family: var(--button-font-family, #{unquote($button-font-family)});
+	line-height: var(--button-line-height, $button-line-height);
+	text-decoration: var(--button-text-decoration, $button-text-decoration);
+	cursor: var(--button-cursor, #{unquote($button-cursor)});
+	padding: var(--button-padding, $button-padding);
 	&:hover {
-		background-color: $button-hover-background-color;
-		color: $button-hover-color;
+		background-color: var(
+			--button-hover-background-color,
+			$button-hover-background-color
+		);
+		color: var(--button-hover-color, $button-hover-color);
 		@if $button-hover-border-width !=
 			0
 			AND
 			$button-border-width !=
 			$button-hover-border-width
 		{
-			border-width: $button-hover-border-width;
-			border-style: $button-hover-border-style;
-			border-color: $button-hover-border-color;
+			border-width: var(
+				--button-hover-border-width,
+				$button-hover-border-width
+			);
+			border-style: var(
+				--button-hover-border-style,
+				$button-hover-border-style
+			);
+			border-color: var(
+				--button-hover-border-color,
+				$button-hover-border-color
+			);
 		}
 		@if $button-hover-cursor != $button-cursor {
 			cursor: $button-hover-cursor;
@@ -30,35 +42,58 @@
 	}
 	&:focus {
 		outline: none;
-		background-color: $button-focus-background-color;
-		color: $button-focus-color;
+		background-color: var(
+			--button-focus-background-color,
+			$button-focus-background-color
+		);
+		color: var(--button-focus-color, $button-focus-color);
 		@if $button-focus-border-width !=
 			0
 			AND
 			$button-border-width !=
 			$button-focus-border-width
 		{
-			border-width: $button-focus-border-width;
-			border-style: $button-focus-border-style;
-			border-color: $button-focus-border-color;
+			border-width: var(
+				--button-focus-border-width,
+				$button-focus-border-width
+			);
+			border-style: var(
+				--button-focus-border-style,
+				$button-focus-border-style
+			);
+			border-color: var(
+				--button-focus-border-color,
+				$button-focus-border-color
+			);
 		}
 		@if $button-focus-cursor != $button-cursor {
 			cursor: $button-focus-cursor;
 		}
 	}
 	&:active {
-		outline: none;
-		background-color: $button-active-background-color;
-		color: $button-active-color;
+		background-color: var(
+			--button-active-background-color,
+			$button-active-background-color
+		);
+		color: var(--button-active-color, $button-focus-color);
 		@if $button-active-border-width !=
 			0
 			AND
 			$button-border-width !=
 			$button-active-border-width
 		{
-			border-width: $button-active-border-width;
-			border-style: $button-active-border-style;
-			border-color: $button-active-border-color;
+			border-width: var(
+				--button-active-border-width,
+				$button-active-border-width
+			);
+			border-style: var(
+				--button-active-border-style,
+				$button-active-border-style
+			);
+			border-color: var(
+				--button-active-border-color,
+				$button-active-border-color
+			);
 		}
 		@if $button-active-cursor != $button-cursor {
 			cursor: $button-active-cursor;
@@ -68,16 +103,10 @@
 		border-width: $button-border-width;
 		border-style: $button-border-style;
 		border-color: $button-border-color;
+	} @else {
+		border: none;
 	}
 }
-$button-font-family: 'RobotoCondensed, Roboto Condensed, Helvetica Neue Condensed, Impact, sans-serif' !default; //
-$button-background-color: #101010 !default; //
-$button-padding: 0.75em 1.5em !default; //
-$button-text-transform: uppercase !default; //
-$button-font-size: 14px !default; //
-$button-border-radius: 2px !default; //
-$button-line-height: 1 !default; //
-$button-font-weight: 600 !default; //
 
 // ------------------------------------------------ */
 //	The default styling for almost every button	   */
@@ -86,16 +115,15 @@ $button-font-weight: 600 !default; //
 @mixin henris-button($class: '.button', $button: false) {
 	$el: $class;
 	#{$base-prefix}#{$el} {
-		
-	// If standard button is also styled:
-  	@if $button {
-  	  $el: #{$class}, button;
+		// If standard button is also styled:
+		@if $button {
+			$el: #{$class}, button;
 			// Reset styling:
-	  	button {
-		  	-webkit-appearance: none;
-		  	appearance: none;
-		  }
-	  }
+			button {
+				-webkit-appearance: none;
+				appearance: none;
+			}
+		}
 
 		// ------------------------------------------------------------------------ */
 		//	Styling set on standard buttons and elements with a button class	   */

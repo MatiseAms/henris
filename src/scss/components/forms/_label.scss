@@ -1,8 +1,11 @@
 @mixin henris-label($el: 'label') {
 	#{$base-prefix}#{$el} {
-		padding-left: 0;
+		line-height:var(--form-input-line-height, #{$form-input-line-height});
 		transition: padding-left 0.3s ease-in-out;
-		padding-right: 1rem;
+		padding-left: 0;
+		margin-right: 1rem;
+		padding: var(--form-input-padding, #{$form-input-padding});
+
 		form & {
 			&:hover {
 				& + input,

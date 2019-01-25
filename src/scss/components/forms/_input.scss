@@ -1,7 +1,13 @@
-@mixin henris-input($el: '.input-field'){
-	#{$base-prefix}#{$el} {
-		input {
+@mixin henris-input($el: 'input-field'){
+	.#{$base-prefix}#{$el} {
+		input {			
 			&[type='text'],
+			&[type='date'],
+			&[type='datetime-local'],
+			&[type='month'],
+			&[type='time'],
+			&[type='week'],
+			&[type='search'],
 			&[type='email'],
 			&[type='tel'],
 			&[type='number'],
@@ -28,6 +34,7 @@
 
 		input {
 			&[type='submit'],
+			&[type='reset'],
 			&[type='button'] {
 				@include henris-button-default();
 			}
@@ -47,6 +54,9 @@
 					border: none;
 				}
 			}
+		}
+		label{
+			@include henris-label();
 		}
 	}
 }
