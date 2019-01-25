@@ -47,7 +47,7 @@ $form-accent-color: var(
 			--form-text-color-placeholder,
 			var(--form-text-color, #{$form-input-text-color})
 		);
-		opacity: 1;
+		opacity: 0.5;
 		transition: filter 0.3s;
 	}
 	&:focus {

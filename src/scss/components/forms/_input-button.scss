@@ -10,13 +10,6 @@
 		}
 		@content;
 	}
-
-	label {
-		& + input[type='button'],
-		& + input[type='submit'] {
-			// margin-top: 1rem;
-		}
-	}
 }
 @if output(form-button) {
 	@include henris-input-button();
