@@ -4,7 +4,10 @@
 		[type='range'] {
 			background: transparent;
 			-webkit-appearance: none;
-			// margin: 10px 0;
+			padding: var(
+				--range-padding,
+				var(--form-input-padding, #{$form-input-padding})
+			);
 		}
 		[type='range']:focus {
 			outline: none;
@@ -97,7 +100,7 @@
 				#{$form-accent-color}
 			);
 		}
-		& + label{
+		& + label {
 			margin-left: 1rem;
 		}
 	}
