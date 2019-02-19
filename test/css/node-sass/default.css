@@ -1,10 +1,10 @@
 .row {
-  max-width: 4096px;
-  width: 100%;
-  margin: auto;
   display: flex;
+  flex-flow: row wrap;
   justify-content: flex-start;
-  flex-flow: row wrap; }
+  width: 100%;
+  max-width: 4096px;
+  margin: auto; }
   
   .row.full > .column {
     width: 100%; }
@@ -43,8 +43,8 @@
     width: 83.33333%; }
   @media only screen and (min-width: 0px) {
     .small-0 > .column .row.small-0 > .column {
-      width: 0;
-      display: none; }
+      display: none;
+      width: 0; }
     
     .row.small-full > .column {
       width: 100%; }
@@ -167,8 +167,8 @@
     width: 83.33333%; }
   @media only screen and (min-width: 751px) {
     .medium-0 > .column .row.medium-0 > .column {
-      width: 0;
-      display: none; }
+      display: none;
+      width: 0; }
     
     .row.medium-full > .column {
       width: 100%; }
@@ -291,8 +291,8 @@
     width: 83.33333%; }
   @media only screen and (min-width: 961px) {
     .large-0 > .column .row.large-0 > .column {
-      width: 0;
-      display: none; }
+      display: none;
+      width: 0; }
     
     .row.large-full > .column {
       width: 100%; }
@@ -415,8 +415,8 @@
     width: 83.33333%; }
   @media only screen and (min-width: 1281px) {
     .xlarge-0 > .column .row.xlarge-0 > .column {
-      width: 0;
-      display: none; }
+      display: none;
+      width: 0; }
     
     .row.xlarge-full > .column {
       width: 100%; }
@@ -538,11 +538,11 @@
   .row.five-sixth > .column {
     width: 83.33333%; }
   .row.center {
-    justify-items: center;
-    justify-content: center; }
+    justify-content: center;
+    justify-items: center; }
   .row.right {
-    justify-items: right;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    justify-items: right; }
   @media only screen and (min-width: 0px) and (max-width: 9999px) {
     .row.small-reverse {
       flex-direction: row-reverse; } }
@@ -597,8 +597,8 @@
 
 @media only screen and (min-width: 0px) {
   .small-0 .column.small-0 {
-    width: 0;
-    display: none; }
+    display: none;
+    width: 0; }
   .column.small-full {
     width: 100%; }
   .column.small-half {
@@ -710,8 +710,8 @@
 
 @media only screen and (min-width: 751px) {
   .medium-0 .column.medium-0 {
-    width: 0;
-    display: none; }
+    display: none;
+    width: 0; }
   .column.medium-full {
     width: 100%; }
   .column.medium-half {
@@ -823,8 +823,8 @@
 
 @media only screen and (min-width: 961px) {
   .large-0 .column.large-0 {
-    width: 0;
-    display: none; }
+    display: none;
+    width: 0; }
   .column.large-full {
     width: 100%; }
   .column.large-half {
@@ -936,8 +936,8 @@
 
 @media only screen and (min-width: 1281px) {
   .xlarge-0 .column.xlarge-0 {
-    width: 0;
-    display: none; }
+    display: none;
+    width: 0; }
   .column.xlarge-full {
     width: 100%; }
   .column.xlarge-half {
@@ -1330,10 +1330,10 @@ blockquote,
 q {
   quotes: none; }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none; }
 
@@ -1365,9 +1365,9 @@ a:not([class])[href] {
 /* ----------------------- */
 hr {
   height: 1px;
+  border: none;
   background-color: currentColor;
   color: currentColor;
-  border: none;
   margin: 1rem 0;
   padding: 0; }
 
@@ -1384,8 +1384,8 @@ ul:not([class]) li,
 ol:not([class]) li {
   position: relative;
   line-height: 2; }
-  ul:not([class]) li:before,
-  ol:not([class]) li:before {
+  ul:not([class]) li::before,
+  ol:not([class]) li::before {
     position: absolute;
     right: 100%;
     transform: translateX(100%); }
@@ -1399,50 +1399,50 @@ ol:not([class]) ol {
 ul:not([class]) li {
   display: block;
   padding-left: 1.5rem; }
-  ul:not([class]) li:before {
+  ul:not([class]) li::before {
     content: '\2014 '; }
 
 ol:not([class]) > li {
   display: block;
   padding-left: 1.5rem; }
-  ol:not([class]) > li:before {
-    font-size: 0.75rem;
+  ol:not([class]) > li::before {
+    display: block;
     font-weight: bold;
-    text-align: left;
+    font-size: 0.75rem;
     line-height: 2rem;
-    display: block; }
+    text-align: left; }
 
 ol:not([class]) {
   counter-reset: level1; }
   ol:not([class]) > li {
     counter-increment: level1; }
-    ol:not([class]) > li:before {
+    ol:not([class]) > li::before {
       content: counter(level1) "."; }
     ol:not([class]) > li ol {
       counter-reset: level2; }
       ol:not([class]) > li ol > li {
         counter-increment: level2;
         padding-left: 2rem; }
-        ol:not([class]) > li ol > li:before {
+        ol:not([class]) > li ol > li::before {
           content: counter(level1) "." counter(level2) "."; }
         ol:not([class]) > li ol > li ol {
           counter-reset: level3; }
           ol:not([class]) > li ol > li ol > li {
             counter-increment: level3; }
-            ol:not([class]) > li ol > li ol > li:before {
+            ol:not([class]) > li ol > li ol > li::before {
               content: counter(level1) "." counter(level2) "." counter(level3) ". "; }
             ol:not([class]) > li ol > li ol > li ol {
               counter-reset: level4; }
               ol:not([class]) > li ol > li ol > li ol > li {
                 padding-left: 3rem;
                 counter-increment: level4; }
-                ol:not([class]) > li ol > li ol > li ol > li:before {
+                ol:not([class]) > li ol > li ol > li ol > li::before {
                   content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) ". "; }
                 ol:not([class]) > li ol > li ol > li ol > li ol {
                   counter-reset: level5; }
                   ol:not([class]) > li ol > li ol > li ol > li ol > li {
                     counter-increment: level5; }
-                    ol:not([class]) > li ol > li ol > li ol > li ol > li:before {
+                    ol:not([class]) > li ol > li ol > li ol > li ol > li::before {
                       content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) ". "; }
 
 /* --------------------- */
@@ -1455,10 +1455,10 @@ ol:not([class]) {
   position: absolute;
   height: px;
   border: 0;
-  margin: -1px;
-  padding: 0;
+  overflow: hidden;
   clip: rect(0 0 0 0);
-  overflow: hidden; }
+  margin: -1px;
+  padding: 0; }
 
 .flex-center {
   display: flex;
@@ -1468,10 +1468,10 @@ ol:not([class]) {
 
 .truncate {
   display: block;
+  max-width: 100%;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%; }
+  overflow: hidden; }
 
 .hide-scroll {
   -ms-overflow-style: -ms-autohiding-scrollbar; }
@@ -1491,152 +1491,152 @@ hr {
   margin: 4.16667vw; }
 
 @media print {
-  [href]:not([href^="#"]):after {
+  [href]:not([href^="#"])::after {
     content: " (" attr(href) ") "; } }
 
 img:not([alt]),
 img[alt=''] {
-  outline: 1px dashed red;
-  position: relative; }
-  img:not([alt]):before,
-  img[alt='']:before {
+  position: relative;
+  outline: 1px dashed red; }
+  img:not([alt])::before,
+  img[alt='']::before {
+    content: Images always need an alt text.;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: Images always need an alt text.; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 input:not([type]),
 input[type=' '],
 input[type=''] {
-  outline: 1px dashed red;
-  position: relative; }
-  input:not([type]):before,
-  input[type=' ']:before,
-  input[type='']:before {
+  position: relative;
+  outline: 1px dashed red; }
+  input:not([type])::before,
+  input[type=' ']::before,
+  input[type='']::before {
+    content: Input always requires an input type;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: Input always requires an input type; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 a[target$='blank']:not([rel]),
 a[target$='blank']:not([rel*='noopener']),
 a[target$='blank']:not([rel*='noreferrer']) {
-  outline: 1px dashed red;
-  position: relative; }
-  a[target$='blank']:not([rel]):before,
-  a[target$='blank']:not([rel*='noopener']):before,
-  a[target$='blank']:not([rel*='noreferrer']):before {
+  position: relative;
+  outline: 1px dashed red; }
+  a[target$='blank']:not([rel])::before,
+  a[target$='blank']:not([rel*='noopener'])::before,
+  a[target$='blank']:not([rel*='noreferrer'])::before {
+    content: a[target=_blank] always needs a rel=noopener;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: a[target=_blank] always needs a rel=noopener; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 details > summary:not(:first-child) {
-  outline: 1px dashed red;
-  position: relative; }
-  details > summary:not(:first-child):before {
+  position: relative;
+  outline: 1px dashed red; }
+  details > summary:not(:first-child)::before {
+    content: Summary should always be the first child in a details;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: Summary should always be the first child in a details; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 fieldset > legend:not(:first-child) {
-  outline: 1px dashed red;
-  position: relative; }
-  fieldset > legend:not(:first-child):before {
+  position: relative;
+  outline: 1px dashed red; }
+  fieldset > legend:not(:first-child)::before {
+    content: Legend should always be the first child in a fieldset;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: Legend should always be the first child in a fieldset; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 abbr:not([title]),
 abbr[title=' '],
 abbr[title=''] {
-  outline: 1px dashed red;
-  position: relative; }
-  abbr:not([title]):before,
-  abbr[title=' ']:before,
-  abbr[title='']:before {
+  position: relative;
+  outline: 1px dashed red; }
+  abbr:not([title])::before,
+  abbr[title=' ']::before,
+  abbr[title='']::before {
+    content: Summary should always be the first child in a details;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: Summary should always be the first child in a details; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 dt + :not(dd),
 :not(dt):not(dd) + dd {
-  outline: 1px dashed red;
-  position: relative; }
-  dt + :not(dd):before,
-  :not(dt):not(dd) + dd:before {
+  position: relative;
+  outline: 1px dashed red; }
+  dt + :not(dd)::before,
+  :not(dt):not(dd) + dd::before {
+    content: DL can only have DT or DD as children;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: DL can only have DT or DD as children; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 :not(dl) > dt,
 :not(dl) > dd,
 dl > :not(dt):not(dd):not(div) {
-  outline: 1px dashed red;
-  position: relative; }
-  :not(dl) > dt:before,
-  :not(dl) > dd:before,
-  dl > :not(dt):not(dd):not(div):before {
+  position: relative;
+  outline: 1px dashed red; }
+  :not(dl) > dt::before,
+  :not(dl) > dd::before,
+  dl > :not(dt):not(dd):not(div)::before {
+    content: DT and DD can only be used in a DL;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: DT and DD can only be used in a DL; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 :not(figure) > figcaption {
-  outline: 1px dashed red;
-  position: relative; }
-  :not(figure) > figcaption:before {
+  position: relative;
+  outline: 1px dashed red; }
+  :not(figure) > figcaption::before {
+    content: Figcaption can only be used in a DL;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: Figcaption can only be used in a DL; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 ul > :not(li),
 ol > :not(li),
 :not(ul):not(ol) > li {
-  outline: 1px dashed red;
-  position: relative; }
-  ul > :not(li):before,
-  ol > :not(li):before,
-  :not(ul):not(ol) > li:before {
+  position: relative;
+  outline: 1px dashed red; }
+  ul > :not(li)::before,
+  ol > :not(li)::before,
+  :not(ul):not(ol) > li::before {
+    content: LI can only be used in a OL or UL;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: LI can only be used in a OL or UL; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 [id*='NaN'],
 [id*='null'],
@@ -1644,21 +1644,21 @@ ol > :not(li),
 [class*='null'],
 [id*='undefined'],
 [class*='undefined'] {
-  outline: 1px dashed red;
-  position: relative; }
-  [id*='NaN']:before,
-  [id*='null']:before,
-  [class*='NaN']:before,
-  [class*='null']:before,
-  [id*='undefined']:before,
-  [class*='undefined']:before {
+  position: relative;
+  outline: 1px dashed red; }
+  [id*='NaN']::before,
+  [id*='null']::before,
+  [class*='NaN']::before,
+  [class*='null']::before,
+  [id*='undefined']::before,
+  [class*='undefined']::before {
+    content: There is probably something wrong with this element, check the ID or class;
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 0.25rem 0.5rem;
-    color: white;
+    left: 0;
     background-color: red;
-    content: There is probably something wrong with this element, check the ID or class; }
+    color: white;
+    padding: 0.25rem 0.5rem; }
 
 section.basic {
   padding: 8.33333vw 0; }
@@ -2433,20 +2433,20 @@ textarea + form {
 
 body,
 html {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: var(--color-body, var(--base-body, #ffffff));
+  color: var(--color-text, var(--base-text-color, #101010));
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  background-color: #f7f7f7;
-  color: #303030;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0; }
 
 main.center {
-  width: 100%;
-  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; }
+  width: 100%;
+  height: 100%; }
   main.center.dark {
-    background-color: #303030;
-    color: white; }
+    background-color: var(--color-text, var(--base-color-text, #101010));
+    color: var(--color-body, --base-color-body, #ffffff); }
