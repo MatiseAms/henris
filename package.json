@@ -15,8 +15,6 @@
 		"build:default": "node-sass dist-input/default.scss dist/henris.css --output-style nested && node-sass dist-input/default.scss dist/henris.min.css --output-style compressed",
 		"build:full": "node-sass dist-input/full.scss dist/henris.full.css --output-style nested && node-sass dist-input/full.scss dist/henris.full.min.css --output-style compressed",
 		"prepublishOnly": "npm run test && npm run build",
-		"icons": "node scripts/icons.js src/icons dist/fonts",
-		"icons:generate": "icon-font-generator src/icons/_brands/*.svg -o dist",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
 		"stylelint": "stylelint 'src/scss/**/*.scss'",
