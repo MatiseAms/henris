@@ -29,8 +29,7 @@
 
 @if output(debug-target-blank) {
 	a[target$='blank']:not([rel]),
-	a[target$='blank']:not([rel*='noopener']),
-	a[target$='blank']:not([rel*='noreferrer']) {
+	a[target$='blank']:not([rel*='noopener']):not([rel*='noreferrer']) {
 		@include debug-warning('a[target=_blank] always needs a rel=noopener');
 	}
 }
