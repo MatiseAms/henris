@@ -18,29 +18,30 @@
 ) {
 	$src: ();
 	@if list-contains($files, 'eot') {
-		$value: "url('#{$path}/#{$file}.eot?#iefix') format('embedded-opentype')";
+		$value: url('#{$path}/#{$file}.eot?#iefix') format('embedded-opentype');
 		$src: append($src, $value);
 	}
 	@if list-contains($files, 'woff') {
-		$value: "url('#{$path}/#{$file}.woff') format('woff')";
+		$value: url('#{$path}/#{$file}.woff') format('woff');
 		$src: append($src, $value);
 	}
 	@if list-contains($files, 'woff2') {
-		$value: "url('#{$path}/#{$file}.woff2') format('woff2')";
+		$value: url('#{$path}/#{$file}.woff2') format('woff2');
 		$src: append($src, $value);
 	}
 	@if list-contains($files, 'ttf') {
-		$value: "url('#{$path}/#{$file}.ttf') format('truetype')";
+		$value: url('#{$path}/#{$file}.ttf') format('truetype');
 		$src: append($src, $value);
 	}
 	@if list-contains($files, 'otf') {
-		$value: "url('#{$path}/#{$file}.otf') format('otf')";
+		$value: url('#{$path}/#{$file}.otf') format('otf');
 		$src: append($src, $value);
 	}
 	@if list-contains($files, 'svg') {
-		$value: "url('#{$path}/#{$file}.svg##{$name}') format('svg')";
+		$value: url('#{$path}/#{$file}.svg##{$name}') format('svg');
 		$src: append($src, $value);
 	}
+
 
 	@font-face {
 		@if (str-index($name, ' ')) {

@@ -2,7 +2,7 @@
 	position: relative;
 	outline: 1px dashed red;
 	&::before {
-		content: #{$text};
+		content: "#{$text}";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -107,14 +107,12 @@
 }
 
 @if output(debug-bad-compute) {
-	[id*='NaN'],
-	[id*='null'],
-	[class*='NaN'],
-	[class*='null'],
-	[id*='undefined'],
-	[class*='undefined'] {
-		@include debug-warning(
-			'There is probably something wrong with this element, check the ID or class'
-		);
+	[id*="NaN"],
+	[id*="null"],
+	[class*="NaN"],
+	[class*="null"],
+	[id*="undefined"],
+	[class*="undefined"] {
+		@include debug-warning("There is probably something wrong with this element, check the ID or class");
 	}
 }

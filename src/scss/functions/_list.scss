@@ -42,14 +42,9 @@
 		@if type-of($e) == list {
 			$result: $result#{to-string($e, $glue, true)};
 		} @else {
-			$result: if(
-				$i != length($list) or $is-nested,
-				$result#{$e}#{$glue},
-				$result#{$e}
-			);
+			$result: if($i != length($list) or $is-nested,$result$e$glue,	$result$e);
 		}
 	}
-
 	@return $result;
 }
 @function to-list($value) {
