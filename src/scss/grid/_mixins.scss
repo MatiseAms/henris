@@ -4,7 +4,6 @@
 //  use width calculation
 //  @include min-(width,4,240,'calc(100% - 240px)');
 
-
 // Get NTH but return null if it doesn't exist.
 @function get-nth($args, $number) {
 	@if $number < (length($args) + 1) {
@@ -14,25 +13,27 @@
 	}
 }
 
-
 // Process Grid arguments to check if the first argument is a string or not.
 @function processGridArgs($args) {
+	@debug $args;
+	@debug '#{nth($args,1)} :: #{type-of(nth($args,1))}';
 	$data: ();
 	@if type-of(nth($args, 1)) == 'string' {
+		@debug 'yes this is a string!';
 		$data: (
 			'property': get-nth($args, 1),
 			'columns': get-nth($args, 2),
-			'width': get-nth($args, 3),
-			'alt': get-nth($args, 4)
+			'width': get-nth($args, 3)
 		);
 	} @else {
 		$data: (
 			'property': null,
 			'columns': get-nth($args, 1),
-			'width': get-nth($args, 2),
-			'alt': get-nth($args, 3)
+			'width': get-nth($args, 2)
 		);
 	}
+
+	@debug "the results :: #{map-get($data,'property')}";
 	@return $data;
 }
 
@@ -42,11 +43,8 @@
 	$mq: grid-mq-min(map-get($data, 'columns'), map-get($data, 'width'));
 	@media #{$mq} {
 		@if map-get($data, 'property') != null {
-			@if map-get($data, 'alt') != false {
-				#{map-get($data, 'property')}: map-get($data, 'alt');
-			} @else {
-				#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
-			}
+			#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
+			content: 'test-text';
 		}
 		@content;
 	}
@@ -64,11 +62,7 @@
 	$mq: grid-mq-max(map-get($data, 'columns'), map-get($data, 'width'));
 	@media #{$mq} {
 		@if map-get($data, 'property') != null {
-			@if map-get($data, 'alt') != false {
-				#{map-get($data, 'property')}: map-get($data, 'alt');
-			} @else {
-				#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
-			}
+			#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
 		}
 		@content;
 	}
