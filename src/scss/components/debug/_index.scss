@@ -86,8 +86,6 @@
 	}
 }
 @if output(debug-list) {
-	ul > :not(li),
-	ol > :not(li),
 	:not(ul):not(ol) > li {
 		@include debug-warning('LI can only be used in a OL or UL');
 	}
