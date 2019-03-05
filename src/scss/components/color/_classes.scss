@@ -11,6 +11,7 @@
 		#{$prefix}#{$color-name} {
 			background-color: #{$color-value};
 			color: contra($color-value);
+			@content;
 		}
 	}
 }
@@ -23,6 +24,7 @@
 		#{$prefix}#{to-lower-case($color-name)},
 		#{$prefix}#{$color-name} {
 			color: $color-value;
+			@content;
 		}
 	}
 }
