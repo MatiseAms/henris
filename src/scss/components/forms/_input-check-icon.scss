@@ -76,14 +76,6 @@
 			}
 		}
 	}
-	@each $iconName, $iconValue in $iconset-basic {
-		#{$el}--#{$iconName} {
-			label::before {
-				content: '#{$iconValue}';
-				@include icon-specific-style($iconName);
-			}
-		}
-	}
 }
 
 @if output(form-check-icon) {
