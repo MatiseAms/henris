@@ -129,11 +129,11 @@
 					width: calc(100% - #{grid(5)});
 					height: 100vh;
 					overflow: auto;
-					@include min-(null, 5, 160) {
+					@include min-(5, 160) {
 						left: 160px;
 						width: calc(100% - 160px);
 					}
-					@include max-(null, 5, 320) {
+					@include max-(5, 320) {
 						left: 320px;
 						width: calc(100% - 320px);
 					}

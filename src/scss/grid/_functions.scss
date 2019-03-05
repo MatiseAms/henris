@@ -1,5 +1,5 @@
 //
-// Get a breakpoint from the settings	*/
+// Get a breakpoint from the settings
 //
 
 @function bp($bp) {
@@ -47,7 +47,7 @@
 	@return $values;
 }
 
-// -
+//
 // Calculate the viewport width based on columns
 //
 
@@ -67,7 +67,7 @@
 
 //
 // Return a media query with min and max values
-// -*/
+// 
 
 @function mq($min: 0, $max: 0) {
 	@if $max > 0 {
@@ -80,18 +80,32 @@
 }
 
 //
+// Convert any size to pixels
+//
+
+@function to-columns($value){
+	@if $value == null {
+		$value: null;
+	}
+	@else if unit($value) == "rem" {
+		$one-column: $grid-design-width / $grid-columns; //
+		$value: strip-unit((strip-unit($columns) * 16) / $one-column);
+	}
+	@else if unit($value) == "px" {
+		$one-column: $grid-design-width / $grid-columns; //
+		$value: strip-unit($value / $one-column);
+	}
+	@return $value;
+}
+
+//
 // Calculate the minimum breakpoint for a value to be
 // at a specified amount of pixels.
 //
 
 @function grid-mq-min($columns, $width) {
-	@if unit($columns) == "rem" {
-		@debug "please just use Grid units!"; //
-		$one-column: $grid-design-width / $grid-columns; //
-		$width: strip-unit((strip-unit($columns) * 16) / $one-column);
-	}
-
-	$minimum-screenwidth: ($width/ $columns) * $grid-columns;
+	$columns: to-columns($columns);
+	$minimum-screenwidth: ($width / $columns) * $grid-columns;
 	$result: "only screen and (max-width: #{strip-unit($minimum-screenwidth)}px)";
 	@return $result;
 }
@@ -102,13 +116,8 @@
 //
 
 @function grid-mq-max($columns, $width) {
-	@if unit($columns) == "rem" {
-		@debug "please just use Grid units!"; //
-		$one-column: $grid-design-width / $grid-columns; //
-		$width: strip-unit((strip-unit($columns) * 16) / $one-column);
-	}
-
-	$minimum-screenwidth: ($width/ $columns) * $grid-columns;
+	$columns: to-columns($columns);
+	$minimum-screenwidth: ($width / $columns) * $grid-columns;
 	$result: "only screen and (min-width: #{strip-unit($minimum-screenwidth)}px)";
 	@return $result;
 }
