@@ -6673,123 +6673,6 @@ blockquote {
       .button--round[class^='button-icon'] span span::before {
         display: inline-block;
         margin: 0 1em; }
-    .button--round.button-icon--right {
-      padding-right: 0;
-      padding-left: 0; }
-      .button--round.button-icon--right.button-icon--play span span::after {
-        content: "▶"; }
-      .button--round.button-icon--right.button-icon--stop span span::after {
-        content: "◼"; }
-      .button--round.button-icon--right.button-icon--pause span span::after {
-        content: "❙❙"; }
-      .button--round.button-icon--right.button-icon--plus span span::after {
-        content: "➕"; }
-      .button--round.button-icon--right.button-icon--minus span span::after {
-        content: "➖"; }
-      .button--round.button-icon--right.button-icon--close span span::after {
-        content: "✕"; }
-      .button--round.button-icon--right.button-icon--close2 span span::after {
-        content: "✖"; }
-      .button--round.button-icon--right.button-icon--close3 span span::after {
-        content: "✗"; }
-      .button--round.button-icon--right.button-icon--close4 span span::after {
-        content: "╳"; }
-      .button--round.button-icon--right.button-icon--arrow-left span span::after {
-        content: "←"; }
-      .button--round.button-icon--right.button-icon--arrow-up span span::after {
-        content: "↑"; }
-      .button--round.button-icon--right.button-icon--arrow-right span span::after {
-        content: "→"; }
-      .button--round.button-icon--right.button-icon--arrow-down span span::after {
-        content: "↓"; }
-      .button--round.button-icon--right.button-icon--arrow-left-up span span::after {
-        content: "↖"; }
-      .button--round.button-icon--right.button-icon--arrow-right-up span span::after {
-        content: "↗"; }
-      .button--round.button-icon--right.button-icon--arrow-right-down span span::after {
-        content: "↘"; }
-      .button--round.button-icon--right.button-icon--arrow-left-down span span::after {
-        content: "↙"; }
-      .button--round.button-icon--right.button-icon--to-up span span::after {
-        content: "⤴"; }
-      .button--round.button-icon--right.button-icon--to-down span span::after {
-        content: "⤵"; }
-      .button--round.button-icon--right.button-icon--to-left span span::after {
-        content: "⤷"; }
-      .button--round.button-icon--right.button-icon--to-right span span::after {
-        content: "⤸"; }
-      .button--round.button-icon--right.button-icon--hamburger span span::after {
-        content: "☰"; }
-      .button--round.button-icon--right.button-icon--real-arrow span span::after {
-        content: "➔"; }
-      .button--round.button-icon--right.button-icon--go-prev span span::after {
-        content: "❮"; }
-      .button--round.button-icon--right.button-icon--go-next span span::after {
-        content: "❯"; }
-      .button--round.button-icon--right.button-icon--glasses span span::after {
-        content: "◯◠◯";
-        letter-spacing: -1.5px; }
-      .button--round.button-icon--right.button-icon--star-lines span span::after {
-        content: "☆"; }
-      .button--round.button-icon--right.button-icon--star span span::after {
-        content: "★"; }
-    .button--round:not(.button-icon--right).button-icon--play span span::before {
-      content: "▶"; }
-    .button--round:not(.button-icon--right).button-icon--stop span span::before {
-      content: "◼"; }
-    .button--round:not(.button-icon--right).button-icon--pause span span::before {
-      content: "❙❙"; }
-    .button--round:not(.button-icon--right).button-icon--plus span span::before {
-      content: "➕"; }
-    .button--round:not(.button-icon--right).button-icon--minus span span::before {
-      content: "➖"; }
-    .button--round:not(.button-icon--right).button-icon--close span span::before {
-      content: "✕"; }
-    .button--round:not(.button-icon--right).button-icon--close2 span span::before {
-      content: "✖"; }
-    .button--round:not(.button-icon--right).button-icon--close3 span span::before {
-      content: "✗"; }
-    .button--round:not(.button-icon--right).button-icon--close4 span span::before {
-      content: "╳"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-left span span::before {
-      content: "←"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-up span span::before {
-      content: "↑"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-right span span::before {
-      content: "→"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-down span span::before {
-      content: "↓"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-left-up span span::before {
-      content: "↖"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-right-up span span::before {
-      content: "↗"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-right-down span span::before {
-      content: "↘"; }
-    .button--round:not(.button-icon--right).button-icon--arrow-left-down span span::before {
-      content: "↙"; }
-    .button--round:not(.button-icon--right).button-icon--to-up span span::before {
-      content: "⤴"; }
-    .button--round:not(.button-icon--right).button-icon--to-down span span::before {
-      content: "⤵"; }
-    .button--round:not(.button-icon--right).button-icon--to-left span span::before {
-      content: "⤷"; }
-    .button--round:not(.button-icon--right).button-icon--to-right span span::before {
-      content: "⤸"; }
-    .button--round:not(.button-icon--right).button-icon--hamburger span span::before {
-      content: "☰"; }
-    .button--round:not(.button-icon--right).button-icon--real-arrow span span::before {
-      content: "➔"; }
-    .button--round:not(.button-icon--right).button-icon--go-prev span span::before {
-      content: "❮"; }
-    .button--round:not(.button-icon--right).button-icon--go-next span span::before {
-      content: "❯"; }
-    .button--round:not(.button-icon--right).button-icon--glasses span span::before {
-      content: "◯◠◯";
-      letter-spacing: -1.5px; }
-    .button--round:not(.button-icon--right).button-icon--star-lines span span::before {
-      content: "☆"; }
-    .button--round:not(.button-icon--right).button-icon--star span span::before {
-      content: "★"; }
   .button--large {
     font-size: 1.5rem; }
   .button--normal {
@@ -6941,91 +6824,6 @@ blockquote {
     [class^='button-icon'].button-icon--only::after {
       width: 2.5em;
       text-indent: 0; }
-
-.button-icon--play::before {
-  content: "▶"; }
-
-.button-icon--stop::before {
-  content: "◼"; }
-
-.button-icon--pause::before {
-  content: "❙❙"; }
-
-.button-icon--plus::before {
-  content: "➕"; }
-
-.button-icon--minus::before {
-  content: "➖"; }
-
-.button-icon--close::before {
-  content: "✕"; }
-
-.button-icon--close2::before {
-  content: "✖"; }
-
-.button-icon--close3::before {
-  content: "✗"; }
-
-.button-icon--close4::before {
-  content: "╳"; }
-
-.button-icon--arrow-left::before {
-  content: "←"; }
-
-.button-icon--arrow-up::before {
-  content: "↑"; }
-
-.button-icon--arrow-right::before {
-  content: "→"; }
-
-.button-icon--arrow-down::before {
-  content: "↓"; }
-
-.button-icon--arrow-left-up::before {
-  content: "↖"; }
-
-.button-icon--arrow-right-up::before {
-  content: "↗"; }
-
-.button-icon--arrow-right-down::before {
-  content: "↘"; }
-
-.button-icon--arrow-left-down::before {
-  content: "↙"; }
-
-.button-icon--to-up::before {
-  content: "⤴"; }
-
-.button-icon--to-down::before {
-  content: "⤵"; }
-
-.button-icon--to-left::before {
-  content: "⤷"; }
-
-.button-icon--to-right::before {
-  content: "⤸"; }
-
-.button-icon--hamburger::before {
-  content: "☰"; }
-
-.button-icon--real-arrow::before {
-  content: "➔"; }
-
-.button-icon--go-prev::before {
-  content: "❮"; }
-
-.button-icon--go-next::before {
-  content: "❯"; }
-
-.button-icon--glasses::before {
-  content: "◯◠◯";
-  letter-spacing: -1.5px; }
-
-.button-icon--star-lines::before {
-  content: "☆"; }
-
-.button-icon--star::before {
-  content: "★"; }
 
 .button[data-icon-before], [data-icon-before][class^='button-icon'] {
   padding-left: 3em; }
@@ -7549,9 +7347,6 @@ fieldset {
   fieldset + fieldset {
     margin-top: 2.08333vw;
     border-top: 1px solid rgba(16, 16, 16, 0.1); }
-    @media only screen and (max-width: 768px) {
-      fieldset + fieldset {
-        margin-top: 16px; } }
   fieldset label {
     display: inline-block;
     flex-shrink: 0;
@@ -8063,91 +7858,6 @@ input[type='submit']:not(.button):not([class^='button-icon']) {
       text-indent: 0; }
     .input-check-icon.input-check--nolabel + .input-check--nolabel {
       margin: 0.25rem; }
-
-.input-check-icon--play label::before {
-  content: "▶"; }
-
-.input-check-icon--stop label::before {
-  content: "◼"; }
-
-.input-check-icon--pause label::before {
-  content: "❙❙"; }
-
-.input-check-icon--plus label::before {
-  content: "➕"; }
-
-.input-check-icon--minus label::before {
-  content: "➖"; }
-
-.input-check-icon--close label::before {
-  content: "✕"; }
-
-.input-check-icon--close2 label::before {
-  content: "✖"; }
-
-.input-check-icon--close3 label::before {
-  content: "✗"; }
-
-.input-check-icon--close4 label::before {
-  content: "╳"; }
-
-.input-check-icon--arrow-left label::before {
-  content: "←"; }
-
-.input-check-icon--arrow-up label::before {
-  content: "↑"; }
-
-.input-check-icon--arrow-right label::before {
-  content: "→"; }
-
-.input-check-icon--arrow-down label::before {
-  content: "↓"; }
-
-.input-check-icon--arrow-left-up label::before {
-  content: "↖"; }
-
-.input-check-icon--arrow-right-up label::before {
-  content: "↗"; }
-
-.input-check-icon--arrow-right-down label::before {
-  content: "↘"; }
-
-.input-check-icon--arrow-left-down label::before {
-  content: "↙"; }
-
-.input-check-icon--to-up label::before {
-  content: "⤴"; }
-
-.input-check-icon--to-down label::before {
-  content: "⤵"; }
-
-.input-check-icon--to-left label::before {
-  content: "⤷"; }
-
-.input-check-icon--to-right label::before {
-  content: "⤸"; }
-
-.input-check-icon--hamburger label::before {
-  content: "☰"; }
-
-.input-check-icon--real-arrow label::before {
-  content: "➔"; }
-
-.input-check-icon--go-prev label::before {
-  content: "❮"; }
-
-.input-check-icon--go-next label::before {
-  content: "❯"; }
-
-.input-check-icon--glasses label::before {
-  content: "◯◠◯";
-  letter-spacing: -1.5px; }
-
-.input-check-icon--star-lines label::before {
-  content: "☆"; }
-
-.input-check-icon--star label::before {
-  content: "★"; }
 
 .input-check-text {
   width: auto;
@@ -8796,7 +8506,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8872,7 +8581,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8948,7 +8656,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9024,7 +8731,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9100,7 +8806,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9176,7 +8881,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9252,7 +8956,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9328,7 +9031,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9404,7 +9106,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9480,7 +9181,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9556,7 +9256,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9632,7 +9331,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9705,7 +9403,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9778,7 +9475,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9851,7 +9547,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9924,7 +9619,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9997,7 +9691,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10070,7 +9763,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10143,7 +9835,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10216,7 +9907,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10289,7 +9979,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10362,7 +10051,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10435,7 +10123,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10521,7 +10208,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10607,7 +10293,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10693,7 +10378,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10779,7 +10463,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10865,7 +10548,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10951,7 +10633,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11037,7 +10718,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11123,7 +10803,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11209,7 +10888,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11295,7 +10973,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11381,7 +11058,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11431,12 +11107,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left {
-      width: 160px; } }
-  @media only screen and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11483,7 +11153,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11533,12 +11202,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 0px) and (max-width: 750px) and (max-width: 768px) {
-    .nav--left__small-only {
-      width: 160px; } }
-  @media only screen and (min-width: 0px) and (max-width: 750px) and (min-width: 1536px) {
-    .nav--left__small-only {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11585,7 +11248,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11635,12 +11297,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 0px) and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left__small-up {
-      width: 160px; } }
-  @media only screen and (min-width: 0px) and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left__small-up {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11687,7 +11343,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11737,12 +11392,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 750px) and (max-width: 960px) and (max-width: 768px) {
-    .nav--left__medium-only {
-      width: 160px; } }
-  @media only screen and (min-width: 750px) and (max-width: 960px) and (min-width: 1536px) {
-    .nav--left__medium-only {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11789,7 +11438,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11839,12 +11487,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 750px) and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left__medium-up {
-      width: 160px; } }
-  @media only screen and (min-width: 750px) and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left__medium-up {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11891,7 +11533,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11941,12 +11582,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 960px) and (max-width: 1280px) and (max-width: 768px) {
-    .nav--left__large-only {
-      width: 160px; } }
-  @media only screen and (min-width: 960px) and (max-width: 1280px) and (min-width: 1536px) {
-    .nav--left__large-only {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11993,7 +11628,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -12043,12 +11677,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 960px) and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left__large-up {
-      width: 160px; } }
-  @media only screen and (min-width: 960px) and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left__large-up {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -12095,7 +11723,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -12145,12 +11772,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 1280px) and (max-width: 1920px) and (max-width: 768px) {
-    .nav--left__xlarge-only {
-      width: 160px; } }
-  @media only screen and (min-width: 1280px) and (max-width: 1920px) and (min-width: 1536px) {
-    .nav--left__xlarge-only {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -12197,7 +11818,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -12247,12 +11867,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 1280px) and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left__xlarge-up {
-      width: 160px; } }
-  @media only screen and (min-width: 1280px) and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left__xlarge-up {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -12299,7 +11913,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -12349,12 +11962,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left__xxlarge-only {
-      width: 160px; } }
-  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left__xxlarge-only {
-      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -12401,7 +12008,6 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
-      width: 60px;
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -12451,12 +12057,6 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
-  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (max-width: 768px) {
-    .nav--left__xxlarge-up {
-      width: 160px; } }
-  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (min-width: 1536px) {
-    .nav--left__xxlarge-up {
-      width: 320px; } }
 
 @media print {
   [href]:not([href^="#"])::after {
@@ -12493,13 +12093,11 @@ input[type=''] {
     padding: 0.25rem 0.5rem; }
 
 a[target$='blank']:not([rel]),
-a[target$='blank']:not([rel*='noopener']),
-a[target$='blank']:not([rel*='noreferrer']) {
+a[target$='blank']:not([rel*='noopener']):not([rel*='noreferrer']) {
   position: relative;
   outline: 1px dashed red; }
   a[target$='blank']:not([rel])::before,
-  a[target$='blank']:not([rel*='noopener'])::before,
-  a[target$='blank']:not([rel*='noreferrer'])::before {
+  a[target$='blank']:not([rel*='noopener']):not([rel*='noreferrer'])::before {
     content: a[target=_blank] always needs a rel=noopener;
     position: absolute;
     top: 0;
@@ -12712,9 +12310,6 @@ table {
   border-collapse: collapse; }
   table + table {
     margin-top: 4.16667vw; }
-    @media only screen and (max-width: 720px) {
-      table + table {
-        margin-top: 30px; } }
   table.full-width {
     width: 100%; }
   table caption {
@@ -13034,44 +12629,26 @@ pre + pre {
 h1 {
   font-size: 4.16667vw;
   line-height: 1; }
-  @media only screen and (max-width: 768px) {
-    h1 {
-      font-size: 32px; } }
 
 h2 {
   font-size: 3.33333vw;
   line-height: 1; }
-  @media only screen and (max-width: 840px) {
-    h2 {
-      font-size: 28px; } }
 
 h3 {
   font-size: 2.5vw;
   line-height: 1.25; }
-  @media only screen and (max-width: 960px) {
-    h3 {
-      font-size: 24px; } }
 
 h4 {
   font-size: 2.08333vw;
   line-height: 1.25; }
-  @media only screen and (max-width: 960px) {
-    h4 {
-      font-size: 20px; } }
 
 h5 {
   font-size: 1.66667vw;
   line-height: 1.25; }
-  @media only screen and (max-width: 1080px) {
-    h5 {
-      font-size: 18px; } }
 
 h6 {
   font-size: 1.25vw;
   line-height: 1.25; }
-  @media only screen and (max-width: 1280px) {
-    h6 {
-      font-size: 16px; } }
 
 h1 + .input-field,
 h2 + .input-field,
@@ -13256,48 +12833,6 @@ form + select,
 form + textarea,
 form + form {
   margin-top: 2.08333vw; }
-  @media only screen and (max-width: 768px) {
-    h1 + input,
-    h1 + select,
-    h1 + textarea,
-    h1 + form,
-    h2 + input,
-    h2 + select,
-    h2 + textarea,
-    h2 + form,
-    h3 + input,
-    h3 + select,
-    h3 + textarea,
-    h3 + form,
-    h4 + input,
-    h4 + select,
-    h4 + textarea,
-    h4 + form,
-    h5 + input,
-    h5 + select,
-    h5 + textarea,
-    h5 + form,
-    h6 + input,
-    h6 + select,
-    h6 + textarea,
-    h6 + form,
-    pre + input,
-    pre + select,
-    pre + textarea,
-    pre + form,
-    p + input,
-    p + select,
-    p + textarea,
-    p + form,
-    .input-field + input,
-    .input-field + select,
-    .input-field + textarea,
-    .input-field + form,
-    form + input,
-    form + select,
-    form + textarea,
-    form + form {
-      margin-top: 16px; } }
 
 table + .button, table + [class^='button-icon'],
 table + .button__container,
@@ -13440,24 +12975,6 @@ p + h5,
 p + h6,
 p + ul {
   margin-top: 2.08333vw; }
-  @media only screen and (max-width: 768px) {
-    div + table,
-    div + h1,
-    div + h2,
-    div + h3,
-    div + h4,
-    div + h5,
-    div + h6,
-    div + ul,
-    p + table,
-    p + h1,
-    p + h2,
-    p + h3,
-    p + h4,
-    p + h5,
-    p + h6,
-    p + ul {
-      margin-top: 16px; } }
 
 input + table,
 input + h1,
@@ -13490,38 +13007,6 @@ textarea + ul,
 textarea + p,
 textarea + form {
   margin-top: 2.08333vw; }
-  @media only screen and (max-width: 768px) {
-    input + table,
-    input + h1,
-    input + h2,
-    input + h3,
-    input + h4,
-    input + h5,
-    input + h6,
-    input + ul,
-    input + p,
-    input + form,
-    select + table,
-    select + h1,
-    select + h2,
-    select + h3,
-    select + h4,
-    select + h5,
-    select + h6,
-    select + ul,
-    select + p,
-    select + form,
-    textarea + table,
-    textarea + h1,
-    textarea + h2,
-    textarea + h3,
-    textarea + h4,
-    textarea + h5,
-    textarea + h6,
-    textarea + ul,
-    textarea + p,
-    textarea + form {
-      margin-top: 16px; } }
 
 body,
 html {
