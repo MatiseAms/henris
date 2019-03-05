@@ -1500,7 +1500,7 @@ img[alt=''] {
   outline: 1px dashed red; }
   img:not([alt])::before,
   img[alt='']::before {
-    content: Images always need an alt text.;
+    content: "Images always need an alt text.";
     position: absolute;
     top: 0;
     left: 0;
@@ -1516,7 +1516,7 @@ input[type=''] {
   input:not([type])::before,
   input[type=' ']::before,
   input[type='']::before {
-    content: Input always requires an input type;
+    content: "Input always requires an input type";
     position: absolute;
     top: 0;
     left: 0;
@@ -1530,7 +1530,7 @@ a[target$='blank']:not([rel*='noopener']):not([rel*='noreferrer']) {
   outline: 1px dashed red; }
   a[target$='blank']:not([rel])::before,
   a[target$='blank']:not([rel*='noopener']):not([rel*='noreferrer'])::before {
-    content: a[target=_blank] always needs a rel=noopener;
+    content: "a[target=_blank] always needs a rel=noopener";
     position: absolute;
     top: 0;
     left: 0;
@@ -1542,7 +1542,7 @@ details > summary:not(:first-child) {
   position: relative;
   outline: 1px dashed red; }
   details > summary:not(:first-child)::before {
-    content: Summary should always be the first child in a details;
+    content: "Summary should always be the first child in a details";
     position: absolute;
     top: 0;
     left: 0;
@@ -1554,7 +1554,7 @@ fieldset > legend:not(:first-child) {
   position: relative;
   outline: 1px dashed red; }
   fieldset > legend:not(:first-child)::before {
-    content: Legend should always be the first child in a fieldset;
+    content: "Legend should always be the first child in a fieldset";
     position: absolute;
     top: 0;
     left: 0;
@@ -1570,7 +1570,7 @@ abbr[title=''] {
   abbr:not([title])::before,
   abbr[title=' ']::before,
   abbr[title='']::before {
-    content: Summary should always be the first child in a details;
+    content: "Summary should always be the first child in a details";
     position: absolute;
     top: 0;
     left: 0;
@@ -1584,7 +1584,7 @@ dt + :not(dd),
   outline: 1px dashed red; }
   dt + :not(dd)::before,
   :not(dt):not(dd) + dd::before {
-    content: DL can only have DT or DD as children;
+    content: "DL can only have DT or DD as children";
     position: absolute;
     top: 0;
     left: 0;
@@ -1600,7 +1600,7 @@ dl > :not(dt):not(dd):not(div) {
   :not(dl) > dt::before,
   :not(dl) > dd::before,
   dl > :not(dt):not(dd):not(div)::before {
-    content: DT and DD can only be used in a DL;
+    content: "DT and DD can only be used in a DL";
     position: absolute;
     top: 0;
     left: 0;
@@ -1612,7 +1612,7 @@ dl > :not(dt):not(dd):not(div) {
   position: relative;
   outline: 1px dashed red; }
   :not(figure) > figcaption::before {
-    content: Figcaption can only be used in a DL;
+    content: "Figcaption can only be used in a DL";
     position: absolute;
     top: 0;
     left: 0;
@@ -1624,7 +1624,7 @@ dl > :not(dt):not(dd):not(div) {
   position: relative;
   outline: 1px dashed red; }
   :not(ul):not(ol) > li::before {
-    content: LI can only be used in a OL or UL;
+    content: "LI can only be used in a OL or UL";
     position: absolute;
     top: 0;
     left: 0;
@@ -1654,7 +1654,7 @@ strong > div {
   small > div::before,
   label > div::before,
   strong > div::before {
-    content: You shouldn't use a div in an inline element;
+    content: "You shouldn't use a div in an inline element";
     position: absolute;
     top: 0;
     left: 0;
@@ -1662,21 +1662,21 @@ strong > div {
     color: white;
     padding: 0.25rem 0.5rem; }
 
-[id*='NaN'],
-[id*='null'],
-[class*='NaN'],
-[class*='null'],
-[id*='undefined'],
-[class*='undefined'] {
+[id*="NaN"],
+[id*="null"],
+[class*="NaN"],
+[class*="null"],
+[id*="undefined"],
+[class*="undefined"] {
   position: relative;
   outline: 1px dashed red; }
-  [id*='NaN']::before,
-  [id*='null']::before,
-  [class*='NaN']::before,
-  [class*='null']::before,
-  [id*='undefined']::before,
-  [class*='undefined']::before {
-    content: There is probably something wrong with this element, check the ID or class;
+  [id*="NaN"]::before,
+  [id*="null"]::before,
+  [class*="NaN"]::before,
+  [class*="null"]::before,
+  [id*="undefined"]::before,
+  [class*="undefined"]::before {
+    content: "There is probably something wrong with this element, check the ID or class";
     position: absolute;
     top: 0;
     left: 0;
@@ -2190,8 +2190,8 @@ pre + h4,
 pre + h5 {
   margin-top: 2rem; }
 
-p[true^='button'],
-p[true*=' button'] {
+p[true^="button"],
+p[true*=" button"] {
   margin-top: 2rem; }
 
 p + p {

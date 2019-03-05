@@ -9,16 +9,22 @@
 	@return inspect($value);
 }
 
+
+
+
+
+
+
 // Check if the color function works properly
 @include test-module('Output [function]') {
 	@include test("Output CSS should by default return 'false'") {
 		// Assert the expected results
-		@include assert-equal(to-string(false), to-string(return-output(css)));
+		@include assert-equal(to-string(false), to-string(return-output(css)),'',true);
 	}
 
 	@include test("Output FULL should by default return 'false'") {
 		// Assert the expected results
-		@include assert-equal(to-string(false), to-string(return-output(full)));
+		@include assert-equal(to-string(false), to-string(return-output(full)),'',true);
 	}
 }
 
@@ -40,13 +46,13 @@ $output: set-output(code, false);
 		"Output CSS should be changed and return 'true' (map-set function)"
 	) {
 		// Assert the expected results
-		@include assert-equal(to-string(true), to-string(return-output(css)));
+		@include assert-equal(to-string(true), to-string(return-output(css)),'',true);
 	}
 
 	@include test(
 		"Output BUTTON should be changed and return 'true' (set-output function)"
 	) {
 		// Assert the expected results
-		@include assert-equal(to-string(true), to-string(return-output(button)));
+		@include assert-equal(to-string(true), to-string(return-output(button)),'',true);
 	}
 }
