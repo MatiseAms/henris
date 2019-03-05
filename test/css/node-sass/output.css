@@ -12188,15 +12188,41 @@ dl > :not(dt):not(dd):not(div) {
     color: white;
     padding: 0.25rem 0.5rem; }
 
-ul > :not(li),
-ol > :not(li),
 :not(ul):not(ol) > li {
   position: relative;
   outline: 1px dashed red; }
-  ul > :not(li)::before,
-  ol > :not(li)::before,
   :not(ul):not(ol) > li::before {
     content: LI can only be used in a OL or UL;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 0.25rem 0.5rem; }
+
+b > div,
+i > div,
+q > div,
+em > div,
+abbr > div,
+cite > div,
+span > div,
+small > div,
+label > div,
+strong > div {
+  position: relative;
+  outline: 1px dashed red; }
+  b > div::before,
+  i > div::before,
+  q > div::before,
+  em > div::before,
+  abbr > div::before,
+  cite > div::before,
+  span > div::before,
+  small > div::before,
+  label > div::before,
+  strong > div::before {
+    content: You shouldn't use a div in an inline element;
     position: absolute;
     top: 0;
     left: 0;
