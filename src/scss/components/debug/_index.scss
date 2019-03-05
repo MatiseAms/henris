@@ -91,21 +91,20 @@
 	}
 }
 
-// @if output(debug-div) {
-// 	b div,
-// 	i div,
-// 	q div,
-// 	em div,
-// 	abbr div,
-// 	cite div,
-// 	code div,
-// 	span div,
-// 	small div,
-// 	label div,
-// 	strong div {
-// 		@include debug-warning("You shouldn\'t use a div in an inline element");
-// 	}
-// }
+@if output(debug-div) {
+	b > div,
+	i > div,
+	q > div,
+	em > div,
+	abbr > div,
+	cite > div,
+	span > div,
+	small > div,
+	label > div,
+	strong > div {
+		@include debug-warning("You shouldn\'t use a div in an inline element");
+	}
+}
 
 @if output(debug-bad-compute) {
 	[id*='NaN'],
