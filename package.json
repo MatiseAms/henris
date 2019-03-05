@@ -51,7 +51,6 @@
 		"sass-true": "^4.0.0",
 		"stylelint": "^9.9.0",
 		"stylelint-logical-order": "0.0.4",
-		"stylelint-order": "^2.0.0",
-		"webfonts-generator": "^0.4.0"
+		"stylelint-order": "^2.0.0"
 	}
 }
