@@ -2337,26 +2337,68 @@ h1 {
   font-size: 4.1666666667vw;
   line-height: 1;
 }
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    content: "test-text";
+  }
+}
+
 h2 {
   font-size: 3.3333333333vw;
   line-height: 1;
 }
+@media only screen and (max-width: 840px) {
+  h2 {
+    font-size: 28px;
+    content: "test-text";
+  }
+}
+
 h3 {
   font-size: 2.5vw;
   line-height: 1.25;
 }
+@media only screen and (max-width: 960px) {
+  h3 {
+    font-size: 24px;
+    content: "test-text";
+  }
+}
+
 h4 {
   font-size: 2.0833333333vw;
   line-height: 1.25;
 }
+@media only screen and (max-width: 960px) {
+  h4 {
+    font-size: 20px;
+    content: "test-text";
+  }
+}
+
 h5 {
   font-size: 1.6666666667vw;
   line-height: 1.25;
 }
+@media only screen and (max-width: 1080px) {
+  h5 {
+    font-size: 18px;
+    content: "test-text";
+  }
+}
+
 h6 {
   font-size: 1.25vw;
   line-height: 1.25;
 }
+@media only screen and (max-width: 1280px) {
+  h6 {
+    font-size: 16px;
+    content: "test-text";
+  }
+}
+
 h1 + .input-field,
 h2 + .input-field,
 h3 + .input-field,
@@ -2531,6 +2573,49 @@ form + textarea,
 form + form {
   margin-top: 2.0833333333vw;
 }
+@media only screen and (max-width: 768px) {
+  h1 + input, h1 + select, h1 + textarea, h1 + form,
+h2 + input,
+h2 + select,
+h2 + textarea,
+h2 + form,
+h3 + input,
+h3 + select,
+h3 + textarea,
+h3 + form,
+h4 + input,
+h4 + select,
+h4 + textarea,
+h4 + form,
+h5 + input,
+h5 + select,
+h5 + textarea,
+h5 + form,
+h6 + input,
+h6 + select,
+h6 + textarea,
+h6 + form,
+pre + input,
+pre + select,
+pre + textarea,
+pre + form,
+p + input,
+p + select,
+p + textarea,
+p + form,
+.input-field + input,
+.input-field + select,
+.input-field + textarea,
+.input-field + form,
+form + input,
+form + select,
+form + textarea,
+form + form {
+    margin-top: 16px;
+    content: "test-text";
+  }
+}
+
 table + .button, table + .button__container,
 .table__container + .button,
 .table__container + .button__container {
@@ -2644,6 +2729,21 @@ p + h6,
 p + ul {
   margin-top: 2.0833333333vw;
 }
+@media only screen and (max-width: 768px) {
+  div + table, div + h1, div + h2, div + h3, div + h4, div + h5, div + h6, div + ul,
+p + table,
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6,
+p + ul {
+    margin-top: 16px;
+    content: "test-text";
+  }
+}
+
 input + table, input + h1, input + h2, input + h3, input + h4, input + h5, input + h6, input + ul, input + p, input + form,
 select + table,
 select + h1,
@@ -2667,6 +2767,33 @@ textarea + p,
 textarea + form {
   margin-top: 2.0833333333vw;
 }
+@media only screen and (max-width: 768px) {
+  input + table, input + h1, input + h2, input + h3, input + h4, input + h5, input + h6, input + ul, input + p, input + form,
+select + table,
+select + h1,
+select + h2,
+select + h3,
+select + h4,
+select + h5,
+select + h6,
+select + ul,
+select + p,
+select + form,
+textarea + table,
+textarea + h1,
+textarea + h2,
+textarea + h3,
+textarea + h4,
+textarea + h5,
+textarea + h6,
+textarea + ul,
+textarea + p,
+textarea + form {
+    margin-top: 16px;
+    content: "test-text";
+  }
+}
+
 body,
 html {
   min-width: 100%;

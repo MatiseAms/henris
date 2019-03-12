@@ -7347,6 +7347,10 @@ fieldset {
   fieldset + fieldset {
     margin-top: 2.08333vw;
     border-top: 1px solid rgba(16, 16, 16, 0.1); }
+    @media only screen and (max-width: 768px) {
+      fieldset + fieldset {
+        margin-top: 16px;
+        content: 'test-text'; } }
   fieldset label {
     display: inline-block;
     flex-shrink: 0;
@@ -8506,6 +8510,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8581,6 +8587,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8656,6 +8664,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8731,6 +8741,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8806,6 +8818,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8881,6 +8895,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -8956,6 +8972,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9031,6 +9049,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9106,6 +9126,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9181,6 +9203,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9256,6 +9280,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9331,6 +9357,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9403,6 +9431,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9475,6 +9505,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9547,6 +9579,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9619,6 +9653,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9691,6 +9727,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9763,6 +9801,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9835,6 +9875,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9907,6 +9949,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -9979,6 +10023,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10051,6 +10097,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10123,6 +10171,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10208,6 +10258,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10293,6 +10345,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10378,6 +10432,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10463,6 +10519,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10548,6 +10606,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10633,6 +10693,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10718,6 +10780,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10803,6 +10867,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10888,6 +10954,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -10973,6 +11041,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11058,6 +11128,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11107,6 +11179,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11153,6 +11232,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11202,6 +11283,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 0px) and (max-width: 750px) and (max-width: 768px) {
+    .nav--left__small-only {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 0px) and (max-width: 750px) and (min-width: 1536px) {
+    .nav--left__small-only {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11248,6 +11336,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11297,6 +11387,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 0px) and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left__small-up {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 0px) and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left__small-up {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11343,6 +11440,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11392,6 +11491,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 750px) and (max-width: 960px) and (max-width: 768px) {
+    .nav--left__medium-only {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 750px) and (max-width: 960px) and (min-width: 1536px) {
+    .nav--left__medium-only {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11438,6 +11544,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11487,6 +11595,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 750px) and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left__medium-up {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 750px) and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left__medium-up {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11533,6 +11648,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11582,6 +11699,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 960px) and (max-width: 1280px) and (max-width: 768px) {
+    .nav--left__large-only {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 960px) and (max-width: 1280px) and (min-width: 1536px) {
+    .nav--left__large-only {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11628,6 +11752,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11677,6 +11803,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 960px) and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left__large-up {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 960px) and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left__large-up {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11723,6 +11856,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11772,6 +11907,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 1280px) and (max-width: 1920px) and (max-width: 768px) {
+    .nav--left__xlarge-only {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 1280px) and (max-width: 1920px) and (min-width: 1536px) {
+    .nav--left__xlarge-only {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11818,6 +11960,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11867,6 +12011,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 1280px) and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left__xlarge-up {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 1280px) and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left__xlarge-up {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -11913,6 +12064,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -11962,6 +12115,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left__xxlarge-only {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left__xxlarge-only {
+      width: 320px; } }
 
 .nav__trigger {
   position: fixed !important;
@@ -12008,6 +12168,8 @@ hr {
     transform: translateY(0.4375rem) rotate(-45deg); }
   @media only screen and (max-width: 1440px) {
     .nav__trigger {
+      width: 60px;
+      content: 'test-text';
       height: 60px; } }
   @media only screen and (min-width: 0px) and (max-width: 750px) {
     .nav__trigger {
@@ -12057,6 +12219,13 @@ hr {
       font-weight: 500;
       font-size: 1em;
       white-space: nowrap; } }
+  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (max-width: 768px) {
+    .nav--left__xxlarge-up {
+      width: 160px;
+      content: 'test-text'; } }
+  @media only screen and (min-width: 1920px) and (max-width: 9999px) and (min-width: 1536px) {
+    .nav--left__xxlarge-up {
+      width: 320px; } }
 
 @media print {
   [href]:not([href^="#"])::after {
@@ -12336,6 +12505,10 @@ table {
   border-collapse: collapse; }
   table + table {
     margin-top: 4.16667vw; }
+    @media only screen and (max-width: 720px) {
+      table + table {
+        margin-top: 30px;
+        content: 'test-text'; } }
   table.full-width {
     width: 100%; }
   table caption {
@@ -12655,26 +12828,50 @@ pre + pre {
 h1 {
   font-size: 4.16667vw;
   line-height: 1; }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 32px;
+      content: 'test-text'; } }
 
 h2 {
   font-size: 3.33333vw;
   line-height: 1; }
+  @media only screen and (max-width: 840px) {
+    h2 {
+      font-size: 28px;
+      content: 'test-text'; } }
 
 h3 {
   font-size: 2.5vw;
   line-height: 1.25; }
+  @media only screen and (max-width: 960px) {
+    h3 {
+      font-size: 24px;
+      content: 'test-text'; } }
 
 h4 {
   font-size: 2.08333vw;
   line-height: 1.25; }
+  @media only screen and (max-width: 960px) {
+    h4 {
+      font-size: 20px;
+      content: 'test-text'; } }
 
 h5 {
   font-size: 1.66667vw;
   line-height: 1.25; }
+  @media only screen and (max-width: 1080px) {
+    h5 {
+      font-size: 18px;
+      content: 'test-text'; } }
 
 h6 {
   font-size: 1.25vw;
   line-height: 1.25; }
+  @media only screen and (max-width: 1280px) {
+    h6 {
+      font-size: 16px;
+      content: 'test-text'; } }
 
 h1 + .input-field,
 h2 + .input-field,
@@ -12859,6 +13056,49 @@ form + select,
 form + textarea,
 form + form {
   margin-top: 2.08333vw; }
+  @media only screen and (max-width: 768px) {
+    h1 + input,
+    h1 + select,
+    h1 + textarea,
+    h1 + form,
+    h2 + input,
+    h2 + select,
+    h2 + textarea,
+    h2 + form,
+    h3 + input,
+    h3 + select,
+    h3 + textarea,
+    h3 + form,
+    h4 + input,
+    h4 + select,
+    h4 + textarea,
+    h4 + form,
+    h5 + input,
+    h5 + select,
+    h5 + textarea,
+    h5 + form,
+    h6 + input,
+    h6 + select,
+    h6 + textarea,
+    h6 + form,
+    pre + input,
+    pre + select,
+    pre + textarea,
+    pre + form,
+    p + input,
+    p + select,
+    p + textarea,
+    p + form,
+    .input-field + input,
+    .input-field + select,
+    .input-field + textarea,
+    .input-field + form,
+    form + input,
+    form + select,
+    form + textarea,
+    form + form {
+      margin-top: 16px;
+      content: 'test-text'; } }
 
 table + .button, table + [class^='button-icon'],
 table + .button__container,
@@ -13001,6 +13241,25 @@ p + h5,
 p + h6,
 p + ul {
   margin-top: 2.08333vw; }
+  @media only screen and (max-width: 768px) {
+    div + table,
+    div + h1,
+    div + h2,
+    div + h3,
+    div + h4,
+    div + h5,
+    div + h6,
+    div + ul,
+    p + table,
+    p + h1,
+    p + h2,
+    p + h3,
+    p + h4,
+    p + h5,
+    p + h6,
+    p + ul {
+      margin-top: 16px;
+      content: 'test-text'; } }
 
 input + table,
 input + h1,
@@ -13033,6 +13292,39 @@ textarea + ul,
 textarea + p,
 textarea + form {
   margin-top: 2.08333vw; }
+  @media only screen and (max-width: 768px) {
+    input + table,
+    input + h1,
+    input + h2,
+    input + h3,
+    input + h4,
+    input + h5,
+    input + h6,
+    input + ul,
+    input + p,
+    input + form,
+    select + table,
+    select + h1,
+    select + h2,
+    select + h3,
+    select + h4,
+    select + h5,
+    select + h6,
+    select + ul,
+    select + p,
+    select + form,
+    textarea + table,
+    textarea + h1,
+    textarea + h2,
+    textarea + h3,
+    textarea + h4,
+    textarea + h5,
+    textarea + h6,
+    textarea + ul,
+    textarea + p,
+    textarea + form {
+      margin-top: 16px;
+      content: 'test-text'; } }
 
 body,
 html {

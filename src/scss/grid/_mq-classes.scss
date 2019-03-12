@@ -1,5 +1,25 @@
 @if output("grid-hide-show-classes") {
-	// Hide classes
+	// Hide classes	
+	.#{$base-prefix-grid}hide-for-xxlarge-up {
+		@media #{$xxlarge-up} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-xxlarge-only {
+		@media #{$xxlarge-only} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-xlarge-up {
+		@media #{$xlarge-up} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-xlarge-only {
+		@media #{$xlarge-only} {
+			display: none;
+		}
+	}
 	.#{$base-prefix-grid}hide-for-large-up {
 		@media #{$large-up} {
 			display: none;

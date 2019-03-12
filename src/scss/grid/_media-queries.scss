@@ -17,7 +17,7 @@ $media-queries: (
 	'xxlarge-only': mq(bp('xlarge'), bp('xxlarge')),
 	'xxlarge-up': mq(bp('xlarge'), 9999),
 	'xxlarge-down': mq(0, 9999),
-	'mobile': mq(0, map-get($grid-breakpoints, 'small')),
+	'mobile': mq(0, bp('small')),
 	'landscape': '#{$grid-screen} and (orientation: landscape)',
 	'portrait': '#{$grid-screen} and (orientation: portrait)'
 );
