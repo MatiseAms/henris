@@ -1,5 +1,10 @@
 @if output("grid-hide-show-classes") {
 	// Hide classes	
+	.#{$base-prefix-grid}hide-for-xxlarge-down {
+		@media #{$xxlarge-down} {
+			display: none;
+		}
+	}
 	.#{$base-prefix-grid}hide-for-xxlarge-up {
 		@media #{$xxlarge-up} {
 			display: none;
@@ -7,6 +12,11 @@
 	}
 	.#{$base-prefix-grid}hide-for-xxlarge-only {
 		@media #{$xxlarge-only} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-xlarge-down {
+		@media #{$xlarge-down} {
 			display: none;
 		}
 	}
@@ -20,6 +30,11 @@
 			display: none;
 		}
 	}
+	.#{$base-prefix-grid}hide-for-large-down {
+		@media #{$large-down} {
+			display: none;
+		}
+	}
 	.#{$base-prefix-grid}hide-for-large-up {
 		@media #{$large-up} {
 			display: none;
@@ -27,6 +42,11 @@
 	}
 	.#{$base-prefix-grid}hide-for-large-only {
 		@media #{$large-only} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-medium-down {
+		@media #{$medium-down} {
 			display: none;
 		}
 	}
