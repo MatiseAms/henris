@@ -15,11 +15,8 @@
 
 // Process Grid arguments to check if the first argument is a string or not.
 @function processGridArgs($args) {
-	@debug $args;
-	@debug '#{nth($args,1)} :: #{type-of(nth($args,1))}';
 	$data: ();
 	@if type-of(nth($args, 1)) == 'string' {
-		@debug 'yes this is a string!';
 		$data: (
 			'property': get-nth($args, 1),
 			'columns': get-nth($args, 2),
@@ -32,8 +29,6 @@
 			'width': get-nth($args, 2)
 		);
 	}
-
-	@debug "the results :: #{map-get($data,'property')}";
 	@return $data;
 }
 

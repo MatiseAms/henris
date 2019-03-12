@@ -1047,6 +1047,22 @@
 .column.five-sixth {
   width: 83.33333%; }
 
+@media only screen and (min-width: 1920px) and (max-width: 9999px) {
+  .hide-for-xxlarge-up {
+    display: none; } }
+
+@media only screen and (min-width: 1920px) and (max-width: 9999px) {
+  .hide-for-xxlarge-only {
+    display: none; } }
+
+@media only screen and (min-width: 1280px) and (max-width: 9999px) {
+  .hide-for-xlarge-up {
+    display: none; } }
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+  .hide-for-xlarge-only {
+    display: none; } }
+
 @media only screen and (min-width: 960px) and (max-width: 9999px) {
   .hide-for-large-up {
     display: none; } }
