@@ -41,13 +41,12 @@
 		$value: url('#{$path}/#{$file}.svg##{$name}') format('svg');
 		$src: append($src, $value);
 	}
-
-
+	
 	@font-face {
 		@if (str-index($name, ' ')) {
 			$name: '#{$name}';
 		}
-		src: list-to-str($src, ',');
+		src: list-to-str($src);
 		font-weight: $weight;
 		font-family: $name;
 		font-style: unquote($type);

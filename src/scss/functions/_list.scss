@@ -7,23 +7,24 @@
 	@return $collection;
 }
 
-@function list-to-str($list,$separator: ',', $last-check: true){
-	$string: null;
-	$total: length($list);
-	$index: 1; 
+@function list-length($list){
+	$length: 0;
 	@each $item in $list{
-		@if $index != $total and $last-check{
-			@if type-of($item){
-				$item: list-to-str($item, $separator, false);
-			} 
-			$string: unquote(#{$string}#{$item}#{$separator});
+		$length: $length + 1; 
+	}
+	@return $length;
+}
+
+@function list-to-str($list,$separator: ', ', $last: true){
+	$string: nth($list,1);
+	
+	@for $i from 2 through list-length($list){
+		$item: nth($list,$i);
+		@if $i == list-length($list) + 1{
+			$string: #{$string}#{$item};
 		} @else {
-			@if type-of($item){
-				$item: list-to-str($item, $separator, true);
-			} 
-			$string: unquote(#{$string}#{$item});
+			$string: #{$string}#{$separator}#{$item};
 		}
-		$index: $index + 1;
 	}
 	@return $string; 
 }
