@@ -7,6 +7,28 @@
 	@return $collection;
 }
 
+@function list-to-str($list,$separator: ','){
+	$string: null;
+	$total: length($list);
+	$index: 1; 
+	@each $item in $list{
+		@if $index != $total{
+			@if type-of($item){
+				$item: list-to-str($item, $separator);
+			} 
+			$string: unquote(#{$string}#{$item}#{$separator});
+		} @else {
+			@if type-of($item){
+				$item: list-to-str($item, $separator);
+			} 
+			$string: unquote(#{$string}#{$item});
+		}
+		$index: $index + 1;
+	}
+	@return $string; 
+}
+
+
 @function str-to-list($string, $separator: ".", $startAt: 1) {
 	$string: str-replace($string, "__", "."); //
 	$string: str-replace($string, "--", "."); //
@@ -33,7 +55,12 @@
 	@return join($value, $list, $seperator);
 }
 
+
+
+
 @function to-string($list, $glue: "", $is-nested: false) {
+	
+	
 	$result: null;
 
 	@for $i from 1 through length($list) {
