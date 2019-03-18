@@ -7,19 +7,19 @@
 	@return $collection;
 }
 
-@function list-to-str($list,$separator: ','){
+@function list-to-str($list,$separator: ',', $last-check: true){
 	$string: null;
 	$total: length($list);
 	$index: 1; 
 	@each $item in $list{
-		@if $index != $total{
+		@if $index != $total and $last-check{
 			@if type-of($item){
-				$item: list-to-str($item, $separator);
+				$item: list-to-str($item, $separator, false);
 			} 
 			$string: unquote(#{$string}#{$item}#{$separator});
 		} @else {
 			@if type-of($item){
-				$item: list-to-str($item, $separator);
+				$item: list-to-str($item, $separator, true);
 			} 
 			$string: unquote(#{$string}#{$item});
 		}
