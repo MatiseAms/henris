@@ -59,3 +59,13 @@
 	$num: $number / ($number * 0 + 1);
 	@return $num;
 }
+
+@function to-unitless-px($number){
+	@if unit($number) == 'rem'{
+		@return strip-unit($number) * $base-font-size;	
+	} @else if unit($number) == 'em' {
+		@warn 'em is not supported';
+	} @else {
+		@return strip-unit($number);
+	}
+}

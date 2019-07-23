@@ -20,13 +20,13 @@
 		$data: (
 			'property': get-nth($args, 1),
 			'columns': get-nth($args, 2),
-			'width': get-nth($args, 3)
+			'width': to-unitless-px(get-nth($args, 3))
 		);
 	} @else {
 		$data: (
 			'property': null,
 			'columns': get-nth($args, 1),
-			'width': get-nth($args, 2)
+			'width': to-unitless-px(get-nth($args, 2))
 		);
 	}
 	@return $data;
@@ -39,7 +39,6 @@
 	@media #{$mq} {
 		@if map-get($data, 'property') != null {
 			#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
-			content: 'test-text';
 		}
 		@content;
 	}
