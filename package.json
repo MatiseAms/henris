@@ -50,7 +50,7 @@
 		"sass": "^1.16.0",
 		"sass-true": "^4.0.0",
 		"stylelint": "^9.9.0",
-		"stylelint-logical-order": "0.0.4",
+		"stylelint-logical-order": "0.0.5",
 		"stylelint-order": "^2.0.0"
 	}
 }
