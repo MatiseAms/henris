@@ -7,10 +7,10 @@
 	@return $collection;
 }
 
-@function str-to-list($string, $separator: ".", $startAt: 1) {
-	$string: str-replace($string, "__", "."); //
-	$string: str-replace($string, "--", "."); //
-	$string: str-replace($string, "_", "."); //
+@function str-to-list($string, $separator: '.', $startAt: 1) {
+	$string: str-replace($string, '__', '.'); //
+	$string: str-replace($string, '--', '.'); //
+	$string: str-replace($string, '_', '.'); //
 
 	$workStr: str-slice($string, $startAt);
 	$list: ();
@@ -33,7 +33,7 @@
 	@return join($value, $list, $seperator);
 }
 
-@function to-string($list, $glue: "", $is-nested: false) {
+@function to-string($list, $glue: '', $is-nested: false) {
 	$result: null;
 
 	@for $i from 1 through length($list) {
@@ -54,4 +54,71 @@
 }
 @function to-list($value) {
 	@return if(type-of($value) != list, ($value), $value);
+}
+
+@function list-length($list) {
+	$length: 0;
+	@each $item in $list {
+		$length: $length + 1;
+	}
+	@return $length;
+}
+
+@function list-to-str($list, $separator: ', ', $last: true) {
+	$string: nth($list, 1);
+	@if list-length($list) > 1 {
+		@for $i from 2 through list-length($list) {
+			$item: nth($list, $i);
+			@if $i == list-length($list) + 1 {
+				$string: #{$string}#{$item};
+			} @else {
+				$string: #{$string}#{$separator}#{$item};
+			}
+		}
+	}
+	@return $string;
+}
+
+@function to-letter-list($str) {
+	$letters: ();
+	@for $i from 1 through str-length($str) {
+		$letters: append($letters, str-slice($str, $i, $i));
+	}
+	@return $letters;
+}
+
+@function shortest($v1, $v2) {
+	@if type-of($v1) == type-of($v2) {
+		@if type-of($v1) == 'list' {
+			@if length($v1) < length($v2) {
+				@return $v1;
+			} @else if length($v1) > length($v2) {
+				@return $v2;
+			} @else {
+				@warn '#{$v1} (length #{length($v2)}) has the same length as #{$v2} (length #{length($v2)}), returned #{$v1}';
+				@return $v1;
+			}
+		} @else if type-of($v1) == 'string' {
+			@if str-length($v1) < str-length($v2) {
+				@return $v1;
+			} @else if str-length($v1) > str-length($v2) {
+				@return $v2;
+			} @else {
+				@warn '#{$v1} (length #{str-length($v2)}) has the same length as #{$v2} (length #{str-length($v2)}), returned #{$v1}';
+				@return $v1;
+			}
+		}
+	} @else {
+		@warn 'Values do not have the same type.';
+	}
+}
+
+@function list-contains($list, $string) {
+	$pass: false;
+	@each $item in $list {
+		@if $item == $string {
+			$pass: true;
+		}
+	}
+	@return $pass;
 }

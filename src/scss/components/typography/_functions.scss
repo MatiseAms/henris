@@ -42,13 +42,13 @@
 	} @else {
 		@if type-of($font-primary) !=
 			"map"
-			AND
+			and
 			type-of($font-secondary) !=
 			"map"
-			AND
+			and
 			type-of($font-tertiary) !=
 			"map"
-			AND
+			and
 			type-of($font-quaternary) !=
 			"map"
 		{

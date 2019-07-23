@@ -3,6 +3,7 @@
 		"input": [
 			{
 				"background-color": "{{color(White)}}",
+				"text-color": "{{color(Black)}}",
 				"border-color": "{{color(Black)}}",
 				"border-style": "solid",
 				"border-width": "1px",

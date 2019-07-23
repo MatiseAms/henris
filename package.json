@@ -1,6 +1,6 @@
 {
 	"name": "henris",
-	"version": "0.5.2-rc2",
+	"version": "0.6.9",
 	"description": "SCSS framework - by Matise",
 	"main": "index.scss",
 	"directories": {
@@ -15,8 +15,6 @@
 		"build:default": "node-sass dist-input/default.scss dist/henris.css --output-style nested && node-sass dist-input/default.scss dist/henris.min.css --output-style compressed",
 		"build:full": "node-sass dist-input/full.scss dist/henris.full.css --output-style nested && node-sass dist-input/full.scss dist/henris.full.min.css --output-style compressed",
 		"prepublishOnly": "npm run test && npm run build",
-		"icons": "node scripts/icons.js src/icons dist/fonts",
-		"icons:generate": "icon-font-generator src/icons/_brands/*.svg -o dist",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
 		"stylelint": "stylelint 'src/scss/**/*.scss'",
@@ -53,7 +51,6 @@
 		"sass-true": "^4.0.0",
 		"stylelint": "^9.9.0",
 		"stylelint-logical-order": "0.0.4",
-		"stylelint-order": "^2.0.0",
-		"webfonts-generator": "^0.4.0"
+		"stylelint-order": "^2.0.0"
 	}
 }

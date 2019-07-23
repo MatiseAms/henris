@@ -17,7 +17,7 @@ $media-queries: (
 	'xxlarge-only': mq(bp('xlarge'), bp('xxlarge')),
 	'xxlarge-up': mq(bp('xlarge'), 9999),
 	'xxlarge-down': mq(0, 9999),
-	'mobile': mq(0, map-get($grid-breakpoints, 'small')),
+	'mobile': mq(0, bp('small')),
 	'landscape': '#{$grid-screen} and (orientation: landscape)',
 	'portrait': '#{$grid-screen} and (orientation: portrait)'
 );
@@ -45,6 +45,8 @@ $xlarge-only: media-query('xlarge-only'); //
 $xlarge-up: media-query('xlarge-up'); //
 $xlarge-down: media-query('xlarge-down'); //
 $xxlarge-only: media-query('xxlarge-only'); //
+$xxlarge-up: media-query('xxlarge-up'); //
+$xxlarge-down: media-query('xxlarge-down'); //
 
 //
 // In rare case you might want to know and have media queries in

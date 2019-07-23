@@ -16,6 +16,8 @@
 				);
 				@include input-checkbox-body {
 					box-shadow: 0 0 0 1px #{$form-border-color} inset;
+					top: 50%;
+					transform: translateY(-50%);
 				}
 
 				@include input-checkbox-check {
@@ -24,6 +26,8 @@
 					background-color: #{$form-border-color};
 					transform: none;
 					opacity: 1;
+					top: 50%;
+					transform: translateY(-50%);
 				}
 				@include input-checkbox-check-checked {
 					left: 1.25rem;

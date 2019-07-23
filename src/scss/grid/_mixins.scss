@@ -4,15 +4,41 @@
 //  use width calculation
 //  @include min-(width,4,240,'calc(100% - 240px)');
 
-@mixin min-($property: null, $columns: 1, $min-width: 100, $alt: false) {
-	$mq: grid-mq-min($columns, $min-width);
+// Get NTH but return null if it doesn't exist.
+@function get-nth($args, $number) {
+	@if $number < (length($args) + 1) {
+		@return nth($args, $number);
+	} @else {
+		@return null;
+	}
+}
+
+// Process Grid arguments to check if the first argument is a string or not.
+@function processGridArgs($args) {
+	$data: ();
+	@if type-of(nth($args, 1)) == 'string' {
+		$data: (
+			'property': get-nth($args, 1),
+			'columns': get-nth($args, 2),
+			'width': to-unitless-px(get-nth($args, 3))
+		);
+	} @else {
+		$data: (
+			'property': null,
+			'columns': get-nth($args, 1),
+			'width': to-unitless-px(get-nth($args, 2))
+		);
+	}
+	@return $data;
+}
+
+// Process Grid arguments to check if the first argument is a string or not.
+@mixin min-($args...) {
+	$data: processGridArgs($args);
+	$mq: grid-mq-min(map-get($data, 'columns'), map-get($data, 'width'));
 	@media #{$mq} {
-		@if $property != null {
-			@if $alt != false {
-				#{$property}: $alt;
-			} @else {
-				#{$property}: #{strip-unit($min-width)}px;
-			}
+		@if map-get($data, 'property') != null {
+			#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
 		}
 		@content;
 	}
@@ -25,15 +51,12 @@
 //  @include min-(width,4,240,'calc(100% - 240px)');
 //
 
-@mixin max-($property: null, $columns: 1, $max-width: 200, $alt: false) {
-	$mq: grid-mq-max($columns, $max-width);
+@mixin max-($args...) {
+	$data: processGridArgs($args);
+	$mq: grid-mq-max(map-get($data, 'columns'), map-get($data, 'width'));
 	@media #{$mq} {
-		@if $property != null {
-			@if $alt != false {
-				#{$property}: $alt;
-			} @else {
-				#{$property}: #{strip-unit($max-width)}px;
-			}
+		@if map-get($data, 'property') != null {
+			#{map-get($data, 'property')}: #{map-get($data, 'width')}px;
 		}
 		@content;
 	}
@@ -56,7 +79,7 @@
 	//
 	// Create the default classes for widths without any media query
 	//
-	@if output("grid-no-mq-classes") {
+	@if output('grid-no-mq-classes') {
 		@for $a from 0 through $grid-columns {
 			$percentage: percentage($a/$grid-columns); //
 			$column: #{$a}#{$childClass};
@@ -156,7 +179,7 @@
 				}
 			}
 		}
-		@if output("grid-mq-#{$bp-name}") {
+		@if output('grid-mq-#{$bp-name}') {
 			@media #{$mq} {
 				//
 				// Sometimes you need a zero, which does the same as a hide for a breakpoint.
@@ -227,6 +250,7 @@
 // Use as @include grid([property],[grid-size];
 // When a grid-min size and a grid-max size are defined, as a overal setting or in the include like:
 // @include grid([property], [grid-size], [min-size], [max-size]);
+
 @mixin grid(
 	$property,
 	$grid,
