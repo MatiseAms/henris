@@ -1,16 +1,14 @@
-label {
-	padding-left: 0;
-	transition: padding-left 0.3s ease-in-out;
-	padding-right: 1rem;
-	form & {
-		&:hover {
-			//padding-left: 0.25rem;
-			//	background-color: color(Black, 0.1);
-			& + input,
-			& + textarea,
-			& + select {
-				background-color: color(Offwhite);
-			}
-		}
+@mixin henris-label($el: 'label') {
+	#{$base-prefix}#{$el} {
+		line-height:var(--form-input-line-height, #{$form-input-line-height});
+		transition: padding-left 0.3s ease-in-out;
+		padding-left: 0;
+		margin-right: 1rem;
+		padding: var(--form-input-padding, #{$form-input-padding});
+		color: var(--form-label-color, inherit);
 	}
+}
+
+@if output(form-label) {
+	@include henris-label();
 }

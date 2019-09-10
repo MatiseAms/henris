@@ -1,5 +1,1 @@
-// The import to just include all function, don't generate
-// any css
-
-$output-css: false;
-@import "src/scss/style.scss";
+@warn "Ext has been deprecated, by default henris doesnt have an output anymore."; 

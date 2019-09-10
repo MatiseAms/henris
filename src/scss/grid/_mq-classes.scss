@@ -1,55 +1,90 @@
 @if output("grid-hide-show-classes") {
-	// Hide classes
-	@media #{$large-up} {
-		.hide-for-large-up {
+	// Hide classes	
+	.#{$base-prefix-grid}hide-for-xxlarge-down {
+		@media #{$xxlarge-down} {
 			display: none;
 		}
 	}
-	@media #{$large-only} {
-		.hide-for-large-only {
+	.#{$base-prefix-grid}hide-for-xxlarge-up {
+		@media #{$xxlarge-up} {
 			display: none;
 		}
 	}
-	@media #{$medium-up} {
-		.hide-for-medium-up {
+	.#{$base-prefix-grid}hide-for-xxlarge-only {
+		@media #{$xxlarge-only} {
 			display: none;
 		}
 	}
-	@media #{$medium-only} {
-		.hide-for-medium-only {
+	.#{$base-prefix-grid}hide-for-xlarge-down {
+		@media #{$xlarge-down} {
 			display: none;
 		}
 	}
-	@media #{$small-only} {
-		.hide-for-small {
+	.#{$base-prefix-grid}hide-for-xlarge-up {
+		@media #{$xlarge-up} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-xlarge-only {
+		@media #{$xlarge-only} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-large-down {
+		@media #{$large-down} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-large-up {
+		@media #{$large-up} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-large-only {
+		@media #{$large-only} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-medium-down {
+		@media #{$medium-down} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-medium-up {
+		@media #{$medium-up} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-medium-only {
+		@media #{$medium-only} {
+			display: none;
+		}
+	}
+	.#{$base-prefix-grid}hide-for-small {
+		@media #{$small-only} {
 			display: none;
 		}
 	}
 
 	// Show classes
-	@media #{$medium-up} {
-		.show-for-small-only {
+	.#{$base-prefix-grid}show-for-small-only {
+		@media #{$medium-up} {
 			display: none;
 		}
 	}
-	@media #{$small-only} {
-		.show-for-medium-only {
+	.#{$base-prefix-grid}show-for-medium-only {
+		@media #{$small-only} {
+			display: none;
+		}
+		@media #{$large-up} {
 			display: none;
 		}
 	}
-	@media #{$large-up} {
-		.show-for-medium-only {
+	.#{$base-prefix-grid}show-for-large-only {
+		@media #{$medium-down} {
 			display: none;
 		}
-	}
-
-	@media #{$medium-down} {
-		.show-for-large-only {
-			display: none;
-		}
-	}
-	@media #{$xlarge-up} {
-		.show-for-large-only {
+		@media #{$xlarge-up} {
 			display: none;
 		}
 	}

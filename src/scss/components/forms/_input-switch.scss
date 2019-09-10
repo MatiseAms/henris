@@ -1,38 +1,56 @@
-.input-switch{
-	display: inline-block;
-	position: relative;
-	input[type='checkbox'] {
-    position: absolute;
-		&:not(.hidden) {
-			@include input-checkbox(
-				2.5rem,
-				1.5rem,
-				.75rem,
-				0.25rem,
-				color(White),
-				color(Blue),
-				.75rem
-			);
-			@include input-checkbox-body {
-				box-shadow: 0 0 0 1px color(Black, 0.2) inset;
-				// top: 50%;
-			}
+@mixin henris-input-switch($el: 'input-switch') {
+	.#{$base-prefix}#{$el} {
+		position: relative;
+		display: inline-block;
+		input[type='checkbox'] {
+			position: absolute;
+			&:not(.hidden) {
+				@include input-checkbox(
+					2.5rem,
+					1.5rem,
+					0.75rem,
+					0.25rem,
+					#{$form-body-color},
+					#{$form-accent-color},
+					0.75rem
+				);
+				@include input-checkbox-body {
+					box-shadow: 0 0 0 1px #{$form-border-color} inset;
+					top: 50%;
+					transform: translateY(-50%);
+				}
 
-			@include input-checkbox-check {
-				opacity: 1;
-				height: 1rem; width: 1rem;
-				background-color: color(Black,.25);
-				transform: none;
+				@include input-checkbox-check {
+					width: 1rem;
+					height: 1rem;
+					background-color: #{$form-border-color};
+					transform: none;
+					opacity: 1;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				@include input-checkbox-check-checked {
+					left: 1.25rem;
+					background-color: #{$form-accent-color};
+					opacity: 1;
+				}
+				@include input-checkbox-label {
+					position: relative;
+					padding-left: 4rem;
+				}
 			}
-			@include input-checkbox-check-checked {
-				opacity: 1;
-				background-color: color(Blue);
+		}
+		&.reverse input[type='checkbox']:not(.hidden) {
+			@include input-checkbox-check {
 				left: 1.25rem;
 			}
-			@include input-checkbox-label {
-				position: relative;
-				padding-left: 2rem;
+			@include input-checkbox-check-checked {
+				left: 0.2rem;
 			}
 		}
 	}
+}
+
+@if output(form-switch) {
+	@include henris-input-switch();
 }

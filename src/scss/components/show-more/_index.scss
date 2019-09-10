@@ -1,0 +1,52 @@
+@if output("showmore") {
+	.showMore {
+		&__container {
+			position: relative;
+			max-height: var(--max-height, 50vh);
+			overflow: hidden;
+			transition: $base-transition;
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 10;
+				width: 100%;
+				height: var(--shadow-height, 200px);
+				background-image: linear-gradient(
+					to top,
+					var(--shadow-color, white),
+					var(--shadow-color-transparent, rgba(255, 255, 255, 0))
+				);
+				pointer-events: none;
+			}
+		}
+		&__input {
+			position: absolute;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			&:checked {
+				& ~ .showMore__container {
+					max-height: var(--expanded-height, 500vh);
+					&::before {
+						opacity: 0;
+					}
+				}
+				& ~ .showMore__trigger {
+					&::before {
+						content: var(--show-less, "");
+					}
+				}
+			}
+		}
+		&__trigger {
+			&::before {
+				content: var(--show-more, "");
+			}
+		}
+	}
+}

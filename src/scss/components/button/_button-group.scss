@@ -1,8 +1,8 @@
-@if output(("components", "button", "button-group")) {
+@if output("components", "button", "button-group") {
 	.button-group {
-		width: calc(100% + #{$base-space});
 		position: relative;
 		left: -#{$base-space / 2};
+		width: calc(100% + #{$base-space});
 		[class^="button"],
 		[class*=" button"] {
 			margin: $base-space / 2;

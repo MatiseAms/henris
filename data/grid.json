@@ -1,9 +1,12 @@
 {
 	"grid": {
 		"row-width": 4096,
+		"row-class": "row",
 		"design-width": 1920,
 		"columns": 24,
+		"column-class": "column",
 		"screen": "only screen",
+		"cssgrid": false,
 		"breakpoints": [
 			{
 				"small": 750,

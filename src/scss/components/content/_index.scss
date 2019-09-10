@@ -1,14 +1,11 @@
-@if output(("components", "content")) {
+@if output('components', 'content') {
 	/* --------------------------------------------- */
 	/*	Styled links when not used for other use	*/
 	/* ------------------------------------------- */
 
-	@if output("content-default-link") {
+	@if output(content-default-link) {
 		a:not([class])[href] {
 			color: currentColor;
-			text-decoration: none;
-			display: inline-block;
-			font-style: italic;
 		}
 	}
 
@@ -16,12 +13,12 @@
 	/*	The horizontal rule   	*/
 	/* ----------------------- */
 
-	@if output("content-hr") {
+	@if output(content-hr) {
 		hr {
 			height: 1px;
+			border: none;
 			background-color: currentColor;
 			color: currentColor;
-			border: none;
 			margin: 1rem 0;
 			padding: 0;
 		}
@@ -31,13 +28,13 @@
 	/*	Sytling specific for content	*/
 	/* ------------------------------- */
 
-	@if output("content-line-height") {
+	@if output(content-line-height) {
 		.content {
 			line-height: 1.5;
 		}
 	}
 
-	@if output("content-list") {
+	@if output(content-list) {
 		/* ----------------------------- */
 		/*	Ordered & Unordered lists	*/
 		/* --------------------------- */
@@ -48,7 +45,7 @@
 				li {
 					position: relative;
 					line-height: 2;
-					&:before {
+					&::before {
 						position: absolute;
 						right: 100%;
 						transform: translateX(100%);
@@ -64,8 +61,8 @@
 			li {
 				display: block;
 				padding-left: 1.5rem;
-				&:before {
-					content: "\2014 ";
+				&::before {
+					content: '\2014 ';
 				}
 			}
 		}
@@ -73,12 +70,12 @@
 			> li {
 				display: block;
 				padding-left: 1.5rem;
-				&:before {
-					font-size: rem(12);
-					font-weight: bold;
-					text-align: left;
-					line-height: 2rem;
+				&::before {
 					display: block;
+					font-weight: bold;
+					font-size: rem(12);
+					line-height: 2rem;
+					text-align: left;
 				}
 			}
 		}
@@ -86,59 +83,59 @@
 			counter-reset: level1;
 			> li {
 				counter-increment: level1;
-				&:before {
-					content: counter(level1) ".";
+				&::before {
+					content: counter(level1) '.';
 				}
 				ol {
 					counter-reset: level2;
 					> li {
 						counter-increment: level2;
 						padding-left: 2rem;
-						&:before {
-							content: counter(level1) "." counter(level2) ".";
+						&::before {
+							content: counter(level1) '.' counter(level2) '.';
 						}
 						ol {
 							counter-reset: level3;
 							> li {
 								counter-increment: level3;
-								&:before {
+								&::before {
 									content: counter(level1)
-										"."
+										'.'
 										counter(level2)
-										"."
+										'.'
 										counter(level3)
-										". ";
+										'. ';
 								}
 								ol {
 									counter-reset: level4;
 									> li {
 										padding-left: 3rem;
 										counter-increment: level4;
-										&:before {
+										&::before {
 											content: counter(level1)
-												"."
+												'.'
 												counter(level2)
-												"."
+												'.'
 												counter(level3)
-												"."
+												'.'
 												counter(level4)
-												". ";
+												'. ';
 										}
 										ol {
 											counter-reset: level5;
 											> li {
 												counter-increment: level5;
-												&:before {
+												&::before {
 													content: counter(level1)
-														"."
+														'.'
 														counter(level2)
-														"."
+														'.'
 														counter(level3)
-														"."
+														'.'
 														counter(level4)
-														"."
+														'.'
 														counter(level5)
-														". ";
+														'. ';
 												}
 											}
 										}
@@ -156,71 +153,71 @@
 	/*  Special notices 	*/
 	/* ------------------- */
 
-	@if output("content-p-notices") {
+	@if output(content-p-notices) {
 		p {
 			&.error,
 			&.success,
 			&.notice {
-				&:before {
-					margin-right: 10px;
-					content: "";
+				&::before {
+					content: '';
+					display: inline-block;
 					width: 1rem;
 					height: 1rem;
-					display: inline-block;
-					text-align: center;
-					line-height: 1rem;
-					color: color(White);
 					border-radius: 3px;
+					color: color(White);
+					line-height: 1rem;
+					text-align: center;
+					margin-right: 10px;
 				}
 			}
-			&.error:before {
-				content: "\2717";
-				background-color: color(Red, 0.75);
+			&.error::before {
+				content: '\2717';
 				border-bottom: 1px solid darken(Red, 10);
+				background-color: color(Red, 0.75);
 			}
-			&.notice:before {
-				content: "\2071";
-				background-color: color(Blue, 0.75);
+			&.notice::before {
+				content: '\2071';
 				border-bottom: 1px solid darken(Blue, 10);
+				background-color: color(Blue, 0.75);
 			}
-			&.success:before {
-				content: "\2713";
-				background-color: color(Green, 0.75);
+			&.success::before {
+				content: '\2713';
 				border-bottom: 1px solid darken(Green, 10);
+				background-color: color(Green, 0.75);
 			}
 		}
 	}
-	@if output("content-link-filetypes") {
+	@if output(content-link-filetypes) {
 		/* --------------------- */
 		/*  Link to filetypes 	*/
 		/* ------------------- */
 
 		a {
-			&[href^=".doc"],
-			&[href*=".doc"],
-			&[href^=".pdf"],
-			&[href*=".pdf"],
-			&[href^=".xls"],
-			&[href*=".xls"] {
+			&[href^='.doc'],
+			&[href*='.doc'],
+			&[href^='.pdf'],
+			&[href*='.pdf'],
+			&[href^='.xls'],
+			&[href*='.xls'] {
 				margin-left: 1.5rem;
 				position: relative;
-				&:before {
+				&::before {
+					content: '';
 					position: absolute;
-					left: -1.25rem;
 					top: 50%;
-					transform: translateY(-50%);
-					content: "";
-					font-weight: bold;
+					left: -1.25rem;
 					display: inline-block;
 					width: 12px;
 					height: 1rem;
-					line-height: 1rem;
 					border: 2px solid currentColor;
-					opacity: 0.5;
 					background-image: linear-gradient(currentColor, currentColor);
-					background-size: 5px 5px;
-					background-position: top right;
 					background-repeat: no-repeat;
+					background-position: top right;
+					background-size: 5px 5px;
+					font-weight: bold;
+					line-height: 1rem;
+					transform: translateY(-50%);
+					opacity: 0.5;
 					clip-path: polygon(
 						0 0,
 						calc(100% - 6px) 0,
@@ -231,19 +228,18 @@
 				}
 			}
 
-			&[href^=".rss"],
-			&[href*=".rss"] {
+			&[href^='.rss'],
+			&[href*='.rss'] {
 				margin-left: 1.5rem;
 				position: relative;
-				&:before {
-					content: "";
-					display: inline-block;
+				&::before {
+					content: '';
 					position: absolute;
-					left: -1.25rem;
 					top: 50%;
+					left: -1.25rem;
+					display: inline-block;
 					width: 1rem;
 					height: 1rem;
-					transform: translateY(-50%);
 					background-image: radial-gradient(
 							transparent 20%,
 							red 20%,
@@ -251,58 +247,59 @@
 							transparent 50%
 						),
 						radial-gradient(transparent 20%, red 20, red 50%, transparent 50%);
-					background-size: 12px 12px, 12px 12px;
-					background-position: left center, right center;
 					background-repeat: no-repeat;
+					background-position: left center, right center;
+					background-size: 12px 12px, 12px 12px;
+					transform: translateY(-50%);
 				}
 			}
-			&[href^="mailto:"],
-			&[href*="mailto:"] {
+			&[href^='mailto:'],
+			&[href*='mailto:'] {
 				margin-left: 1.75rem;
 				position: relative;
-				&:before {
+				&::before {
+					content: '';
 					position: absolute;
-					left: -1.5rem;
 					top: 50%;
-					transform: translateY(-50%);
-					content: "";
-					font-weight: bold;
+					left: -1.5rem;
 					display: inline-block;
 					width: 1rem;
 					height: 12px;
-					line-height: 1rem;
 					border: 2px solid currentColor;
-					opacity: 0.5;
 					background-image: linear-gradient(currentColor, currentColor);
-					background-size: 5px 5px;
-					background-position: top right;
 					background-repeat: no-repeat;
+					background-position: top right;
+					background-size: 5px 5px;
+					font-weight: bold;
+					line-height: 1rem;
+					transform: translateY(-50%);
+					opacity: 0.5;
 				}
 			}
 		}
 	}
-	// @if output("content-row-example") {
+	@if output(content-row-example) {
+		.content .example {
+			.row {
+				border: 1px solid color(Black, 0.1);
+				border-bottom: 0;
+				&:first-child {
+					border-radius: $base-border-radius $base-border-radius 0 0;
+				}
+				&:last-child {
 
-	.content .example {
-		.row {
-			border: 1px solid color(Black, 0.1);
-			border-bottom: 0;
-			&:first-child {
-				border-radius: $base-border-radius $base-border-radius 0 0;
-			}
-			&:last-child {
-				border-radius: 0 0 $base-border-radius $base-border-radius;
+					border-bottom: 1px solid color(Black, 0.1);
+					border-radius: 0 0 $base-border-radius $base-border-radius;
+				}
+				&:nth-child(odd) {
+					background-color: color(Blue, 0.05);
+				}
 
-				border-bottom: 1px solid color(Black, 0.1);
-			}
-			&:nth-child(odd) {
-				background-color: color(Blue, 0.05);
-			}
-
-			.column {
-				padding: 0.5rem 1rem;
-				& + .column {
-					border-left: 1px solid color(Black, 0.1);
+				.column {
+					padding: 0.5rem 1rem;
+					& + .column {
+						border-left: 1px solid color(Black, 0.1);
+					}
 				}
 			}
 		}

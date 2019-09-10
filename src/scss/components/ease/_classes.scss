@@ -1,23 +1,27 @@
-@if output(("components", "ease", "ease-classes")) {
+@mixin ease($ease-name, $property: null) {
+	@if length(map-get($ease, $ease-name) > 0) {
+		transition-timing-function: cubic-bezier(#{unquote($ease-value)});
+		animation-timing-function: cubic-bezier(#{unquote($ease-value)});
+	} @else {
+		@warn "#{$ease-name} doesn't exist";
+	}
+}
+
+@mixin henris-ease($prefix: '.ease-'){
 	$temp: ();
 	@each $ease-name, $ease-value in $ease {
-		.ease-#{$ease-name} {
-			&,
-			&:before,
-			&:after {
-				animation-timing-function: cubic-bezier(#{unquote($ease-value)});
-				transition-timing-function: cubic-bezier(#{unquote($ease-value)});
-			}
+		#{$prefix}#{$ease-name} {
 			$temp: join($temp, $ease-name);
+			&,
+			&::before,
+			&::after {
+				transition-timing-function: cubic-bezier(#{unquote($ease-value)});
+				animation-timing-function: cubic-bezier(#{unquote($ease-value)});
+			}
 		}
 	}
 }
 
-@mixin ease($ease-name, $property: null) {
-	@if length(map-get($ease, $ease-name) > 0) {
-		animation-timing-function: cubic-bezier(#{unquote($ease-value)});
-		transition-timing-function: cubic-bezier(#{unquote($ease-value)});
-	} @else {
-		@warn "#{$ease-name} doesn't exist";
-	}
+@if output("components", "ease", "ease-classes") {
+	@include henris-ease();
 }

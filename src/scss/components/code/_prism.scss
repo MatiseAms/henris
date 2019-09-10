@@ -1,4 +1,4 @@
-// @if output(("components", "code-prism")) {
+// @if output("components", "code-prism") {
 // PrismJS 1.14.0 https://prismjs.com/download.html#themes=prism-dark&languages=markup+css+clike+javascript */
 //
 // prism.js Dark theme for JavaScript, CSS and HTML
@@ -6,22 +6,18 @@
 // @author Lea Verou
 //
 
-$color-primary: color(Blue);
-$color-secondary: color(Red);
-$color-tertiary: color(Purple);
-
-@if output(("components", "code", "code-prism")) {
+@if output("components", "code", "code-prism") {
 	code[class*="language-"],
 	pre[class*="language-"] {
-		color: white;
 		background: none;
+		color: white;
 		font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-		text-align: left;
-		white-space: pre;
-		word-spacing: normal;
-		word-break: normal;
-		word-wrap: normal;
 		line-height: 1.5;
+		white-space: pre;
+		text-align: left;
+		word-wrap: normal;
+		word-break: normal;
+		word-spacing: normal;
 		tab-size: 4;
 		hyphens: none;
 	}
@@ -35,30 +31,30 @@ $color-tertiary: color(Purple);
 
 	pre[class*="language-"],
 	:not(pre) > code[class*="language-"] {
-		background: $dark;
+		background: $color-dark;
 	}
 
 	/* Code blocks */
 	pre[class*="language-"] {
+		border-radius: 0.5em;
+		overflow: auto;
 		padding: 1em;
 		margin: 0.5em 0;
-		overflow: auto;
-		border-radius: 0.5em;
 	}
 
 	/* Inline code */
 	:not(pre) > code[class*="language-"] {
-		padding: 2rem;
 		border-radius: $base-border-radius;
-		white-space: normal;
 		background: transparent;
+		white-space: normal;
+		padding: 2rem;
 	}
 
 	.token.comment,
 	.token.prolog,
 	.token.doctype,
 	.token.cdata {
-		color: rgba($light, 0.5);
+		color: rgba($color-light, 0.5);
 	}
 
 	.token.punctuation {

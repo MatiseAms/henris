@@ -33,51 +33,51 @@
 	$menu-margin-left: $margin-left !global;
 	$menu-margin-top: $margin-top !global;
 	$menu-top: $top !global;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-indent: -999em;
+	cursor: pointer;
 
 	// The code for the span
 	user-select: none;
-	position: absolute;
 	margin: #{$margin-top} auto #{$margin} -#{$margin-left};
-	text-indent: -999em;
-	top: 50%;
-	left: 50%;
-	cursor: pointer;
 
 	// Set styles to bars
 	&,
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		display: block;
 		width: $width;
 		height: $height;
 		background-color: $color;
-		transition: $transition-duration;
 		opacity: 1;
+		transition: $transition-duration;
 		@if $round != 0 {
 			border-radius: $round;
 		}
 	}
 	// Bottom and top bar
-	&:before,
-	&:after {
-		position: absolute;
+	&::before,
+	&::after {
 		content: "";
+		position: absolute;
 	}
 
 	// Top bar
-	&:before {
+	&::before {
 		top: -#{$top};
 	}
 
 	// Bottom bar
-	&:after {
+	&::after {
 		top: #{$top};
 	}
 }
 
 @mixin menu-close {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		top: 0px;
 		margin-top: -#{($menu-height/2) + ($menu-gutter + $menu-height)};
 		@content;
@@ -85,40 +85,40 @@
 	& {
 		background-color: transparent;
 	}
-	&:before {
+	&::before {
 		transform: translateY($menu-gutter + $menu-height) rotate(45deg);
 	}
-	&:after {
+	&::after {
 		transform: translateY($menu-gutter + $menu-height) rotate(-45deg);
 	}
 }
 @mixin menu-reset {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		margin-top: 0;
 		@content;
 	}
 	& {
 		background-color: $menu-color;
 	}
-	&:before {
-		transform: translateY(0) rotate(0deg);
+	&::before {
 		top: -#{$menu-top};
-	}
-	&:after {
 		transform: translateY(0) rotate(0deg);
+	}
+	&::after {
 		top: #{$menu-top};
+		transform: translateY(0) rotate(0deg);
 	}
 }
 @mixin menu-body {
 	&,
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		@content;
 	}
 }
 @mixin menu-body-first {
-	&:before {
+	&::before {
 		@content;
 	}
 }
@@ -128,14 +128,14 @@
 	}
 }
 @mixin menu-body-last {
-	&:after {
+	&::after {
 		@content;
 	}
 }
 
 @mixin menu-body-close {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		@content;
 	}
 }

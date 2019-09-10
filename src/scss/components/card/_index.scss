@@ -1,0 +1,52 @@
+@mixin henris-card($el: '.card') {
+	#{$base-prefix}#{$el} {
+		position: relative;
+		border-radius: $base-border-radius;
+		@content;
+		&__holder {
+			padding: var(--card-space, 1rem);
+		}
+		&__row {
+			position: relative;
+			width: calc(100% + ((var(--card-padding, 1rem) * 2) * 2));
+			margin-left: calc((var(--card-padding, 1rem) * 2) * -1);
+		}
+		header {
+			padding: var(--card-padding, 1rem);
+		}
+		main {
+			padding: var(--card-padding, 1rem);
+			table {
+				position: relative;
+				left: calc(var(--card-padding, 1rem) * -1);
+				width: calc(100% + (var(--card-padding, 1rem) * 2));
+				tr {
+					display: flex;
+					flex-wrap: wrap;
+					td {
+					}
+				}
+			}
+		}
+		&--expand-main {
+			main {
+				top: 100%;
+				left: 0;
+				width: 100%;
+				background-color: color(White, 0.2);
+				overflow: hidden;
+				transition: $base-transition;
+			}
+			&:hover {
+				z-index: 10;
+			}
+		}
+	}
+	.column #{$base-prefix}#{$el} {
+		height: 100%;
+	}
+}
+
+@if output(card) {
+	@include henris-card();
+}

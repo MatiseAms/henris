@@ -1,0 +1,24 @@
+$form-input-background-color: #ffffff !default; //
+$form-input-text-color: #101010 !default; //
+$form-input-border-color: #101010 !default; //
+$form-input-border-style: solid !default; //
+$form-input-border-width: 1px !default; //
+$form-input-font-size: 1rem !default; //
+$form-input-line-height: 1rem !default; //
+$form-input-border-radius: 2px !default; //
+$form-input-min-width: 10rem !default; //
+$form-input-max-width: 100% !default; //
+$form-input-padding: 0.75rem !default; //
+$form-input: (
+	"background-color": #ffffff, 
+	"text-color": #101010, 
+	"border-color": #101010, 
+	"border-style": solid, 
+	"border-width": 1px, 
+	"font-size": 1rem, 
+	"line-height": 1rem, 
+	"border-radius": 2px, 
+	"min-width": 10rem, 
+	"max-width": 100%, 
+	"padding": 0.75rem
+) !default; //

@@ -1,121 +1,129 @@
-$output-css: true !default; //
-$output-full: false !default; //
-$output-background-colors: true !default; //
-$output-text-colors: true !default; //
-$output-custom-properties: true !default; //
-$output-ease-classes: false !default; //
-$output-button-default: true !default; //
-$output-button-colors: true !default; //
-$output-button-sizes: true !default; //
-$output-button-rounded: true !default; //
-$output-button-round: true !default; //
-$output-button-icons: true !default; //
-$output-button-text-transform: true !default; //
-$output-button-rotated: true !default; //
-$output-button-border: true !default; //
-$output-custom-properties-media-queries: false !default; //
-$output-custom-properties-colors: false !default; //
-$output-grid: true !default; //
-$output-grid-helpers: false !default; //
-$output-grid-hide-show-classes: true !default; //
-$output-grid-only-classes: true !default; //
-$output-grid-counted-columns: true !default; //
-$output-grid-parts: true !default; //
-$output-grid-offset: false !default; //
-$output-grid-push: false !default; //
-$output-grid-pull: false !default; //
-$output-grid-non-breaking-column: false !default; //
-$output-grid-columns: true !default; //
-$output-grid-cssgrid: false !default; //
-$output-grid-row-breakpoints: true !default; //
-$output-components: true !default; //
-$output-blockquote: true !default; //
-$output-button: false !default; //
-$output-button-group: false !default; //
-$output-code: true !default; //
-$output-code-prism: false !default; //
-$output-color: true !default; //
-$output-content: true !default; //
-$output-content-link-filetypes: false !default; //
-$output-content-p-notices: false !default; //
-$output-content-list: true !default; //
-$output-content-line-height: true !default; //
-$output-content-hr: true !default; //
-$output-content-default-link: true !default; //
-$output-detail-list: true !default; //
-$output-ease: true !default; //
-$output-forms: true !default; //
-$output-helpers: true !default; //
-$output-reset: true !default; //
-$output-reset-meyerweb: true !default; //
-$output-reset-extra: true !default; //
-$output-horizontal-rule: true !default; //
-$output-icon: true !default; //
-$output-icons-specific: false !default; //
-$output-print: true !default; //
-$output-reminder: true !default; //
-$output-section: true !default; //
-$output-table: true !default; //
-$output-typography: true !default; //
-$output-typography-headings: true !default; //
-$output-typography-margins: true !default; //
+$output-typography-usage: true !default; //
+$output-typography-weight-classes: false !default; //
+$output-pattern: false !default; //
+$output-pattern-checkered: true !default; //
+$output-pattern-cubes: true !default; //
+$output-pattern-dots: true !default; //
+$output-pattern-houndstooth: true !default; //
+$output-pattern-lines: true !default; //
+$output-pattern-zigzag: true !default; //
 $output: (
-	"css": true,
-	"full": false,
-	"background-colors": true,
-	"text-colors": true,
-	"custom-properties": true,
-	"ease-classes": false,
-	"button-default": true,
-	"button-colors": true,
-	"button-sizes": true,
-	"button-rounded": true,
-	"button-round": true,
-	"button-icons": true,
-	"button-text-transform": true,
-	"button-rotated": true,
-	"button-border": true,
-	"custom-properties-media-queries": false,
-	"custom-properties-colors": false,
-	"grid": true,
-	"grid-helpers": false,
-	"grid-hide-show-classes": true,
-	"grid-only-classes": true,
-	"grid-counted-columns": true,
-	"grid-parts": true,
-	"grid-offset": false,
-	"grid-push": false,
-	"grid-pull": false,
-	"grid-non-breaking-column": false,
-	"grid-columns": true,
-	"grid-cssgrid": false,
-	"grid-row-breakpoints": true,
-	"components": true,
-	"blockquote": true,
-	"button": false,
-	"button-group": false,
-	"code": true,
-	"code-prism": false,
-	"color": true,
-	"content": true,
-	"content-link-filetypes": false,
-	"content-p-notices": false,
-	"content-list": true,
-	"content-line-height": true,
-	"content-hr": true,
-	"content-default-link": true,
-	"detail-list": true,
-	"ease": true,
-	"forms": true,
-	"helpers": true,
-	"reset": true,
-	"reset-meyerweb": true,
-	"reset-extra": true,
-	"horizontal-rule": true,
-	"icon": true,
-	"icons-specific": false,
-	"print": true,
-	"reminder": true,
-	"section": true,
-	"table": true
+	"css": false, 
+	"full": false, 
+	"debug": true, 
+	"debug-image-alt": true, 
+	"debug-input-type": true, 
+	"debug-target-blank": true, 
+	"debug-summary-first": true, 
+	"debug-legend-first": true, 
+	"debug-abbr-title": true, 
+	"debug-javascript-link": true, 
+	"debug-detail-list-children": true, 
+	"debug-figcaption": true, 
+	"debug-div": true, 
+	"debug-list": true, 
+	"debug-bad-compute": true, 
+	"background-colors": true, 
+	"text-colors": true, 
+	"custom-properties": true, 
+	"ease-classes": false, 
+	"button": false, 
+	"button-default": true, 
+	"button-colors": true, 
+	"button-sizes": true, 
+	"button-rounded": true, 
+	"button-round": true, 
+	"button-icons": true, 
+	"button-text-transform": true, 
+	"button-rotated": true, 
+	"button-border": true, 
+	"custom-properties-media-queries": false, 
+	"custom-properties-color": false, 
+	"grid": true, 
+	"grid-only": false, 
+	"grid-helpers": false, 
+	"grid-hide-show-classes": true, 
+	"grid-only-classes": false, 
+	"grid-counted-columns": true, 
+	"grid-column": true, 
+	"grid-parts": true, 
+	"grid-offset": false, 
+	"grid-push": false, 
+	"grid-pull": false, 
+	"grid-non-breaking-column": false, 
+	"grid-columns": true, 
+	"grid-cssgrid": false, 
+	"grid-row-breakpoints": true, 
+	"grid-mq-custom-properties": false, 
+	"grid-no-mq-classes": false, 
+	"grid-mq-small": true, 
+	"grid-mq-medium": true, 
+	"grid-mq-large": true, 
+	"grid-mq-xlarge": true, 
+	"grid-mq-xxlarge": false, 
+	"components": true, 
+	"blockquote": false, 
+	"button-group": false, 
+	"card": false, 
+	"code": false, 
+	"code-prism": false, 
+	"color": true, 
+	"color-background-colors": true, 
+	"color-text-colors": true, 
+	"content": true, 
+	"content-link-filetypes": false, 
+	"content-p-notices": false, 
+	"content-list": true, 
+	"content-line-height": true, 
+	"content-row-example": false, 
+	"content-hr": true, 
+	"content-default-link": true, 
+	"content-detail-list": false, 
+	"data-label": false, 
+	"detail-list": false, 
+	"ease": true, 
+	"form": false, 
+	"form-fieldset": true, 
+	"form-form": true, 
+	"form-button": true, 
+	"form-input-text": true, 
+	"form-check-color": false, 
+	"form-check-icon": false, 
+	"form-check-text": false, 
+	"form-checkbox": true, 
+	"form-hidden": true, 
+	"form-radio": true, 
+	"form-range": true, 
+	"form-switch": true, 
+	"form-input": true, 
+	"form-input-colored": false, 
+	"form-textarea": true, 
+	"form-select": true, 
+	"form-label": true, 
+	"form-field": true, 
+	"helpers": true, 
+	"reset": true, 
+	"reset-meyerweb": true, 
+	"reset-extra": true, 
+	"horizontal-rule": true, 
+	"icon": true, 
+	"icons-specific": false, 
+	"print": true, 
+	"navigation": false, 
+	"section": true, 
+	"showmore": false, 
+	"spacing": true, 
+	"table": false, 
+	"typography": true, 
+	"typography-headings": true, 
+	"typography-margins": true, 
+	"typography-usage": true, 
+	"typography-weight-classes": false, 
+	"pattern": false, 
+	"pattern-checkered": true, 
+	"pattern-cubes": true, 
+	"pattern-dots": true, 
+	"pattern-houndstooth": true, 
+	"pattern-lines": true, 
+	"pattern-zigzag": true
 ) !default; //

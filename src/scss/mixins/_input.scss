@@ -17,12 +17,12 @@
 			padding-left: $width + $margin;
 			position: relative;
 			cursor: pointer;
-			&:before {
+			&::before {
 				content: "";
-				display: block;
 				position: absolute;
-				left: 0;
 				top: 0;
+				left: 0;
+				display: block;
 				width: $width;
 				height: $height;
 				background: $bg-body;
@@ -30,22 +30,22 @@
 					border-radius: $round;
 				}
 			}
-			&:after {
+			&::after {
 				content: "";
-				display: block;
 				position: absolute;
-				left: $spacing;
 				top: $spacing;
+				left: $spacing;
+				display: block;
 				width: ($width - ($spacing * 2));
 				height: ($width - ($spacing * 2));
-				background: $bg-check;
 				border-radius: $round;
+				background: $bg-check;
 				opacity: 0;
 				transition: $base-transition;
 			}
 		}
 		input[type="radio"]:checked {
-			& + label:after {
+			& + label::after {
 				opacity: 1;
 				transition: $base-transition;
 			}
@@ -71,12 +71,12 @@
 			padding-left: $width + $margin;
 			position: relative;
 			cursor: pointer;
-			&:before {
+			&::before {
 				content: "";
-				display: block;
 				position: absolute;
-				left: 0;
 				top: 0;
+				left: 0;
+				display: block;
 				width: $width;
 				height: $height;
 				background: $bg-body;
@@ -84,22 +84,22 @@
 					border-radius: $round;
 				}
 			}
-			&:after {
+			&::after {
 				content: "";
-				display: block;
 				position: absolute;
-				left: $spacing;
 				top: $spacing;
+				left: $spacing;
+				display: block;
 				width: ($width - ($spacing * 2));
 				height: ($width - ($spacing * 2));
-				background: $bg-check;
 				border-radius: $round;
+				background: $bg-check;
 				opacity: 0;
 				transition: $base-transition;
 			}
 		}
 		input[type="checkbox"]:checked {
-			& + label:after {
+			& + label::after {
 				opacity: 1;
 				transition: $base-transition;
 			}
@@ -116,7 +116,7 @@
 	@if $el == "body" {
 		@include parent {
 			input#{$type} + label {
-				&:before {
+				&::before {
 					@content;
 				}
 			}
@@ -133,19 +133,19 @@
 		}
 	} @else if $el == "check" {
 		@include parent {
-			input#{$type} + label:after {
+			input#{$type} + label::after {
 				@content;
 			}
 		}
 	} @else if $el == "check-checked" {
 		@include parent {
-			input#{$type}:checked + label:after {
+			input#{$type}:checked + label::after {
 				@content;
 			}
 		}
 	} @else if $el == "body-checked" {
 		input#{$type}:checked + label {
-			&:before {
+			&::before {
 				@content;
 			}
 		}

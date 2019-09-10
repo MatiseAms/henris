@@ -1,0 +1,5 @@
+@import '../../src/scss/custom-output';
+
+$output: set-output(full, true);
+
+@import '../../src/scss/index';

@@ -1,15 +1,16 @@
-@if output(("components", "detail-list")) {
-	dl {
-		margin: 0px;
-		padding: 0px;
-		overflow: auto;
+@mixin henris-detail-list($el: 'dl') {
+
+	#{$base-prefix}#{$el} {
 		display: flex;
 		flex-wrap: wrap;
+		overflow: auto;
+		margin: 0px;
+		padding: 0px;
 		dt,
 		dd {
 			display: inline-block;
-			min-width: 200px;
 			flex-grow: 1;
+			min-width: 200px;
 			padding: 1rem 0;
 		}
 		dt {
@@ -22,4 +23,8 @@
 			//	padding-top: 0;
 		}
 	}
+}
+
+@if output('components', 'detail-list') {
+	@include henris-detail-list();
 }

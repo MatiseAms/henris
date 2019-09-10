@@ -1,0 +1,26 @@
+@if output("pattern", "pattern-lines") {
+	.pattern-lines {
+		background-image: linear-gradient(
+				to right bottom,
+				transparent calc(100% - (var(--pattern-width) / 2)),
+				var(--pattern-color-primary) calc(100% - (var(--pattern-width) / 2)),
+				var(--pattern-color-primary)
+			),
+			linear-gradient(
+				to right bottom,
+				transparent calc(50% - (var(--pattern-width) / 2)),
+				var(--pattern-color-primary) calc(50% - (var(--pattern-width) / 2)),
+				var(--pattern-color-primary) calc(50% + (var(--pattern-width) / 2)),
+				transparent calc(50% + (var(--pattern-width) / 2))
+			),
+			linear-gradient(
+				to right bottom,
+				var(--pattern-color-primary),
+				var(--pattern-color-primary) calc(var(--pattern-width) / 2),
+				var(--pattern-color-secondary) calc(var(--pattern-width) / 2)
+			);
+		background-repeat: repeat;
+
+		background-size: var(--pattern-size);
+	}
+}

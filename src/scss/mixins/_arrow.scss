@@ -4,18 +4,18 @@
 	}
 	// The Close button
 	& {
+		display: block;
 		width: $size;
 		height: $size;
-		display: block;
 		text-indent: -999em;
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
+			position: absolute;
 			display: block;
 			width: 75%;
 			height: $thickness;
 			background-color: $bg;
-			position: absolute;
 		}
 	}
 	@if $direction == 'close' {
@@ -42,116 +42,116 @@
 }
 @mixin arrow-min() {
 	& {
-		&:before,
-		&:after {
-			left: 25%;
+		&::before,
+		&::after {
 			top: 25%;
-			transform-origin: 50% 50%;
+			left: 25%;
 			width: 100%;
+			transform-origin: 50% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(0deg);
 		}
-		&:after {
-			transform: rotate(90deg);
+		&::after {
 			width: 0;
+			transform: rotate(90deg);
 		}
 	}
 }
 @mixin arrow-plus() {
 	& {
-		&:before,
-		&:after {
-			left: 0%;
+		&::before,
+		&::after {
 			top: 50%;
-			transform-origin: 50% 50%;
+			left: 0%;
 			width: 100%;
+			transform-origin: 50% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(0deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 @mixin arrow-close() {
 	& {
-		&:before,
-		&:after {
-			left: 50%;
+		&::before,
+		&::after {
 			top: 50%;
-			transform-origin: 50% 50%;
+			left: 50%;
 			width: 100%;
+			transform-origin: 50% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(-45deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(135deg);
 		}
 	}
 }
 @mixin arrow-left() {
 	& {
-		&:before,
-		&:after {
-			left: 25%;
+		&::before,
+		&::after {
 			top: 50%;
+			left: 25%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(-45deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(45deg);
 		}
 	}
 }
 @mixin arrow-right() {
 	& {
-		&:before,
-		&:after {
-			left: 75%;
+		&::before,
+		&::after {
 			top: 50%;
+			left: 75%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(135deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(-135deg);
 		}
 	}
 }
 @mixin arrow-down() {
 	& {
-		&:before,
-		&:after {
-			left: 50%;
+		&::before,
+		&::after {
 			top: 75%;
+			left: 50%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(-135deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(-45deg);
 		}
 	}
 }
 @mixin arrow-up() {
 	& {
-		&:before,
-		&:after {
-			left: 50%;
+		&::before,
+		&::after {
 			top: 25%;
+			left: 50%;
 			transform-origin: 0% 50%;
 		}
-		&:before {
+		&::before {
 			transform: rotate(45deg);
 		}
-		&:after {
+		&::after {
 			transform: rotate(-225deg);
 		}
 	}

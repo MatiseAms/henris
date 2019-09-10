@@ -1,0 +1,22 @@
+@if output("pattern", "pattern-zigzag") {
+	.pattern-zigzag {
+		background: linear-gradient(
+					135deg,
+					var(--pattern-color-primary) 25%,
+					transparent 25%
+				)
+				calc((var(--pattern-size) * 2) * -1)
+				0,
+			linear-gradient(225deg, var(--pattern-color-primary) 25%, transparent 25%)
+				calc((var(--pattern-size) * 2) * -1)
+				0,
+			linear-gradient(315deg, var(--pattern-color-primary) 25%, transparent 25%),
+			linear-gradient(
+				45deg,
+				var(--pattern-color-primary) 25%,
+				var(--pattern-color-secondary) 25%
+			);
+		background-size: calc(var(--pattern-size) * 4)
+			calc(var(--pattern-size) * 4);
+	}
+}

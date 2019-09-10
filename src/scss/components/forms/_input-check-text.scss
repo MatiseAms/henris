@@ -1,55 +1,58 @@
-.input-check-text {
-	height: auto;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	label {
-		position: relative;
-
-		display: block;
-		left: 0;
-		min-width: 2.5em;
+@mixin henris-check-text($el: '.input-check-text') {
+	#{$base-prefix}#{$el} {
 		width: auto;
-		padding: 0 1em;
-		line-height: 2.5em;
-		text-align: center;
-		text-indent: 0;
-		box-shadow: 0 0 0 1px color(Black, 0.15);
-		border-radius: $base-border-radius;
-
-		&:before {
-			content: attr(data-text);
-		}
-	}
-	input[type="checkbox"],
-	input[type="radio"] {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		width: 0;
-		height: 0;
-		margin: 0;
+		height: auto;
 		padding: 0;
-		position: absolute;
-		opacity: 0;
-	}
+		margin: 0;
+		@content;
+		label {
+			position: relative;
+			left: 0;
+			display: inline-block;
+			width: auto;
+			min-width: 2.5em;
+			box-shadow: 0 0 0 1px #{$form-shadow-color};
+			border-radius: $base-border-radius;
+			line-height: 2.5em;
+			text-align: center;
+			text-indent: 0;
+			padding: 0 1em;
 
-	label:before {
-	}
+			&::before {
+				content: attr(data-text);
+			}
+		}
+		input[type='checkbox'],
+		input[type='radio'] {
+			position: absolute;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			margin: 0;
+			padding: 0;
+		}
 
-	input:checked {
-		& + label {
-			background-color: color(Black);
-			color: color(White);
+		input:checked {
+			& + label {
+				background-color: color(Black);
+				color: color(White);
+			}
 		}
-	}
-	&.input-check--nolabel {
-		margin: 0.25rem;
-		&:before {
-			top: 0 !important;
-		}
-		& + .input-check--nolabel {
+		&.input-check--nolabel {
 			margin: 0.25rem;
+			&::before {
+				top: 0 !important;
+			}
+			& + .input-check--nolabel {
+				margin: 0.25rem;
+			}
 		}
 	}
+}
+
+@if output(form-check-text) {
+	@include henris-check-text();
 }

@@ -1,0 +1,59 @@
+@if output("pattern", "pattern-cubes") {
+	.pattern-cubes {
+
+		--pattern-size-temp: calc((var(--pattern-size) / 8) * 9);
+		background-image: linear-gradient(
+				30deg,
+				var(--pattern-color-primary) 12%,
+				transparent 12.5%,
+				transparent 87%,
+				var(--pattern-color-primary) 87.5%,
+				var(--pattern-color-primary)
+			),
+			linear-gradient(
+				150deg,
+				var(--pattern-color-primary) 12%,
+				transparent 12.5%,
+				transparent 87%,
+				var(--pattern-color-primary) 87.5%,
+				var(--pattern-color-primary)
+			),
+			linear-gradient(
+				30deg,
+				var(--pattern-color-primary) 12%,
+				transparent 12.5%,
+				transparent 87%,
+				var(--pattern-color-primary) 87.5%,
+				var(--pattern-color-primary)
+			),
+			linear-gradient(
+				150deg,
+				var(--pattern-color-primary) 12%,
+				transparent 12.5%,
+				transparent 87%,
+				var(--pattern-color-primary) 87.5%,
+				var(--pattern-color-primary)
+			),
+			linear-gradient(
+				60deg,
+				var(--pattern-color-secondary) 25%,
+				transparent 25.5%,
+				transparent 75%,
+				var(--pattern-color-secondary) 75%,
+				var(--pattern-color-secondary)
+			),
+			linear-gradient(
+				60deg,
+				var(--pattern-color-secondary) 25%,
+				transparent 25.5%,
+				transparent 75%,
+				var(--pattern-color-secondary) 75%,
+				var(--pattern-color-secondary)
+			);
+		background-position: 0 0, 0 0,
+			calc(var(--pattern-size) / 2) var(--pattern-size-temp),
+			calc(var(--pattern-size) / 2) var(--pattern-size-temp), 0 0,
+			calc(var(--pattern-size) / 2) var(--pattern-size-temp);
+		background-size: var(--pattern-size) calc(var(--pattern-size-temp) * 2);
+	}
+}

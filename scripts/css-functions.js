@@ -23,7 +23,7 @@ functions.grid = function(data, v) {
 				if (functions.isNumber(val)) {
 					multi.push(gridCalc(val));
 				} else {
-					console.log(val, " - Nan");
+					console.log(val, " - NaN");
 				}
 			});
 			return multi.join(" ");
@@ -46,7 +46,7 @@ functions.color = (data, v) => {
 		searchColor = vArray[0];
 		transparency = vArray[1];
 	}
-	// console.log(data.colors);
+	
 	Object.keys(data.color).forEach(function(list) {
 		if (list !== "title") {
 			data.color[list].forEach(function(colorList) {

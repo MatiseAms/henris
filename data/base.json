@@ -1,14 +1,27 @@
 {
 	"base": {
 		"prefix": "",
+		"prefix-grid": "",
 		"border-radius": "3px",
+		"border-width": "1px",
 		"space": "1rem",
 		"font-size": "16px",
 		"font-path": "/fonts",
 		"image-path": "/images",
 		"transition": ".3s",
 		"transition-time": ".3",
+		"cubic-bezier": "cubic-bezier(0,.5,1,.5)",
 		"box-shadow": "0 0 100px 0 rgba(0,0,0,.1)",
-		"cubic-bezier": "cubic-bezier(.17,.67,.83,.67"
+		"color": {
+			"dark": "{{color(Black)}}",
+			"light": "{{color(White)}}",
+			"shadow": "{{color(Black)}}",
+			"primary": "{{color(Blue)}}",
+			"secondary": "{{color(Purple)}}",
+			"warning": "{{color(Orange)}}",
+			"error": "{{color(Red)}}",
+			"notification": "{{color(Yellow)}}",
+			"success": "{{color(Green)}}"
+		}
 	}
 }

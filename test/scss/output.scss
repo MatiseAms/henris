@@ -1,0 +1,58 @@
+@import '../../node_modules/sass-true/sass/true';
+
+@import '../../src/scss/custom-output';
+
+@function to-bool($value) {
+	@return not($value or $value == '' or $value == 0 or $value == ());
+}
+@function to-string($value) {
+	@return inspect($value);
+}
+
+
+
+
+
+
+
+// Check if the color function works properly
+@include test-module('Output [function]') {
+	@include test("Output CSS should by default return 'false'") {
+		// Assert the expected results
+		@include assert-equal(to-string(false), to-string(return-output(css)),'',true);
+	}
+
+	@include test("Output FULL should by default return 'false'") {
+		// Assert the expected results
+		@include assert-equal(to-string(false), to-string(return-output(full)),'',true);
+	}
+}
+
+// Map-set directly
+$output: map-set($output, css, true);
+$output: map-set($output, full, true);
+$output: map-set($output, grid, false);
+
+// Using the function
+$output: set-output(button, true);
+$output: set-output(card, true);
+$output: set-output(code, false);
+
+@import '../../src/scss/index';
+
+// Check if the color function works properly
+@include test-module('Output [function]') {
+	@include test(
+		"Output CSS should be changed and return 'true' (map-set function)"
+	) {
+		// Assert the expected results
+		@include assert-equal(to-string(true), to-string(return-output(css)),'',true);
+	}
+
+	@include test(
+		"Output BUTTON should be changed and return 'true' (set-output function)"
+	) {
+		// Assert the expected results
+		@include assert-equal(to-string(true), to-string(return-output(button)),'',true);
+	}
+}

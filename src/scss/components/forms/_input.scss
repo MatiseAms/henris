@@ -1,44 +1,65 @@
-.input,
-input {
-	&:not([type="range"]),
-	&:not([type="checkbox"]),
-	&:not([type="radio"]),
-	&:not([type="submit"]),
-	&[type="text"],
-	&[type="email"],
-	&[type="tel"],
-	&[type="number"],
-	&[type="url"] {
-		@extend %default-input;
-		&:not(:placeholder-shown) {
-			border: 1px solid color(Black, 0.25);
+@mixin henris-input($el: 'input-field'){
+	.#{$base-prefix}#{$el} {
+		input {			
+			&[type='text'],
+			&[type='date'],
+			&[type='datetime-local'],
+			&[type='month'],
+			&[type='time'],
+			&[type='week'],
+			&[type='search'],
+			&[type='email'],
+			&[type='tel'],
+			&[type='number'],
+			&[type='password'],
+			&[type='url'] {
+				@include henris-input-default();
+			}
 		}
-		&--ghost,
-		&--naked {
-			@extend %default-input--ghost;
+		.input {
+			&--ghost,
+			&--naked {
+				input {
+					&[type='text'],
+					&[type='email'],
+					&[type='tel'],
+					&[type='number'],
+					&[type='password'],
+					&[type='url'] {
+						@include henris-input-ghost();
+					}
+				}
+			}
+		}
+
+		input {
+			&[type='submit'],
+			&[type='reset'],
+			&[type='button'] {
+				@include henris-button-default();
+			}
+		}
+
+		input {
+			&[type='color'] {
+				width: 32px;
+				height: 32px;
+				border: none;
+				-webkit-appearance: none;
+
+				&::-webkit-color-swatch-wrapper {
+					padding: 0;
+				}
+				&::-webkit-color-swatch {
+					border: none;
+				}
+			}
+		}
+		label{
+			@include henris-label();
 		}
 	}
 }
-
-input {
-	&[type="submit"],
-	&[type="button"] {
-		@extend %default-button;
-	}
-}
-
-input {
-	&[type="color"] {
-		-webkit-appearance: none;
-		border: none;
-		width: 32px;
-		height: 32px;
-
-		&::-webkit-color-swatch-wrapper {
-			padding: 0;
-		}
-		&::-webkit-color-swatch {
-			border: none;
-		}
-	}
+@if output(form-input) {
+	@include henris-input();
 }

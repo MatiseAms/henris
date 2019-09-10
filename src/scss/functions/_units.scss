@@ -4,11 +4,11 @@
 ////
 
 @function is-number($value) {
-	@return type-of($value) == 'number';
+	@return type-of($value) == "number";
 }
 
 @function is-time($value) {
-	@return is-number($value) and index('ms' 's', unit($value)) != null;
+	@return is-number($value) and index("ms" "s", unit($value)) != null;
 }
 
 @function is-duration($value) {
@@ -16,12 +16,12 @@
 }
 
 @function is-angle($value) {
-	@return is-number($value) and index('deg' 'rad' 'grad' 'turn', unit($value))
+	@return is-number($value) and index("deg" "rad" "grad" "turn", unit($value))
 		!= null;
 }
 
 @function is-frequency($value) {
-	@return is-number($value) and index('Hz' 'kHz', unit($value)) != null;
+	@return is-number($value) and index("Hz" "kHz", unit($value)) != null;
 }
 
 @function is-integer($value) {
@@ -30,16 +30,16 @@
 
 @function is-relative-length($value) {
 	@return is-number($value) and
-		index('em' 'ex' 'ch' 'rem' 'vw' 'vh' 'vmin' 'vmax', unit($value)) != null;
+		index("em" "ex" "ch" "rem" "vw" "vh" "vmin" "vmax", unit($value)) != null;
 }
 
 @function is-absolute-length($value) {
 	@return is-number($value) and
-		index('cm' 'mm' 'in' 'px' 'pt' 'pc', unit($value)) != null;
+		index("cm" "mm" "in" "px" "pt" "pc", unit($value)) != null;
 }
 
 @function is-percentage($value) {
-	@return is-number($value) and unit($value) == '%';
+	@return is-number($value) and unit($value) == "%";
 }
 
 @function is-length($value) {
@@ -47,12 +47,12 @@
 }
 
 @function is-resolution($value) {
-	@return is-number($value) and index('dpi' 'dpcm' 'dppx', unit($value)) != null;
+	@return is-number($value) and index("dpi" "dpcm" "dppx", unit($value)) != null;
 }
 
 @function is-position($value) {
 	@return is-length($value) or is-percentage($value) or
-		index('top' 'right' 'bottom' 'left' 'center', $value) != null;
+		index("top" "right" "bottom" "left" "center", $value) != null;
 }
 
 @function strip-unit($number) {
@@ -60,10 +60,12 @@
 	@return $num;
 }
 
-@function even($number) {
-	@debug $number % 2;
-	/*   @if $number % 2 == 0{
-  $num: true;
-} @else { $num: false; }
-@return $num; */
+@function to-unitless-px($number){
+	@if unit($number) == 'rem'{
+		@return strip-unit($number) * $base-font-size;	
+	} @else if unit($number) == 'em' {
+		@warn 'em is not supported';
+	} @else {
+		@return strip-unit($number);
+	}
 }

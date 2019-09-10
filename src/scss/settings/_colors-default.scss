@@ -3,6 +3,7 @@ $color-default-black: #101010 !default; //
 $color-default-dark: #303030 !default; //
 $color-default-white: #ffffff !default; //
 $color-default-offwhite: #f7f7f7 !default; //
+$color-default-gray: #7f7f7f !default; //
 $color-default-green: #10c565 !default; //
 $color-default-blue: #1eb3e0 !default; //
 $color-default-red: #eb0f33 !default; //
@@ -17,6 +18,7 @@ $color-default: (
 	"Dark": #303030, 
 	"White": #ffffff, 
 	"Offwhite": #f7f7f7, 
+	"Gray": #7f7f7f, 
 	"Green": #10c565, 
 	"Blue": #1eb3e0, 
 	"Red": #eb0f33, 

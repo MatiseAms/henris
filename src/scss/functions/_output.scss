@@ -4,45 +4,100 @@
 // the value from the given output if true or false in the settings.
 //
 
-@function output($args: ()) {
-	$doOutput: true;
-	/*
-        Check the overall setting. If false, do not output any css
-    */
-	@if $output-css == false {
-		$doOutput: false;
-	}
+// Let check if the output is set already, if not. Let's set it.
+$output-current: () !default;
+@if length($output-current) < 1 {
+	$output-current: $output;
+}
 
-	/*
-        Go through all $arguments
-    */
+@function output($args...) {
+	// Set a default of output true
+	$doOutput: true;
+	$isGrid: false;
+	//
+	//	Go through all $arguments
+	//
 	@each $arg in $args {
-		@if map-has-key($output, $arg) {
-			@if map-get($output, $arg) == false {
-				$doOutput: false;
-			}
+		//
+		// Check if its a grid output
+		//
+		@if type-of($arg) == 'string' and str-index($arg, 'grid') == 1 {
+			$isGrid: true;
+		}
+		@if type-of($arg) == 'string' {
+			$doOutput: check-output($arg, true, $doOutput);
 		} @else {
-			@warn "#{$arg} does not exist in the settings.";
+			@each $listArg in $arg {
+				@if type-of($arg) == 'bool' {
+					$doOutput: $arg;
+				} @else {
+					$doOutput: check-output($listArg, true, $doOutput);
+				}
+			}
 		}
 	}
 
-	/*
-		The overruler to create all the css
-	*/
-	@if map-get($output, 'full') == true {
+	//
+	//  Check the overall setting. If false, do not output any css
+	//
+	@if check-output('css', true, $doOutput) == false {
+		$doOutput: false;
+	}
+	//
+	//	The overruler to create all the css
+	//
+
+	@if check-output('full', true) == true {
 		$doOutput: true;
 	}
 
-	/*
-      In the end, determine if this prop should return anything.
-  */
+	//
+	//	Grid Only output
+	//
+
+	@if check-output('grid-only', true) == true {
+		@if $isGrid == false {
+			$doOutput: false;
+		} @else {
+			// @debug '#{$args} : #{$doOutput}';
+		}
+	}
+
+	//
+	//	In the end, determine if this prop should return anything.
+	//
 	@return $doOutput;
 }
 
-/*
-  Allow to create custom configuration with $henris
-  Check if the henris is defined to override $ouput
- */
-@if(variable_exists(henris)){
-  $output: map-merge($output, $henris);
+@function check-output($arg, $warn: false, $doOutput: true) {
+	$Return: $doOutput;
+
+	@if map-has-key($output-current, $arg) {
+		@if map-get($output-current, $arg) == false {
+			$Return: false;
+		}
+		//
+		// Check if the argument has a parent argument to overrule.
+		// Get the first item from the list and check this value. If this value is false, all
+		// children won't be outputted.
+		//
+
+		$newList: str-split($arg, '-');
+
+		@if length($newList) > 1 {
+			@if check-output(nth($newList, 1)) == false {
+				$Return: false;
+			}
+		}
+	} @else if $arg == 'full' {
+		$Return: true;
+	} @else {
+		//
+		// Only warn when checking the children. Don't check on the parents, this is not relevant.
+		//
+		@if $warn {
+			@warn "#{$arg} does not exist in the settings.";
+		}
+	}
+	@return $Return;
 }

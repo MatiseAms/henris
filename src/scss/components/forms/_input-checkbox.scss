@@ -1,63 +1,80 @@
-input[type="checkbox"] {
-	-webkit-appearance: checkbox;
-	-moz-appearance: checkbox;
-	appearance: checkbox;
-	width: auto;
-	max-width: auto;
-	min-width: auto;
-}
-.input-checkbox {
-	height: auto;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	input[type="checkbox"] {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		width: 0;
-		height: 0;
-		margin: 0;
+@mixin henris-checkbox($el: '.input-checkbox') {
+	[type='checkbox'] {
+		width: auto;
+		min-width: auto;
+		max-width: auto;
+		-webkit-appearance: checkbox;
+		-moz-appearance: checkbox;
+		appearance: checkbox;
+	}
+	#{$base-prefix}#{$el} {
+		width: auto;
+		height: auto;
 		padding: 0;
-		&:not(.hidden) {
-			@include input-checkbox(
-				1rem,
-				1rem,
-				0,
-				0.25rem,
-				color(White),
-				color(Blue),
-				0%
-			);
-			@include input-checkbox-body {
-				box-shadow: 0 0 0 1px color(Black, 0.2) inset;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-			@include input-checkbox-check {
-				top: calc(50%);
-				transform: translateY(-50%);
-			}
-			@include input-checkbox-label {
-				position: relative;
-				padding: 0;
-				padding-left: 2rem;
-				width: auto;
-				line-height: 2rem;
-				margin: 0;
-			}
-		}
-		&.hidden {
+		margin: 0;
+		[type='checkbox'] {
 			width: 0;
 			height: 0;
-			opacity: 0;
-			position: absolute;
-			& + label {
-				&:before,
-				&:after {
-					content: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			margin: 0;
+			padding: 0;
+			&:not(.hidden) {
+				@include input-checkbox(
+					1rem,
+					1rem,
+					0,
+					0.25rem,
+					#{$form-body-color},
+					#{$form-accent-color},
+					0%
+				);
+				@include input-checkbox-body {
+					top: 50%;
+					box-shadow: 0 0 0 #{$form-border-width} #{$form-border-color} inset;
+					border-radius: #{$form-border-radius};
+					transform: translateY(-50%);
+				}
+				@include input-checkbox-check {
+					top: calc(50%);
+					transform: translateY(-50%);
+				}
+				@include input-checkbox-label {
+					position: relative;
+					width: auto;
+					line-height: 2rem;
+					padding: 0;
+					padding-left: 2rem;
+					margin: 0;
+				}
+			}
+			&.hidden {
+				position: absolute;
+				width: 0;
+				height: 0;
+				opacity: 0;
+				& + label {
+					&::before,
+					&::after {
+						content: none;
+					}
 				}
 			}
 		}
+		label[for] + input[type='checkbox'] {
+			width: 1rem;
+			height: 1rem;
+			border: #{$form-border-width} solid #{$form-border-color};
+			border-radius: #{$form-border-radius};
+			opacity: 1;
+			-webkit-appearance: checkbox;
+			-moz-appearance: checkbox;
+			appearance: checkbox;
+			
+		}
 	}
+}
+@if output('form-checkbox') {
+	@include henris-checkbox();
 }
