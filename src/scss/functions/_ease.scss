@@ -1,0 +1,38 @@
+// ---------------------------------------------------------------------------------------------
+//   The main ease function, get a easing value from the current easing set
+// -------------------------------------------------------------------------------------------
+
+@function ease($ease-name){
+	@if (map-get($ease, $ease-name) != null ) {
+		$ease-value: map-get($ease, $ease-name);
+		@return cubic-bezier(#{unquote($ease-value)});
+	} @else {
+		@warn "#{$ease-name} doesn't exist";
+		@return ();
+	}
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//    If you defined custom easing, we will extend the existing easing with these easing.
+// -------------------------------------------------------------------------------------------
+
+@function add-custom-easing($custom-easing-set) {
+	$passed: true;
+
+	// Let's first check if it has values
+	@if length($custom-easing-set) < 1 {
+		$passed: false;
+		@warn "[function define-custom-easing] The custom easing you've made, doesnt have any values an therefor the default easing will be used.";
+	} @else {
+		@if length(nth($custom-easing-set, 1)) != 2 {
+			$passed: false;
+			@warn "[function define-custom-easing] The custom easing you've made, doesn't have right structure.";
+		}
+	}
+	@if $passed {
+		@return map-merge($custom-easing-set, $ease);
+	} @else {
+		@return $ease;
+	}
+}
