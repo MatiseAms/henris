@@ -11,6 +11,7 @@ Another SCSS framework to make css development a lot faster and easier.
 [![Node version](https://img.shields.io/david/matiseAms/henris.svg?style=-square)](https://github.com/matiseAms/henris/)
 [![Node version](https://img.shields.io/npm/v/henris.svg?style=-square)](https://www.npmjs.com/package/henris)
 
+> **WARNING**: This version of Henri's is deprecated, [Go to Henri's 1.0](https://www.github.com/henris-style/henris)
 
 ## Getting Started
 
