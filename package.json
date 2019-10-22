@@ -41,7 +41,7 @@
 		"autoprefixer": "^9.4.4",
 		"chalk": "^2.4.2",
 		"cli-table": "^0.3.1",
-		"flat": "^4.1.0",
+		"flat": "^5.0.0",
 		"node-sass": "^4.11.0",
 		"npm": "^6.5.0",
 		"postcss": "^7.0.8",
